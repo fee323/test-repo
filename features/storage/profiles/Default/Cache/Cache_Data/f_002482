@@ -1,0 +1,2366 @@
+<script>console.log("C:\\anisiis\\test.cartzlink.com\\httpdocs\\admin\\protected\\views\\site\\error403.php")</script><script>console.log("C:\\anisiis\\test.cartzlink.com\\httpdocs\\admin\\protected\\views\\layouts\\mainnew.php")</script>	
+    <!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN">
+    <html dir="ltr" lang="en">
+
+    <head>
+        <meta name="viewport" content="width=device-width">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-16">
+        <title>
+            CARTZLink.com        </title>
+        <link rel="stylesheet" type="text/css" href="cube/components/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="/admin/index.php?r=site/cssNewTwo">
+        <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="/admin/css/autoComplete.css">
+        <!-- <title>jQuery.noConflict demo</title> -->
+            <script type="text/javascript" src="/admin/js-cube/1.jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/20.jquery.plugin.min.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/21.jquery.calculator.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/3.jquery-migrate-1.0.0.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/4.jquery-ui.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/5.jquery.ajaxqueue.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/50.jquery.smartmenus.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/51.jquery.smartmenus.bootstrap.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/52.jquery.smartmenus.keyboard.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/7.jquery.bgiframe.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/FancyTable.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/HoldOn.min.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/Sortable.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/aes.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/autoComplete.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/bootstrap-datepicker.ar.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/cartzlinks.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/chrome.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/demo-rtl.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/demo-skin-changer.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/demo.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/dygraph-data.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/flash.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/grid-import.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/jquery.calendars.islamic.min.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/jquery.contextMenu.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/jquery.cookie.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/jquery.csvToTable.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/jquery.csvToTable2.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/jquery.dimensions.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/jquery.flot.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/jquery.flot.stack.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/jquery.form.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/jquery.jeditable.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/jquery.jqplot.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/jquery.jqplot.min.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/jquery.maskedinput.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/jquery.maskedinput.min.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/jquery.metadata.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/jquery.multi-select.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/jquery.multifile.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/jquery.nanoscroller.min.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/jquery.pagination.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/jquery.rating.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/jquery.stickytable.min.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/jquery.tabletoCSV.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/jquery.ticker.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/jquery.ui.autocomplete.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/jquery.yii.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/jquery.yiiactiveform.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/jquery.yiigridview.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/jquery.yiilistview.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/jquery.yiitab.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/menu.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/moment-with-locales.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/moment.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/my-fake-toast.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/notify.min.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/packery.pkgd.min.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/papaparse5.3.1.min.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/read-excel-file.min.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/scripts.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/shortcutKey.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/site.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/sortable-tables.min.js"></script>
+    <script type="text/javascript" src="/admin/js-cube/toastr.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.js"></script>
+        <script src="/ckeditor/ckeditor.js"></script>
+        <script src="/ckeditor/adapters/jquery.js"></script>
+        <script src="/js/runckeditor.js"></script>
+        <script type="text/javascript" src="includes/general.js"></script>
+        <script type="text/javascript">AC_FL_RunContent = 0;</script>
+        <script src="../js/AC_RunActiveContent.js" type="text/javascript"></script>
+
+        <script type="text/javascript" src="/admin/index.php?r=site/jsNew"></script>
+
+
+        <!-- File input start -->
+        <!-- the fileinput plugin styling CSS file -->
+        <link rel="stylesheet" type="text/css"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.min.css" crossorigin="anonymous">
+
+        <link rel="stylesheet" type="text/css"
+            href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.2.5/css/fileinput.min.css" media="all" />
+
+        <!-- if using RTL (Right-To-Left) orientation, load the RTL CSS file after fileinput.css by uncommenting below -->
+        <!-- link href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.2.5/css/fileinput-rtl.min.css" media="all" rel="stylesheet" type="text/css" /-->
+
+
+        <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.2.5/js/plugins/piexif.min.js"></script>
+
+        <!-- sortable.min.js is only needed if you wish to sort / rearrange files in initial preview. 
+    This must be loaded before fileinput.min.js -->
+        <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.2.5/js/plugins/sortable.min.js"></script>
+
+        <!-- bootstrap.bundle.min.js below is needed if you wish to zoom and preview file content in a detail modal
+    dialog. bootstrap 5.x or 4.x is supported. You can also use the bootstrap js 3.3.x versions. -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+            crossorigin="anonymous"></script>
+
+        <!-- the main fileinput plugin script JS file -->
+        <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.2.5/js/fileinput.min.js"></script>
+
+        <!-- following theme script is needed to use the Font Awesome 5.x theme (`fas`). Uncomment if needed. -->
+        <!-- script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.2.5/themes/fas/theme.min.js"></script -->
+
+        <!-- optionally if you need translation for your language then include the locale file as mentioned below (replace LANG.js with your language locale) -->
+        <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.2.5/js/locales/LANG.js"></script>
+
+        <!-- 
+file input end -->
+        <style>
+            /* nehal */
+            .bg-white-cus {
+                background: white !important;
+                /* nehal */
+            }
+
+            .bg-white-cus:hover {
+                background: #e9ecef !important;
+                /* nehal */
+            }
+        </style>
+
+        <!-- smartmenu jQuery ini.    -->
+        <script type="text/javascript">
+async function GetDefaultValues() {
+    try {
+        const response = await fetch('/admin/?r=report/GetDefaultValues&_lang=en');
+        
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const data = await response.json();
+
+        data.forEach(item => {
+            let elementId = item.controlId;
+
+            // Adjust control ID for special cases
+            if (!item.url.includes("r=report")) {
+                elementId = item.controlId.replace('ac_', '').replace('_ac', '');
+            }
+
+            const field = $(`#${elementId}`);
+            const defaultValue = item.control_defaultValue;
+
+            // Assign values based on field type
+            if (field.is(':checkbox')) {
+                field.prop('checked', defaultValue === 'checked');
+            } else if (field.is(':radio')) {
+                $(`input[name='${elementId}'][value='${defaultValue}']`).prop('checked', true);
+            } else if (field.is('select')) {
+                const selectValue = defaultValue.split('|')[1] || defaultValue;
+                field.val(selectValue);
+            } else if (field.is('textarea') || field.is('input')) {
+                field.val(defaultValue);
+            } else {
+                console.warn(`Unhandled field type for control ID: ${elementId}`);
+            }
+        });
+    } catch (error) {
+        console.error('Error fetching or applying default values:', error);
+    }
+}
+
+// Call the function
+GetDefaultValues();
+
+            $(function () {
+                $('#main-menu').smartmenus({
+                    subMenusSubOffsetX: 1,
+                    subMenusSubOffsetY: -8
+                });
+            });
+        </script>
+
+        <!-- Edit by Faheem Anis -->
+                <style>
+            #settingsModal,
+            #userLogModal {
+                max-width: 70%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #settingsModalBackdrop,
+            #userLogModalBackdrop {
+                z-index: -1;
+            }
+        </style>
+        <!-- end edit by Faheem Anis -->
+
+        <!-- fixed navbar  -->
+        <script type="text/javascript">
+
+            $(function ($) {
+
+                var nav = $('#main-menu');
+
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 125) {
+                        nav.addClass("f-nav");
+                    } else {
+                        nav.removeClass("f-nav");
+                    }
+                });
+
+            });
+
+            function newTheme() {
+                $.ajax({
+                    type: 'POST',
+                    url: '/admin/?r=settings/changeTheme&_lang=en',
+                    data: { newtheme: "oldTheme", user: 'admin' },
+                    success: function (data) {
+                        console.log(data);
+                        location.reload();
+                    }
+                })
+            }
+            /*Added by M Danyal Alvi 30-03-2021*/
+            function SaveImage() {
+                var input = document.getElementById("imgupload");
+                var file = input.files[0];
+                if (file != undefined) {
+                    var formData = new FormData();
+                    if (!!file.type.match(/image.*/)) {
+                        formData.append("image", file);
+                        $.ajax({
+                            url: "/admin/?r=products/SaveProfileImage&_lang=en",
+                            type: "POST",
+                            data: formData,
+                            processData: false,
+                            contentType: false,
+                            success: function (data) {
+                                //alert('success');
+                                window.location.reload();
+                            }
+                        });
+                    } else {
+                        alert('Not a valid image!');
+                    }
+                } else {
+                    alert('Input something!');
+                }
+            }
+
+                /*Added by M Danyal Alvi 30-03-2021*/
+        </script>
+        <!-- keyboard navigation SmartMenu jQuery -->
+        <script type="text/javascript">
+            $(function () {
+                $('#main-menu').smartmenus({
+                    subMenusSubOffsetX: 1,
+                    subMenusSubOffsetY: -8
+                });
+                $('#main-menu').smartmenus('keyboardSetHotkey', 123, 'shiftKey');
+            });
+            /*Edited By Khurram*/
+            $(document).ready(function () {
+                var $el4 = $('#files'), initPlugin = function () {
+                    $el4.fileinput({
+                        theme: 'fa',
+                        // uploadUrl: "/admin/indexyii.php?r=orders/UploadAgreementFiles",
+                        deleteUrl: "/admin/indexyii.php?r=orders/removeFile",
+                        // uploadAsync: true,
+                        // minFileCount: ,
+                        // maxFileCount: 100,
+                        overwriteInitial: true,
+                        browseOnZoneClick: true,
+                        // initialPreview: r,
+                        initialPreviewAsData: true,
+                        // initialPreviewConfig : f,
+                    }).on('filesorted', function (e, params) {
+                        //console.log('file sorted', e, params);
+                    }).on('fileuploaded', function (e, params) {
+                        console.log('file uploaded', e, params);
+                        console.log(params.response['filepath']);
+                    }).on('filesuccessremove', function (e, id) {
+                        console.log(id);
+                        event.preventDefault();
+                        var dp = $('div.file-preview-thumbnails [id="' + id + '"]').attr('title');
+                        if (dp === undefined) {
+                            dp = $('div.file-preview-thumbnails [id="' + id + '"]  div.kv-file-content > img').attr('title');
+                        }
+
+                        $.post('/admin/indexyii.php?r=orders/removeFile', { 'fileName': dp, id: orid })
+                            .done(function (r) {
+                                if (r == 'ok') {
+                                    $("[id='" + id + "']").fadeOut(300, function () { $(this).remove() });
+                                } else {
+                                    $("[id='" + id + "']").addClass('btn-danger').find('.file-actions').html(r);
+                                }
+                            })
+                            .fail(function () {
+                                $("[id='" + id + "']").addClass('btn-danger').find('.file-actions').html('nothing deleted');
+                            })
+                        return false;
+                    });
+
+                }
+                initPlugin();
+                                $('.create-model-btn').click(function () {
+                    var show = $(this).text();
+                    if (show.substring(0, 4).toString().trim() == 'Add') {
+                                              $('.create-model-btn').text('Hide');
+                                              setTimeout(function () {
+                            GetDefaultValues();
+
+                        }, 5000);
+                    }
+                    else if (show.substring(0, 4).toString().trim() == 'Hide') {
+                        $('.create-model-btn').text('Show');
+                    }
+                    else {
+                        $('.create-model-btn').text('Hide');
+                    }
+                });
+                                $('legend').css('font-size', '18px').css('text-align', 'center').css('font-weight', 'bold');
+            });
+                        /*Edited By Khurram*/
+        </script>
+        <!--
+    <script src="/admin/jsoth/jquery-2.2.3.js"></script>
+    <script>
+        jq2 = jQuery.noConflict( true );
+    </script>
+-->
+
+        <!-- <script href="cube/components/jquery/dist/jquery.min.js"></script> -->
+        <!-- <script src="https://code.jquery.com/jquery-1.9.1.min.js" integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ=" crossorigin="anonymous"></script> -->
+        <link rel="stylesheet" type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/offline-js/0.7.19/themes/offline-theme-slide.min.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/offline-js/0.7.19/themes/offline-language-english.min.css" />
+        <script href="cube/components/bootstrap/dist/js/bootstrap.js"></script>
+        <!-- <link rel="stylesheet" type="text/css" href="cube/css/libs/bootstrap-rtl.min.css" /> -->
+
+        <!-- RTL support - for demo only -->
+        <!-- <script src="cube/js/demo-rtl.js"></script> -->
+        <!--
+    If you need RTL support just include here RTL CSS file <link rel="stylesheet" type="text/css" href="cube/css/libs/bootstrap-rtl.min.css" />
+    And add "rtl" class to <body> element - e.g. <body class="rtl">
+    -->
+
+        <!-- libraries -->
+        <link rel="stylesheet" type="text/css" href="cube/components/font-awesome/css/font-awesome.css" />
+        <link rel="stylesheet" type="text/css" href="cube/css/libs/nanoscroller.css" />
+
+        <!-- global styles -->
+        <link rel="stylesheet" type="text/css" href="cube/css/compiled/theme_styles.css" />
+
+        <!-- this page specific styles -->
+
+        <!-- google font libraries -->
+        <link href='//fonts.googleapis.com/css?family=Open+Sans:400,600,700,300|Titillium+Web:200,300,400' rel='stylesheet'
+            type='text/css'>
+
+        <!--[if lt IE 9]>
+    <script src="cube/js/html5shiv.js"></script>
+    <script src="cube/js/respond.min.js"></script>
+    <![endif]-->
+        <!-- end new -->
+        <style type="text/css">
+            form {
+                margin: 0px !important;
+            }
+
+            *::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+                background-color: #F5F5F5;
+                border-radius: 10px;
+            }
+
+            *::-webkit-scrollbar {
+                width: 10px;
+                background-color: #F5F5F5;
+            }
+
+            *::-webkit-scrollbar-thumb {
+                border-radius: 10px;
+                background-color: #8bc34a;
+            }
+
+            .file-input {
+                width: 100%;
+                margin-bottom: 10vh;
+            }
+
+            .fileinput-upload {
+                display: none !important;
+            }
+
+                    </style>
+    </head>
+    
+    <body >
+                            <table id="colors_tab" class="colorBorderNone1" style="height: 20px; padding: 0px; margin: 0px;">
+
+
+                <tr class="colorBorderNone" style="height: 20px; padding: 0px; margin: 0px; display: none">
+
+                    <td class="colorBorderNone" style="width: 59px; ">&nbsp; </td>
+
+                    <td class="colorBorderNone" style="width: 20px; padding: 0px; margin: 0px;">
+                        <a href="/admin/index.php?r=orders/createDispatch&_lang=en&theme=red">
+                            <div style="background-color: rgba(202,29,29,1) ; width: 20px; height:20px; margin-left: 2px;  ">
+                            </div>
+                        </a>
+                    </td>
+
+
+                    <td class="colorBorderNone" style="width: 20px; padding: 0px; margin: 0px;">
+                        <a href="/admin/index.php?r=orders/createDispatch&_lang=en&theme=green">
+                            <div style="background-color: rgba(76,173,53,1); width: 20px; height:20px; margin-left: 2px;"></div>
+                        </a>
+
+                    </td>
+
+                    <td class="colorBorderNone" style="width: 20px; padding: 0px; margin: 0px;">
+                        <a href="/admin/index.php?r=orders/createDispatch&_lang=en&theme=purple">
+                            <div style="background-color: rgba(173,65,225,1);   width: 20px; height:20px; margin-left: 2px;">
+                            </div>
+                        </a>
+
+                    </td>
+
+                    <td class="colorBorderNone" style="width: 20px; padding: 0px; margin: 0px;">
+                        <a href="/admin/index.php?r=orders/createDispatch&_lang=en&theme=orange">
+                            <div style="background-color: rgba(230,126,34,1); width: 20px; height:20px; margin-left: 2px;">
+                            </div>
+                        </a>
+
+                    </td>
+
+                    <td class="colorBorderNone" style="width: 20px; padding: 0px; margin: 0px;">
+                        <a href="/admin/index.php?r=orders/createDispatch&_lang=en&theme=blue">
+                            <div style="background-color: rgba(52,152,219,1); width: 20px; height:20px; margin-left: 2px;">
+                            </div>
+                        </a>
+
+                    </td>
+                    <td class="colorBorderNone" style="width: 20px; padding: 0px; margin: 0px;">
+                        <a href="/admin/index.php?r=orders/createDispatch&_lang=en&theme=pink">
+                            <div style="background-color: rgba(149,38,141,1); width: 20px; height:20px; margin-left: 2px;">
+                            </div>
+                        </a>
+
+                    </td>
+
+                    <td class="colorBorderNone" style="width: 20px; padding: 0px; margin: 0px;">
+                        <a href="/admin/index.php?r=orders/createDispatch&_lang=en&theme=teal">
+                            <div style="background-color: rgba(14,122,120,1); width: 20px; height:20px; margin-left: 2px;">
+                            </div>
+                        </a>
+
+                    </td>
+                    <td class="colorBorderNone" style="width: 20px; padding: 0px; margin: 0px;">
+                        <a href="/admin/index.php?r=orders/createDispatch&_lang=en&theme=olive">
+                            <div style="background-color: rgba(177,189,40,1); width: 20px; height:20px; margin-left: 2px;">
+                            </div>
+                        </a>
+                    </td>
+
+                    <td class="colorBorderNone" style="width: 20px; padding: 0px; margin: 0px;">
+                        <a href="/admin/index.php?r=orders/createDispatch&_lang=en&theme=darkBlue">
+                            <div style="background-color: rgba(16,46,133,1); width: 20px; height:20px; margin-left: 2px;"></div>
+                        </a>
+                    </td>
+
+                    <td class="colorBorderNone" style="width: 20px; padding: 0px; margin: 0px;">
+                        <a href="/admin/index.php?r=orders/createDispatch&_lang=en&theme=darkBrown">
+                            <div style="background-color: rgba(181,28,0,1); width: 20px; height:20px; margin-left: 2px;"></div>
+                        </a>
+                    </td>
+
+                    <td class="colorBorderNone" style="width: 20px; padding: 0px; margin: 0px;">
+                        <a href="/admin/index.php?r=orders/createDispatch&_lang=en&theme=darkPurple">
+                            <div style="background-color: rgba(115,0,173,1); width: 20px; height:20px; margin-left: 2px;"></div>
+                        </a>
+                    </td>
+
+                    <td class="colorBorderNone" style="width: 20px; padding: 0px; margin: 0px;">
+                        <a href="/admin/index.php?r=orders/createDispatch&_lang=en&theme=skyBlue">
+                            <div style="background-color: rgba(82,199,255,1); width: 20px; height:20px; margin-left: 2px;">
+                            </div>
+                        </a>
+                    </td>
+
+                    <td class="colorBorderNone" style="width: 20px; padding: 0px; margin: 0px;">
+                        <a href="/admin/index.php?r=orders/createDispatch&_lang=en&theme=yellow">
+                            <div style="background-color: rgba(231,182,0,1); width: 20px; height:20px; margin-left: 2px;"></div>
+                        </a>
+                    </td>
+
+                    <td class="colorBorderNone" style="width: 20px; padding: 0px; margin: 0px;">
+                        <a href="/admin/index.php?r=orders/createDispatch&_lang=en&theme=lightGreen">
+                            <div style="background-color: rgba(148,211,0,1); width: 20px; height:20px; margin-left: 2px;"></div>
+                        </a>
+                    </td>
+
+                    <td class="colorBorderNone" style="width: 20px; padding: 0px; margin: 0px;">
+                        <a href="/admin/index.php?r=orders/createDispatch&_lang=en&theme=lightTeal">
+                            <div style="background-color: rgba(0,219,206,1); width: 20px; height:20px; margin-left: 2px;"></div>
+                        </a>
+                    </td>
+
+                    <td class="colorBorderNone" style="width: 20px; padding: 0px; margin: 0px;">
+                        <a href="/admin/index.php?r=orders/createDispatch&_lang=en&theme=Aubergine">
+                            <div style="background-color: rgba(42,8,7,1); width: 20px; height:20px; margin-left: 2px;"></div>
+                        </a>
+                    </td>
+
+                    <td class="colorBorderNone" style="width: 20px; padding: 0px; margin: 0px;">
+                        <a href="/admin/index.php?r=orders/createDispatch&_lang=en&theme=Rustic-Red">
+                            <div style="background-color: rgba(69,4,10,1); width: 20px; height:20px; margin-left: 2px;"></div>
+                        </a>
+                    </td>
+
+                    <td class="colorBorderNone" style="width: 20px; padding: 0px; margin: 0px;">
+                        <a href="/admin/index.php?r=orders/createDispatch&_lang=en&theme=Pharlap">
+                            <div style="background-color: rgba(164,128,130,1); width: 20px; height:20px; margin-left: 2px;">
+                            </div>
+                        </a>
+                    </td>
+
+                    <td class="colorBorderNone">&nbsp; </td>
+                    <td align="right" style="margin-right: 20px;">
+                                            </td>
+                </tr>
+            </table>
+
+                <style>
+#log_tb {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+}
+
+#log_tb td, #log_tb th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#log_tb tr:nth-child(even){background-color: #f2f2f2;}
+
+#log_tb tr:hover {background-color: #ddd;}
+
+#log_tb th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+#searchResults {
+    margin-bottom: 10px;
+    position:absolute;
+    background:white;
+    width:565px;
+    border-radius: 6px;
+    min-height: 0px;
+    max-height: 249px;
+    overflow-y: scroll;
+}
+#searchResults li {
+    margin-top:10px;
+    border-bottom: 1px solid #d9d4d4;
+    padding: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+#searchResults li a {
+    text-decoration: none;
+    font-weight: 1000;
+}
+#searchInput
+{
+    // margin-top: -41px;
+}
+</style>
+        <div id="theme-wrapper">
+            <!-- New header added adil -->
+            <header class="navbar navbar-expand-lg navbar-light container d-block d-lg-flex" id="header-navbar">
+                <a class="navbar-brand float-left float-lg-none" href="index.html" id="logo">
+                    <img alt="" class="normal-logo logo-white" src="/custom/assets/images/logo-login.png" />
+                    <img alt="" class="normal-logo logo-black" src="/custom/assets/images/logo-login.png" />
+                </a>
+                <button aria-controls="sidebar-nav" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler float-right float-lg-none" data-target="#sidebar-nav" data-toggle="collapse"
+                    type="button" onclick="toggleNavBar();">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <ul class="nav navbar-nav mr-auto d-none d-lg-block mrg-l-none">
+                    <li><a class="btn" id="make-small-nav"><i class="fa fa-bars"></i></a></li>
+                    <li>
+                        <h1 style="font-size: 1.5em; line-height: 2.4em; margin: 0;">AMONG MOST SIMPLE & FEATURE RICH ERP ON
+                            CLOUD</h1>
+                        <div class="input-group" style="position: absolute; top: 8px; width: 29.5%;">
+                            <span class="input-group-text" id="basic-addon1" style="padding:10px;"><i class="fa fa-search"
+                                    aria-hidden="true"></i></span>
+                            <input class="form-control" type="search" placeholder="Search menu" aria-label="Search"
+                                id="searchInput">
+
+                        </div>
+                        <div id="searchResults" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"></div>
+                </ul>
+                <div class="searchBox">
+                    <!-- umair -->
+                    <input id="searchBy" class="form-control form-control-sm searchInput" type="text" name=""
+                        value="" placeholder="Enter Product name or scan Barcode">
+                    <button class="btn searchbtn btn-primary rounded-circle"><i class="fa fa-search"></i></button>
+                </div>
+                <ul class="nav navbar-nav ml-auto float-right float-lg-none" id="header-nav">
+                                    <li>
+                                                <div class="checkbox-nice" style="display:none; padding-left:0px; ">
+                            <label class="switch" style="padding-top: 11px;">
+                                <input type="checkbox" onchange="newTheme();">
+                                <span class="slider round"></span>
+                            </label>
+                            <label class="oldTheme" style="padding-top: 17px !important; color:#fff;">
+                                Old Theme
+                            </label>
+                        </div>
+
+                        <style>
+                            .custom-button {
+                                background-color: transparent;
+                                border: none;
+                                color: rgba(255, 255, 255, 0.9);
+                                border-radius: 20px;
+                                padding: 8px 12px;
+                                transition: background-color 0.3s ease;
+                                display: flex;
+                                align-items: center;
+                            }
+
+                            .custom-button:hover {
+                                background-color: transparent;
+
+                                color: #000000;
+                            }
+
+                            .custom-button img {
+                                width: 30px; height: 30px;
+                                margin-right: 8px;
+                            }
+                        </style>
+
+                                                <button class="custom-button btn mt-2" onclick="window.open('')"
+                            style="display: none;">
+                            <img src="/admin/assets/images/question.png" alt="Get Help Icon"> Get Help Now!</button>
+
+                    </li>
+
+                                            <li class="dropdown profile-dropdown">
+                            <!--Edit by M Danyal Alvi 29-03-2021 -->
+                            <a>
+                                <img alt=""
+                                    src="/admin/img/samples/scarlet-159.png?10=10" />
+                                <span class="d-none d-md-block" id="loggedUser">
+                                    admin                                </span>
+                                <b class="caret"></b>
+                            </a>
+                            <!--Edit by M Danyal Alvi 29-03-2021 -->
+                                                            <ul class="dropdown-menu dropdown-menu-right">
+                                                                                <li>
+                                                <a href="#"
+                                                    style="font-size: 0.875em; padding-left: 18px; padding-right: 18px; border: none; border-radius: 0; cursor: pointer; display: block;">
+                                                    <img alt="" src="img/samples/scarlet-159.png"
+                                                        style="border-radius: 50%; float: left; height: 35px; margin-right: 5px; width: 35px; border: 2px solid #fff;">
+                                                    <span class="d-none d-md-block SwitchUser" data-userId="1"
+                                                        style="float: left; display: block; margin-right: 3px; font-size: em; line-height: 3em;">
+                                                        admin                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                                                        <li>
+                                                <a href="#"
+                                                    style="font-size: 0.875em; padding-left: 18px; padding-right: 18px; border: none; border-radius: 0; cursor: pointer; display: block;">
+                                                    <img alt="" src="img/samples/scarlet-159.png"
+                                                        style="border-radius: 50%; float: left; height: 35px; margin-right: 5px; width: 35px; border: 2px solid #fff;">
+                                                    <span class="d-none d-md-block SwitchUser" data-userId="184"
+                                                        style="float: left; display: block; margin-right: 3px; font-size: em; line-height: 3em;">
+                                                        cartzlink                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                                            </ul>
+                                                    </li>
+                                        <!-- Header user selector menu end-->
+                    <li class="d-none d-sm-block">
+                        <a href="/admin/indexyii.php?r=user/user/logout" class="btn">
+                            <i class="fa fa-power-off">
+                            </i>
+                        </a>
+                    </li>
+                </ul>
+            </header>
+            <!-- New header End -->
+            <!-- New left  menu added adil -->
+            <div id="page-wrapper" class="container">
+                <div class="row">
+                    <div id="nav-col">
+                        <section id="col-left" class="col-left-nano">
+                            <div id="col-left-inner" class="col-left-nano-content">
+                                <div id="user-left-box" class="clearfix d-none d-lg-block profile2-dropdown">
+                                    <img alt=""
+                                        src="/admin/img/samples/scarlet-159.png?10=10" />
+                                    <div class="user-box">
+                                        <span class="dropdown name">
+                                            <a href="#" class="dropdown-nocaret dropdown-toggle"
+                                                data-toggle="dropdown">admin                                            </a><!-- <i class="fa fa-angle-down"></i>-->
+                                            <!--<ul class="dropdown-menu dropdown-menu-right" style="display: none;">
+                                                            <li class="item"><a href="user-profile.html"><i class="fa fa-user"></i>Profile</a></li>
+                                                            <li class="item"><a href="#"><i class="fa fa-cog"></i>Settings</a></li>
+                                                            <li class="item"><a href="#"><i class="fa fa-envelope-o"></i>Messages</a></li>
+                                                            <li class="item"><a href="#"><i class="fa fa-power-off"></i>Logout</a></li>
+                                                        </ul>-->
+                                        </span>
+                                        <span class="status">
+                                            <i class="fa fa-circle"></i> Online
+                                        </span>
+                                        <!--Added by M Danyal Alvi 30-03-2021*/-->
+                                        <form action="" method="post" id="profileImage" enctype="multipart/form-data"
+                                            onchange="SaveImage()">
+                                            <span class="status">
+                                                <i class="fa fa-upload"></i>
+                                                <input type="file" id="imgupload" style="display:none" />
+                                                <labeL for="imgupload" style="cursor: pointer;">Profile Image</labeL>
+                                            </span>
+                                        </form>
+                                        <!--Added by M Danyal Alvi 30-03-2021*/-->
+                                    </div>
+                                </div>
+                                <!-- Going to call function listMainMenuNew -->
+                                                                    <div class="navbar navbar-expand-lg navbar-light">
+                                        <div class="collapse navbar-collapse navbar-ex1-collapse" id="sidebar-nav">
+                                            <ul id="main-menu" class="nav navbar-nav nav-pills nav-stacked" class="sm sm-blue"
+                                                data-smartmenus-id="15882315946752766"
+                                                style="max-height: calc(100vh - 280px);overflow-y: auto;">
+                                                <!-- <li class="nav-header nav-header-first d-none d-lg-block">
+                                                                Navigation
+                                                            </li> -->
+                                                <li class="nav-header nav-header-first d-none d-lg-block">
+                                                    <input class="form-control" style="border-radius: 0px; display:none;"
+                                                        placeholder="Search..." id="searchText" type="text">
+                                                </li>
+                                                <!-- menu -->
+    
+    <li id="mnuid_308"><a  href='../admin/' class="bg-white-cus"><i class="icon-home"></i>&nbsp;&nbsp;<span>Home</span></a></li><li id="mnuid_356"><a class='dropdown-toggle dropdown-nocaret'  href='javascript:void(0)' class="bg-white-cus"><i class="icon-shopping-cart"></i>&nbsp;&nbsp;<span>Sales</span> <i class='fa fa-angle-right drop-icon'></i></a><ul class="submenu bg-white"><li id="mnuid_357"><a class='dropdown-toggle dropdown-nocaret'  href='javascript:void(0)' class="bg-white-cus"><i class="icon-calendar"></i>&nbsp;&nbsp;<span>Transactions</span> <i class='fa fa-angle-right drop-icon'></i></a><ul class="submenu bg-white"><li id="mnuid_9905"><a  href='/admin/indexyii.php?r=orders/salesOrder' class="bg-white-cus"><span>Sales Order</span></a></li><li id="mnuid_112855"><a  href='/admin/indexyii.php?r=orders/DispatchScreen' class="bg-white-cus"><span>Dispatch Screen</span></a></li><li id="mnuid_116492"><a  href='/admin/indexyii.php?r=orders/bulkDispatch' class="bg-white-cus"><span>Bulk Dispatch</span></a></li><li id="mnuid_111830"><a  href='/admin/indexyii.php?r=orders/ImportSI' class="bg-white-cus"><span>Import SI</span></a></li><li id="mnuid_379"><a  href='/admin/indexyii.php?r=orders/salesReturn' class="bg-white-cus"><span>Sales Return</span></a></li><li id="mnuid_1482"><a  href='/admin/indexyii.php?r=orders/MergeSO' class="bg-white-cus"><span>Merge SO</span></a></li><li id="mnuid_9123"><a  href='/admin/indexyii.php?r=orders/BulkTransactionUpdate' class="bg-white-cus"><span>Bulk Dispatch Update</span></a></li><li id="mnuid_377"><a  href='/admin/indexyii.php?r=orders/salesInvoice' class="bg-white-cus"><span>Sales Invoice</span></a></li></ul></li><li id="mnuid_358"><a class='dropdown-toggle dropdown-nocaret'  href='javascript:void(0)' class="bg-white-cus"><i class="icon-picture"></i>&nbsp;&nbsp;<span>Daily Output</span> <i class='fa fa-angle-right drop-icon'></i></a><ul class="submenu bg-white"><li id="mnuid_9972"><a  href='/admin/indexyii.php?r=report/sl_dueInvoice' class="bg-white-cus"><span>Due Invoice List</span></a></li><li id="mnuid_9535"><a  href='/admin/indexyii.php?r=report/PCC' class="bg-white-cus"><span>Price List (Clients)</span></a></li><li id="mnuid_9536"><a  href='/admin/indexyii.php?r=report/PCB' class="bg-white-cus"><span>Price List (Breakup)</span></a></li><li id="mnuid_9973"><a  href='/admin/indexyii.php?r=report/sr_daily' class="bg-white-cus"><span>Daily Sales Report</span></a></li><li id="mnuid_9920"><a  href='/admin/indexyii.php?r=report/l_supplier' class="bg-white-cus"><span>Supplier List</span></a></li><li id="mnuid_9922"><a  href='/admin/indexyii.php?r=report/l_customer' class="bg-white-cus"><span>Customer List</span></a></li><li id="mnuid_9918"><a  href='/admin/indexyii.php?r=report/l_Product' class="bg-white-cus"><span>Product List</span></a></li><li id="mnuid_9514"><a  href='/admin/indexyii.php?r=report/lWBC_Product' class="bg-white-cus"><span>Product List With Brand & Category</span></a></li><li id="mnuid_9818"><a  href='/admin/indexyii.php?r=report/l_Item' class="bg-white-cus"><span>Item List - Company Wise</span></a></li><li id="mnuid_9095"><a  href='/admin/indexyii.php?r=report/exportTransactions' class="bg-white-cus"><span>Export Transactions</span></a></li></ul></li><li id="mnuid_359"><a class='dropdown-toggle dropdown-nocaret'  href='javascript:void(0)' class="bg-white-cus"><i class="icon-info-sign"></i>&nbsp;&nbsp;<span>Reports</span> <i class='fa fa-angle-right drop-icon'></i></a><ul class="submenu bg-white"><li id="mnuid_1454"><a  href='/admin/indexyii.php?r=report/sr_stockReport_vw_fifo' class="bg-white-cus"><span>STOCK REPORT FIFO - VENUE WISE</span></a></li><li id="mnuid_383"><a  href='/admin/indexyii.php?r=report/sr_salereport' class="bg-white-cus"><span>Sales Report</span></a></li><li id="mnuid_9894"><a  href='/admin/indexyii.php?r=report/sr_bestselling' class="bg-white-cus"><span>Best Selling</span></a></li></ul></li><li id="mnuid_360"><a class='dropdown-toggle dropdown-nocaret'  href='javascript:void(0)' class="bg-white-cus"><i class="icon-tasks"></i>&nbsp;&nbsp;<span>Master Entry</span> <i class='fa fa-angle-right drop-icon'></i></a><ul class="submenu bg-white"><li id="mnuid_376"><a class='dropdown-toggle dropdown-nocaret'  href='javascript:void(0)' class="bg-white-cus"><span>Stock</span> <i class='fa fa-angle-right drop-icon'></i></a><ul class="submenu bg-white"><li id="mnuid_365"><a  href='/admin/indexyii.php?r=products' class="bg-white-cus"><span>Products</span></a></li><li id="mnuid_368"><a  href='/admin/indexyii.php?r=m_flag&fltr_flagType=GODOWN' class="bg-white-cus"><span>Godown</span></a></li><li id="mnuid_367"><a  href='/admin/indexyii.php?r=m_stock_opg' class="bg-white-cus"><span>Stock Opening</span></a></li><li id="mnuid_9537"><a  href='/admin/indexyii.php?r=m_stock_opg/adjustStkOpg' class="bg-white-cus"><span>Adjust Stock Opening</span></a></li><li id="mnuid_366"><a  href='/admin/indexyii.php?r=category' class="bg-white-cus"><span>Category</span></a></li><li id="mnuid_10068"><a  href='/admin/indexyii.php?r=m_flag&fltr_flagType=producttype' class="bg-white-cus"><span>Product Type</span></a></li><li id="mnuid_364"><a  href='/admin/indexyii.php?r=m_flag&fltr_flagType=Origin' class="bg-white-cus"><span>Origin</span></a></li><li id="mnuid_363"><a  href='/admin/indexyii.php?r=m_flag&fltr_flagType=BRAND' class="bg-white-cus"><span>Brand</span></a></li><li id="mnuid_361"><a  href='/admin/indexyii.php?r=m_flag&fltr_flagType=UNIT' class="bg-white-cus"><span>Unit</span></a></li><li id="mnuid_9957"><a  href='/admin/indexyii.php?r=m_flag&fltr_flagType=STCK_FNCTNL_CTGRY' class="bg-white-cus"><span>Functional Category</span></a></li></ul></li><li id="mnuid_374"><a  href='/admin/indexyii.php?r=customers/customers' class="bg-white-cus"><span>Customer</span></a></li><li id="mnuid_375"><a  href='/admin/indexyii.php?r=m_price' class="bg-white-cus"><span>Price List</span></a></li><li id="mnuid_9678"><a  href='/admin/indexyii.php?r=products/mergeProduct' class="bg-white-cus"><span>Merge Product</span></a></li><li id="mnuid_10003"><a  href='/admin/indexyii.php?r=customers/supplier' class="bg-white-cus"><span>Supplier</span></a></li><li id="mnuid_371"><a  href='/admin/indexyii.php?r=m_flag&fltr_flagType=ORDRSTTS' class="bg-white-cus"><span>Order Status</span></a></li><li id="mnuid_9562"><a  href='/admin/indexyii.php?r=m_price/weight' class="bg-white-cus"><span>Price List Weight</span></a></li><li id="mnuid_9664"><a  href='/admin/indexyii.php?r=products/allProducts' class="bg-white-cus"><span>ALL Products</span></a></li></ul></li></ul></li><li id="mnuid_334"><a class='dropdown-toggle dropdown-nocaret'  href='javascript:void(0)' class="bg-white-cus"><i class="icon-briefcase"></i>&nbsp;&nbsp;<span>Accounts</span> <i class='fa fa-angle-right drop-icon'></i></a><ul class="submenu bg-white"><li id="mnuid_335"><a class='dropdown-toggle dropdown-nocaret'  href='javascript:void(0)' class="bg-white-cus"><i class="icon-calendar"></i>&nbsp;&nbsp;<span>Data Entry</span> <i class='fa fa-angle-right drop-icon'></i></a><ul class="submenu bg-white"><li id="mnuid_119"><a  href='/admin/indexyii.php?r=accounts2' class="bg-white-cus"><span>Add Account Voucher</span></a></li><li id="mnuid_9646"><a  href='/admin/indexyii.php?r=accounts2/CashReceiptCV' class="bg-white-cus"><span>Bank / Cash Receipt (CV)</span></a></li><li id="mnuid_9647"><a  href='/admin/indexyii.php?r=accounts2/CashPaymentDV' class="bg-white-cus"><span>Debit / Cash Payment (DV)</span></a></li><li id="mnuid_112834"><a  href='/admin/indexyii.php?r=accounts2/bulkUpdate' class="bg-white-cus"><span>Bulk Transaction Update</span></a></li><li id="mnuid_114468"><a  href='/admin/indexyii.php?r=accounts2/FRV' class="bg-white-cus"><span>Franchise Receiving Voucher</span></a></li><li id="mnuid_115469"><a  href='/admin/indexyii.php?r=accounts2/FPV' class="bg-white-cus"><span>Franchise Payment Voucher</span></a></li><li id="mnuid_116489"><a  href='/admin/indexyii.php?r=accounts2/importCVV2' class="bg-white-cus"><span> Import Receipts (New)</span></a></li><li id="mnuid_9629"><a  href='/admin/indexyii.php?r=orders/service_invoice' class="bg-white-cus"><span>Purchase Service Invoice</span></a></li><li id="mnuid_9140"><a  href='/admin/indexyii.php?r=orders/SSI' class="bg-white-cus"><span>Sales Service Invoice</span></a></li></ul></li><li id="mnuid_336"><a class='dropdown-toggle dropdown-nocaret'  href='javascript:void(0)' class="bg-white-cus"><i class="icon-picture"></i>&nbsp;&nbsp;<span>Daily Outputs</span> <i class='fa fa-angle-right drop-icon'></i></a><ul class="submenu bg-white"><li id="mnuid_9981"><a  href='/admin/indexyii.php?r=report/gl_coa' class="bg-white-cus"><span>Chart Of Accounts</span></a></li></ul></li><li id="mnuid_337"><a class='dropdown-toggle dropdown-nocaret'  href='javascript:void(0)' class="bg-white-cus"><i class="icon-info-sign"></i>&nbsp;&nbsp;<span>Reports</span> <i class='fa fa-angle-right drop-icon'></i></a><ul class="submenu bg-white"><li id="mnuid_114473"><a  href='/admin/indexyii.php?r=report/shopsales' class="bg-white-cus"><span>Shop Reconsiliation Printing</span></a></li><li id="mnuid_9979"><a  href='/admin/indexyii.php?r=report/gr_tb' class="bg-white-cus"><span>Trial Balance</span></a></li><li id="mnuid_9978"><a  href='/admin/indexyii.php?r=report/gr_lgr' class="bg-white-cus"><span>Account Ledger</span></a></li><li id="mnuid_112836"><a  href='/admin/indexyii.php?r=report/FYC_Sale' class="bg-white-cus"><span>Five Year Sales Comparison</span></a></li><li id="mnuid_9702"><a  href='/admin/indexyii.php?r=report/GR_AGING_AP' class="bg-white-cus"><span>Aging Of Account Payable</span></a></li><li id="mnuid_9703"><a  href='/admin/indexyii.php?r=report/GR_AGING_AR' class="bg-white-cus"><span>Aging Of Account Receivable</span></a></li><li id="mnuid_9512"><a  href='/admin/indexyii.php?r=report/FST' class="bg-white-cus"><span>PN/L Statement</span></a></li><li id="mnuid_9400"><a  href='/admin/indexyii.php?r=report/GR_LGRVW' class="bg-white-cus"><span>Account Ledger(Venue Wise)</span></a></li></ul></li><li id="mnuid_338"><a class='dropdown-toggle dropdown-nocaret'  href='javascript:void(0)' class="bg-white-cus"><i class="icon-tasks"></i>&nbsp;&nbsp;<span>Master Entry</span> <i class='fa fa-angle-right drop-icon'></i></a><ul class="submenu bg-white"><li id="mnuid_125"><a  href='/admin/indexyii.php?r=gm_acc' class="bg-white-cus"><span>Chart of Accounts</span></a></li><li id="mnuid_92"><a  href='/admin/indexyii.php?r=accounts_opg' class="bg-white-cus"><span>Accounts Opening</span></a></li></ul></li></ul></li><li id="mnuid_9895"><a class='dropdown-toggle dropdown-nocaret'  href='javascript:void(0)' class="bg-white-cus"><span>Purchase</span> <i class='fa fa-angle-right drop-icon'></i></a><ul class="submenu bg-white"><li id="mnuid_9731"><a class='dropdown-toggle dropdown-nocaret'  href='javascript:void(0)' class="bg-white-cus"><span>Data Entry</span> <i class='fa fa-angle-right drop-icon'></i></a><ul class="submenu bg-white"><li id="mnuid_9917"><a  href='/admin/indexyii.php?r=orders/purchaseOrder' class="bg-white-cus"><span>Purchase Order</span></a></li><li id="mnuid_378"><a  href='/admin/indexyii.php?r=orders/purchaseInvoice' class="bg-white-cus"><span>Purchase Invoice</span></a></li><li id="mnuid_380"><a  href='/admin/indexyii.php?r=orders/purchaseReturn' class="bg-white-cus"><span>Purchase Return</span></a></li></ul></li><li id="mnuid_9835"><a class='dropdown-toggle dropdown-nocaret'  href='javascript:void(0)' class="bg-white-cus"><span>Reports</span> <i class='fa fa-angle-right drop-icon'></i></a><ul class="submenu bg-white"><li id="mnuid_11088"><a  href='/admin/indexyii.php?r=report/SR_PurchaseReport' class="bg-white-cus"><span>Purchase Report</span></a></li></ul></li></ul></li><li id="mnuid_9896"><a class='dropdown-toggle dropdown-nocaret'  href='javascript:void(0)' class="bg-white-cus"><span>Inventory</span> <i class='fa fa-angle-right drop-icon'></i></a><ul class="submenu bg-white"><li id="mnuid_9559"><a class='dropdown-toggle dropdown-nocaret'  href='javascript:void(0)' class="bg-white-cus"><i class="icon-calendar"></i>&nbsp;&nbsp;<span>Data Entry</span> <i class='fa fa-angle-right drop-icon'></i></a><ul class="submenu bg-white"><li id="mnuid_114457"><a  href='/admin/indexyii.php?r=products/SyncPosPricesjs' class="bg-white-cus"><span>Sync POS Price</span></a></li><li id="mnuid_9779"><a  href='/admin/indexyii.php?r=m_ingrdnt' class="bg-white-cus"><span>Ingredient Formula</span></a></li><li id="mnuid_114466"><a  href='/admin/indexyii.php?r=products/SyncPosinventory' class="bg-white-cus"><span>POS Product Insert And Delete</span></a></li><li id="mnuid_9142"><a  href='/admin/indexyii.php?r=orders/GRI' class="bg-white-cus"><span>General Receiving</span></a></li><li id="mnuid_1599"><a  href='/admin/indexyii.php?r=products/SyncProductsPrices' class="bg-white-cus"><span>Sync Shopify Prices</span></a></li><li id="mnuid_1469"><a  href='/admin/indexyii.php?r=orders/SyncInventory' class="bg-white-cus"><span>Sync Inventory to Shopify</span></a></li><li id="mnuid_9945"><a  href='/admin/indexyii.php?r=orders/stockTransfer' class="bg-white-cus"><span>Stock Transfer</span></a></li><li id="mnuid_112838"><a  href='/admin/indexyii.php?r=orders/RRO' class="bg-white-cus"><span>Raw Material Requistion</span></a></li><li id="mnuid_9842"><a  href='/admin/indexyii.php?r=orders/GernalIssuance' class="bg-white-cus"><span>General Issuance</span></a></li><li id="mnuid_9923"><a  href='/admin/indexyii.php?r=builditem' class="bg-white-cus"><span>Manufacture Item</span></a></li><li id="mnuid_1449"><a  href='/admin/indexyii.php?r=orders/inventoryAdjustmentJournalVoucher' class="bg-white-cus"><span>General Issuance Account Adjustment</span></a></li></ul></li><li id="mnuid_9809"><a class='dropdown-toggle dropdown-nocaret'  href='javascript:void(0)' class="bg-white-cus"><span>Reports</span> <i class='fa fa-angle-right drop-icon'></i></a><ul class="submenu bg-white"><li id="mnuid_9975"><a  href='/admin/indexyii.php?r=report/sr_stockreportfifo' class="bg-white-cus"><span>Stock Report - FIFO</span></a></li><li id="mnuid_9944"><a  href='/admin/indexyii.php?r=report/sr_stockaging' class="bg-white-cus"><span>Stock Aging</span></a></li><li id="mnuid_9591"><a  href='/admin/indexyii.php?r=report/SR_StockReportProductBWWise' class="bg-white-cus"><span>Stock Break Up</span></a></li></ul></li></ul></li><li id="mnuid_115490"><a class='dropdown-toggle dropdown-nocaret'  href='javascript:void(0)' class="bg-white-cus"><span>POS</span> <i class='fa fa-angle-right drop-icon'></i></a><ul class="submenu bg-white"><li id="mnuid_115491"><a class='dropdown-toggle dropdown-nocaret'  href='javascript:void(0)' class="bg-white-cus"><i class="icon-calender"></i>&nbsp;&nbsp;<span>Data Entry</span> <i class='fa fa-angle-right drop-icon'></i></a><ul class="submenu bg-white"><li id="mnuid_115505"><a  href='/admin/indexyii.php?r=report/MakePOsSummary' class="bg-white-cus"><span>Make POS Summary</span></a></li></ul></li><li id="mnuid_115492"><a class='dropdown-toggle dropdown-nocaret'  href='javascript:void(0)' class="bg-white-cus"><i class="icon-picture"></i>&nbsp;&nbsp;<span>Reports</span> <i class='fa fa-angle-right drop-icon'></i></a><ul class="submenu bg-white"><li id="mnuid_115507"><a  href='/admin/indexyii.php?r=report/ReconcilePOsSummary' class="bg-white-cus"><span>Reconcile POS Summary</span></a></li></ul></li><li id="mnuid_115493"><a  href='javascript:void(0)' class="bg-white-cus"><i class="icon-tasks"></i>&nbsp;&nbsp;<span>Master Entry</span></a></li><li id="mnuid_115482"><a  href='javascript:void(0)' class="bg-white-cus"><span>Products</span></a></li><li id="mnuid_115497"><a class='dropdown-toggle dropdown-nocaret'  href='javascript:void(0)' class="bg-white-cus"><span>POS Links</span> <i class='fa fa-angle-right drop-icon'></i></a><ul class="submenu bg-white"><li id="mnuid_115500"><a class='dropdown-toggle dropdown-nocaret'  href='javascript:void(0)' class="bg-white-cus"><span>outlet</span> <i class='fa fa-angle-right drop-icon'></i></a><ul class="submenu bg-white"><li id="mnuid_115502"><a  href='javascript:void(0)' class="bg-white-cus"><span> </span></a></li></ul></li><li id="mnuid_115501"><a class='dropdown-toggle dropdown-nocaret'  href='javascript:void(0)' class="bg-white-cus"><span>franchise</span> <i class='fa fa-angle-right drop-icon'></i></a><ul class="submenu bg-white"><li id="mnuid_115503"><a  href='javascript:void(0)' class="bg-white-cus"><span> </span></a></li></ul></li></ul></li></ul></li><li id="mnuid_114472"><a  href='/admin/indexyii.php?r=task/supporttickets' class="bg-white-cus"><span>Support Tickets</span></a></li><li id="mnuid_115496"><a class='dropdown-toggle dropdown-nocaret'  href='javascript:void(0)' class="bg-white-cus"><span>Shopify</span> <i class='fa fa-angle-right drop-icon'></i></a><ul class="submenu bg-white"><li id="mnuid_116495"><a  href='/admin/indexyii.php?r=report/syncProductShopify' class="bg-white-cus"><span>Manual Product Sync</span></a></li></ul></li><li id="mnuid_9942"><a class='dropdown-toggle dropdown-nocaret'  href='javascript:void(0)' class="bg-white-cus"><span>Settings</span> <i class='fa fa-angle-right drop-icon'></i></a><ul class="submenu bg-white"><li id="mnuid_9497"><a class='dropdown-toggle dropdown-nocaret'  href='javascript:void(0)' class="bg-white-cus"><span>Security</span> <i class='fa fa-angle-right drop-icon'></i></a><ul class="submenu bg-white"><li id="mnuid_9313"><a  href='/admin/indexyii.php?r=report/userRight' class="bg-white-cus"><span>User Rights - Report</span></a></li><li id="mnuid_9651"><a  href='/admin/indexyii.php?r=user/user/requestList' class="bg-white-cus"><span>Requested Logins</span></a></li><li id="mnuid_115510"><a  href='/admin/indexyii.php?r=users/updateUser' class="bg-white-cus"><span>UserSignoutSession</span></a></li><li id="mnuid_9614"><a  href='/admin/indexyii.php?r=m_restricted_types' class="bg-white-cus"><span>Restricted Type</span></a></li><li id="mnuid_9613"><a  href='/admin/indexyii.php?r=sealed_entries' class="bg-white-cus"><span>Sealed Entries</span></a></li><li id="mnuid_9993"><a  href='/admin/indexyii.php?r=userVenueRight' class="bg-white-cus"><span>User / Venue Login Right</span></a></li><li id="mnuid_9519"><a  href='/admin/indexyii.php?r=m_price/UPD' class="bg-white-cus"><span>User Wise Products</span></a></li><li id="mnuid_9394"><a  href='/admin/indexyii.php?r=settings/clearCache' class="bg-white-cus"><i class="icon-briefcase"></i>&nbsp;&nbsp;<span>Clear Cache</span></a></li><li id="mnuid_9409"><a  href='/admin/indexyii.php?r=ACCVenueRight' class="bg-white-cus"><span>Account / Venue Right</span></a></li><li id="mnuid_9671"><a  href='/admin/indexyii.php?r=m_user_godown' class="bg-white-cus"><span>User / Godown Login Right</span></a></li><li id="mnuid_9630"><a  href='/admin/indexyii.php?r=M_ManagerAllocation' class="bg-white-cus"><span>Login Manager Allocation</span></a></li><li id="mnuid_9483"><a  href='/admin/indexyii.php?r=settings/productKey' class="bg-white-cus"><span>Products Encryption Key(Master)</span></a></li><li id="mnuid_9353"><a  href='/admin/indexyii.php?r=settings/productKeyUser' class="bg-white-cus"><span>Product Encryption Key(Users)</span></a></li><li id="mnuid_9683"><a  href='/admin/indexyii.php?r=settings/twofaccommon' class="bg-white-cus"><span>2fac Common Code</span></a></li><li id="mnuid_9941"><a  href='/admin/indexyii.php?r=user/user/admin' class="bg-white-cus"><span>Users</span></a></li><li id="mnuid_9932"><a  href='/admin/indexyii.php?r=roles' class="bg-white-cus"><span>Roles</span></a></li><li id="mnuid_9931"><a  href='/admin/indexyii.php?r=users' class="bg-white-cus"><span>Assign Roles</span></a></li><li id="mnuid_11809"><a  href='/admin/indexyii.php?r=m_price/USERACCCUSTOMERAUTH' class="bg-white-cus"><span>Assign Acc/Customers</span></a></li></ul></li><li id="mnuid_114450"><a class='dropdown-toggle dropdown-nocaret'  href='javascript:void(0)' class="bg-white-cus"><span>Import</span> <i class='fa fa-angle-right drop-icon'></i></a><ul class="submenu bg-white"><li id="mnuid_1000"><a  href='/admin/indexyii.php?r=orders/Importinvoices' class="bg-white-cus"><span>Import Invoices</span></a></li><li id="mnuid_114451"><a  href='/admin/indexyii.php?r=products/import' class="bg-white-cus"><span>Products Import</span></a></li><li id="mnuid_114452"><a  href='/admin/indexyii.php?r=customers/import' class="bg-white-cus"><span>Customers Import</span></a></li><li id="mnuid_114453"><a  href='/admin/indexyii.php?r=m_stock_opg' class="bg-white-cus"><span>Stock Opening Import</span></a></li><li id="mnuid_114455"><a  href='/admin/indexyii.php?r=accounts_opg/Import' class="bg-white-cus"><span>Account Import</span></a></li></ul></li><li id="mnuid_116490"><a  href='/admin/indexyii.php?r=settings/DomainConfiguration' class="bg-white-cus"><span>Site Settings</span></a></li><li id="mnuid_116494"><a  href='/admin/indexyii.php?r=settings/courierIntegration' class="bg-white-cus"><span>Courier Integration</span></a></li></ul></li><li id="mnuid_127"><a  href='/admin/indexyii.php?r=user/user/logout' class="bg-white-cus"><span>Logoff</span></a></li>    <!-- end menu-->                                            </ul>
+                                        </div>
+                                    </div>
+                                                            </div>
+
+
+                        </section>
+                        <div id="nav-col-submenu"></div>
+                    </div>
+
+                    <!-- Bread Crum start -->
+                    <div id="content-wrapper">
+                        <div class="col-lg-12">
+                            <div id="content-header" class="clearfix">
+                                <div class="float-left">
+                                    <h1 id="title"></h1>
+                                    <ol id="breadcrumb" class="breadcrumb">
+
+                                    </ol>
+                                </div>
+                                                                    <h6 id="login_log_f"
+                                        style="cursor:pointer;color: red; font-weight:bold;display: inline-block;float: right;margin-right: 5%;font-size: 0.85rem !important;">
+                                        Last Failed : 05-08-2025 11:29 AM <span
+                                            style="background-color:yellow;">( 6 Days Ago )</span>
+                                        127.0.0.1                                        <span style="color:green;"> ( Normal )</span>                                        ▼
+                                    </h6>                                                                    <h6 id="login_log_s"
+                                        style="cursor:pointer;font-weight:bold;color: limegreen;display: inline-block;float: right;margin-right: 5%;font-size: 0.85rem !important;">
+                                        Last Login : 05-14-2025 04:18 PM <span
+                                            style="background-color:yellow;">( Today )</span>
+                                        127.0.0.1                                        <span style="color:green;"> ( Normal )</span>                                        ▼
+                                    </h6>                                <!--  User Login Log-->
+                                <div class="modal fade" id="userLogModal" tabindex="-1" role="dialog" aria-hidden="true"
+                                    style="">
+                                    <div class="modal-dialog modal-dialog-centered" role="document"
+                                        style="height: 100%; max-width:45%;">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="text-center modal-title"><b>Signin Attempts</b></h4>
+                                                <button type="button" class="close" id="userLogModalDismiss"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body" style="margin: auto;padding: 10px;">
+                                                <table id='log_tb' class='table-responsive text-center'><thead><tr><th>Date</th><th>Ip address</th><th>Total</th><th>Success</th><th>Failed</th></tr></thead><tbody><tr><td>05-14-2025 ( Today )</td><td>127.0.0.1</td><td>67</td><td>63</td><td>4</td></tr></tbody></table>                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-backdrop show fade" id="userLogModalBackdrop" style="display: none;">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <h1>AMONG MOST SIMPLE & FEATURE RICH ERP ON CLOUD</h1> -->
+                            <div class="row" style="opacity: 1;">
+    <div class="col-lg-12">
+        <div id="error-box">
+            <div class="row">
+                <div class="col-12 col-sm-12" style="min-height: 900px;">
+                <center>
+                    <div id="error-box-inner">
+                        <img src="img/error-500-v2.png" alt="Have you seen this page?">
+                    </div>
+                    <h1>ERROR 500</h1>
+                    <p>
+                        Sorry, it seems error has occured during your request.</br>
+                        <pre class="alert alert-danger">CDbTransaction is inactive and cannot perform commit or roll back operations.</pre>
+                    </p>
+                    <p>
+                        <pre>
+                            C:\anisiis\test.cartzlink.com\httpdocs\framework\db\CDbTransaction.php:85                            #0 C:\anisiis\test.cartzlink.com\httpdocs\admin\protected\controllers\OrdersController.php(16901): CDbTransaction->rollback()
+#1 C:\anisiis\test.cartzlink.com\httpdocs\framework\web\actions\CInlineAction.php(50): OrdersController->actioncreateDispatch()
+#2 C:\anisiis\test.cartzlink.com\httpdocs\framework\web\CController.php(349): CInlineAction->runWithParams(Array)
+#3 C:\anisiis\test.cartzlink.com\httpdocs\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 C:\anisiis\test.cartzlink.com\httpdocs\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 C:\anisiis\test.cartzlink.com\httpdocs\framework\web\CController.php(1235): CFilter->filter(Object(CFilterChain))
+#6 C:\anisiis\test.cartzlink.com\httpdocs\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\anisiis\test.cartzlink.com\httpdocs\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\anisiis\test.cartzlink.com\httpdocs\framework\web\CController.php(310): CFilterChain->run()
+#9 C:\anisiis\test.cartzlink.com\httpdocs\framework\web\CController.php(284): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\anisiis\test.cartzlink.com\httpdocs\framework\web\CWebApplication.php(278): CController->run('createDispatch')
+#11 C:\anisiis\test.cartzlink.com\httpdocs\framework\web\CWebApplication.php(137): CWebApplication->runController('orders/createDi...')
+#12 C:\anisiis\test.cartzlink.com\httpdocs\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\anisiis\test.cartzlink.com\httpdocs\admin\indexyii.php(152): CApplication->run()
+#14 C:\anisiis\test.cartzlink.com\httpdocs\admin\index.php(2): require_once('C:\\anisiis\\test...')
+#15 {main}                        </pre>
+                    </p>
+                    <p>
+                        Go back to <a href="/">homepage</a>.
+                    </p>
+                </center>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>                            <!-- <ol class="breadcrumb">
+                                    <div id="recent_pages">recent_pages AAAAAA</div>
+                                        <li><a href="#">Home</a></li>
+                                        <li class="active"><span>Dashboard</span></li>
+                                    </ol> -->
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- bread Crum end -->
+
+
+
+                    <!-- New Menu End -->
+                    <div id="cartzlink_header">
+                        <!-- header //-->
+                        <link rel="stylesheet" type="text/css" href="stylesheets/ticker-style.css">
+                        <script language="javascript" src="js/jquery.tabletoCSV.js"></script>
+
+                        <!--   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">      -->
+
+                        <!--[if lte IE 7]>
+        <style type="text/css">
+            html .jqueryslidemenu {
+                height: 1%;
+            }
+
+            /*Holly Hack for IE7 and below*/
+        </style>
+        <![endif]-->
+
+                        <div id="flash"></div>
+                    
+                    
+                    
+
+                    
+
+                    <!-- header_eof //-->
+
+                                                            
+                        <div id="cartzlink_footer" class="hid">
+
+
+                            <!-- footer //-->
+                            <br />
+                            </td>
+                            </tr>
+                            </table>
+
+                            <!--  -->
+                            <!-- footer_eof //-->
+                            <br />
+                        </div>
+                        <!-- Fix Buttons -->
+                        <!-- <div class="page-wrapper" style="bottom: 40; left: 0;margin: 0; position: fixed; right: 0; width: 100%; z-index: 999;">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <button type="button" class="btn btn-primary">Primary</button>
+                        <button type="button" class="btn btn-secondary">Secondary</button>
+                        <button type="button" class="btn btn-success">Success</button>
+                        <button type="button" class="btn btn-danger">Danger</button>
+                        <button type="button" class="btn btn-warning">Warning</button>
+                        <button type="button" class="btn btn-info">Info</button>
+                        <button type="button" class="btn btn-light">Light</button>
+                        <button type="button" class="btn btn-dark">Dark</button>
+                        <button type="button" class="btn btn-link">Link</button>
+
+                     </div>
+                        
+                        
+                        
+
+                </div>
+            </div> -->
+                                                 <div id="footer-bar" class="row formFooterBar" style="bottom: 36px;">
+                            <div class="container" style="background-color: #fff;">
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-6 ft_btn">
+                                        <div class="btnset1">
+                                            <button type="button" class="btn btn-primary showHideForm"
+                                                onclick="toggleForm();">Show/hide Form</button>
+                                            <!-- Edit  By Hamza on 09-Nov-2021 for Lew Payroll Task 135798 -->
+                                            <button type="button" class="btn btn-warning copyEntry"
+                                                onclick="copyVoucher();">Copy</button>
+                                            <button type="button" id="defaultValues" class="btn btn-primary">Set Default
+                                                Values</button>
+                                            <!-- Edit by Faheem Anis on 21/12/2021 -->
+                                            <!-- Editing by Rehan Anis on 18-07-2024 -->
+                                                                                            <button type="button" class="btn btn-primary" id="btnSettings">
+                                                    Settings
+                                                </button>
+
+                                                   <!-- Customize Button -->
+                                               <a href="/admin/indexyii.php?r=settings/customizeScreen&page=orders%2FcreateDispatch&dt=0" class="btn btn-primary">Customize</a>
+
+                                                <!-- Settings Modal -->
+                                                <div class="modal fade" id="settingsModal" tabindex="-1" role="dialog"
+                                                    aria-hidden="true" style="min-width: 70%; overflow-y: auto;"
+                                                    data-url="/admin/?r=settings&HideHeader=1&route=orders%2FcreateDispatch&_lang=en">
+                                                    <div class="modal-dialog modal-dialog-centered" role="document"
+                                                        style="height: 100%; min-width: 85%;">
+                                                        <div class="modal-content" style="min-height: 80%;">
+                                                            <div class="modal-header">
+                                                                <button type="button" class="close" id="settingsModalDismiss"
+                                                                    aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <!-- <iframe src="/admin/indexyii.php?r=settings&amp;HideHeader=true&amp;route=orders/createDispatch" frameborder="0" style="width: 100%; height: 600px;"></iframe> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-backdrop show fade" id="settingsModalBackdrop"
+                                                        style="display: none;"></div>
+                                                </div>
+                                                                                        <!-- Edit by Faheem Anis on 21/12/2021 -->
+                                            <!-- Editing by Rehan Anis on 18-07-2024 -->
+                                        </div>
+                                       
+                                                   
+                                              
+
+                                        <!-- <div class="btnset2"> -->
+                                            
+
+                                        <button type="button" class="pull-right btn btn-success createEntry"
+                                            name="yt0">Save</button>
+                                        <!-- </div> -->
+                                    </div>
+                                    <div class="col-sm-6 col-md-6">
+                                        <center>
+                                            <div class="btnset3">
+                                                <!-- <button type="button" class="btn btn-light">Light</button> -->
+                                                <!-- <button type="button" class="btn btn-dark">Dark</button> -->
+                                                <!-- <button type="button" class="btn btn-link">head</button> -->
+                                                <button title="Go to top" class="btn btn-danger" id="goToDataGrid">Data
+                                                    Grid</button>
+                                                <button type="button" class="btn btn-secondary" id="goToForm">Form</button>
+                                                <button type="button" class="btn btn-success" id="goToChildForm">Child
+                                                    Grid</button>
+                                                <button onclick="topFunction()" id="myBtn" title="Go to top"
+                                                    class="btn btn-danger">Top</button>
+
+                                                <style type="text/css">
+                                                    #page-wrapper {
+                                                        padding-top: 28px !important;
+                                                        ;
+                                                    }
+
+                                                    #myBtn {
+                                                        /*display: none;*/
+                                                        /* Hidden by default */
+                                                        /*bottom: 20px;*/
+                                                        /* Place the button at the bottom of the page */
+                                                        /*right: 30px;*/
+                                                        /* Place the button 30px from the right */
+                                                        z-index: 999;
+                                                        /* Make sure it does not overlap */
+                                                        /*border: none;*/
+                                                        /* Remove borders */
+                                                        /*outline: none;*/
+                                                        /* Remove outline */
+                                                        /*background-color: red;*/
+                                                        /* Set a background color */
+                                                        /*color: white;*/
+                                                        /* Text color */
+                                                        /*cursor: pointer;*/
+                                                        /* Add a mouse pointer on hover */
+                                                        /*padding: 15px;*/
+                                                        /* Some padding */
+                                                        /*border-radius: 10px;*/
+                                                        /* Rounded corners */
+                                                        /*font-size: 18px;*/
+                                                        /* Increase font size */
+                                                    }
+
+                                                    @media (max-width: 991px) {
+                                                        #sidebar-nav.navbar-collapse {
+                                                            position: fixed;
+                                                            z-index: 1000;
+                                                            top: 50px;
+                                                            background: rgb(243, 245, 246);
+                                                            bottom: 0px;
+                                                            transition: all 0.2s ease 0s;
+                                                            max-height: 100% !important;
+                                                        }
+
+                                                        #main-menu {
+                                                            max-height: 100% !important;
+                                                        }
+
+                                                        .formfooterbar {
+                                                            z-index: 0 !important;
+                                                        }
+                                                    }
+
+                                                    @media screen and (max-width: 600px) {
+                                                        .formfooterbar {
+                                                            bottom: 90px !important;
+                                                            z-index: 0;
+                                                        }
+
+                                                        .btnset3 {
+                                                            margin-top: 5px;
+                                                            float: none !important;
+                                                            margin-bottom: 5px;
+                                                        }
+
+                                                    }
+
+                                                    /*#myBtn:hover {
+                                                      background-color: #555;  Add a dark-grey background on hover
+                                                    }*/
+                                                </style>
+                                            </div>
+                                        </center>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- fix buttons end -->
+                        <!-- New footer added adil -->
+                        <footer id="footer-bar" class="row">
+                            <p id="pageload_time" class="col-3"> </p>
+                            <p>
+                            <p id="footer-copyright" class="col-6">
+                                Copyright 2025
+                                CARTZ Link.
+                                All rights reserved
+                                CARTZ Link.
+                                provides no warranty and it is provided on as on basis
+                            </p>
+                            <p id="total_time" class="col-3"> </p>
+                            </p>
+
+                        </footer>
+                        <!-- new footer end -->
+
+                        <!-- CONFIG TOOL ADDED ADIL -->
+                        <div id="config-tool" class="closed">
+                            <a id="config-tool-cog">
+                                <i class="fa fa-cog"></i>
+                            </a>
+
+                            <div id="config-tool-options">
+                                <h4>Layout Options</h4>
+                                <ul>
+                                    <li>
+                                        <div class="checkbox-nice">
+                                            <input type="checkbox" id="config-fixed-header" />
+                                            <label for="config-fixed-header">
+                                                Fixed Header
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="checkbox-nice">
+                                            <input type="checkbox" id="config-fixed-sidebar" />
+                                            <label for="config-fixed-sidebar">
+                                                Fixed Left Menu
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="checkbox-nice">
+                                            <input type="checkbox" id="config-fixed-footer" />
+                                            <label for="config-fixed-footer">
+                                                Fixed Footer
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="checkbox-nice">
+                                            <input type="checkbox" id="config-boxed-layout" />
+                                            <label for="config-boxed-layout">
+                                                Boxed Layout
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <!-- <div>
+                        
+                    </div> -->
+
+                                        <div class="checkbox-nice"
+                                            style="padding-left:0px; ">
+                                            <label class="switch">
+                                                <input type="checkbox" onchange="newTheme();">
+                                                <span class="slider round"></span>
+                                            </label>
+                                            <label class="oldTheme" style="padding-top: 10px !important;">
+                                                Old Theme
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <!-- <li>
+                    <div class="checkbox-nice">
+                        <input type="checkbox" id="config-rtl-layout" />
+                        <label for="config-rtl-layout">
+                            Right-to-Left
+                        </label>
+                    </div>
+                </li> -->
+                                </ul>
+                                <br />
+                                <h4>Skin Color</h4>
+                                <ul id="skin-colors" class="clearfix">
+                                    <li>
+                                        <a class="skin-changer" data-skin="" data-toggle="tooltip" title="Default"
+                                            style="background-color: #34495e;">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="skin-changer" data-skin="theme-white" data-toggle="tooltip"
+                                            title="White/Green" style="background-color: #2ecc71;">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="skin-changer blue-gradient" data-skin="theme-blue-gradient"
+                                            data-toggle="tooltip" title="Gradient">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="skin-changer" data-skin="theme-turquoise" data-toggle="tooltip"
+                                            title="Green Sea" style="background-color: #1abc9c;">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="skin-changer" data-skin="theme-amethyst" data-toggle="tooltip"
+                                            title="Amethyst" style="background-color: #9b59b6;">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="skin-changer" data-skin="theme-blue" data-toggle="tooltip" title="Blue"
+                                            style="background-color: #2980b9;">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="skin-changer" data-skin="theme-red" data-toggle="tooltip" title="Red"
+                                            style="background-color: #e74c3c;">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="skin-changer" data-skin="theme-whbl" data-toggle="tooltip"
+                                            title="White/Blue" style="background-color: #A48082;">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="skin-changer" data-skin="theme-brown" data-toggle="tooltip" title="brown"
+                                            style="background-color: #45040A;">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="skin-changer" data-skin="theme-richgreen" data-toggle="tooltip"
+                                            title="Blue" style="background-color: #4cad35;">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="skin-changer" data-skin="theme-red" data-toggle="tooltip" title="Red"
+                                            style="background-color: #00DBCE;">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="skin-changer" data-skin="theme-whbl" data-toggle="tooltip"
+                                            title="White/Blue" style="background-color: #3498db;">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- CONFIG TOOL END -->
+                    </div>
+                </div>
+
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/offline-js/0.7.19/offline.min.js"></script>
+    </body>
+
+    </html>
+
+    <form id="productUpdateForm" method="post" enctype="multipart/form-data" style="opacity: 0; ">
+    Key: <input id="fileToUploadDecrypt" name="fileToUploadDecrypt" type="file" accept="application/json">
+</form>
+<i class="fa fa-lock encryptionImage" onclick="decryptProducts();" style="font-size: 1.5em; "></i>
+<i class="fa fa-unlock encryptionImage" onclick="encryptProducts();" style="font-size: 1.5em;display:none;"></i>
+
+
+<script type="text/javascript">
+    const searchBox = document.querySelector('.searchBox');
+    const button = document.querySelector('.searchbtn');
+    const searchInput = document.querySelector('.searchInput');
+
+    button.addEventListener('click', (event) => {
+        event.stopPropagation();
+
+        if (searchBox.classList.contains('active')) {
+            // Search when the search box is active
+            search();
+        } else {
+            // Toggle the active class to open the search box
+            searchBox.classList.toggle('active');
+            searchInput.focus();
+        }
+    });
+    function topFunction() {
+        $('html, body').animate({
+            scrollTop: $("#header-navbar").offset().top
+        }, 2000);
+    }
+    // modified by rehan anis on 25-07-2024
+    // form is not opening in settings page
+    // because .create-model-btn is absent
+    function toggleForm() {
+        if($('.create-model-btn').length > 0){
+            $('.create-model-btn').click();
+        }else{
+            $(".form-model").toggle();
+        }
+    }
+    var isCheck = 0;
+    $(document).ready().ajaxStop(function () {
+
+
+
+        $('.printMenu').next().css({
+            'width': 'auto',
+            'height': 'auto',
+            'font-size': 'small'
+        }).attr('value', 'Print');
+
+    });
+
+    $(document).ready(function () {
+
+        if (false) { // Add by Umair for FormDisplay by default
+            $('.form-model').css('display', 'block !important');
+        }
+        //Edit By Hamza on 22-11-2021 
+        var http = "http";
+        $('#skin-colors .skin-changer').click();
+        $('#searchText').bind('keyup', function () {
+
+            var searchString = $(this).val();
+            $("#sidebar-nav ul li").each(function (index, value) {
+                currentName = $(value).text()
+                if (currentName.toUpperCase().indexOf(searchString.toUpperCase()) > -1) {
+                    $(value).show();
+                    $(value).parents().show();
+                } else {
+                    $(value).hide();
+                }
+            });
+            if (searchString == "") {
+                $("#sidebar-nav .submenu").hide("slow");
+            }
+        });
+                if ($('.create-model-btn').length == 1) {
+            //$btn = $('.create-model-btn');
+            //$('.create-model-btn').parent().parent().remove(); Commented by Sibtain, it is removing all html of http://crm.cartzlink.com.local/admin/indexyii.php?r=customers/customers
+            $('.create-model-btn').hide();
+            toggleForm();
+            //$('.showHideForm').attr('id',$btn.attr('id'));
+            //$('.showHideForm').attr('href',$btn.attr('href'));
+            //$('.showHideForm').addClass('create-model-btn');
+            //document.getElementById("customers-form-create-model-btn").click();
+        }
+
+        if ($("input[name$='yt0']").length == 1) {
+            $btn = $("input[name$='yt0']");
+            $("input[name$='yt0']").hide();//parent().parent().remove();
+            $('.createEntry').attr('id', $btn.attr('id') + '_newBtn');
+            $('.createEntry').attr('name', $btn.attr('name') + '_newBtn');
+            $('.createEntry').attr('data', $btn.attr('id'));
+        }
+        
+        function copyVoucher() {
+    $('#id').val('');
+    $('#accounts_vno').val('');    
+    $('#accounts_partySerialNo').val('');
+    var currentTime = new Date();
+    var month = currentTime.getMonth() + 1;
+    var day = currentTime.getDate();
+    var year = currentTime.getFullYear();
+    $('#accounts_docDate').val(year + "/" + month + "/" + day);
+
+    $("input[id^='accounts_transaction_']").filter(function() {
+        return this.id.match(/accounts_transaction_[0-9]+_id/);
+    }).val('');
+    $("input[id^='accounts_transaction_']").filter(function() {
+        return this.id.match(/accounts_transaction_[0-9]+_parent_id/);
+    }).val('');
+}
+
+        if ($('.copyVoucher').length == 1) {
+            $btn = $('.copyVoucher');
+            $('.copyVoucher').remove();
+            $('.copyEntry').attr('onclick', $btn.attr('onclick'));
+            
+        }
+
+
+
+        $(document).on('click', '.createEntry', function () {
+            console.log($(this).text())
+            var id = $(this).attr('data');
+            if (!$(this).text() === 'Report') {
+                                    $(this).prop('disabled', true);
+                                }
+            $('#' + id).click();
+            //$(this).prop('disabled',false);
+        });
+
+        $("#goToDataGrid").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#grid-view-fromdate-form").offset().top
+            }, 2000);
+        });
+
+        $("#goToForm").click(function () {
+            $('html, body').animate({
+                scrollTop: $(".form").offset().top
+            }, 2000);
+        });
+
+        $("#goToChildForm").click(function () {
+            $('html, body').animate({
+                scrollTop: $(".grid-view").offset().top
+            }, 2000);
+        });
+
+        var sess_id = "1";
+        var sess_name = "admin";
+
+        $(document).on("click", ".SwitchUser", function () {
+            var userId = $(this).attr('data-userid');
+            var userName = $(this).text();
+            $.ajax({
+
+                url: 'ajax.php',
+                type: 'post',
+                data: {
+                    'UserID': userId,
+                    'Username': userName,
+                },
+                success: function (data) {
+                    window.location.href = window.location.origin;
+                },
+                error: function (data) {
+                    //console.log(data);
+                }
+            });
+        });
+
+        if (sess_name != "") {
+            $('#loggedUser').text(sess_name);
+        }
+        //console.log(sess_name);
+        //alert("ok" + sess_id + sess_name);
+        //$("#SwitchUsers option[value = "+ sess_id +"]").attr('selected','selected');
+
+
+        /*$("#main").on("change","#SwitchUsers",function(){
+    
+            var id = $(this).val();
+            var saname = $(this).find("option:selected").text();
+    
+            $.ajax({
+    
+                url:'ajax.php',
+                type:'post',
+                data : {
+                    'UserID' : id,
+                    'Username' : saname,
+                },
+                success: function (data) {
+                window.location.href = window.location.origin;
+                },
+                error: function (data) {
+                    // //console.log(data);
+                }
+            });
+        });*/
+
+    });
+
+/*muzammil*/Offline.options = { checks: { xhr: { url: '/tiny-image.gif' } } };/*muzammil*/
+
+    setInterval(function () {
+        var domain = document.domain;
+        if (domain == 'crm.cartzlink.com' || domain == 'crm.cartzlink.local') {
+            $.ajax({
+
+                type: 'POST',
+                url: http + '://anamta.primeerp.top.local/admin/indexyii.php?r=orders/get_mobile',
+                dataType: 'json',
+                success: function (data) {
+                    if (data != 0) {
+                        send_msg(data);
+                    } else {
+                        ////console.log('No Data');
+                    }
+                }
+            })
+        }
+    }, 300000)
+
+    function send_msg(data) {
+        if (data != '') {
+            $.each(data, function () {
+                var total_array = this.order_item_price.split('-');
+
+                if (total_array != '') {
+                    var total = parseInt(total_array[0], 10) + parseInt(total_array[1], 10);
+                } else {
+                    var total = this.order_item_price;
+                }
+
+                var message = "Assalam-u-Alaikum!\nThankYou for placing your order on Aam.com.pk.\nYour order details are as follows:\n\n" + this.order_item_name + "\nTotal Charges (" + total + ")\nPlease reply with Y to confirm your order";
+                var number = this.order_user_phone;
+                var number = number.replace(/\s/g, '');
+                var order_id = this.order_id
+                var device_id = '55535'
+                $.ajax({
+                    type: "POST",
+                    url: './sms/index.php',
+                    data: { message: message, device_id: device_id, number: number },
+                    success: function (data) {
+                        set_status(data, order_id)
+                        function set_status(data, order_id) {
+                            var status = 'Message Sent';
+                            $.ajax({
+                                type: "POST",
+                                url: http + '://anamta.primeerp.top.local/admin/indexyii.php?r=orders/update_order_status',
+                                data: { order_id: order_id, status: status },
+                                success: function (data) {
+                                    ////console.log(data)
+                                }
+                            });
+                        }
+                    }
+                });
+
+
+            })
+        }
+    }
+
+    function decryptProducts() {
+        //M.Noman
+        var url = window.location.href;
+        if (isCheck == 0) {
+                            document.getElementById("fileToUploadDecrypt").value = "";
+                $("#fileToUploadDecrypt").click();
+                        } else {
+            document.getElementById("fileToUploadDecrypt").value = "";
+            $("#fileToUploadDecrypt").click();
+        }
+        //M.Noman
+    }
+
+    $('#fileToUploadDecrypt').change(function () {
+        if ($.trim($('#fileToUploadDecrypt').val()).length) {
+            $.ajax({
+                url: "/admin/?r=settings/decryptProducts&_lang=en",
+                type: "POST",
+                data: new FormData($('#productUpdateForm')[0]),
+                dataType: 'JSON',
+                async: false,
+                success: function (data) {
+                    if (data.status) {
+                        location.reload();
+                    }
+                    else {
+                        alert('Unable to decrypt with provided key');
+                    }
+                }, error: function (jqXHR, exception) {
+                    alert("Error Decrypting products");
+                },
+                cache: false,
+                contentType: false,
+                processData: false
+            });
+        } else {
+            alert("Select key file");
+        }
+    });
+
+    function encryptProducts() {
+        $.ajax({
+            url: "/admin/?r=settings/encryptProducts&_lang=en",
+            type: "POST",
+            success: function (data) {
+                location.reload();
+            }
+        });
+    }
+
+    //By Huzaifa on 23-jan-19 to save default values
+    $("#defaultValues").click(function () {
+
+        if ($('.fa-users').is(':visible') || $('.fa-user').is(':visible')) {
+            $('.fa-user').remove();
+            $('.fa-users').remove();
+        } else {
+            $("input:visible").after("&nbsp;<i class='fa fa-user'></i>&nbsp;<i class='fa fa-users'></i>");
+            $("select:visible").after("&nbsp;<i class='fa fa-user'></i>&nbsp;<i class='fa fa-users'></i>");
+            $("input:button").next().remove();
+            $("input:button").next().remove();
+            $("input:submit").next().remove();
+            $("input:submit").next().remove();
+        }
+        //    if ($('.fa').is(':visible')) {
+        //          $('.fa').remove();
+        //    }else{
+        //          $( "input:visible" ).after( "&nbsp;<i class='fa fa-user'></i>&nbsp;<i class='fa fa-users'></i>" );
+        //          $( "select:visible" ).after( "&nbsp;<i class='fa fa-user'></i>&nbsp;<i class='fa fa-users'></i>" );
+        //          $( "input:button" ).next().remove();
+        //           $( "input:button" ).next().remove();
+        //           $( "input:submit" ).next().remove();
+        //           $( "input:submit" ).next().remove();
+        //    }
+
+
+    });
+    $(document).on('click', '.fa-user', function () {
+        var value = $(this).prev().val();
+        var inputId = $(this).prev().attr('id');
+        if ($(this).prev().is(':checkbox')) {
+            if ($(this).prev().prop("checked") == true) {
+                var value = 'checked';
+            } else {
+                var value = 'unchecked';
+            }
+        }
+
+        if (inputId) {
+
+        } else {
+            var value = 'name|' + $(this).prev().val();
+            inputId = $(this).prev().attr('name');
+        }
+        //console.log(value);
+        var userId = '1';
+        $.ajax({
+            type: 'POST',
+            data: { value: value, inputId: inputId, userId: userId },
+            url: '/admin/indexyii.php?r=report/SaveDefaultValues',
+            success: function (data) {
+                ////console.log('logs = > '+data);
+                document.location.reload(true);
+
+            }
+        });
+    });
+    $(document).on('click', '.fa-users', function () {
+        var value = $(this).prev().prev().val();
+        var inputId = $(this).prev().prev().attr('id');
+        if ($(this).prev().prev().is(':checkbox')) {
+            if ($(this).prev().prev().prop("checked") == true) {
+                var value = 'checked';
+            } else { var value = 'unchecked'; }
+        }
+        if (inputId) {
+
+        } else {
+            var value = 'name|' + $(this).prev().prev().val();
+            inputId = $(this).prev().prev().attr('name');
+        }
+        var userId = '00';
+        $.ajax({
+            type: 'POST',
+            data: { value: value, inputId: inputId, userId: userId },
+            url: '/admin/indexyii.php?r=report/SaveDefaultValues',
+            success: function (data) {
+                ////console.log('logs = > '+data);
+                document.location.reload(true);
+
+            }
+        });
+    });
+    </script>
+<style type="text/css">
+    .searchBox {
+        margin-top: 0.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        top: 50%;
+        left: 96%;
+        transform: translate(-50%, 50%);
+        height: 40px;
+        border-radius: 40px;
+        padding: 10px;
+    }
+
+    .searchBox.active>.searchInput {
+        display: block !important;
+        margin: 0px -458px;
+    }
+
+    .searchbtn {
+        font-size: 1.4rem;
+        padding: 0.6rem;
+    }
+
+    .searchInput {
+        display: none !important;
+        width: 450px !important;
+        background: none;
+        outline: none;
+        float: left;
+        font-size: 1rem !important;
+    }
+
+    @media screen and (max-width: 620px) {
+        .searchBox.active>.searchInput {
+            width: 150px !important;
+        }
+    }
+
+    /*loader by muzammil*/
+    .pace {
+        -webkit-pointer-events: none;
+        pointer-events: none;
+
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+
+    .pace .pace-activity {
+        display: block;
+        position: fixed;
+        z-index: 2000;
+        top: 0;
+        right: 0;
+        width: 300px;
+        height: 300px;
+        background: #29d;
+        -webkit-transition: -webkit-transform 0.3s;
+        transition: transform 0.3s;
+        -webkit-transform: translateX(100%) translateY(-100%) rotate(45deg);
+        transform: translateX(100%) translateY(-100%) rotate(45deg);
+        pointer-events: none;
+    }
+
+    .pace.pace-active .pace-activity {
+        -webkit-transform: translateX(50%) translateY(-50%) rotate(45deg);
+        transform: translateX(50%) translateY(-50%) rotate(45deg);
+    }
+
+    .pace .pace-activity::before,
+    .pace .pace-activity::after {
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        display: block;
+        border: 5px solid #fff;
+        border-radius: 50%;
+        content: '';
+    }
+
+    .pace .pace-activity::before {
+        margin-left: -40px;
+        width: 80px;
+        height: 80px;
+        border-right-color: rgba(0, 0, 0, .2);
+        border-left-color: rgba(0, 0, 0, .2);
+        -webkit-animation: pace-theme-corner-indicator-spin 3s linear infinite;
+        animation: pace-theme-corner-indicator-spin 3s linear infinite;
+    }
+
+    .pace .pace-activity::after {
+        bottom: 50px;
+        margin-left: -20px;
+        width: 40px;
+        height: 40px;
+        border-top-color: rgba(0, 0, 0, .2);
+        border-bottom-color: rgba(0, 0, 0, .2);
+        -webkit-animation: pace-theme-corner-indicator-spin 1s linear infinite;
+        animation: pace-theme-corner-indicator-spin 1s linear infinite;
+    }
+
+    @-webkit-keyframes pace-theme-corner-indicator-spin {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+
+        100% {
+            -webkit-transform: rotate(359deg);
+        }
+    }
+
+    @keyframes pace-theme-corner-indicator-spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(359deg);
+        }
+    }
+
+    /*loader by muzammil*/
+    .encryptionImage {
+        position: absolute;
+        font-size: 1.5em;
+        top: 3%;
+        right: 3%;
+    }
+
+    /*for navbar toggling*/
+    * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    @media screen and (max-width: 1200px) {}
+
+    /* right float navmenu */
+
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 10000;
+        top: 0;
+        right: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+
+    .sidenav::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+        /* make scrollbar transparent */
+    }
+
+    .sidenav a {
+        position: relative;
+        z-index: 1;
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+    @media screen and (max-height: 450px) {
+        .sidenav {
+            padding-top: 15px;
+        }
+
+        .sidenav a {
+            font-size: 18px;
+        }
+    }
+
+    .navbar-nav .nav-pills .nav-stacked .sm-collapsible,
+    .submenu {
+        list-style-type: none !important;
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+        border-radius: 34px;
+    }
+
+    .slider.round:before {
+        border-radius: 50%;
+        /*display: ;*/
+    }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 43px;
+        height: 21px;
+    }
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 14px;
+        width: 14px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    input:checked+.slider {
+        background-color: #2196F3;
+    }
+
+    input:focus+.slider {
+        box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked+.slider:before {
+        -webkit-transform: translateX(21px);
+        -ms-transform: translateX(21px);
+        transform: translateX(21px);
+    }
+
+    .switch:before {
+        display: none;
+    }
+
+    .oldTheme:before {
+        display: none;
+    }
+
+    .switch:after {
+        display: none;
+    }
+
+    .oldTheme:after {
+        display: none;
+    }
+</style>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+    //M.Noman.
+    $(window).bind("load", function () {
+        var url = window.location.href;
+        if (url.split('open=')[1] == "1") {
+            setTimeout(function () {
+                window.focus();
+                document.getElementById("fileToUploadDecrypt").value = "";
+                isCheck = 1;
+                alert('Authentication successfull. Please upload secret key to continue...!');
+            }, 1000);
+        }
+    });
+//End of Code M.Noman
+</script>
+
+<!-- cube script added by adil-->
+
+<!-- global scripts -->
+<!-- <script href="cube/js/demo-skin-changer.js"></script> --> <!-- only for demo -->
+
+<script href="cube/components/bootstrap/assets/js/vendor/popper.min.js"></script>
+<script href="cube/components/nanoscroller/bin/javascripts/jquery.nanoscroller.min.js"></script>
+
+<!-- <script href="cube/js/demo.js"></script>  --><!-- only for demo -->
+
+<!-- this page specific scripts -->
+<script href="cube/components/moment/min/moment.min.js"></script>
+<script href="cube/components-custom/jquery-jvectormap-2.0.3/jquery-jvectormap-2.0.3.min.js"></script>
+<script href="cube/components-custom/jvectormap-maps/jquery-jvectormap-world-merc.js"></script>
+<script href="cube/components-custom/jvectormap-maps/gdp-data.js"></script>
+<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="components/flot/excanvas.min.js"></script><![endif]-->
+<script href="cube/components/flot/jquery.flot.js"></script>
+<script href="cube/components/flot/jquery.flot.resize.js"></script>
+<script href="cube/components/flot/jquery.flot.time.js"></script>
+<script href="cube/components/flot/jquery.flot.threshold.js"></script>
+<script href="cube/components/flot-axislabels/jquery.flot.axislabels.js"></script>
+<script href="cube/components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+<script href="cube/components/skycons/skycons.js"></script>
+
+<!-- theme scripts -->
+<script href="cube/js/scripts.js"></script>
+<script href="cube/components/PACE/pace.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        return;
+        //IA TODO REMOVED CHARTS INITIALLY
+        //CHARTS
+        function gd(year, day, month) {
+            return new Date(year, month - 1, day).getTime();
+        }
+
+        if ($('#graph-bar').length) {
+            var data1 = [
+                [gd(2015, 1, 1), 838], [gd(2015, 1, 2), 749], [gd(2015, 1, 3), 634], [gd(2015, 1, 4), 1080], [gd(2015, 1, 5), 850], [gd(2015, 1, 6), 465], [gd(2015, 1, 7), 453], [gd(2015, 1, 8), 646], [gd(2015, 1, 9), 738], [gd(2015, 1, 10), 899], [gd(2015, 1, 11), 830], [gd(2015, 1, 12), 789]
+            ];
+
+            var data2 = [
+                [gd(2015, 1, 1), 342], [gd(2015, 1, 2), 721], [gd(2015, 1, 3), 493], [gd(2015, 1, 4), 403], [gd(2015, 1, 5), 657], [gd(2015, 1, 6), 782], [gd(2015, 1, 7), 609], [gd(2015, 1, 8), 543], [gd(2015, 1, 9), 599], [gd(2015, 1, 10), 359], [gd(2015, 1, 11), 783], [gd(2015, 1, 12), 680]
+            ];
+
+            var series = new Array();
+
+            series.push({
+                data: data1,
+                bars: {
+                    show: true,
+                    barWidth: 24 * 60 * 60 * 12000,
+                    lineWidth: 1,
+                    fill: 1,
+                    align: 'center'
+                },
+                label: 'Revenues'
+            });
+            series.push({
+                data: data2,
+                color: '#e84e40',
+                lines: {
+                    show: true,
+                    lineWidth: 3,
+                },
+                points: {
+                    fillColor: "#e84e40",
+                    fillColor: '#ffffff',
+                    pointWidth: 1,
+                    show: true
+                },
+                label: 'Orders'
+            });
+
+            $.plot("#graph-bar", series, {
+                colors: ['#03a9f4', '#f1c40f', '#2ecc71', '#3498db', '#9b59b6', '#95a5a6'],
+                grid: {
+                    tickColor: "#f2f2f2",
+                    borderWidth: 0,
+                    hoverable: true,
+                    clickable: true
+                },
+                legend: {
+                    noColumns: 1,
+                    labelBoxBorderColor: "#000000",
+                    position: "ne"
+                },
+                shadowSize: 0,
+                xaxis: {
+                    mode: "time",
+                    tickSize: [1, "month"],
+                    tickLength: 0,
+                    // axisLabel: "Date",
+                    axisLabelUseCanvas: true,
+                    axisLabelFontSizePixels: 12,
+                    axisLabelFontFamily: 'Open Sans, sans-serif',
+                    axisLabelPadding: 10
+                }
+            });
+
+            var previousPoint = null;
+            $("#graph-bar").bind("plothover", function (event, pos, item) {
+                if (item) {
+                    if (previousPoint != item.dataIndex) {
+
+                        previousPoint = item.dataIndex;
+
+                        $("#flot-tooltip").remove();
+                        var x = item.datapoint[0],
+                            y = item.datapoint[1];
+
+                        showTooltip(item.pageX, item.pageY, item.series.label, y);
+                    }
+                }
+                else {
+                    $("#flot-tooltip").remove();
+                    previousPoint = [0, 0, 0];
+                }
+            });
+
+            function showTooltip(x, y, label, data) {
+                $('<div id="flot-tooltip">' + '<b>' + label + ': </b><i>' + data + '</i>' + '</div>').css({
+                    top: y + 5,
+                    left: x + 20
+                }).appendTo("body").fadeIn(200);
+            }
+        }
+
+        //WORLD MAP
+        $('#world-map').vectorMap({
+            map: 'world_merc',
+            backgroundColor: '#ffffff',
+            zoomOnScroll: false,
+            regionStyle: {
+                initial: {
+                    fill: '#e1e1e1',
+                    stroke: 'none',
+                    "stroke-width": 0,
+                    "stroke-opacity": 1
+                },
+                hover: {
+                    "fill-opacity": 0.8
+                },
+                selected: {
+                    fill: '#8dc859'
+                },
+                selectedHover: {
+                }
+            },
+            markerStyle: {
+                initial: {
+                    fill: '#e84e40',
+                    stroke: '#e84e40'
+                }
+            },
+            markers: [
+                { latLng: [38.35, -121.92], name: 'Los Angeles - 23' },
+                { latLng: [39.36, -73.12], name: 'New York - 84' },
+                { latLng: [50.49, -0.23], name: 'London - 43' },
+                { latLng: [36.29, 138.54], name: 'Tokyo - 33' },
+                { latLng: [37.02, 114.13], name: 'Beijing - 91' },
+                { latLng: [-32.59, 150.21], name: 'Sydney - 22' },
+            ],
+            series: {
+                regions: [{
+                    values: gdpData,
+                    scale: ['#6fc4fe', '#2980b9'],
+                    normalizeFunction: 'polynomial'
+                }]
+            },
+            onRegionLabelShow: function (e, el, code) {
+                el.html(el.html() + ' (' + gdpData[code] + ')');
+            }
+        });
+
+        /* SPARKLINE - graph in header */
+        var orderValues = [10, 8, 5, 7, 4, 4, 3, 8, 0, 7, 10, 6, 5, 4, 3, 6, 8, 9];
+
+        $('.spark-orders').sparkline(orderValues, {
+            type: 'bar',
+            barColor: '#ced9e2',
+            height: 25,
+            barWidth: 6
+        });
+
+        var revenuesValues = [8, 3, 2, 6, 4, 9, 1, 10, 8, 2, 5, 8, 6, 9, 3, 4, 2, 3, 7];
+
+        $('.spark-revenues').sparkline(revenuesValues, {
+            type: 'bar',
+            barColor: '#ced9e2',
+            height: 25,
+            barWidth: 6
+        });
+
+        /* ANIMATED WEATHER */
+        var skycons = new Skycons({ "color": "#03a9f4" });
+        // on Android, a nasty hack is needed: {"resizeClear": true}
+
+        // you can add a canvas by it's ID...
+        skycons.add("current-weather", Skycons.SNOW);
+
+        // start animation!
+        skycons.play();
+
+
+
+    });
+    function toggleNavBar() {
+        $("#sidebar-nav").animate({ width: 'toggle' }, 150);
+    }
+    function openModalLog() {
+        $("#userLogModal").animate({ height: 'toggle', opacity: 'toggle' }, 300, function () {
+            $('#userLogModalBackdrop').show();
+            $('#userLogModal').show();
+            $('#userLogModal').addClass('show');
+        });
+    }
+    function closeModalLog() {
+        // document.getElementById("userLogModalBackdrop").style.display = "none"
+        $("#userLogModal").animate({ opacity: 'toggle', height: 'toggle' }, 300, function () {
+            $('#userLogModalBackdrop').hide();
+            $('#userLogModal').hide();
+            // document.getElementById("userLogModal").classList.remove("show")
+            $('#userLogModal').removeClass('show');
+        });
+    }
+
+    $('#login_log_s,#login_log_f').click(openModalLog);
+    $('#userLogModalDismiss').click(closeModalLog);
+    const modal_log = document.getElementById('userLogModalBackdrop');
+    /* Edit by Faheem Anis on 21/12/2021 */
+            function openModal() {
+            var ModalElem = $('#settingsModal');
+            var url = ModalElem.data('url');
+            $.ajax({
+                url: url,
+                type: 'post',
+                success: function (response) {
+                    // Add response in Modal body
+                    ModalElem.find('.modal-body').html(response);
+
+                    // Display Modal
+                    // ModalElem.modal('show');
+                    ModalElem.show();
+                    ModalElem.addClass('show');
+                    $('#settingsModalBackdrop').show();
+                },
+                'error': function (response) {
+                    alert(response.status + ': ' + response.statusText);
+                }
+            });
+        }
+
+        function closeModal() {
+            // document.getElementById("settingsModalBackdrop").style.display = "none"
+            $('#settingsModalBackdrop').hide();
+            $('#settingsModal').hide();
+            // document.getElementById("settingsModal").classList.remove("show")
+            $('#settingsModal').removeClass('show');
+        }
+
+        // Get the modal
+        const modal = document.getElementById('settingsModalBackdrop');
+
+        // When the user clicks anywhere outside of the modal, close it
+        // window.onclick = function(event) {
+        //     if (event.target == modal) {
+        //         closeModal()
+        //     }
+        // }
+        $('#btnSettings').click(openModal);
+        $('#settingsModalDismiss').click(closeModal);
+
+                
+     // Not by Faheem
+ window.onclick = function (event) {
+        if (event.target == modal_log) {
+            closeModalLog()
+        } try {
+            if (event.target == modal) {
+                closeModal();
+            }
+        } catch (error) { }
+    }
+    /* end edit by Faheem Anis on 21/12/2021 */
+    $(document).ready(function () {
+        $('#searchInput').on('input', function () { // taha
+            $('#searchResults').css('display', 'block');
+        });
+        var menu = [];
+
+// Function for live search
+function liveSearch(searchString) {
+    var http = "http";
+    let menuTitle = searchString;
+    var resultsContainer = $('#searchResults');
+    var searchbox = $('#searchInput').val();
+    let userId = 1;
+
+    if (menu.length === 0) {
+        $.ajax({
+            url: "/admin/?r=Menu/searchmenu&_lang=en",
+            type: "POST",
+            async: false, 
+            data: {
+                'menuTitle': menuTitle,
+                'userId': userId,
+            },
+            success: function (data) {
+                
+                var decodedData = JSON.parse(data);
+                decodedData.forEach(function (result) {
+                    var menuItem = {
+                        name: result.menu,
+                        url: result.menuURL,
+                        subParentmenu: result.subParentmenu,
+                        Parentmenu: result.Parentmenu
+                    };
+                    menu.push(menuItem);
+                });
+                filterAndDisplayResults(searchString);
+            },
+            error: function (xhr, status, error) {
+                console.error("AJAX request failed: ", status, error);
+            }
+        });
+    } else {
+        filterAndDisplayResults(searchString);
+    }
+    function filterAndDisplayResults(searchString) {
+        var filteredMenus = menu.filter(function (item) {
+            return item.name.toLowerCase().includes(searchString.toLowerCase());
+        });
+        resultsContainer.empty();
+        filteredMenus.forEach(function (filteredMenu) {
+            var parent = filteredMenu.Parentmenu || '';
+            var subparent = filteredMenu.subParentmenu || '';
+
+            resultsContainer.append('<li><a href="' + http + '://anamta.primeerp.top.local/admin/indexyii.php?r=' + filteredMenu.url + '">' + filteredMenu.name + '</a><br><span style="font-size:10px;color:gray;">' + parent + '--->' + subparent + '</span></li>');
+        });
+        if (searchString === '') {
+            resultsContainer.empty();
+        }
+    }
+}
+        $('.hasDatepicker').attr("autocomplete", "off");
+        $('#searchInput').on('keyup', function () {
+            var searchString = $(this).val();
+            liveSearch(searchString);
+        });
+    });
+
+    $(document).ready(function () {
+        $('#searchInput').click(function () {
+            // Add clear button when input field is clicked
+            $(this).before('<span class="clear-input" style="position: absolute; right: 2rem; top: 50%; transform: translateY(-50%); cursor: pointer;z-index:999;">&#x2716;</span>');
+        });
+
+        // Event listener for the clear button
+        $(document).on('click', '.clear-input', function () {
+            // Clear the input field and remove the clear button
+            $('#searchInput').val('');
+            $('#searchResults').css('display', 'none');
+            $(this).remove();
+        });
+
+
+    });
+    $(document).ready(function () {//umair
+        $("#searchBy").keypress(function (evt) {
+            if (evt.which == 13) {
+                evt.preventDefault();
+                var value = ($("#searchBy").val()).trim();
+                if (value.length < 3) return false;
+                window.location.href = "/admin/indexyii.php?r=products/findProduct&key=" + value;
+                // window.open("/admin/indexyii.php?r=products/findProduct&id="+value); 
+            }
+        });
+    });
+</script>
+
+<script src="cube/components-custom/modal-animations/modernizr.custom.js"></script>
+<script src="cube/components-custom/modal-animations//classie.js"></script>
+<script src="cube/components-custom/modal-animations//modalEffects.js"></script>
+<script>var page_generation = 0.81984686851501; </script>
+<script>
+    window.addEventListener('load', function () {
+        var loadStart = window.performance.timing;
+        var transfertime = (loadStart.responseEnd - loadStart.requestStart) / 1000;
+        var page_generation = window.page_generation;
+        var total_time = (page_generation + transfertime);
+        //console.log(total_time);
+        document.getElementById("pageload_time").innerHTML = 'Page generated in: ' + page_generation + ' seconds <br/>';
+        document.getElementById("total_time").innerHTML = 'Transfer time: ' + transfertime + '. Total Time is ' + total_time + ' seconds.<br/>';
+        //document.body.insertAdjacentHTML('beforeend', '<p style=\'text-align:center;\'>Transfer time: ' + transfertime + '. Total Time is ' + total_time + ' seconds.</p><br/>');
+        //document.body.insertAdjacentHTML('beforeend', '<p style=\'text-align:center;\'> </p>'); 
+    });
+
+    $(document).ready(function () {
+        var datepickerOptions = { 'showAnim': 'fold', 'dateFormat': 'yy-mm-dd' };
+        $('.hasDate').datepicker(datepickerOptions);
+        
+        // for superuser's condition
+
+        $('input[name$=date_purchased]').datepicker(datepickerOptions);
+    });
+    
+</script>
+<script>
+    var currentAction = 'site/error';
+</script>
+

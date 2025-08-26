@@ -1,0 +1,51 @@
+@allure.link:http://anamta.primeerp.top/admin/?r=orders/LoadInvoiceForm&docTypeId=1994
+@allure.label.epic:sales
+
+enterprisedemo
+Feature: Sales Order
+
+ 
+@critical
+#Scenario: Create Sales Order
+   # Given we visit "orders/LoadInvoiceForm&docTypeId=1994"
+   #     and we click "Show/hide Form" button
+    #    and we select "test customer1" in "customers_id" autocomplete
+ #       and we enter "2025-06-19" in "date_purchased"
+    #     and we enter "500" in "SSP"
+#         and we click button with id "terms-tab"
+#        and we select "ERP MAIN GODOWN" in "frmVenueId"        
+     #   and we enter "500" in "hotelCommisionP"
+       # and we fill the grid with:
+      #     | Product                        | Rate  | Qty | Amount |
+     #      | Test Raw 003 (Raw 003 ) - 9016 | 500   | 5   | 2500   |
+    #When we click "Save" button
+   # Then we should see success message
+  #  and we should see this entry in grid:
+ #       | customers_id   | currency_value |
+#        | test customer1 | 2500           |
+
+
+#Scenario: Edit Sales Order
+#      Given we visit "orders/salesOrder"
+#          when we edit the top row
+#          then we should see "test customer1" in "customers_id"
+#        #  then we should see "100" in "cartage"
+#          then we should see the following in grid:
+#           | Product                        | Rate  | Qty | Amount |
+#           | Test Raw 003 (Raw 003 ) - 9016 | 500   | 5   | 2500   |
+
+
+
+@critical
+Scenario: Edit Sales Order - Field and Grid Load Check
+    Given we visit "orders/salesOrder"
+    When we clear the from date and search
+    And we edit the top row
+    Then the following fields should not be empty:
+    | field                               |
+    | orders_model_date_purchased         |
+    | orders_model_delivery_name          |
+    | orders_model_delivery_suburb        |
+    | orders_model_delivery_street_address|
+    | orders_model_delivery_city          |
+

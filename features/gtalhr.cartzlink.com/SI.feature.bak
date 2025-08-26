@@ -1,0 +1,6 @@
+
+Feature: Sales Invoice
+
+#@critical
+#Scenario: Sales order page
+#    Given we visit "orders/salesInvoice"

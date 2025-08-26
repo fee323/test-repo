@@ -1,0 +1,50 @@
+
+import subprocess
+import os
+
+# Domains list
+domains = [ 
+    "gta.cartzlink.com",
+    "anamta.primeerp.top"
+]
+
+# Base report directory
+base_report_dir = "reports"
+os.makedirs(base_report_dir, exist_ok=True)
+
+# Credentials dictionary
+credentials = {
+    "gta.cartzlink.com": "czxVYO,30y8{2w",
+    "anamta.primeerp.top": "czxVYO,30y8{2w",
+    # Add more domains and passwords here
+}
+
+for domain in domains:
+    print(f"\n========== Running Behave Tests for: {domain} ==========\n")
+
+    # Har domain ka report folder bana lo
+    safe_domain_name = domain.replace(".", "_")
+    domain_report_dir = os.path.join(base_report_dir, safe_domain_name)
+    os.makedirs(domain_report_dir, exist_ok=True)
+
+    # Allure results folder for this domain
+    allure_results_dir = os.path.join(domain_report_dir, "allure-results")
+    os.makedirs(allure_results_dir, exist_ok=True)
+
+    # Pretty output file
+    pretty_output_file = os.path.join(domain_report_dir, "pretty.output")
+
+    password = credentials.get(domain, "")
+    if not password:
+        print(f"[FAIL] No password found for domain {domain}. Skipping.")
+        continue
+
+    # Behave command with domain and password
+    command = f'venv\\Scripts\\behave -D domain={domain} -D password={password} --no-capture -f pretty -o "{pretty_output_file}" {domain}'
+
+    try:
+        subprocess.run(command, check=True, shell=True)
+        print(f" Tests passed on {domain}\n")
+
+    except subprocess.CalledProcessError:
+        print(f" Tests failed on {domain}\n")

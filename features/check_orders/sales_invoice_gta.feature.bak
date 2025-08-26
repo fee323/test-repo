@@ -1,0 +1,15 @@
+   
+   
+@domain_gta
+Feature: Sales Invoice   
+   
+Scenario: Edit Sales Invoice
+    Given we visit "orders/salesInvoice"   
+    When we clear the from date and search
+    And we edit the top row
+    Then the following fields should not be empty:
+    | field                               |
+    | orders_model_date_purchased         |
+    | orders_model_customers_id           |
+    | orders_model_sGodownId              |
+    | orders_model_trDate                 |

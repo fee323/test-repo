@@ -1,0 +1,6 @@
+[behave]
+; format = pretty
+; color = yes
+; no_capture = true
+format=allure_behave.formatter:AllureFormatter
+outfiles=allure-results

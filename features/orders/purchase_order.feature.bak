@@ -1,0 +1,51 @@
+@allure.link:http://demo.cartzlink.com.local/admin/?r=orders/purchaseOrder
+@allure.label.owner:faheemanis
+@allure.label.epic:purchase
+Feature: Purchase Order
+
+Scenario: Create Purchase Order
+    Given we visit "orders/purchaseOrder"
+        and we click "Show/hide Form" button
+        and we select "SUSEN FACTORY" in "customers_id" autocomplete
+        and we enter "2025-05-08" in "orderDate"
+        and we enter "200" in "cartage"
+        and we fill the grid with:
+            | Items                                       | Rate | Qty | Disc. % | Disc. Amt. | Fixed Disc. | Stax | Stax Amt | Amount |
+            | JS011BLACK -  JS 011 Black - 1PCS - 14978   | 100  | 5   | 0       | 0          | 0           |      | 0        | 500    |
+                When we click "Save" button
+    Then we should see success message
+    and we should see this entry in grid:
+        | customers_id  | currency_value |
+        | SUSEN FACTORY | 700            |
+
+Scenario: Edit Purchase Order
+    Given we visit "orders/purchaseOrder"
+       when we edit the top row
+       and we wait "3" seconds
+       then we should see "SUSEN FACTORY" in "customers_id" autocomplete
+       then we should see "2025-05-08" in "orderDate"
+       then we should see "200" in "cartage"
+       then we should see the following in grid:
+             | Items                                       | Rate | Qty | Disc. % | Disc. Amt. | Fixed Disc. | Stax | Stax Amt | Amount |
+             | JS011BLACK -  JS 011 Black - 1PCS - 14978   | 100  | 5   | 0       | 0          | 0           |      | 0        | 500    |
+Scenario: Update Purchase Order
+    Given we visit "orders/purchaseOrder"
+        when we edit the top row
+        and we wait "3" seconds
+        and we select "SUSEN TRD" in "customers_id" autocomplete
+        and we enter "2024-10-15" in "orderDate"
+        and we enter "200" in "cartage"
+         and we fill the grid with:
+            | Items                                                                   | Rate | Qty | Disc. % | Disc. Amt. | Fixed Disc. | Stax | Stax Amt | Amount |
+            | ECOTRAVELLUGGAGE24BLACK -  ECO TRAVEL LUGGAGE 24 Black - 1PCS - 16947   | 150  | 5   | 0       | 0          | 0           |      | 0        | 750    |
+    When we click "Save" button
+    Then we should see success message
+    and we should see this entry in grid:
+        | customers_id | currency_value |
+        | SUSEN TRD    | 950            |
+
+Scenario: Delete Purchase Order
+    Given we visit "orders/purchaseOrder"
+    when we store the top row's DOC Id
+        and we delete the top row
+    then we should not see the stored Doc Id

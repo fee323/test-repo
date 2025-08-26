@@ -1,0 +1,1 @@
+{"nb.newagedistributions.com": {"Server": "newage", "Page Load": 3.6, "Login": 16.1, "Features": {"Sales Order": {"Feature": 26.2, "Scenario Timings": [{"name": "Visit Sales order page", "duration": 26.2, "status": "passed", "failed_steps": []}], "Failed Steps": []}}}}

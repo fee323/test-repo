@@ -1,0 +1,23 @@
+
+@domain_anamta
+Feature: Sales Invoice
+
+
+@critical
+Scenario: Edit Sales Invoice - Field and Grid Load Check
+    Given we visit "orders/salesInvoice"
+    When we clear the from date and search
+    And we edit the top row
+    Then the following fields should not be empty:
+    | field                               |
+    | orders_model_date_purchased         |
+    | orders_model_labelPrint             |
+    | orders_model_customers_id           |
+    | orders_model_sGodownId              |
+    | orders_model_trDate                 |
+    | orders_model_delivery_name          |
+    | orders_model_delivery_suburb        |
+    | orders_model_delivery_street_address|
+    | orders_model_delivery_city          |
+
+#    And the first 1 rows in grid should be completely filled

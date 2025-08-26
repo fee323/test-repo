@@ -1,0 +1,22 @@
+@allure.link:http://anamta.primeerp.top.local/admin/indexyii.php?r=accounts2
+@allure.label.epic:accounts
+
+Feature: Chart of Accounts
+
+@critical
+Scenario: Print Chart of Accounts 
+#    Given we visit "report/gl_coa"        
+#
+#        and we enter "Tree Id" in "showinReport"
+#        And we check "sort_id"
+#        and we select "" in "sort_field"
+#        and we select "" in "venueId"
+#        and we enter "80" in "partySerialNo"
+#      when we click "Print" button
+#
+#      
+    Given we visit "report/gl_coa"
+        and we enter "TreeId" in "showinReport"
+        and we check "sort_id"
+        when we click "Print" button
+#        then we should see the Chart of Accounts report

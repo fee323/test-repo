@@ -1,0 +1,77 @@
+@allure.link:http://anamta.primeerp.top.local/admin/indexyii.php?r=accounts2
+@allure.label.epic:accounts
+
+
+@domain_anamta
+Feature: Add Account Voucher
+
+#@critical
+#Scenario: Create Account Voucher
+#    Given we visit "accounts2"        
+#        and we select "DV" in "TransTypeId" 
+#        and we enter "2025-05-27" in "docDate"
+#        and we select "SUSEN FACTORY 2" in "accountCustomerId" autocomplete
+#        and we select "SusenZamzama" in "venueId"
+#        and we enter "80" in "partySerialNo"
+#        and we fill the grid with:
+#              | Order Id | Account/Customer | Detail  | Debit      | Credit | Cost Center | Chq.# | Venue  |
+#              |          |  AK              |         | 100,000.00 | .00    |             |       |        |
+#
+#      when we click "Save" button
+#      Then we should see success message
+#      and we should see this entry in grid:
+#        | accountCustomerId | partySerialNo |
+#        | SUSEN FACTORY 2   | 80            |
+
+
+@critical
+Scenario: Edit Account Voucher
+    Given we visit "accounts2"
+       when we edit the top row
+        then we should see "DV" in "TransTypeId"
+        then we should see "2507004" in "vno"
+        then we should see "2025-07-31" in "docDate"
+        then we should see "HBL CASUALS \ Bank A/C" in "accountCustomerId"
+#        then we should see "SusenZamzama" in "venueId"
+        then we should see "67" in "partySerialNo"
+        then we should see "HBL CASUALS => AK" in "fileNo"
+        then we should see the following in grid:
+              | Order Id | Account/Customer | Detail               | Debit      | Credit | Cost Center | Chq. # | Chq. Dt. | Venue  |
+              | 0        |  AK              | HBL CASUALS => AK    | 250,000.00 | .00    |             |        |          |        |
+
+#@critical
+#Scenario: Update Account Voucher
+#    Given we visit "accounts2"        
+#        when we edit the top row
+#        and we select "CV" in "TransTypeId"
+#        and we enter "2025-05-27" in "docDate" 
+#        and we select "MBL/001 \ Bank A/C" in "accountCustomerId" autocomplete
+#        and we select "SusenTariqRoad" in "venueId"
+#        and we enter "81" in "partySerialNo"
+#        and we fill the grid with:
+#          | Order Id | Account/Customer         | Detail  | Debit      | Credit | Cost Center | Chq.# | Venue  |
+#              |          | S TAX \ UTILITY EXPENSES |         | 200,000    | .00    |             |       |        |
+#
+#      when we click "Save" button
+#      Then we should see success message
+#      and we should see this entry in grid:
+#        | accountCustomerId  | partySerialNo |
+#        | MBL/001 \ Bank A/C | 81            |
+#
+#  @critical
+#  Scenario: Delete Account Voucher
+#      Given we visit "accounts2"
+#      when we store the top row's DOC Id
+#          and we delete the top row
+#      then we should not see the stored Doc Id
+
+# Scenario: Load Purchase Order
+#     Given we visit "orders/purchaseInvoice"
+#         and we click "Show/hide Form" button
+#         and we select "PO 1" in "para_2" autocomplete
+#         when we click "Load Purchase Order" button
+#         and we wait "2" seconds
+#         then we should see "2025/5/7" in "date_purchased"
+#         and we should see the following in grid:
+#       | DC | Products                                    | Rate | Qty |  Disc. % | Disc. Amt | Fixed Disc. | Amount |
+#       |    | 003 - hazard test product 3 - 1 - 15086     | 200  | 2   |  0       | 0         | 0           |  400   |

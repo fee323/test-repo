@@ -1,0 +1,1764 @@
+{
+  "2025-08-15": {
+    "anamta.primeerp.top": {
+      "Server": "s12",
+      "Page Load": 3.8,
+      "Login": 25.7,
+      "Features": {
+        "CASH RECEIPT CV": {
+          "Feature": 9.5,
+          "Scenario Timings": [
+            {
+              "name": "Visit CashReceiptCV Page and click on Edit btn",
+              "duration": 9.5,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Account Voucher": {
+          "Feature": 10.4,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 10.4,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "cam.itserver.biz": {
+      "Server": "metro cam",
+      "Page Load": 5.4,
+      "Login": 14.8,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 10.1,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 10.1,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Gatepass": {
+          "Feature": 50.0,
+          "Scenario Timings": [
+            {
+              "name": "Visit Gate pass Page and click on Edit btn",
+              "duration": 49.9,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Purchase Invoice": {
+          "Feature": 59.2,
+          "Scenario Timings": [
+            {
+              "name": "Visit Purchase invoice Page and click on Edit btn",
+              "duration": 59.1,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Production Order FSTUser": {
+          "Feature": 15.3,
+          "Scenario Timings": [
+            {
+              "name": "Visit Production order page and click on Edit btn",
+              "duration": 15.2,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "mhp.itserver.biz": {
+      "Server": "MHP",
+      "Page Load": 2.7,
+      "Login": 16.1,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 14.5,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 14.5,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Sales Order": {
+          "Feature": 15.7,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales order page",
+              "duration": 15.7,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "mt2.itserver.biz": {
+      "Server": "metro crm",
+      "Page Load": 3.5,
+      "Login": 14.2,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 30.0,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 30.0,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Sales invoice MT": {
+          "Feature": 117.4,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales invoice page",
+              "duration": 117.4,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "mt.itserver.biz": {
+      "Server": "metro crm",
+      "Page Load": 3.6,
+      "Login": 13.9,
+      "Features": {
+        "Sales Order": {
+          "Feature": 26.4,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales order page and click on edit btn",
+              "duration": 26.4,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "gta.cartzlink.com": {
+      "Server": "s13",
+      "Page Load": 3.9,
+      "Login": 22.6,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 17.4,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 17.3,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Sales Invoice": {
+          "Feature": 41.8,
+          "Scenario Timings": [
+            {
+              "name": "Sales Invoice page",
+              "duration": 41.8,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "fst.itserver.biz": {
+      "Server": "FST",
+      "Page Load": 17.1,
+      "Login": 14.1,
+      "Features": {
+        "Sales Order": {
+          "Feature": 58.5,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales order page and click on Edit btn",
+              "duration": 58.5,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "nb.newagedistributions.com": {
+      "Server": "newage",
+      "Page Load": 3.4,
+      "Login": 13.0,
+      "Features": {
+        "Sales Order": {
+          "Feature": 33.8,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales order page",
+              "duration": 33.8,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "bmkenya.itserver.biz": {
+      "Server": "bmkenya",
+      "Page Load": 17.5,
+      "Login": 13.6,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 12.1,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 12.1,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Sales Order": {
+          "Feature": 4.7,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales order page",
+              "duration": 4.7,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "scentnsecret.itserver.biz": {
+      "Server": "scentnsecret",
+      "Page Load": 3.7,
+      "Login": 14.6,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 10.5,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 10.5,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Sales Order": {
+          "Feature": 3.3,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales order page",
+              "duration": 3.3,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "crm.cartzlink.com": {
+      "Server": "s15",
+      "Page Load": 2.5,
+      "Login": 49.4,
+      "Features": {
+        "Dash board": {
+          "Feature": 0.0,
+          "Scenario Timings": [
+            {
+              "name": "Visit Dash board page",
+              "duration": 0.0,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "crm.tabrospharma.com": {
+      "Server": "TP",
+      "Page Load": 6.9,
+      "Login": 21.3,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 8.9,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 8.9,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Sales Order": {
+          "Feature": 10.0,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales Order Page and click on Edit btn",
+              "duration": 10.0,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    }
+  },
+  "2025-08-16": {
+    "anamta.primeerp.top": {
+      "Server": "s12",
+      "Page Load": 2.1,
+      "Login": 27.0,
+      "Features": {
+        "CASH RECEIPT CV": {
+          "Feature": 14.2,
+          "Scenario Timings": [
+            {
+              "name": "Visit CashReceiptCV Page and click on Edit btn",
+              "duration": 14.2,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Account Voucher": {
+          "Feature": 13.9,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 13.9,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "mhp.itserver.biz": {
+      "Server": "MHP",
+      "Page Load": 3.0,
+      "Login": 34.1,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 16.8,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 16.5,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Sales Order": {
+          "Feature": 17.9,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales order page",
+              "duration": 17.9,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "mt2.itserver.biz": {
+      "Server": "metro crm",
+      "Page Load": 5.8,
+      "Login": 14.8,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 30.9,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 30.9,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Sales invoice MT": {
+          "Feature": 135.8,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales invoice page",
+              "duration": 135.7,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "mt.itserver.biz": {
+      "Server": "metro crm",
+      "Page Load": 33.3,
+      "Login": 14.7,
+      "Features": {
+        "Sales Order": {
+          "Feature": 27.3,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales order page and click on edit btn",
+              "duration": 27.3,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "gta.cartzlink.com": {
+      "Server": "s13",
+      "Page Load": 7.5,
+      "Login": 25.1,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 19.6,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 19.6,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Sales Invoice": {
+          "Feature": 45.7,
+          "Scenario Timings": [
+            {
+              "name": "Sales Invoice page",
+              "duration": 45.7,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "fst.itserver.biz": {
+      "Server": "FST",
+      "Page Load": 3.3,
+      "Login": 14.1,
+      "Features": {
+        "Sales Order": {
+          "Feature": 68.1,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales order page and click on Edit btn",
+              "duration": 68.1,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "cam.itserver.biz": {
+      "Server": "metro cam",
+      "Page Load": 10.0,
+      "Login": 21.5,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 11.1,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 11.1,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Gatepass": {
+          "Feature": 63.3,
+          "Scenario Timings": [
+            {
+              "name": "Visit Gate pass Page and click on Edit btn",
+              "duration": 63.3,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Purchase Invoice": {
+          "Feature": 64.7,
+          "Scenario Timings": [
+            {
+              "name": "Visit Purchase invoice Page and click on Edit btn",
+              "duration": 64.7,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Production Order FSTUser": {
+          "Feature": 17.7,
+          "Scenario Timings": [
+            {
+              "name": "Visit Production order page and click on Edit btn",
+              "duration": 17.7,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "nb.newagedistributions.com": {
+      "Server": "newage",
+      "Page Load": 4.4,
+      "Login": 14.5,
+      "Features": {
+        "Sales Order": {
+          "Feature": 31.7,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales order page",
+              "duration": 31.7,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "bmkenya.itserver.biz": {
+      "Server": "bmkenya",
+      "Page Load": 34.9,
+      "Login": 14.8,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 14.3,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 14.3,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Sales Order": {
+          "Feature": 6.4,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales order page",
+              "duration": 6.4,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "scentnsecret.itserver.biz": {
+      "Server": "scentnsecret",
+      "Page Load": 7.7,
+      "Login": 17.5,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 16.5,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 16.3,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Sales Order": {
+          "Feature": 3.6,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales order page",
+              "duration": 3.6,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "crm.cartzlink.com": {
+      "Server": "s15",
+      "Page Load": 4.3,
+      "Login": 14.4,
+      "Features": {
+        "Dash board": {
+          "Feature": 0.0,
+          "Scenario Timings": [
+            {
+              "name": "Visit Dash board page",
+              "duration": 0.0,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "crm.tabrospharma.com": {
+      "Server": "TP",
+      "Page Load": 3.2,
+      "Login": 21.6,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 10.1,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 10.1,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Sales Order": {
+          "Feature": 10.4,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales Order Page and click on Edit btn",
+              "duration": 10.4,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    }
+  },
+  "2025-08-18": {
+    "anamta.primeerp.top": {
+      "Server": "s12",
+      "Page Load": 3.7,
+      "Login": 23.0,
+      "Features": {
+        "CASH RECEIPT CV": {
+          "Feature": 10.2,
+          "Scenario Timings": [
+            {
+              "name": "Visit CashReceiptCV Page and click on Edit btn",
+              "duration": 10.2,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Account Voucher": {
+          "Feature": 11.5,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 11.5,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "mhp.itserver.biz": {
+      "Server": "MHP",
+      "Page Load": 3.6,
+      "Login": 14.5,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 18.3,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 18.3,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Sales Order": {
+          "Feature": 21.1,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales order page",
+              "duration": 21.0,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "mt2.itserver.biz": {
+      "Server": "metro crm",
+      "Page Load": 4.3,
+      "Login": 13.8,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 47.9,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 47.9,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Sales invoice MT": {
+          "Feature": 127.6,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales invoice page",
+              "duration": 127.6,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "mt.itserver.biz": {
+      "Server": "metro crm",
+      "Page Load": 1.8,
+      "Login": 15.1,
+      "Features": {
+        "Sales Order": {
+          "Feature": 37.3,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales order page and click on edit btn",
+              "duration": 37.2,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "gta.cartzlink.com": {
+      "Server": "s13",
+      "Page Load": 3.5,
+      "Login": 21.9,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 19.1,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 19.1,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Sales Invoice": {
+          "Feature": 42.0,
+          "Scenario Timings": [
+            {
+              "name": "Sales Invoice page",
+              "duration": 42.0,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "fst.itserver.biz": {
+      "Server": "FST",
+      "Page Load": 37.0,
+      "Login": 21.9,
+      "Features": {
+        "Sales Order": {
+          "Feature": 61.9,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales order page and click on Edit btn",
+              "duration": 61.9,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "cam.itserver.biz": {
+      "Server": "metro cam",
+      "Page Load": 5.9,
+      "Login": 16.5,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 10.9,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 10.8,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Gatepass": {
+          "Feature": 53.0,
+          "Scenario Timings": [
+            {
+              "name": "Visit Gate pass Page and click on Edit btn",
+              "duration": 53.0,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Purchase Invoice": {
+          "Feature": 56.0,
+          "Scenario Timings": [
+            {
+              "name": "Visit Purchase invoice Page and click on Edit btn",
+              "duration": 56.0,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Production Order FSTUser": {
+          "Feature": 17.1,
+          "Scenario Timings": [
+            {
+              "name": "Visit Production order page and click on Edit btn",
+              "duration": 17.1,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "nb.newagedistributions.com": {
+      "Server": "newage",
+      "Page Load": 4.7,
+      "Login": 13.7,
+      "Features": {
+        "Sales Order": {
+          "Feature": 28.8,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales order page",
+              "duration": 28.8,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "bmkenya.itserver.biz": {
+      "Server": "bmkenya",
+      "Page Load": 34.6,
+      "Login": 14.5,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 13.0,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 13.0,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Sales Order": {
+          "Feature": 4.1,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales order page",
+              "duration": 4.1,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "scentnsecret.itserver.biz": {
+      "Server": "scentnsecret",
+      "Page Load": 4.2,
+      "Login": 15.1,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 12.0,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 12.0,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Sales Order": {
+          "Feature": 3.6,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales order page",
+              "duration": 3.6,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "crm.cartzlink.com": {
+      "Server": "s15",
+      "Page Load": 2.8,
+      "Login": 13.9,
+      "Features": {
+        "Dash board": {
+          "Feature": 0.0,
+          "Scenario Timings": [
+            {
+              "name": "Visit Dash board page",
+              "duration": 0.0,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "crm.tabrospharma.com": {
+      "Server": "TP",
+      "Page Load": 2.5,
+      "Login": 23.2,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 9.6,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 9.6,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Sales Order": {
+          "Feature": 11.4,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales Order Page and click on Edit btn",
+              "duration": 11.4,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    }
+  },
+  "2025-08-21": {
+    "anamta.primeerp.top": {
+      "Server": "s12",
+      "Page Load": 4.6,
+      "Login": 25.0,
+      "Features": {
+        "CASH RECEIPT CV": {
+          "Feature": 11.3,
+          "Scenario Timings": [
+            {
+              "name": "Visit CashReceiptCV Page and click on Edit btn",
+              "duration": 11.3,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Account Voucher": {
+          "Feature": 10.6,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 10.6,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "mhp.itserver.biz": {
+      "Server": "MHP",
+      "Page Load": 1.7,
+      "Login": 17.0,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 17.1,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 17.1,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Sales Order": {
+          "Feature": 16.5,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales order page",
+              "duration": 16.4,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "mt2.itserver.biz": {
+      "Server": "metro crm",
+      "Page Load": 4.7,
+      "Login": 15.3,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 39.1,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 39.1,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Sales invoice MT": {
+          "Feature": 148.3,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales invoice page",
+              "duration": 148.3,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "mt.itserver.biz": {
+      "Server": "metro crm",
+      "Page Load": 3.8,
+      "Login": 23.0,
+      "Features": {
+        "Sales Order": {
+          "Feature": 37.8,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales order page and click on edit btn",
+              "duration": 37.8,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "gta.cartzlink.com": {
+      "Server": "s13",
+      "Page Load": 2.8,
+      "Login": 28.3,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 24.2,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 23.7,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Sales Invoice": {
+          "Feature": 54.2,
+          "Scenario Timings": [
+            {
+              "name": "Sales Invoice page",
+              "duration": 54.2,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "fst.itserver.biz": {
+      "Server": "FST",
+      "Page Load": 14.8,
+      "Login": 18.7,
+      "Features": {
+        "Sales Order": {
+          "Feature": 75.3,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales order page and click on Edit btn",
+              "duration": 75.0,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "cam.itserver.biz": {
+      "Server": "metro cam",
+      "Page Load": 5.0,
+      "Login": 19.3,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 10.2,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 10.2,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Gatepass": {
+          "Feature": 66.2,
+          "Scenario Timings": [
+            {
+              "name": "Visit Gate pass Page and click on Edit btn",
+              "duration": 66.2,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Purchase Invoice": {
+          "Feature": 75.8,
+          "Scenario Timings": [
+            {
+              "name": "Visit Purchase invoice Page and click on Edit btn",
+              "duration": 75.8,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Production Order FSTUser": {
+          "Feature": 32.4,
+          "Scenario Timings": [
+            {
+              "name": "Visit Production order page and click on Edit btn",
+              "duration": 32.4,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "nb.newagedistributions.com": {
+      "Server": "newage",
+      "Page Load": 4.8,
+      "Login": 37.3,
+      "Features": {
+        "Sales Order": {
+          "Feature": 50.9,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales order page",
+              "duration": 50.9,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "bmkenya.itserver.biz": {
+      "Server": "bmkenya",
+      "Page Load": 2.3,
+      "Login": 16.2,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 14.5,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 14.5,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Sales Order": {
+          "Feature": 6.0,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales order page",
+              "duration": 6.0,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "scentnsecret.itserver.biz": {
+      "Server": "scentnsecret",
+      "Page Load": 5.4,
+      "Login": 20.6,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 20.9,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 20.9,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Sales Order": {
+          "Feature": 5.3,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales order page",
+              "duration": 5.3,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "crm.cartzlink.com": {
+      "Server": "s15",
+      "Page Load": 0.3,
+      "Login": 2.7,
+      "Features": {
+        "Dash board": {
+          "Feature": 0.0,
+          "Scenario Timings": [
+            {
+              "name": "Visit Dash board page",
+              "duration": 0.0,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "crm.tabrospharma.com": {
+      "Server": "TP",
+      "Page Load": 2.7,
+      "Login": 0.1,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 29.7,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 29.7,
+              "status": "failed",
+              "failed_steps": [
+                {
+                  "Step": "we edit the top row",
+                  "Error": " Edit button could not be clicked or did not open the form",
+                  "Duration": 17.19
+                }
+              ]
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Sales Order": {
+          "Feature": 19.2,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales Order Page and click on Edit btn",
+              "duration": 19.2,
+              "status": "failed",
+              "failed_steps": [
+                {
+                  "Step": "we edit the top row",
+                  "Error": " Edit button could not be clicked or did not open the form",
+                  "Duration": 16.61
+                }
+              ]
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    }
+  },
+  "2025-08-22": {
+    "anamta.primeerp.top": {
+      "Server": "s12",
+      "Page Load": 4.1,
+      "Login": 25.9,
+      "Features": {
+        "CASH RECEIPT CV": {
+          "Feature": 12.2,
+          "Scenario Timings": [
+            {
+              "name": "Visit CashReceiptCV Page and click on Edit btn",
+              "duration": 12.2,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Account Voucher": {
+          "Feature": 13.7,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 13.7,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "mhp.itserver.biz": {
+      "Server": "MHP",
+      "Page Load": 3.2,
+      "Login": 17.0,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 18.3,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 18.3,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Sales Order": {
+          "Feature": 19.1,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales order page",
+              "duration": 19.1,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "mt2.itserver.biz": {
+      "Server": "metro crm",
+      "Page Load": 36.1,
+      "Login": 15.5,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 36.7,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 36.7,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Sales invoice MT": {
+          "Feature": 131.8,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales invoice page",
+              "duration": 131.7,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "mt.itserver.biz": {
+      "Server": "metro crm",
+      "Page Load": 1.9,
+      "Login": 30.5,
+      "Features": {
+        "Sales Order": {
+          "Feature": 31.4,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales order page and click on edit btn",
+              "duration": 31.4,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "gta.cartzlink.com": {
+      "Server": "s13",
+      "Page Load": 2.1,
+      "Login": 25.8,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 18.1,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 18.1,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Sales Invoice": {
+          "Feature": 38.0,
+          "Scenario Timings": [
+            {
+              "name": "Sales Invoice page",
+              "duration": 38.0,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "fst.itserver.biz": {
+      "Server": "FST",
+      "Page Load": 33.1,
+      "Login": 14.2,
+      "Features": {
+        "Sales Order": {
+          "Feature": 61.2,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales order page and click on Edit btn",
+              "duration": 61.2,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "cam.itserver.biz": {
+      "Server": "metro cam",
+      "Page Load": 1.9,
+      "Login": 15.0,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 9.5,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 9.5,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Gatepass": {
+          "Feature": 48.8,
+          "Scenario Timings": [
+            {
+              "name": "Visit Gate pass Page and click on Edit btn",
+              "duration": 48.8,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Purchase Invoice": {
+          "Feature": 57.0,
+          "Scenario Timings": [
+            {
+              "name": "Visit Purchase invoice Page and click on Edit btn",
+              "duration": 57.0,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Production Order FSTUser": {
+          "Feature": 17.8,
+          "Scenario Timings": [
+            {
+              "name": "Visit Production order page and click on Edit btn",
+              "duration": 17.8,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "nb.newagedistributions.com": {
+      "Server": "newage",
+      "Page Load": 3.6,
+      "Login": 16.1,
+      "Features": {
+        "Sales Order": {
+          "Feature": 26.2,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales order page",
+              "duration": 26.2,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "bmkenya.itserver.biz": {
+      "Server": "bmkenya",
+      "Page Load": 2.3,
+      "Login": 43.9,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 30.2,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 30.2,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Sales Order": {
+          "Feature": 15.1,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales order page",
+              "duration": 15.0,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "scentnsecret.itserver.biz": {
+      "Server": "scentnsecret",
+      "Page Load": 2.5,
+      "Login": 33.4,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 23.8,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 23.8,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Sales Order": {
+          "Feature": 7.2,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales order page",
+              "duration": 6.9,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "crm.cartzlink.com": {
+      "Server": "s15",
+      "Page Load": 2.6,
+      "Login": 16.7,
+      "Features": {
+        "Dash board": {
+          "Feature": 0.0,
+          "Scenario Timings": [
+            {
+              "name": "Visit Dash board page",
+              "duration": 0.0,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "crm.tabrospharma.com": {
+      "Server": "TP",
+      "Page Load": 1.7,
+      "Login": 26.0,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 12.1,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 12.1,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Sales Order": {
+          "Feature": 19.1,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales Order Page and click on Edit btn",
+              "duration": 18.3,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    }
+  }
+}

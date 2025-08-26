@@ -1,0 +1,6 @@
+Feature: Sales Order # multiple_domains_feature/Anamta_order.feature:4
+
+  @critical
+  Scenario: Sales order page           # multiple_domains_feature/Anamta_order.feature:7
+    Given we visit "orders/salesOrder" # steps/form_actions.py:14
+

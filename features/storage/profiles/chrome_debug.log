@@ -1,0 +1,24 @@
+[58232:54000:0624/182211.959:INFO:components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc:202] No machine level policy manager exists.
+[58232:69528:0624/182211.970:ERROR:content\browser\network_sandbox.cc:318] Failed to grant sandbox access to cache directory E:\tests\features\storage\profiles\Default\Cache\Cache_Data: Access is denied. (0x5)
+[58232:69528:0624/182211.971:ERROR:content\browser\network_sandbox.cc:333] Failed to grant sandbox access to shared dictionary directory E:\tests\features\storage\profiles\Default\Shared Dictionary: Access is denied. (0x5)
+[58232:69528:0624/182211.972:ERROR:content\browser\network_sandbox.cc:422] Failed to grant sandbox access to network context data directory E:\tests\features\storage\profiles\Default\Network: Access is denied. (0x5)
+[58232:14636:0624/182211.978:ERROR:content\browser\network_sandbox.cc:422] Failed to grant sandbox access to network context data directory E:\tests\features\storage\profiles\Default\Safe Browsing Network: Access is denied. (0x5)
+[58232:54000:0624/182212.066:ERROR:content\browser\network_service_instance_impl.cc:261] Encountered error while migrating network context data or granting sandbox access for E:\tests\features\storage\profiles\Default\Network. Result: 11: The operation completed successfully. (0x0)
+[58232:54000:0624/182212.068:ERROR:content\browser\network_service_instance_impl.cc:261] Encountered error while migrating network context data or granting sandbox access for E:\tests\features\storage\profiles\Default\Safe Browsing Network. Result: 11: The operation completed successfully. (0x0)
+[29944:59404:0624/182212.081:ERROR:gpu\ipc\client\command_buffer_proxy_impl.cc:127] ContextResult::kTransientFailure: Failed to send GpuControl.CreateCommandBuffer.
+[58232:54000:0624/182213.135:INFO:CONSOLE:0] "[DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o", source: https://anamta.primeerp.top/admin/?r=user/user/login&_lang=en (0)
+[58232:54000:0624/182213.136:INFO:CONSOLE:62] "TypeError: $(...).nanoScroller is not a function", source: https://anamta.primeerp.top/admin/cube/js/demo.js (62)
+[58232:54000:0624/182213.137:INFO:CONSOLE:2] "jQuery.Deferred exception: $(...).nanoScroller is not a function TypeError: $(...).nanoScroller is not a function
+    at HTMLDocument.<anonymous> (https://anamta.primeerp.top/admin/cube/js/scripts.js:98:33)
+    at l (https://anamta.primeerp.top/admin/cube/components/jquery/dist/jquery.min.js:2:29375)
+    at https://anamta.primeerp.top/admin/cube/components/jquery/dist/jquery.min.js:2:29677 undefined", source: https://anamta.primeerp.top/admin/cube/components/jquery/dist/jquery.min.js (2)
+[58232:54000:0624/182213.137:INFO:CONSOLE:2] "Uncaught TypeError: $(...).nanoScroller is not a function", source: https://anamta.primeerp.top/admin/cube/components/jquery/dist/jquery.min.js (2)
+[58232:54000:0624/182222.257:INFO:CONSOLE:0] "[DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o", source: https://anamta.primeerp.top/admin/?r=user/user/login (0)
+[58232:54000:0624/182222.261:INFO:CONSOLE:62] "TypeError: $(...).nanoScroller is not a function", source: https://anamta.primeerp.top/admin/cube/js/demo.js (62)
+[58232:54000:0624/182222.261:INFO:CONSOLE:2] "jQuery.Deferred exception: $(...).nanoScroller is not a function TypeError: $(...).nanoScroller is not a function
+    at HTMLDocument.<anonymous> (https://anamta.primeerp.top/admin/cube/js/scripts.js:98:33)
+    at l (https://anamta.primeerp.top/admin/cube/components/jquery/dist/jquery.min.js:2:29375)
+    at https://anamta.primeerp.top/admin/cube/components/jquery/dist/jquery.min.js:2:29677 undefined", source: https://anamta.primeerp.top/admin/cube/components/jquery/dist/jquery.min.js (2)
+[58232:54000:0624/182222.261:INFO:CONSOLE:2] "Uncaught TypeError: $(...).nanoScroller is not a function", source: https://anamta.primeerp.top/admin/cube/components/jquery/dist/jquery.min.js (2)
+[5560:3996:0624/182236.356:WARNING:net\extras\sqlite\sqlite_persistent_store_backend_base.cc:176] Failed to post task from FlushAndNotifyInBackground@net\extras\sqlite\sqlite_persistent_store_backend_base.cc:226 to client_task_runner_.
+[5560:3996:0624/182236.356:WARNING:net\extras\sqlite\sqlite_persistent_store_backend_base.cc:176] Failed to post task from FlushAndNotifyInBackground@net\extras\sqlite\sqlite_persistent_store_backend_base.cc:226 to client_task_runner_.

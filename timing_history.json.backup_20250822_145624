@@ -1,0 +1,178 @@
+{
+  "2025-08-05": {
+    "anamta.primeerp.top": {
+      "Page Load": 3.18,
+      "Login": 23.02,
+      "Features": {
+        "Feature": [
+          76.2,
+          40.72
+        ]
+      },
+      "Scenarios": {
+        "Scenario": [
+          9.85,
+          10.62
+        ]
+      }
+    },
+    "mhp.itserver.biz": {
+      "Page Load": 4.33,
+      "Login": 22.29,
+      "Features": {
+        "Feature": [
+          45.57,
+          80.23
+        ]
+      },
+      "Scenarios": {
+        "Scenario": [
+          18.26,
+          47.42
+        ]
+      }
+    },
+    "mt2.itserver.biz": {
+      "Page Load": 2.08,
+      "Login": 41.87,
+      "Features": {
+        "Feature": [
+          125.35,
+          290.13
+        ]
+      },
+      "Scenarios": {
+        "Scenario": [
+          58.98,
+          221.75
+        ]
+      }
+    },
+    "gta.cartzlink.com": {
+      "Page Load": 4.99,
+      "Login": 33.81,
+      "Features": {
+        "Feature": [
+          68.45,
+          172.36
+        ]
+      },
+      "Scenarios": {
+        "Scenario": [
+          20.07,
+          118.75
+        ]
+      }
+    },
+    "fst.itserver.biz": {
+      "Page Load": 10.69,
+      "Login": 22.79,
+      "Features": {
+        "Feature": [
+          213.7
+        ]
+      },
+      "Scenarios": {
+        "Scenario": [
+          165.44
+        ]
+      }
+    },
+    "cam.itserver.biz": {
+      "Page Load": 6.95,
+      "Login": 31.78,
+      "Features": {
+        "Feature": [
+          105.13,
+          194.52,
+          161.82,
+          69.49
+        ]
+      },
+      "Scenarios": {
+        "Scenario": [
+          25.65,
+          90.37,
+          128.11,
+          21.93
+        ]
+      }
+    },
+    "nb.newagedistributions.com": {
+      "Page Load": 1.08,
+      "Login": 14.26,
+      "Features": {
+        "Feature": [
+          90.8
+        ]
+      },
+      "Scenarios": {
+        "Scenario": [
+          51.52
+        ]
+      }
+    },
+    "bmkenya.itserver.biz": {
+      "Page Load": 33.52,
+      "Login": 25.38,
+      "Features": {
+        "Feature": [
+          76.38,
+          75.33
+        ]
+      },
+      "Scenarios": {
+        "Scenario": [
+          14.6,
+          6.57
+        ]
+      }
+    },
+    "scentnsecret.itserver.biz": {
+      "Page Load": 6.76,
+      "Login": 17.26,
+      "Features": {
+        "Feature": [
+          42.1,
+          36.71
+        ]
+      },
+      "Scenarios": {
+        "Scenario": [
+          13.3,
+          5.83
+        ]
+      }
+    },
+    "crm.cartzlink.com": {
+      "Page Load": 2.92,
+      "Login": 23.68,
+      "Features": {
+        "Feature": [
+          31.53
+        ]
+      },
+      "Scenarios": {
+        "Scenario": [
+          0.0
+        ]
+      }
+    },
+    "crm.tabrospharma.com": {
+      "Page Load": 1.29,
+      "Login": 27.39,
+      "Features": {
+        "Feature": [
+          58.89,
+          52.61
+        ]
+      },
+      "Scenarios": {
+        "Scenario": [
+          15.36,
+          16.99
+        ]
+      }
+    }
+  }
+}

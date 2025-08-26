@@ -1,0 +1,1 @@
+{"fst.itserver.biz": {"Server": "FST", "Page Load": 33.1, "Login": 14.2, "Features": {"Sales Order": {"Feature": 61.2, "Scenario Timings": [{"name": "Visit Sales order page and click on Edit btn", "duration": 61.2, "status": "passed", "failed_steps": []}], "Failed Steps": []}}}}

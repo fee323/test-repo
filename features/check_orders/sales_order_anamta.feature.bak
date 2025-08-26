@@ -1,0 +1,37 @@
+@allure.link:https://gta.cartzlink.com/admin/indexyii.php?r=orders/salesInvoice
+@allure.label.epic:sales
+
+
+
+@critical
+#Scenario: Edit Sales Invoice
+#    Given we visit "orders/salesInvoice"
+#       When we edit the row with "Farooq Khushbu House"
+#       then we should see "59497" in "documentTextId"
+#       then we should see "Farooq Khushbu House" in "customers_id"
+#       then we should see "ERP MAIN GODOWN" in "PhysicalLocationId" 
+#       then we should see "100" in "cartage"
+#       then we should see the following in grid:
+#          | Products             | Rate  | Qty   | Loose Qty  | Loose Rate  | Sticker Qty | Amount | Ounce Rate |
+#          | JANAN PLATINUM TYPE  | 65000 | 1     | 0          | 0           | 0           | 65000  |  0         |
+#     #     | 20006 - Dela Al Sabaya - GLOBAL FRAGRANCES    | 27000 | 0     | 100        | 2700        | 0           | 14400  |  0         |
+#     #     | IP035 - BLACK OPIUM (Type) - ILHAM FRAGRANCES | 20100 | 0     | 100        | 2010        | 0           | 14400  |  0         |
+
+
+@domain_anamta
+Feature: Sales Order
+
+@critical
+Scenario: Edit Sales Order - Field and Grid Load Check
+    Given we visit "orders/salesOrder"
+#    When we clear the from date and search
+#    and we edit the row with "Mohammad Asad"
+    When we clear date field "grid_view_fromdate", click submit and edit the row with "Mohammad Asad"
+    then the following fields should not be empty:
+    | field                               |
+    | orders_model_date_purchased         |
+    | orders_model_delivery_name          |
+    | orders_model_delivery_suburb        |
+    | orders_model_delivery_street_address|
+    | orders_model_delivery_city          |
+    And the first 2 rows in grid should be completely filled

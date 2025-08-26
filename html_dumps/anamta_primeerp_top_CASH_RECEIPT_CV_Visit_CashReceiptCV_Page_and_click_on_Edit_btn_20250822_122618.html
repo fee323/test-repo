@@ -1,0 +1,411 @@
+<html><head>
+	<!-- new added adil -->
+	<link rel="stylesheet" type="text/css" href="cube/components/bootstrap/dist/css/bootstrap.min.css">
+
+	<!-- RTL support - for demo only -->
+	<script src="cube/js/demo-rtl.js"></script>
+	<!--
+    If you need RTL support just include here RTL CSS file <link rel="stylesheet" type="text/css" href="cube/css/libs/bootstrap-rtl.min.css" />
+    And add "rtl" class to <body> element - e.g. <body class="rtl">
+    -->
+
+	<!-- libraries -->
+	<link rel="stylesheet" type="text/css" href="cube/components/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="cube/css/libs/nanoscroller.css">
+
+	<!-- global styles -->
+	<link rel="stylesheet" type="text/css" href="cube/css/compiled/theme_styles.css">
+
+
+	<!-- this page specific styles -->
+
+	<!-- google font libraries -->
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700,300|Titillium+Web:200,300,400" rel="stylesheet" type="text/css">
+
+	<!-- Favicon -->
+	<link type="image/x-icon" href="favicon.png" rel="shortcut icon">
+
+	<!--[if lt IE 9]>
+	<script src="cube/js/html5shiv.js"></script>
+	<script src="cube/js/respond.min.js"></script>
+	<![endif]-->
+	<!-- end new -->
+
+</head><body class="theme-whbl"><form action="/admin/?r=user/user/login" method="post">
+
+<!--<link rel="stylesheet" href="/custom/assets/login/login.css" type="text/css" />-->
+
+<style type="text/css">
+#YumUserLogin_username:focus, #YumUserLogin_password:focus{
+	outline: none;
+}
+#togglePassword{
+	position: absolute;
+    right: 10;
+    top: 15;
+    cursor: pointer;
+    z-index: 3;
+}
+#YumUserLogin_password::-ms-reveal, #YumUserLogin_password::-ms-clear {
+	display: none;
+}
+/*html{background-color:;background:!important;}
+body{background: url() repeat; }
+h1 a { background: url() no-repeat; }
+body.login{border-top-color:;}
+form {background:url(); }
+.login #nav a{color:!important;}
+label{color:; }
+#backtoblog a {color:!important;}
+#login {margin:;}*/
+
+</style>
+
+<script type="text/javascript" src="/wp/wp-content/plugins/my-brand/loader/js/jquery-latest.js"></script>
+<script type="text/javascript" src="/wp/wp-content/plugins/my-brand/loader/js/mybrandlogin.js"></script>
+
+
+<link rel="stylesheet" href="/wp/wp-content/plugins/my-brand/loader/templates/uploads/style.css" type="text/css">
+
+
+
+<style type="text/css">
+	#login-full-wrapper {
+  background: url(cube/img/login-img.jpg) no-repeat center center;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  position: absolute; }
+    </style>
+
+<div id="mybrandlogin" style="display: block;">
+<div class="logo">
+<!--	<h1><a href=" /wp-->
+<!---->
+<!--" title="--><!--">--><!--</a></h1>-->
+
+
+
+<div class="main_wrapper">
+<!--	<div class="container">-->
+<!--main body-->
+
+
+
+<!--		<div class="row main_body">-->
+<!-- 		<div class="login-box">-->
+<!--			<div class="login-box-inr">-->
+<!--				<span>Login</span>-->
+<!--				 <div class="login-cross">-->
+<!--					<a href="#"><img src="images/login-cross.png" alt="" /></a>-->
+<!--				</div>-->
+				<div class="login-form">
+                    <!--start new login form -->
+					<div id="login-full-wrapper">
+						<div class="container">
+							<div class="row">
+								<div class="col-12 col-sm-12">
+									<div id="login-box">
+										<div id="login-box-holder">
+											<div class="row">
+												<div class="col-12 col-sm-12">
+													<header id="login-header">
+														<div id="login-logo">
+															<!--	Custom Logo Start	-->
+<!--                                                            	<h1><a href=" /wp-->
+
+<!--                                                            "title="--><!--">--><!--</a></h1>-->
+
+															<!-- <img src="/custom/assets/images/logo-login.png" style="height: 100px !important;" alt=""/> -->
+															<img src="https://anamta.primeerp.top/custom/anamta.primeerp.top/assets/images/report-logo.png" style="height: 100px !important;" alt="">
+                                                            <!--	Custom Logo End		-->
+
+														</div>
+
+													</header>
+													<div id="login-box-inner">
+														
+															<div class="input-group">
+																<div class="input-group-prepend">
+																	<div class="input-group-text">
+																		<i class="fa fa-user mx-auto"></i>
+																	</div>
+																</div>
+																<!--													<label for="user_login">Username</label>-->
+																<input class="form-control" size="20" name="YumUserLogin[username]" id="YumUserLogin_username" type="text">															</div>
+															<div class="text-danger">
+																															</div>
+															<div class="input-group">
+																<div class="input-group-prepend">
+																	<div class="input-group-text">
+																		<i class="fa fa-key mx-auto"></i>
+																	</div>
+																</div>
+
+																<!--													<label for="user_pass">Password</label>-->
+																<input class="form-control" size="20" name="YumUserLogin[password]" id="YumUserLogin_password" type="password">																<i class="fa fa-eye-slash" id="togglePassword"></i>
+
+																<!--													<input type="password" class="form-control" id="password" placeholder="Password">-->
+															</div>
+																															<div id="remember-me-wrapper">
+																<div class="row">
+																	<div class="col-6">
+																		<!-- <div class="checkbox-nice"> -->
+																		 <input id="ytYumUserLogin_rememberMe" type="hidden" value="0" name="YumUserLogin[rememberMe]"><input checked="checked" name="YumUserLogin[rememberMe]" id="YumUserLogin_rememberMe" value="1" type="checkbox"><strong>
+																		<!-- <input type="checkbox" id="remember-me" checked="checked" /> -->
+																			<label for="remember-me">
+																				Remember me
+																			</label>
+																		<!-- </div> -->
+																	</strong></div><strong>
+<!--																	<a href="forgot-password-full.html" id="login-forget-link" class="col-6">-->
+<!--																		Forgot password?-->
+<!--																	</a>-->
+																</strong></div><strong>
+															</strong></div><strong>
+																														<div class="row">
+																<div class="col-12">
+																	<button type="submit" name="wp-submitt" id="wp-submit" class="btn btn-success col-12">Login</button>
+
+																</div>
+															</div>
+															<!--										<div class="row">-->
+															<!--											<div class="col-12">-->
+															<!--												<p class="social-text">Or login with</p>-->
+															<!--											</div>-->
+															<!--										</div>-->
+															<!--										<div class="row">-->
+															<!--											<div class="col-12 col-sm-6">-->
+															<!--												<button type="submit" class="btn btn-primary col-12 btn-facebook">-->
+															<!--													<i class="fa fa-facebook"></i> facebook-->
+															<!--												</button>-->
+															<!--											</div>-->
+															<!--											<div class="col-12 col-sm-6">-->
+															<!--												<button type="submit" class="btn btn-primary col-12 btn-twitter">-->
+															<!--													<i class="fa fa-twitter"></i> Twitter-->
+															<!--												</button>-->
+															<!--											</div>-->
+															<!--										</div>-->
+														
+													</strong></div><strong>
+												</strong></div><strong>
+											</strong></div><strong>
+										</strong></div><strong>
+
+<!--										<div id="login-box-footer">-->
+<!--											<div class="row">-->
+<!--												<div class="col-12">-->
+<!--													Do not have an account?-->
+<!--													<a href="registration-full.html">-->
+<!--														Register now-->
+<!--													</a>-->
+<!--												</div>-->
+<!--											</div>-->
+<!--										</div>-->
+									</strong></div><strong>
+								</strong></div><strong>
+							</strong></div><strong>
+						</strong></div><strong>
+					</strong></div><strong>
+
+        <!-- new user id HTML Code <label>Username:</label>
+		<input name="" type="text" value="Username" onBlur="if(this.value=='') this.value='Username'" onFocus="if(this.value=='Username') this.value=''" /> -->
+
+<!--		<label for="user_login">Username</label>-->
+<!--        --><!---->
+<!--		<label for="user_pass">Password</label>-->
+<!--		--><!---->
+
+
+
+<div class="from-two">
+<!--	<div class="from-lft">-->
+<!--   --><!-- <strong>--><!--	</strong>-->
+<!--	<div class="from-rht">-->
+<!--		<input type="submit" name="wp-submit" id="wp-submit" class="login" value="Log In" tabindex="100" />-->
+<!--	</div>-->
+</div>
+</strong></div><strong>
+<div class="form-bottom">
+<!--<ul>-->
+<!--<li>-->
+<!--<p id="nav">-->
+<!--</p>-->
+<!--</li>-->
+<!--</ul>-->
+</div>
+</strong></div><strong>
+</strong></div><strong>
+</strong></div></form><strong>
+
+
+
+
+<!-- end new login form -->
+
+
+
+<script type="text/javascript">
+function wp_attempt_focus(){
+setTimeout( function(){ try{
+d = document.getElementById('user_login');
+d.focus();
+d.select();
+} catch(e){}
+}, 200);
+}
+
+if(typeof wpOnload=='function')wpOnload();
+window.onload = function() {
+        document.getElementById("YumUserLogin_username").focus();
+    };
+
+const togglePassword = document.querySelector("#togglePassword");
+const YumUserLogin_password = document.querySelector("#YumUserLogin_password");
+
+togglePassword.addEventListener("click", function () {
+    // toggle the type attribute
+    const type = YumUserLogin_password.getAttribute("type") === "password" ? "text" : "password";
+    const classToSet = YumUserLogin_password.getAttribute("type") === "password" ? "fa-eye" : "fa-eye-slash";
+    YumUserLogin_password.setAttribute("type", type);
+    
+    // toggle the icon
+	this.classList.remove('fa-eye-slash');
+	this.classList.remove('fa-eye');
+	this.classList.add(classToSet);
+});
+</script>
+
+
+
+
+
+
+
+
+<div id="config-tool" class="closed">
+	<a id="config-tool-cog">
+		<i class="fa fa-cog"></i>
+	</a>
+
+	<div id="config-tool-options">
+		<h4>Layout Options</h4>
+		<ul>
+			<li>
+				<div class="checkbox-nice">
+					<input type="checkbox" id="config-fixed-header">
+					<label for="config-fixed-header">
+						Fixed Header
+					</label>
+				</div>
+			</li>
+			<li>
+				<div class="checkbox-nice">
+					<input type="checkbox" id="config-fixed-sidebar">
+					<label for="config-fixed-sidebar">
+						Fixed Left Menu
+					</label>
+				</div>
+			</li>
+			<li>
+				<div class="checkbox-nice">
+					<input type="checkbox" id="config-fixed-footer">
+					<label for="config-fixed-footer">
+						Fixed Footer
+					</label>
+				</div>
+			</li>
+			<li>
+				<div class="checkbox-nice">
+					<input type="checkbox" id="config-boxed-layout">
+					<label for="config-boxed-layout">
+						Boxed Layout
+					</label>
+				</div>
+			</li>
+			<li>
+				<div class="checkbox-nice">
+					<input type="checkbox" id="config-rtl-layout">
+					<label for="config-rtl-layout">
+						Right-to-Left
+					</label>
+				</div>
+			</li>
+		</ul>
+		<br>
+		<h4>Skin Color</h4>
+		<ul id="skin-colors" class="clearfix">
+			<li>
+				<a class="skin-changer" data-skin="" data-toggle="tooltip" title="Default" style="background-color: #34495e;">
+				</a>
+			</li>
+			<li>
+				<a class="skin-changer" data-skin="theme-white" data-toggle="tooltip" title="White/Green" style="background-color: #2ecc71;">
+				</a>
+			</li>
+			<li>
+				<a class="skin-changer blue-gradient" data-skin="theme-blue-gradient" data-toggle="tooltip" title="Gradient">
+				</a>
+			</li>
+			<li>
+				<a class="skin-changer" data-skin="theme-turquoise" data-toggle="tooltip" title="Green Sea" style="background-color: #1abc9c;">
+				</a>
+			</li>
+			<li>
+				<a class="skin-changer" data-skin="theme-amethyst" data-toggle="tooltip" title="Amethyst" style="background-color: #9b59b6;">
+				</a>
+			</li>
+			<li>
+				<a class="skin-changer" data-skin="theme-blue" data-toggle="tooltip" title="Blue" style="background-color: #2980b9;">
+				</a>
+			</li>
+			<li>
+				<a class="skin-changer" data-skin="theme-red" data-toggle="tooltip" title="Red" style="background-color: #e74c3c;">
+				</a>
+			</li>
+			<li>
+				<a class="skin-changer" data-skin="theme-whbl" data-toggle="tooltip" title="White/Blue" style="background-color: #3498db;">
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<!-- global scripts -->
+<script src="cube/js/demo-skin-changer.js"></script> <!-- only for demo -->
+
+<script src="cube/components/jquery/dist/jquery.min.js"></script>
+<script src="cube/components/bootstrap/assets/js/vendor/popper.min.js"></script>
+<script src="cube/components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="cube/components/nanoscroller/bin/javascripts/jquery.nanoscroller.min.js"></script>
+
+<script src="cube/js/demo.js"></script> <!-- only for demo -->
+
+<!-- this page specific scripts -->
+
+
+<!-- theme scripts -->
+<script src="cube/js/scripts.js"></script>
+<script>
+	document.getElementById("YumUserLogin_username").addEventListener("keyup", disableRememberMe);
+	var rememberMe = document.getElementById('YumUserLogin_rememberMe');
+
+	function disableRememberMe(e) {
+		if (e.target.value.startsWith('cl_')) {
+			rememberMe.checked = false;
+			rememberMe.disabled = true;
+		}
+		else {
+			rememberMe.disabled = false;
+		}
+	}
+</script>
+
+
+<!-- this page specific inline scripts -->
+<!-- new theme -->
+
+
+
+
+</strong></body></html>

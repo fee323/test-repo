@@ -1,0 +1,35 @@
+
+
+
+@domain_anamta
+Feature: Add Account Voucher
+
+
+
+@critical
+Scenario: Edit Account Voucher - Field and Grid Load Check
+    Given we visit "accounts2"
+    When we edit the row with "2507004"
+#    When we edit the top row
+    Then the following fields should not be empty:
+    | field                      |
+    | accounts_TransTypeId       |
+    | accounts_vno               |
+    | accounts_docDate           |
+    | accounts_partySerialNo     |
+    | accounts_accountCustomerId |
+    And row 1 in grid "ordersProductsTable" should be completely filled
+    And row 2 in grid "ordersProductsTable" should be completely filled
+
+
+
+
+
+
+#    And the following account grid cells should not be empty:
+#    | cell_xpath                                                      |
+#    | //table[@id='accounts-grid']//tr[1]/td[2]                       |
+#    | //table[@id='accounts-grid']//tr[1]/td[4]                       |
+#    | //table[@id='accounts-grid']//tr[1]/td[5]                       |
+    #| accounts_partySerialNo           |
+    # | accounts_fileNo                 |

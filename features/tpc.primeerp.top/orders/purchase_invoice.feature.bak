@@ -1,0 +1,61 @@
+@allure.link:http://demo.cartzlink.com.local/admin/?r=orders/purchaseInvoice
+@allure.label.owner:faheemanis
+@allure.label.epic:purchase
+Feature: Purchase Invoice
+
+@critical
+Scenario: Create Purchase Invoice
+    Given we visit "orders/purchaseInvoice"
+        and we click "Show/hide Form" button
+        and we select "POST EX" in "customers_id"
+        and we enter "100" in "cartage"
+        and we fill the grid with:
+            | DC | Products | Rate | Qty | Freight | Disc. % | Disc. Amt. | Fixed Disc. | Amount |
+            |    | 9004     | 100  | 5   | 500     | 0       | 0          | 0           | 1000   |
+    When we click "Save" button
+    Then we should see success message
+    and we should see this entry in grid:
+        | customers_id  | currency_value |
+        | POST EX       | 1100           |
+
+Scenario: Edit Purchase Invoice
+    Given we visit "orders/purchaseInvoice"
+        when we edit the top row
+        then we should see "POST EX" in "customers_id"
+        then we should see "100" in "cartage"
+        then we should see the following in grid:
+            | DC | Products                         | Rate | Qty | Freight | Disc. % | Disc. Amt. | Fixed Disc. | Amount |
+            |    | 3652fleece jacket - 1 - 9004     | 100  | 5   | 500     | 0       | 0          | 0           | 1000   |
+
+@critical
+Scenario: Update Purchase Invoice
+    Given we visit "orders/purchaseInvoice"
+        when we edit the top row 
+        and we select "POST EX" in "customers_id"
+        and we enter "200" in "cartage"
+         and we fill the grid with:
+            | DC | Products   | Rate | Qty | Freight | Disc. % | Disc. Amt. | Fixed Disc. | Amount |
+            |    | 9005       | 150  | 5   | 500     | 0       | 0          | 0           | 1250   |
+ 
+    and we click "Save" button
+    Then we should see success message
+    and we should see this entry in grid:
+        | customers_id  | currency_value |
+        | POST EX       | 1450           |
+
+@critical
+Scenario: Delete Purchase Invoice
+    Given we visit "orders/purchaseInvoice"
+    when we store the top row's DOC Id
+        and we delete the top row
+    then we should not see the stored Doc Id
+
+# Scenario: Load Purchase Order
+#     Given we visit "orders/purchaseInvoice"
+#        and we select "PO 8 - FAROOQ SONS - Amt: 49560.00" in "para_2" autocomplete
+#        when we click "Load Purchase Order" button
+#        then we should see "2024-08-21" in "doDate"
+#        and we should see the following in grid:
+#             | Products                            | Pcs  | Rate | Qty | Bonus | Total Qty | Disc. % | Disc. Amt. | Fixed Disc. | Amount | Custom Cost | OrderNo |
+#             | EL-ARAIS 6ML CPO - Dubai - 400      | 0    | 500  | 0   | 0     | 0         | 0       | 0          | 0           | 0      |             |         |
+            

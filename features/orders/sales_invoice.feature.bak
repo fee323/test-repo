@@ -1,0 +1,48 @@
+@allure.link:http://demo.cartzlink.com.local/admin/?r=orders/salesInvoice
+@allure.label.epic:sales
+Feature: Sales Invoice
+
+#Scenario: Create Sales Invoice
+#    Given we visit "orders/salesInvoice"
+#        and we click "Show/hide Form" button
+#        and we select "SUSEN FACTORY" in "customers_id"
+#        and we select "ERP MAIN GODOWN" in "PhysicalLocationId" 
+#        and we enter "100" in "cartage"
+#        and we fill the grid with:
+#          | DC  | Products                                                | Rate | Qty  | Disc. %  | Disc.Amt. | Fixed Disc | Amount |
+#          |     | Test1111145555 - TEst-Cartzlink-Sync - 1 - 54697        | 1000 | 5    | 0        | 0         | 0          | 5000   |
+#    When we click "Save" button
+#    Then we should see success message
+#    and we should see this entry in grid:
+#        | customers_id  | currency_value |
+#        | SUSEN FACTORY |  5100          |
+
+Scenario: Edit Sales Invoice
+    Given we visit "orders/salesInvoice"
+       when we edit the top row
+       then we should see "PostEx" in "customers_id"
+       and we select "ERP MAIN GODOWN" in "PhysicalLocationId" 
+       then we should see "100" in "cartage"
+       then we should see the following in grid:
+          | DC  | Products                                                | Rate | Qty  | Disc. %  | Disc.Amt. | Fixed Disc | Amount |
+          |     | Test1111145555 - TEst-Cartzlink-Sync - 1 - 54697        | 1000 | 5    | 0        | 0         | 0          | 5000      |
+          
+#Scenario: Update Sales Invoice
+#    Given we visit "orders/salesInvoice"
+#        when we edit the top row 
+#        and we select "POST EX" in "customers_id"
+#        and we enter "200" in "cartage"
+#         and we fill the grid with:
+#          | DC  | Products                                                | Rate | Qty  | Disc. %  | Disc.Amt. | Fixed Disc | Amount |
+#          |     | Test1111145555 - TEst-Cartzlink-Sync - 1 - 54697        | 1000 | 5    | 5        | 250       | 0          | 4750   |
+#    When we click "Save" button
+#    Then we should see success message
+#    and we should see this entry in grid:
+#        | customers_id | currency_value |
+#        | PostEx       | 4950           |
+
+#Scenario: Delete Sales Invoice
+#    Given we visit "orders/salesInvoice"
+#    when we store the top row's DOC Id
+#        and we delete the top row
+#    then we should not see the stored Doc Id

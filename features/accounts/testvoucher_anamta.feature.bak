@@ -1,0 +1,14 @@
+
+@domain_anamta
+Feature: Add Account Voucher
+
+
+
+@critical
+Scenario: Edit Account Voucher - Field and Grid Load Check
+    Given we visit "accounts2"
+    When we edit the row with "2504011"
+#    Then the first 2 rows in grid should be completely filled
+    Then row 1 in grid "ordersProductsTable" should have Account, Debit and Credit filled
+
+#    And row 2 in grid "ordersProductsTable" should be completely filled

@@ -1,0 +1,59 @@
+@allure.link:http://demo.cartzlink.com.local/admin/?r=orders/salesOrder
+@allure.label.epic:sales
+@domain_anamta
+Feature: Sales Order
+
+#Scenario: Create Sales Order
+#    Given we visit "orders/salesOrder"
+#        and we click "Show/hide Form" button
+#        and we select "SUSEN TRD" in "customers_id" autocomplete
+#      and we enter "2025-05-12" in "date_purchased"
+#        and we select "ERP MAIN GODOWN" in "frmVenueId"
+#        and we enter "0" in "cartage"
+#        and we fill the grid with:
+#            | Products                                                         | Rate  | Qty | Disc.% | Disc. Amt. | Stax %| Stax Amt | Amount | Remarks | DI |
+#            | JS011BLACK -  JS 011 Black - 1PCS - 14978                        | 5250  | 1   |  0     | 0          | 0     | 0        | 5250   |         |    |
+#            | ECOTRAVELLUGGAGE20BLACK -  ECO TRAVEL LUGGAGE 20 - 1PCS - 16943  | 20000 | 1   |  0     | 0          | 0     | 0        | 20000  |         |    |
+#    When we click "Save" button
+#    Then we should see success message
+#    and we should see this entry in grid:
+#        | customers_id  | currency_value |
+#        | SUSEN TRD     | 25250          |
+
+Scenario: Edit Sales Order
+    Given we visit "orders/salesOrder"
+       When we clear the from date and search
+       when we edit the top row
+     #  then we should see "SUSEN TRD" in "customers_id" autocomplete
+       then we should see "2025-04-30" in "date_purchased"
+#      then we should see "ERP MAIN GODOWN" in "frmVenueId"
+       then we should see "SusenZamzama" in "venueId"
+       then we should see "39159" in "usps_track_num2"
+       then we should see "150" in "cartage"
+       then we should see the following in grid:
+            | Products                                              | Rate  | Qty | Disc.% | Disc. Amt. | Stax %| Stax Amt | Amount | Remarks | DI |
+            | CRYSTAL10BLACK38 CRYSTAL 10 Black / 38 - 1PCS - 58698 | 3000  | 1   |  0     | 0          | 0     | 0        | 3000   |         |    |
+
+
+#Scenario: Update Sales Order
+#    Given we visit "orders/salesOrder"
+#        when we edit the top row 
+#        and we select "alchapo-test-customer - 252 - karachi" in "customers_id" autocomplete
+#        and we enter "2024-08-21" in "date_purchased"
+#        and we select "SusenTariqRoad" in "frmVenueId"
+#        and we enter "200" in "cartage"
+#         and we fill the grid with:
+#            | Products                                                         | Rate  | Qty | Disc.% | Disc. Amt. | Stax %| Stax Amt | Amount  | Remarks | DI |
+#            | JS011BLACK -  JS 011 Black - 1PCS - 14978                        | 5250  | 2   |  0     | 0          | 0     | 0        | 10500   |         |    |
+#            | ECOTRAVELLUGGAGE20BLACK -  ECO TRAVEL LUGGAGE 20 - 1PCS - 16943  | 20000 | 1   |  0     | 0          | 0     | 0        | 20000   |         |    |
+#    When we click "Save" button
+#    Then we should see success message
+#    and we should see this entry in grid:
+#        | customers_id   | currency_value |
+#        | POST EX        | 30700          |
+
+#Scenario: Delete Sales Order
+#    Given we visit "orders/salesOrder"
+#    when we store the top row's DOC Id
+#        and we delete the top row
+ #   then we should not see the stored Doc Id

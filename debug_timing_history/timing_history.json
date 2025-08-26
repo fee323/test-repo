@@ -1,0 +1,410 @@
+{
+  "2025-08-05": {
+    "test.domain.com": {
+      "Server": "Test Server",
+      "Page Load": 2.5,
+      "Login": 15.2,
+      "Features": {
+        "Test Feature": {
+          "Feature": 51.8,
+          "Scenario Timings": [
+            {
+              "name": "Test Scenario 1",
+              "duration": 12.3,
+              "status": "passed"
+            },
+            {
+              "name": "Test Scenario 2",
+              "duration": 8.7,
+              "status": "passed"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "2025-08-04": {
+    "test.domain.com": {
+      "Server": "Test Server",
+      "Page Load": 2.6,
+      "Login": 15.7,
+      "Features": {
+        "Test Feature": {
+          "Feature": 51.8,
+          "Scenario Timings": [
+            {
+              "name": "Test Scenario 1",
+              "duration": 12.3,
+              "status": "passed"
+            },
+            {
+              "name": "Test Scenario 2",
+              "duration": 8.7,
+              "status": "passed"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "2025-08-03": {
+    "test.domain.com": {
+      "Server": "Test Server",
+      "Page Load": 2.7,
+      "Login": 16.2,
+      "Features": {
+        "Test Feature": {
+          "Feature": 51.8,
+          "Scenario Timings": [
+            {
+              "name": "Test Scenario 1",
+              "duration": 12.3,
+              "status": "passed"
+            },
+            {
+              "name": "Test Scenario 2",
+              "duration": 8.7,
+              "status": "passed"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "2025-08-02": {
+    "test.domain.com": {
+      "Server": "Test Server",
+      "Page Load": 2.8,
+      "Login": 16.7,
+      "Features": {
+        "Test Feature": {
+          "Feature": 51.8,
+          "Scenario Timings": [
+            {
+              "name": "Test Scenario 1",
+              "duration": 12.3,
+              "status": "passed"
+            },
+            {
+              "name": "Test Scenario 2",
+              "duration": 8.7,
+              "status": "passed"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "2025-08-01": {
+    "test.domain.com": {
+      "Server": "Test Server",
+      "Page Load": 2.9,
+      "Login": 17.2,
+      "Features": {
+        "Test Feature": {
+          "Feature": 51.8,
+          "Scenario Timings": [
+            {
+              "name": "Test Scenario 1",
+              "duration": 12.3,
+              "status": "passed"
+            },
+            {
+              "name": "Test Scenario 2",
+              "duration": 8.7,
+              "status": "passed"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "2025-07-31": {
+    "test.domain.com": {
+      "Server": "Test Server",
+      "Page Load": 3.0,
+      "Login": 17.7,
+      "Features": {
+        "Test Feature": {
+          "Feature": 51.8,
+          "Scenario Timings": [
+            {
+              "name": "Test Scenario 1",
+              "duration": 12.3,
+              "status": "passed"
+            },
+            {
+              "name": "Test Scenario 2",
+              "duration": 8.7,
+              "status": "passed"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "2025-07-30": {
+    "test.domain.com": {
+      "Server": "Test Server",
+      "Page Load": 3.1,
+      "Login": 18.2,
+      "Features": {
+        "Test Feature": {
+          "Feature": 51.8,
+          "Scenario Timings": [
+            {
+              "name": "Test Scenario 1",
+              "duration": 12.3,
+              "status": "passed"
+            },
+            {
+              "name": "Test Scenario 2",
+              "duration": 8.7,
+              "status": "passed"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "2025-08-22": {
+    "test.domain.com": {
+      "Server": "Test Server",
+      "Page Load": 2.8,
+      "Login": 16.7,
+      "Features": {
+        "Test Feature": {
+          "Feature": 51.8,
+          "Scenario Timings": [
+            {
+              "name": "Test Scenario 1",
+              "duration": 12.3,
+              "status": "passed"
+            },
+            {
+              "name": "Test Scenario 2",
+              "duration": 8.7,
+              "status": "passed"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "2025-08-21": {
+    "test.domain.com": {
+      "Server": "Test Server",
+      "Page Load": 2.9,
+      "Login": 17.2,
+      "Features": {
+        "Test Feature": {
+          "Feature": 51.8,
+          "Scenario Timings": [
+            {
+              "name": "Test Scenario 1",
+              "duration": 12.3,
+              "status": "passed"
+            },
+            {
+              "name": "Test Scenario 2",
+              "duration": 8.7,
+              "status": "passed"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "2025-08-20": {
+    "test.domain.com": {
+      "Server": "Test Server",
+      "Page Load": 3.0,
+      "Login": 17.7,
+      "Features": {
+        "Test Feature": {
+          "Feature": 51.8,
+          "Scenario Timings": [
+            {
+              "name": "Test Scenario 1",
+              "duration": 12.3,
+              "status": "passed"
+            },
+            {
+              "name": "Test Scenario 2",
+              "duration": 8.7,
+              "status": "passed"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "2025-08-19": {
+    "test.domain.com": {
+      "Server": "Test Server",
+      "Page Load": 3.1,
+      "Login": 18.2,
+      "Features": {
+        "Test Feature": {
+          "Feature": 51.8,
+          "Scenario Timings": [
+            {
+              "name": "Test Scenario 1",
+              "duration": 12.3,
+              "status": "passed"
+            },
+            {
+              "name": "Test Scenario 2",
+              "duration": 8.7,
+              "status": "passed"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "2025-08-18": {
+    "test.domain.com": {
+      "Server": "Test Server",
+      "Page Load": 2.9,
+      "Login": 17.2,
+      "Features": {
+        "Test Feature": {
+          "Feature": 51.8,
+          "Scenario Timings": [
+            {
+              "name": "Test Scenario 1",
+              "duration": 12.3,
+              "status": "passed"
+            },
+            {
+              "name": "Test Scenario 2",
+              "duration": 8.7,
+              "status": "passed"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "2025-08-17": {
+    "test.domain.com": {
+      "Server": "Test Server",
+      "Page Load": 3.0,
+      "Login": 17.7,
+      "Features": {
+        "Test Feature": {
+          "Feature": 51.8,
+          "Scenario Timings": [
+            {
+              "name": "Test Scenario 1",
+              "duration": 12.3,
+              "status": "passed"
+            },
+            {
+              "name": "Test Scenario 2",
+              "duration": 8.7,
+              "status": "passed"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "2025-08-16": {
+    "test.domain.com": {
+      "Server": "Test Server",
+      "Page Load": 3.1,
+      "Login": 18.2,
+      "Features": {
+        "Test Feature": {
+          "Feature": 51.8,
+          "Scenario Timings": [
+            {
+              "name": "Test Scenario 1",
+              "duration": 12.3,
+              "status": "passed"
+            },
+            {
+              "name": "Test Scenario 2",
+              "duration": 8.7,
+              "status": "passed"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "2025-08-25": {
+    "test.domain.com": {
+      "Server": "Test Server",
+      "Page Load": 2.5,
+      "Login": 15.2,
+      "Features": {
+        "Test Feature": {
+          "Feature": 51.8,
+          "Scenario Timings": [
+            {
+              "name": "Test Scenario 1",
+              "duration": 12.3,
+              "status": "passed"
+            },
+            {
+              "name": "Test Scenario 2",
+              "duration": 8.7,
+              "status": "passed"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "2025-08-24": {
+    "test.domain.com": {
+      "Server": "Test Server",
+      "Page Load": 2.6,
+      "Login": 15.7,
+      "Features": {
+        "Test Feature": {
+          "Feature": 51.8,
+          "Scenario Timings": [
+            {
+              "name": "Test Scenario 1",
+              "duration": 12.3,
+              "status": "passed"
+            },
+            {
+              "name": "Test Scenario 2",
+              "duration": 8.7,
+              "status": "passed"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "2025-08-23": {
+    "test.domain.com": {
+      "Server": "Test Server",
+      "Page Load": 2.7,
+      "Login": 16.2,
+      "Features": {
+        "Test Feature": {
+          "Feature": 51.8,
+          "Scenario Timings": [
+            {
+              "name": "Test Scenario 1",
+              "duration": 12.3,
+              "status": "passed"
+            },
+            {
+              "name": "Test Scenario 2",
+              "duration": 8.7,
+              "status": "passed"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+[22776:43756:0823/184538.399:WARNING:chrome_main_delegate.cc(744)] This is Chrome version 127.0.6533.121 (not a warning)
+[22776:43756:0823/184538.455:INFO:chrome_browser_cloud_management_controller.cc(196)] No machine level policy manager exists.
+[22776:43756:0823/184538.465:WARNING:browser_management_service.cc(128)] EnterpriseLogoUrl fetch failed with error code -1 and MIME type 
+[22776:43756:0823/184539.576:INFO:CONSOLE(0)] "[DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o", source: https://denim600.primeerp.top/admin/?r=user/user/login (0)
+[22776:43756:0823/184539.591:INFO:CONSOLE(2)] "jQuery.Deferred exception: $(...).nanoScroller is not a function TypeError: $(...).nanoScroller is not a function
+    at HTMLDocument.<anonymous> (https://denim600.primeerp.top/admin/cube/js/scripts.js:98:33)
+    at l (https://denim600.primeerp.top/admin/cube/components/jquery/dist/jquery.min.js:2:29375)
+    at c (https://denim600.primeerp.top/admin/cube/components/jquery/dist/jquery.min.js:2:29677) undefined", source: https://denim600.primeerp.top/admin/cube/components/jquery/dist/jquery.min.js (2)
+[22776:43756:0823/184539.593:INFO:CONSOLE(2)] "Uncaught TypeError: $(...).nanoScroller is not a function", source: https://denim600.primeerp.top/admin/cube/components/jquery/dist/jquery.min.js (2)
+[22776:43756:0823/184542.231:INFO:CONSOLE(0)] "[DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o", source: https://denim600.primeerp.top/admin/?r=user/user/login (0)
+[22776:43756:0823/184542.234:INFO:CONSOLE(2)] "jQuery.Deferred exception: $(...).nanoScroller is not a function TypeError: $(...).nanoScroller is not a function
+    at HTMLDocument.<anonymous> (https://denim600.primeerp.top/admin/cube/js/scripts.js:98:33)
+    at l (https://denim600.primeerp.top/admin/cube/components/jquery/dist/jquery.min.js:2:29375)
+    at c (https://denim600.primeerp.top/admin/cube/components/jquery/dist/jquery.min.js:2:29677) undefined", source: https://denim600.primeerp.top/admin/cube/components/jquery/dist/jquery.min.js (2)
+[22776:43756:0823/184542.234:INFO:CONSOLE(2)] "Uncaught TypeError: $(...).nanoScroller is not a function", source: https://denim600.primeerp.top/admin/cube/components/jquery/dist/jquery.min.js (2)
+[22776:43756:0823/184544.913:INFO:CONSOLE(0)] "[DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o", source: https://denim600.primeerp.top/admin/?r=user/user/login (0)
+[22776:43756:0823/184544.916:INFO:CONSOLE(2)] "jQuery.Deferred exception: $(...).nanoScroller is not a function TypeError: $(...).nanoScroller is not a function
+    at HTMLDocument.<anonymous> (https://denim600.primeerp.top/admin/cube/js/scripts.js:98:33)
+    at l (https://denim600.primeerp.top/admin/cube/components/jquery/dist/jquery.min.js:2:29375)
+    at c (https://denim600.primeerp.top/admin/cube/components/jquery/dist/jquery.min.js:2:29677) undefined", source: https://denim600.primeerp.top/admin/cube/components/jquery/dist/jquery.min.js (2)
+[22776:43756:0823/184544.916:INFO:CONSOLE(2)] "Uncaught TypeError: $(...).nanoScroller is not a function", source: https://denim600.primeerp.top/admin/cube/components/jquery/dist/jquery.min.js (2)

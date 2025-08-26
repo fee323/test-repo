@@ -1,0 +1,31 @@
+
+
+@domain_gta
+Feature: Add Account Voucher
+
+#@critical
+#Scenario: Edit Account Voucher - Field and Grid Load Check
+#    Given we visit "accounts2"
+#       when we edit the top row
+#        then we should see "RV" in "TransTypeId"
+#        then we should see "2506518" in "vno"
+#        then we should see "2025-06-26" in "docDate"
+#        then we should see "Self - Karachi" in "accountCustomerId"
+#        then we should see "1900-01-01" in "chqDt"
+#        then we should see "JAVED FABRICS" in "narration"
+#        then we should see the following in grid:
+#             | Order Id | Account/Customer | Detail | Debit      | Credit | Chq. # | Chq. Dt.   | Bank   | Venue  |
+#             | 0        | ITA PAYMENTS     |        | 300,000.00 |    .00 |        | 1900-01-01 |        |        |
+
+
+@critical
+Scenario: Edit Account Voucher - Field and Grid Load Check
+    Given we visit "accounts2"
+    When we edit the top row
+    Then the following fields should not be empty:
+    | field                       |
+    | accounts_TransTypeId        |
+    | accounts_docDate            |
+    And the first 1 rows in grid should be completely filled
+  #  | orders_model_sGodownId              |
+  #  | orders_model_trDate                 |
