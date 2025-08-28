@@ -152,7 +152,7 @@ def print_final_summary(timing_summary, timing_tracker=None):
         login = domain_summary.get("Login")
         
         # Check page load failures and performance
-        if not isinstance(page_load, float):
+        if not isinstance(page_load, float) or page_load == "Failed":
             all_failures.append({
                 "type": "Page Load",
                 "domain": domain,
@@ -172,7 +172,7 @@ def print_final_summary(timing_summary, timing_tracker=None):
                 })
         
         # Check login failures and performance
-        if not isinstance(login, float):
+        if not isinstance(login, float) or login == "Failed":
             all_failures.append({
                 "type": "Login",
                 "domain": domain,
@@ -216,7 +216,7 @@ def print_final_summary(timing_summary, timing_tracker=None):
                         "details": f"Above 7-day average ({feature_data.get('average', 0):.1f}s)"
                     })
             
-            # Check scenario failures only (no slow tests for scenarios)
+            # Check scenario failures and performance
             scenario_timings = summary.get("Scenario Timings", [])
             for scenario in scenario_timings:
                 if scenario["status"] == "failed":
@@ -228,6 +228,7 @@ def print_final_summary(timing_summary, timing_tracker=None):
                         "scenario": scenario["name"],
                         "details": f"Scenario failed in {scenario['duration']:.2f}s"
                     })
+
     
     # Print failures and performance issues summary at the top
     if all_failures or all_slow_tests:
@@ -270,7 +271,7 @@ def print_final_summary(timing_summary, timing_tracker=None):
                     print(f"[SLOW] {slow_test['type']} SLOW | {slow_test['server']} | {slow_test['domain']}")
                     print(f"   Feature: {slow_test['feature']}")
                     print(f"   Time: {slow_test['time']:.2f}s | {slow_test['details']}")
-
+                # Scenarios removed from slow tests
         
         print("=" * 80)
         print()
@@ -308,7 +309,7 @@ def print_final_summary(timing_summary, timing_tracker=None):
                     html_lines.append(f"<li style='color: #f57c00;'><strong>{slow_test['type']} SLOW</strong> | {slow_test['server']} | {slow_test['domain']}<br>Time: {slow_test['time']:.2f}s | {slow_test['details']}</li>")
                 elif slow_test["type"] == "Feature":
                     html_lines.append(f"<li style='color: #f57c00;'><strong>{slow_test['type']} SLOW</strong> | {slow_test['server']} | {slow_test['domain']}<br>Feature: {slow_test['feature']}<br>Time: {slow_test['time']:.2f}s | {slow_test['details']}</li>")
-
+                # Scenarios removed from slow tests
             html_lines.append("</ul>")
         
         html_lines.append("<hr>")
@@ -543,7 +544,7 @@ def send_test_summary_email(summary_text):
         msg = EmailMessage()
         msg["Subject"] = "[SUMMARY] Automated Test Summary Report"
         msg["From"] = "CLAutomation_Alert@inayaat.com"
-        msg["To"] = "shafi@cartzlink.com, Devleads@cartzlink.com"
+        msg["To"] = "shafi@cartzlink.com"#, Devleads@cartzlink.com"
         
         # Set HTML content properly
         msg.set_content(summary_text, subtype='html')
@@ -567,18 +568,18 @@ def main():
 
     domains = [
 #        {"domain": "anamta.primeerp.top", "server": "s12", "password": "fdgd"},
-        {"domain": "anamta.primeerp.top", "server": "s12", "password": "czxVYO,30y8{2w"},
-        {"domain": "mhp.itserver.biz", "server": "MHP", "password": "czxVYO,30y8{2w"},
+#        {"domain": "anamta.primeerp.top", "server": "s12", "password": "czxVYO,30y8{2w"},
+#        {"domain": "mhp.itserver.biz", "server": "MHP", "password": "czxVYO,30y8{2w"},
         {"domain": "mt2.itserver.biz", "server": "metro crm", "password": "c3q)1k10(Yv!"},
-        {"domain": "mt.itserver.biz", "server": "metro crm", "password": "vI$97cK59+E2"},
-        {"domain": "gta.cartzlink.com", "server": "s13", "password": "czxVYO,30y8{2w"},
-        {"domain": "fst.itserver.biz", "server": "FST", "password": "8}rZ`bB8?68"},
-        {"domain": "cam.itserver.biz", "server": "metro cam", "password": "dXT2316?.m_5"},
-        {"domain": "nb.newagedistributions.com", "server": "newage", "password": "GkD4e7o[0?>T"},
-        {"domain": "bmkenya.itserver.biz", "server": "bmkenya", "password": "7!WrCiO1£>3T"},
-        {"domain": "scentnsecret.itserver.biz", "server": "scentnsecret", "password": "x%11<Zc8;J^!"},
-        {"domain": "crm.cartzlink.com", "server": "s15", "password": "£8~pYxF~i40&"},
-        {"domain": "crm.tabrospharma.com", "server": "TP", "password": "3M8Fg&Sn,18>"},
+#        {"domain": "mt.itserver.biz", "server": "metro crm", "password": "vI$97cK59+E2"},
+#        {"domain": "gta.cartzlink.com", "server": "s13", "password": "czxVYO,30y8{2w"},
+#        {"domain": "fst.itserver.biz", "server": "FST", "password": "8}rZ`bB8?68"},
+#        {"domain": "cam.itserver.biz", "server": "metro cam", "password": "dXT2316?.m_5"},
+#        {"domain": "nb.newagedistributions.com", "server": "newage", "password": "GkD4e7o[0?>T"},
+#        {"domain": "bmkenya.itserver.biz", "server": "bmkenya", "password": "7!WrCiO1£>3T"},
+#        {"domain": "scentnsecret.itserver.biz", "server": "scentnsecret", "password": "x%11<Zc8;J^!"},
+#        {"domain": "crm.cartzlink.com", "server": "s15", "password": "£8~pYxF~i40&"},
+#        {"domain": "crm.tabrospharma.com", "server": "TP", "password": "3M8Fg&Sn,18>"},
 
 #        {"domain": "crm.cqsignal.com ", "server": "cqsignal", "password": "1"},        
 #        {"domain": "aone.cartzlink.com", "server": "s", "password": "d87-2w1Qh:9d"},

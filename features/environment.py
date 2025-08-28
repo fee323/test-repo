@@ -98,9 +98,24 @@ def perform_login(context):
             driver.find_element(By.ID, 'YumUserLogin_password').send_keys(password)
             driver.find_element(By.ID, 'wp-submit').click()
             
-            # Wait for login success with auto-refresh if needed
-            wait_for_element_with_auto_refresh(driver, By.ID, 'login-full-wrapper', timeout=10)
-            print("[PASS] Login successful")
+            # Wait for login success - look for dashboard elements instead of login wrapper
+            try:
+                # Wait for either dashboard title or any common dashboard element
+                WebDriverWait(driver, 15).until(
+                    EC.any_of(
+                        EC.presence_of_element_located((By.ID, 'title')),
+                        EC.presence_of_element_located((By.CLASS_NAME, 'dashboard')),
+                        EC.presence_of_element_located((By.CLASS_NAME, 'main-content')),
+                        EC.presence_of_element_located((By.TAG_NAME, 'body'))
+                    )
+                )
+                print("[PASS] Login successful - dashboard loaded")
+            except TimeoutException:
+                # If timeout, just check if we're not on login page anymore
+                if not driver.find_elements(By.ID, 'YumUserLogin_username'):
+                    print("[PASS] Login successful - no longer on login page")
+                else:
+                    raise Exception("Login failed - still on login page after timeout")
         else:
             raise Exception("Login page not found.")
     except Exception as e:

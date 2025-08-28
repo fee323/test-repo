@@ -1841,5 +1841,102 @@
         }
       }
     }
+  },
+  "2025-08-27": {
+    "anamta.primeerp.top": {
+      "Server": "s12",
+      "Page Load": 5.6,
+      "Login": 23.5,
+      "Features": {
+        "CASH RECEIPT CV": {
+          "Feature": 10.1,
+          "Scenario Timings": [
+            {
+              "name": "Visit CashReceiptCV Page and click on Edit btn",
+              "duration": 10.1,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Account Voucher": {
+          "Feature": 11.5,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 11.5,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    },
+    "mt2.itserver.biz": {
+      "Server": "metro crm",
+      "Page Load": 34.8,
+      "Login": 16.4,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 54.1,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 54.1,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Sales invoice MT": {
+          "Feature": 212.7,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales invoice page",
+              "duration": 212.3,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    }
+  },
+  "2025-08-28": {
+    "mt2.itserver.biz": {
+      "Server": "metro crm",
+      "Page Load": 4.9,
+      "Login": 21.1,
+      "Features": {
+        "Add Account Voucher": {
+          "Feature": 65.6,
+          "Scenario Timings": [
+            {
+              "name": "Visit Account Voucher Page and click on Edit btn",
+              "duration": 65.6,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        },
+        "Sales invoice MT": {
+          "Feature": 220.7,
+          "Scenario Timings": [
+            {
+              "name": "Visit Sales invoice page",
+              "duration": 220.6,
+              "status": "passed",
+              "failed_steps": []
+            }
+          ],
+          "Failed Steps": []
+        }
+      }
+    }
   }
 }
