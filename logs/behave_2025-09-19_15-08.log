@@ -1,0 +1,227 @@
+========================================= 
+Behave Run Started at Fri 09/19/2025 15:08:20.78 
+========================================= 
+[INFO] Cleaned up 1 old/excess timing history entries. Remaining: 6 entries.
+
+============================================================
+STARTING DOMAIN: mt2.itserver.biz (Server: metro crm)
+============================================================
+[INFO] Running 2 feature files for domain 'mt2.itserver.biz':
+    C:\tests\features\mt2.itserver.biz\AccV.feature
+    C:\tests\features\mt2.itserver.biz\SO.feature
+[INFO] Domain = mt2.itserver.biz
+[INFO] Starting browser and logging in for domain: mt2.itserver.biz
+[INFO] Creating fresh browser instance for domain: mt2.itserver.biz
+[INFO] Attempt 1/5: Creating Chrome driver...
+[INFO] Applying performance optimizations for problematic domain: mt2.itserver.biz
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/5: Opening https://mt2.itserver.biz/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://mt2.itserver.biz/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[PASS] Login successful - dashboard loaded with refresh function
+[INFO] Login completed. Page Load: 4.0s, Login: 26.9s
+[INFO] Login successful for domain: mt2.itserver.biz
+Feature: Add Account Voucher # features/mt2.itserver.biz/AccV.feature:4
+
+  @critical
+  Scenario: Visit Account Voucher Page and click on Edit btn  # features/mt2.itserver.biz/AccV.feature:7
+    Given we visit "accounts2"                                # features/steps/form_actions.py:36
+    When we edit the top row                                  # features/steps/cartzlink_form.py:155
+
+Feature: Sales invoice MT # features/mt2.itserver.biz/SO.feature:4
+
+  @critical
+  Scenario: Visit Sales invoice page        # features/mt2.itserver.biz/SO.feature:7
+    Given we visit "orders/salesInvoice_MT" # features/steps/form_actions.py:36
+    When we clear the from date and search  # features/steps/form_actions.py:82
+      Traceback (most recent call last):
+        File "C:\Users\Cartzlink\AppData\Local\Programs\Python\Python312\Lib\site-packages\behave\model.py", line 1991, in run
+          match.run(runner.context)
+        File "C:\Users\Cartzlink\AppData\Local\Programs\Python\Python312\Lib\site-packages\behave\matchers.py", line 105, in run
+          self.func(context, *args, **kwargs)
+        File "features\steps\form_actions.py", line 95, in step_impl
+          context.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", edit_button)
+                                                                                           ^^^^^^^^^^^
+      UnboundLocalError: cannot access local variable 'edit_button' where it is not associated with a value
+
+----
+CAPTURED STDOUT: scenario
+ Successfully loaded orders/salesInvoice_MT
+---- CAPTURED_SCENARIO_OUTPUT_END ----
+
+
+[INFO] Server: metro crm | Domain: mt2.itserver.biz
+==================================================
+[PASS] Add Account Voucher
+[FAIL] Sales invoice MT
+
+============================================================
+COMPLETED DOMAIN: mt2.itserver.biz
+============================================================
+
+============================================================
+STARTING DOMAIN: fst.itserver.biz (Server: FST)
+============================================================
+[INFO] Running 1 feature files for domain 'fst.itserver.biz':
+    C:\tests\features\fst.itserver.biz\SO.feature
+[INFO] Domain = fst.itserver.biz
+[INFO] Starting browser and logging in for domain: fst.itserver.biz
+[INFO] Creating fresh browser instance for domain: fst.itserver.biz
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://fst.itserver.biz/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://fst.itserver.biz/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[PASS] Login successful - dashboard loaded with refresh function
+[INFO] Login completed. Page Load: 32.2s, Login: 33.6s
+[INFO] Login successful for domain: fst.itserver.biz
+Feature: Sales Order # features/fst.itserver.biz/SO.feature:4
+
+  @critical
+  Scenario: Visit Sales order page and click on Edit btn  # features/fst.itserver.biz/SO.feature:7
+    Given we visit "orders/salesOrder"                    # features/steps/form_actions.py:36
+    When we clear the from date and search                # features/steps/form_actions.py:82
+      Traceback (most recent call last):
+        File "C:\Users\Cartzlink\AppData\Local\Programs\Python\Python312\Lib\site-packages\behave\model.py", line 1991, in run
+          match.run(runner.context)
+        File "C:\Users\Cartzlink\AppData\Local\Programs\Python\Python312\Lib\site-packages\behave\matchers.py", line 105, in run
+          self.func(context, *args, **kwargs)
+        File "features\steps\form_actions.py", line 95, in step_impl
+          context.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", edit_button)
+                                                                                           ^^^^^^^^^^^
+      UnboundLocalError: cannot access local variable 'edit_button' where it is not associated with a value
+
+----
+CAPTURED STDOUT: scenario
+ Successfully loaded orders/salesOrder
+---- CAPTURED_SCENARIO_OUTPUT_END ----
+
+
+[INFO] Server: FST | Domain: fst.itserver.biz
+==================================================
+[FAIL] Sales Order
+
+============================================================
+COMPLETED DOMAIN: fst.itserver.biz
+============================================================
+
+==================================================
+[SUMMARY] FINAL TEST SUMMARY
+==================================================
+
+================================================================================
+[CRITICAL] FAILURES AND PERFORMANCE ISSUES SUMMARY
+================================================================================
+
+FAILURES (2 total):
+--------------------------------------------------
+[FAIL] Scenario FAILED | metro crm | mt2.itserver.biz
+   Feature: Sales invoice MT
+   Scenario: Visit Sales invoice page
+   Details: Scenario failed in 38.80s
+
+[FAIL] Scenario FAILED | FST | fst.itserver.biz
+   Feature: Sales Order
+   Scenario: Visit Sales order page and click on Edit btn
+   Details: Scenario failed in 27.80s
+
+
+SLOW TESTS (5 total):
+--------------------------------------------------
+[SLOW] Login SLOW | metro crm | mt2.itserver.biz
+   Time: 26.90s | Above 7-day average (25.8s)
+[SLOW] Feature SLOW | metro crm | mt2.itserver.biz
+   Feature: Add Account Voucher
+   Time: 36.80s | Above 7-day average (23.1s)
+[SLOW] Page Load SLOW | FST | fst.itserver.biz
+   Time: 32.20s | Above 7-day average (18.8s)
+[SLOW] Login SLOW | FST | fst.itserver.biz
+   Time: 33.60s | Above 7-day average (27.6s)
+[SLOW] Feature SLOW | FST | fst.itserver.biz
+   Feature: Sales Order
+   Time: 27.80s | Above 7-day average (20.1s)
+================================================================================
+
+[DEBUG] Getting 7-day data for domain: mt2.itserver.biz
+[DEBUG] Page load data: {'current': 4.0, 'average': 27.814285714285713, 'values': [4.0, 34.4, 32.3, 32.6, 14.9, 41.9, 34.6], 'is_high': False}
+[DEBUG] Formatted summary: 
+Times (Last 7 Days): 4.0, 34.4, 32.3, 32.6, 14.9, 41.9, 34.6
+7-Day Avg: 27.8
+Today: 4.0
+[DEBUG] Getting 7-day login data for domain: mt2.itserver.biz
+[DEBUG] Login data: {'current': 26.9, 'average': 25.785714285714285, 'values': [26.9, 29.6, 16.1, 12.1, 52.9, 19.2, 23.7], 'is_high': True}
+[DEBUG] Formatted login summary: 
+Times (Last 7 Days): 26.9, 29.6, 16.1, 12.1, 52.9, 19.2, 23.7
+7-Day Avg: 25.8
+Today: 26.9  Above 7-Day Avg
+[DEBUG] Getting 7-day data for domain: fst.itserver.biz
+[DEBUG] Page load data: {'current': 32.2, 'average': 18.785714285714285, 'values': [32.2, 2.9, 24.4, 14.2, 16.6, 29.7, 11.5], 'is_high': True}
+[DEBUG] Formatted summary: 
+Times (Last 7 Days): 32.2, 2.9, 24.4, 14.2, 16.6, 29.7, 11.5
+7-Day Avg: 18.8
+Today: 32.2  Above 7-Day Avg
+[DEBUG] Getting 7-day login data for domain: fst.itserver.biz
+[DEBUG] Login data: {'current': 33.6, 'average': 27.599999999999998, 'values': [33.6, 27.4, 11.8, 13.0, 13.3, 81.8, 12.3], 'is_high': True}
+[DEBUG] Formatted login summary: 
+Times (Last 7 Days): 33.6, 27.4, 11.8, 13.0, 13.3, 81.8, 12.3
+7-Day Avg: 27.6
+Today: 33.6  Above 7-Day Avg
+
+[INFO] Server: metro crm | Domain: mt2.itserver.biz
+[INFO] Features executed:
+    Add Account Voucher
+    Sales invoice MT
+==================================================
+[PASS] Page Load (4.00s)
+
+Times (Last 7 Days): 4.0, 34.4, 32.3, 32.6, 14.9, 41.9, 34.6
+7-Day Avg: 27.8
+Today: 4.0
+[PASS] Login (26.90s)  Above 7-Day Avg
+
+Times (Last 7 Days): 26.9, 29.6, 16.1, 12.1, 52.9, 19.2, 23.7
+7-Day Avg: 25.8
+Today: 26.9  Above 7-Day Avg
+
+[INFO] Feature: Add Account Voucher
+[PASS] Feature: Add Account Voucher (36.80s)  Above 7-Day Avg
+
+Times (Last 7 Days): 36.8, 46.9, 21.5, 13.5, 13.3, 13.9, 15.8
+7-Day Avg: 23.1
+Today: 36.8  Above 7-Day Avg
+[PASS] Scenario: Visit Account Voucher Page and click on Edit btn (36.80s)
+[INFO] Feature: Sales invoice MT
+[PASS] Feature: Sales invoice MT (38.80s)
+
+Times (Last 7 Days): 38.8, 60.3, 20.4, 30.0, 103.9, 26.8, 40.5
+7-Day Avg: 45.8
+Today: 38.8
+[FAIL] Scenario: Visit Sales invoice page (38.80s)
+
+[INFO] Server: FST | Domain: fst.itserver.biz
+[INFO] Features executed:
+    Sales Order
+==================================================
+[PASS] Page Load (32.20s)  Above 7-Day Avg
+
+Times (Last 7 Days): 32.2, 2.9, 24.4, 14.2, 16.6, 29.7, 11.5
+7-Day Avg: 18.8
+Today: 32.2  Above 7-Day Avg
+[PASS] Login (33.60s)  Above 7-Day Avg
+
+Times (Last 7 Days): 33.6, 27.4, 11.8, 13.0, 13.3, 81.8, 12.3
+7-Day Avg: 27.6
+Today: 33.6  Above 7-Day Avg
+
+[INFO] Feature: Sales Order
+[PASS] Feature: Sales Order (27.80s)  Above 7-Day Avg
+
+Times (Last 7 Days): 27.8, 40.3, 13.5, 12.9, 13.3, 14.3, 18.9
+7-Day Avg: 20.1
+Today: 27.8  Above 7-Day Avg
+[FAIL] Scenario: Visit Sales order page and click on Edit btn (27.80s)
+[PASS] Test summary email sent successfully.
+Finished at Fri 09/19/2025 15:12:17.41 
+========================================= 

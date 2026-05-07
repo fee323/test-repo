@@ -79,26 +79,53 @@ def select_dropdown(context, text, field_id):
     dropdown.select_by_visible_text(text)
     time.sleep(3)
 
-@when('we clear the from date and search')# added by shafee
+@when('we clear the from date and search')
 def step_impl(context):
-    WebDriverWait(context.driver, 5).until(
+    WebDriverWait(context.driver, 10).until(
         EC.presence_of_element_located((By.ID, 'grid_view_fromdate'))
     )
-    time.sleep(3)
+    time.sleep(1)
     date_field = context.driver.find_element(By.ID, 'grid_view_fromdate')
     date_field.clear()
 
-
     context.driver.find_element(By.ID, 'date_check').click()
-    time.sleep(3)
+    time.sleep(1)
 
-    WebDriverWait(context.driver, 5).until(
-        EC.presence_of_element_located((By.CSS_SELECTOR, 'img[src*="update.png"]'))
+    # Wait for an edit button to be clickable, then get it
+    edit_button = WebDriverWait(context.driver, 15).until(
+        EC.element_to_be_clickable((By.CSS_SELECTOR, 'img[src*="update.png"]'))
     )
 
-    edit_button = context.driver.find_elements(By.CSS_SELECTOR, 'img[src*="update.png"]')[0]
+    # Scroll then click
+    context.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", edit_button)
+    time.sleep(0.3)
     edit_button.click()
-    time.sleep(3)
+    time.sleep(1)
+
+
+#@when('we clear the from date and search')# added by shafee
+#def step_impl(context):
+#    WebDriverWait(context.driver, 5).until(
+#        EC.presence_of_element_located((By.ID, 'grid_view_fromdate'))
+#    )
+#    time.sleep(3)
+#    date_field = context.driver.find_element(By.ID, 'grid_view_fromdate')
+#    date_field.clear()
+#
+#
+#    context.driver.find_element(By.ID, 'date_check').click()
+#    time.sleep(3)
+#
+#    context.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", edit_button)
+#    time.sleep(3)
+#
+#    WebDriverWait(context.driver, 5).until(
+#        EC.presence_of_element_located((By.CSS_SELECTOR, 'img[src*="update.png"]'))
+#    )
+#
+#    edit_button = context.driver.find_elements(By.CSS_SELECTOR, 'img[src*="update.png"]')[0]
+#    edit_button.click()
+#    time.sleep(3)
 
 
 

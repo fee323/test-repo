@@ -1,0 +1,6 @@
+========================================= 
+Behave Run Started at Wed 02/25/2026 11:19:33.48 
+========================================= 
+Error fetching domain list: FetchDomainList failed: {'ok': 0, 'msg': 'Unauthorized'}
+Finished at Wed 02/25/2026 11:19:35.61 
+========================================= 

@@ -1,0 +1,155 @@
+========================================= 
+Behave Run Started at Thu 09/25/2025 14:37:46.66 
+========================================= 
+
+============================================================
+STARTING DOMAIN: anamta.primeerp.top (Server: s12)
+============================================================
+[INFO] Running 2 feature files for domain 'anamta.primeerp.top':
+    C:\tests\features\anamta.primeerp.top\AccCV.feature
+    C:\tests\features\anamta.primeerp.top\AccV.feature
+[INFO] Domain = anamta.primeerp.top
+[INFO] Starting browser and logging in for domain: anamta.primeerp.top
+[INFO] Creating fresh browser instance for domain: anamta.primeerp.top
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://anamta.primeerp.top/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://anamta.primeerp.top/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[PASS] Login successful - dashboard loaded with refresh function
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 3.0s, Login: 30.5s
+[INFO] Login successful for domain: anamta.primeerp.top
+Feature: CASH RECEIPT CV # ../../tests/features/anamta.primeerp.top/AccCV.feature:3
+
+  @critical
+  Scenario: Visit CashReceiptCV Page and click on Edit btn  # ../../tests/features/anamta.primeerp.top/AccCV.feature:6
+    Given we visit "accounts2/CashReceiptCV"                # ../../tests/features/steps/form_actions.py:36
+    When we edit the top row                                # ../../tests/features/steps/cartzlink_form.py:155
+
+Feature: Account Voucher # ../../tests/features/anamta.primeerp.top/AccV.feature:4
+
+  @critical
+  Scenario: Visit Account Voucher Page and click on Edit btn  # ../../tests/features/anamta.primeerp.top/AccV.feature:7
+    Given we visit "accounts2"                                # ../../tests/features/steps/form_actions.py:36
+    When we edit the top row                                  # ../../tests/features/steps/cartzlink_form.py:155
+
+
+[INFO] Server: s12 | Domain: anamta.primeerp.top
+==================================================
+[PASS] CASH RECEIPT CV
+[PASS] Account Voucher
+
+============================================================
+COMPLETED DOMAIN: anamta.primeerp.top
+============================================================
+
+============================================================
+STARTING DOMAIN: mt.itserver.biz (Server: metro crm)
+============================================================
+[INFO] Running 1 feature files for domain 'mt.itserver.biz':
+    C:\tests\features\mt.itserver.biz\SO.feature
+[INFO] Domain = mt.itserver.biz
+[INFO] Starting browser and logging in for domain: mt.itserver.biz
+[INFO] Creating fresh browser instance for domain: mt.itserver.biz
+[INFO] Attempt 1/5: Creating Chrome driver...
+[INFO] Applying performance optimizations for problematic domain: mt.itserver.biz
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/5: Opening https://mt.itserver.biz/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://mt.itserver.biz/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[PASS] Login successful - dashboard loaded with refresh function
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 2.2s, Login: 25.0s
+[INFO] Login successful for domain: mt.itserver.biz
+Feature: Sales Order # ../../tests/features/mt.itserver.biz/SO.feature:4
+
+  @critical
+  Scenario: Visit Sales order page and click on edit btn  # ../../tests/features/mt.itserver.biz/SO.feature:7
+    Given we visit "orders/SO2"                           # ../../tests/features/steps/form_actions.py:36
+    When we edit the top row                              # ../../tests/features/steps/cartzlink_form.py:155
+
+
+[INFO] Server: metro crm | Domain: mt.itserver.biz
+==================================================
+[PASS] Sales Order
+
+============================================================
+COMPLETED DOMAIN: mt.itserver.biz
+============================================================
+
+==================================================
+[SUMMARY] FINAL TEST SUMMARY
+==================================================
+[DEBUG] Getting 7-day data for domain: anamta.primeerp.top
+[DEBUG] Page load data: {'current': 3.0, 'average': 3.0, 'values': [3.0], 'is_high': False}
+[DEBUG] Formatted summary: 
+Times (Today): 3.0
+Today: 3.0
+[DEBUG] Getting 7-day login data for domain: anamta.primeerp.top
+[DEBUG] Login data: {'current': 30.5, 'average': 30.5, 'values': [30.5], 'is_high': False}
+[DEBUG] Formatted login summary: 
+Times (Today): 30.5
+Today: 30.5
+[DEBUG] Getting 7-day data for domain: mt.itserver.biz
+[DEBUG] Page load data: {'current': 2.2, 'average': 2.2, 'values': [2.2], 'is_high': False}
+[DEBUG] Formatted summary: 
+Times (Today): 2.2
+Today: 2.2
+[DEBUG] Getting 7-day login data for domain: mt.itserver.biz
+[DEBUG] Login data: {'current': 25.0, 'average': 25.0, 'values': [25.0], 'is_high': False}
+[DEBUG] Formatted login summary: 
+Times (Today): 25.0
+Today: 25.0
+
+[INFO] Server: s12 | Domain: anamta.primeerp.top
+[INFO] Features executed:
+    CASH RECEIPT CV
+    Account Voucher
+==================================================
+[PASS] Page Load (3.00s)
+
+Times (Today): 3.0
+Today: 3.0
+[PASS] Login (30.50s)
+
+Times (Today): 30.5
+Today: 30.5
+
+[INFO] Feature: CASH RECEIPT CV
+[PASS] Feature: CASH RECEIPT CV (9.90s)
+
+Times (Today): 9.9
+Today: 9.9
+[PASS] Scenario: Visit CashReceiptCV Page and click on Edit btn (9.90s)
+[INFO] Feature: Account Voucher
+[PASS] Feature: Account Voucher (9.40s)
+
+Times (Today): 9.4
+Today: 9.4
+[PASS] Scenario: Visit Account Voucher Page and click on Edit btn (9.40s)
+
+[INFO] Server: metro crm | Domain: mt.itserver.biz
+[INFO] Features executed:
+    Sales Order
+==================================================
+[PASS] Page Load (2.20s)
+
+Times (Today): 2.2
+Today: 2.2
+[PASS] Login (25.00s)
+
+Times (Today): 25.0
+Today: 25.0
+
+[INFO] Feature: Sales Order
+[PASS] Feature: Sales Order (22.40s)
+
+Times (Today): 22.4
+Today: 22.4
+[PASS] Scenario: Visit Sales order page and click on edit btn (22.40s)
+[PASS] Test summary email sent successfully.
+Finished at Thu 09/25/2025 14:39:45.63 
+========================================= 

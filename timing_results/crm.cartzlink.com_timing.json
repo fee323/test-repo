@@ -1,1 +1,1 @@
-{"crm.cartzlink.com": {"Server": "s15", "Page Load": 2.1, "Login": 14.5, "Features": {"Dash board": {"Feature": 0.0, "Scenario Timings": [{"name": "Visit Dash board page", "duration": 0.0, "status": "passed", "failed_steps": []}], "Failed Steps": []}}}}
+{"crm.cartzlink.com": {"Server": "CRM-CARTZLINK", "Page Load": 1.0, "Login": 211.5, "Features": {"Dash board": {"Feature": 0.0, "Scenario Timings": [{"name": "Visit Dash board page", "duration": 0.0, "status": "passed", "failed_steps": []}], "Failed Steps": []}}}}

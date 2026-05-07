@@ -1,1 +1,1 @@
-{"nb.newagedistributions.com": {"Server": "newage", "Page Load": 21.2, "Login": 19.7, "Features": {"Sales Order": {"Feature": 40.1, "Scenario Timings": [{"name": "Visit Sales order page", "duration": 40.1, "status": "passed", "failed_steps": []}], "Failed Steps": []}}}}
+{"nb.newagedistributions.com": {"Server": "NEWAGE", "Page Load": 3.8, "Login": 192.6, "Features": {"Sales Order": {"Feature": 16.5, "Scenario Timings": [{"name": "Visit Sales order page", "duration": 16.5, "status": "failed", "failed_steps": []}], "Failed Steps": []}}}}

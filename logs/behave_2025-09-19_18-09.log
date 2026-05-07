@@ -1,0 +1,17 @@
+========================================= 
+Behave Run Started at Fri 09/19/2025 18:09:10.94 
+========================================= 
+Traceback (most recent call last):
+  File "C:\tests\run_behave.py", line 615, in <module>
+    main()
+  File "C:\tests\run_behave.py", line 566, in main
+    timing_tracker = TimingTracker()
+                     ^^^^^^^^^^^^^^^
+  File "C:\tests\timing_tracker.py", line 10, in __init__
+    self.ensure_data_dir()
+  File "C:\tests\timing_tracker.py", line 15, in ensure_data_dir
+    os.makedirs(self.data_dir, exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [WinError 5] Access is denied: 'timing_history'
+Finished at Fri 09/19/2025 18:09:28.94 
+========================================= 

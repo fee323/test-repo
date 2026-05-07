@@ -1,0 +1,13 @@
+========================================= 
+Behave Run Started at Sat 02/28/2026 14:20:00.30 
+========================================= 
+Traceback (most recent call last):
+  File "E:\shayan\tests\run_behave.py", line 18, in <module>
+    from features.environment import errors_summary, timing_summary
+  File "E:\shayan\tests\features\environment.py", line 241
+    return False
+    ^^^^^^^^^^^^
+SyntaxError: 'return' outside function
+Error found 
+Finished at Sat 02/28/2026 14:20:01.96 
+========================================= 

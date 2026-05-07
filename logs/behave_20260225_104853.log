@@ -1,0 +1,562 @@
+========================================= 
+Behave Run Started at Wed 02/25/2026 10:48:53.41 
+========================================= 
+
+============================================================
+STARTING DOMAIN: aone.cartzlink.com (Server: AONE-CARTZLINK)
+============================================================
+[INFO] Running 3 feature files for domain 'aone.cartzlink.com':
+    E:\shayan\tests\features\aone.cartzlink.com\AccV.feature
+    E:\shayan\tests\features\aone.cartzlink.com\SI.feature
+    E:\shayan\tests\features\aone.cartzlink.com\SO.feature
+[INFO] Domain = aone.cartzlink.com
+[INFO] Starting browser and logging in for domain: aone.cartzlink.com
+[INFO] Creating fresh browser instance for domain: aone.cartzlink.com
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://aone.cartzlink.com/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://aone.cartzlink.com/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[WARN] Page load taking longer than 30s, refreshing... (refresh 1/2)
+[WARN] Page load taking longer than 30s, refreshing... (refresh 2/2)
+[WARN] Refresh function failed, trying fallback method: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff66573aa55
+	0x7ff665498630
+	0x7ff66522d75d
+	0x7ff66528862e
+	0x7ff66528893c
+	0x7ff6652d8d87
+	0x7ff6652d591c
+	0x7ff665279098
+	0x7ff665279f83
+	0x7ff665767810
+	0x7ff665761afd
+	0x7ff665782c1a
+	0x7ff6654b3345
+	0x7ff6654bb81c
+	0x7ff6654a1924
+	0x7ff6654a1ad6
+	0x7ff665487e47
+	0x7ffcf0467374
+	0x7ffcf247cc91
+
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 1.1s, Login: 192.5s
+[INFO] Login successful for domain: aone.cartzlink.com
+[INFO] Starting feature: Add Account Voucher
+Feature: Add Account Voucher # features/aone.cartzlink.com/AccV.feature:4
+
+  @critical
+  Scenario: Visit Account Voucher Page and click on Edit btn  # features/aone.cartzlink.com/AccV.feature:7
+    Given we visit "accounts2"                                # features/steps/form_actions.py:36
+    When we edit the top row                                  # features/steps/cartzlink_form.py:155
+      Assertion Failed:  Edit button could not be clicked or did not open the form
+      Captured stdout:
+       Successfully loaded accounts2
+      
+      [Screenshot Saved] E:\shayan\tests\screenshots\we edit the top row_20260225_105226.png
+
+[INFO] Completed feature: Add Account Voucher
+DEBUG: context.domain = aone.cartzlink.com
+DEBUG: timing_summary = {'aone.cartzlink.com': {'Server': 'AONE-CARTZLINK', 'Page Load': 1.1, 'Login': 192.5, 'Features': {'Add Account Voucher': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Account Voucher Page and click on Edit btn', 'duration': 15.9, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Add Account Voucher (15.9s)
+[DEBUG] Writing timing summary for aone.cartzlink.com to E:\shayan\tests\timing_results\aone.cartzlink.com_timing.json
+
+[INFO] Starting feature: Sales Invoice
+Feature: Sales Invoice # features/aone.cartzlink.com/SI.feature:3
+
+  @critical
+  Scenario: Visit Sales Order Page and click on Edit btn  # features/aone.cartzlink.com/SI.feature:6
+    Given we visit "orders/salesInvoice"                  # features/steps/form_actions.py:36
+    When we edit the top row                              # features/steps/cartzlink_form.py:155
+      Assertion Failed:  Edit button could not be clicked or did not open the form
+      Captured stdout:
+       Successfully loaded orders/salesInvoice
+      
+      [Screenshot Saved] E:\shayan\tests\screenshots\we edit the top row_20260225_105242.png
+
+[INFO] Completed feature: Sales Invoice
+DEBUG: context.domain = aone.cartzlink.com
+DEBUG: timing_summary = {'aone.cartzlink.com': {'Server': 'AONE-CARTZLINK', 'Page Load': 1.1, 'Login': 192.5, 'Features': {'Add Account Voucher': {'Feature': 15.9, 'Scenario Timings': [{'name': 'Visit Account Voucher Page and click on Edit btn', 'duration': 15.9, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}, 'Sales Invoice': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Sales Order Page and click on Edit btn', 'duration': 15.7, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Invoice (15.7s)
+[DEBUG] Writing timing summary for aone.cartzlink.com to E:\shayan\tests\timing_results\aone.cartzlink.com_timing.json
+
+[INFO] Starting feature: Sales Order
+Feature: Sales Order # features/aone.cartzlink.com/SO.feature:4
+
+  @critical
+  Scenario: Visit Sales Order Page and click on Edit btn  # features/aone.cartzlink.com/SO.feature:7
+    Given we visit "orders/salesOrder"                    # features/steps/form_actions.py:36
+    When we edit the top row                              # features/steps/cartzlink_form.py:155
+      Assertion Failed:  Edit button could not be clicked or did not open the form
+      Captured stdout:
+       Successfully loaded orders/salesOrder
+      
+      [Screenshot Saved] E:\shayan\tests\screenshots\we edit the top row_20260225_105258.png
+
+[INFO] Completed feature: Sales Order
+DEBUG: context.domain = aone.cartzlink.com
+DEBUG: timing_summary = {'aone.cartzlink.com': {'Server': 'AONE-CARTZLINK', 'Page Load': 1.1, 'Login': 192.5, 'Features': {'Add Account Voucher': {'Feature': 15.9, 'Scenario Timings': [{'name': 'Visit Account Voucher Page and click on Edit btn', 'duration': 15.9, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}, 'Sales Invoice': {'Feature': 15.7, 'Scenario Timings': [{'name': 'Visit Sales Order Page and click on Edit btn', 'duration': 15.7, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}, 'Sales Order': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Sales Order Page and click on Edit btn', 'duration': 15.9, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Order (15.9s)
+[DEBUG] Writing timing summary for aone.cartzlink.com to E:\shayan\tests\timing_results\aone.cartzlink.com_timing.json
+
+[INFO] Closing browser for domain: aone.cartzlink.com
+[INFO] Browser closed successfully for domain: aone.cartzlink.com
+[INFO] Browser instance cleared for domain: aone.cartzlink.com
+[SUMMARY] Timing for aone.cartzlink.com:
+{
+  "page_load": {
+    "current": 1.1,
+    "average": 1.2600000000000002,
+    "values": [
+      1.1,
+      1.6,
+      1.8,
+      0.8,
+      1.0
+    ],
+    "is_high": false
+  },
+  "login": {
+    "current": 192.5,
+    "average": 158.16,
+    "values": [
+      192.5,
+      195.2,
+      192.6,
+      192.4,
+      18.1
+    ],
+    "is_high": true
+  },
+  "features": {
+    "Add Account Voucher": {
+      "current": 15.9,
+      "average": 14.34,
+      "values": [
+        15.9,
+        15.9,
+        15.9,
+        15.9,
+        8.1
+      ],
+      "is_high": true
+    },
+    "Sales Invoice": {
+      "current": 15.7,
+      "average": 16.2,
+      "values": [
+        15.7,
+        15.9,
+        15.9,
+        15.9,
+        17.6
+      ],
+      "is_high": false
+    },
+    "Sales Order": {
+      "current": 15.9,
+      "average": 15.9,
+      "values": [
+        15.9,
+        15.9,
+        15.7,
+        15.8,
+        16.2
+      ],
+      "is_high": false
+    }
+  },
+  "scenario": {
+    "current": 15.833333333333334,
+    "average": 15.48,
+    "values": [
+      15.833333333333334,
+      15.9,
+      15.833333333333334,
+      15.866666666666667,
+      13.966666666666667
+    ],
+    "is_high": true
+  }
+}
+
+[INFO] Server: AONE-CARTZLINK | Domain: aone.cartzlink.com
+==================================================
+[FAIL] Add Account Voucher
+[FAIL] Sales Invoice
+[FAIL] Sales Order
+
+============================================================
+COMPLETED DOMAIN: aone.cartzlink.com
+============================================================
+
+============================================================
+STARTING DOMAIN: bmkenya.itserver.biz (Server: BM-KENYA)
+============================================================
+[INFO] Running 2 feature files for domain 'bmkenya.itserver.biz':
+    E:\shayan\tests\features\bmkenya.itserver.biz\AccV.feature
+    E:\shayan\tests\features\bmkenya.itserver.biz\SO.feature
+[INFO] Domain = bmkenya.itserver.biz
+[INFO] Starting browser and logging in for domain: bmkenya.itserver.biz
+[INFO] Creating fresh browser instance for domain: bmkenya.itserver.biz
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://bmkenya.itserver.biz/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://bmkenya.itserver.biz/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[WARN] Page load taking longer than 30s, refreshing... (refresh 1/2)
+[WARN] Page load taking longer than 30s, refreshing... (refresh 2/2)
+[WARN] Refresh function failed, trying fallback method: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff66573aa55
+	0x7ff665498630
+	0x7ff66522d75d
+	0x7ff66528862e
+	0x7ff66528893c
+	0x7ff6652d8d87
+	0x7ff6652d591c
+	0x7ff665279098
+	0x7ff665279f83
+	0x7ff665767810
+	0x7ff665761afd
+	0x7ff665782c1a
+	0x7ff6654b3345
+	0x7ff6654bb81c
+	0x7ff6654a1924
+	0x7ff6654a1ad6
+	0x7ff665487e47
+	0x7ffcf0467374
+	0x7ffcf247cc91
+
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 3.5s, Login: 192.3s
+[INFO] Login successful for domain: bmkenya.itserver.biz
+[INFO] Starting feature: Add Account Voucher
+Feature: Add Account Voucher # features/bmkenya.itserver.biz/AccV.feature:4
+
+  @critical
+  Scenario: Visit Account Voucher Page and click on Edit btn  # features/bmkenya.itserver.biz/AccV.feature:7
+    Given we visit "accounts2"                                # features/steps/form_actions.py:36
+    When we edit the top row                                  # features/steps/cartzlink_form.py:155
+      Assertion Failed:  Edit button could not be clicked or did not open the form
+      Captured stdout:
+       Successfully loaded accounts2
+      
+      [Screenshot Saved] E:\shayan\tests\screenshots\we edit the top row_20260225_105638.png
+
+[INFO] Completed feature: Add Account Voucher
+DEBUG: context.domain = bmkenya.itserver.biz
+DEBUG: timing_summary = {'bmkenya.itserver.biz': {'Server': 'BM-KENYA', 'Page Load': 3.5, 'Login': 192.3, 'Features': {'Add Account Voucher': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Account Voucher Page and click on Edit btn', 'duration': 16.5, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Add Account Voucher (16.5s)
+[DEBUG] Writing timing summary for bmkenya.itserver.biz to E:\shayan\tests\timing_results\bmkenya.itserver.biz_timing.json
+
+[INFO] Starting feature: Sales Order
+Feature: Sales Order # features/bmkenya.itserver.biz/SO.feature:4
+
+  @critical
+  Scenario: Visit Sales order page     # features/bmkenya.itserver.biz/SO.feature:7
+    Given we visit "orders/salesOrder" # features/steps/form_actions.py:36
+[INFO] Completed feature: Sales Order
+DEBUG: context.domain = bmkenya.itserver.biz
+DEBUG: timing_summary = {'bmkenya.itserver.biz': {'Server': 'BM-KENYA', 'Page Load': 3.5, 'Login': 192.3, 'Features': {'Add Account Voucher': {'Feature': 16.5, 'Scenario Timings': [{'name': 'Visit Account Voucher Page and click on Edit btn', 'duration': 16.5, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}, 'Sales Order': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Sales order page', 'duration': 0.8, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Order (0.8s)
+[DEBUG] Writing timing summary for bmkenya.itserver.biz to E:\shayan\tests\timing_results\bmkenya.itserver.biz_timing.json
+
+[INFO] Closing browser for domain: bmkenya.itserver.biz
+[INFO] Browser closed successfully for domain: bmkenya.itserver.biz
+[INFO] Browser instance cleared for domain: bmkenya.itserver.biz
+[SUMMARY] Timing for bmkenya.itserver.biz:
+{
+  "page_load": {
+    "current": 3.5,
+    "average": 3.716666666666667,
+    "values": [
+      3.5,
+      4.2,
+      4.0,
+      3.5,
+      3.3,
+      3.8
+    ],
+    "is_high": false
+  },
+  "login": {
+    "current": 192.3,
+    "average": 134.55,
+    "values": [
+      192.3,
+      192.8,
+      190.7,
+      191.8,
+      19.4,
+      20.3
+    ],
+    "is_high": true
+  },
+  "features": {
+    "Add Account Voucher": {
+      "current": 16.5,
+      "average": 14.25,
+      "values": [
+        16.5,
+        16.3,
+        16.5,
+        16.5,
+        9.6,
+        10.1
+      ],
+      "is_high": true
+    },
+    "Sales Order": {
+      "current": 0.8,
+      "average": 0.8166666666666668,
+      "values": [
+        0.8,
+        0.8,
+        0.8,
+        0.6,
+        0.9,
+        1.0
+      ],
+      "is_high": false
+    }
+  },
+  "scenario": {
+    "current": 8.65,
+    "average": 7.533333333333334,
+    "values": [
+      8.65,
+      8.55,
+      8.65,
+      8.55,
+      5.25,
+      5.55
+    ],
+    "is_high": true
+  }
+}
+
+[INFO] Server: BM-KENYA | Domain: bmkenya.itserver.biz
+==================================================
+[FAIL] Add Account Voucher
+[PASS] Sales Order
+
+============================================================
+COMPLETED DOMAIN: bmkenya.itserver.biz
+============================================================
+
+============================================================
+STARTING DOMAIN: crm.cartzlink.com (Server: CRM-CARTZLINK)
+============================================================
+[INFO] Running 1 feature files for domain 'crm.cartzlink.com':
+    E:\shayan\tests\features\crm.cartzlink.com\dashboard.feature
+[INFO] Domain = crm.cartzlink.com
+[INFO] Starting browser and logging in for domain: crm.cartzlink.com
+[INFO] Creating fresh browser instance for domain: crm.cartzlink.com
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://crm.cartzlink.com/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://crm.cartzlink.com/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[WARN] Page load taking longer than 30s, refreshing... (refresh 1/2)
+[WARN] Page load taking longer than 30s, refreshing... (refresh 2/2)
+[WARN] Refresh function failed, trying fallback method: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff66573aa55
+	0x7ff665498630
+	0x7ff66522d75d
+	0x7ff66528862e
+	0x7ff66528893c
+	0x7ff6652d8d87
+	0x7ff6652d591c
+	0x7ff665279098
+	0x7ff665279f83
+	0x7ff665767810
+	0x7ff665761afd
+	0x7ff665782c1a
+	0x7ff6654b3345
+	0x7ff6654bb81c
+	0x7ff6654a1924
+	0x7ff6654a1ad6
+	0x7ff665487e47
+	0x7ffcf0467374
+	0x7ffcf247cc91
+
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 0.7s, Login: 194.6s
+[INFO] Login successful for domain: crm.cartzlink.com
+[INFO] Starting feature: Dash board
+Feature: Dash board # features/crm.cartzlink.com/dashboard.feature:4
+[INFO] Completed feature: Dash board
+DEBUG: context.domain = crm.cartzlink.com
+DEBUG: timing_summary = {'crm.cartzlink.com': {'Server': 'CRM-CARTZLINK', 'Page Load': 0.7, 'Login': 194.6, 'Features': {'Dash board': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Dash board page', 'duration': 0.0, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Dash board (0.0s)
+[DEBUG] Writing timing summary for crm.cartzlink.com to E:\shayan\tests\timing_results\crm.cartzlink.com_timing.json
+
+  @critical
+  Scenario: Visit Dash board page  # features/crm.cartzlink.com/dashboard.feature:7
+
+[INFO] Closing browser for domain: crm.cartzlink.com
+[INFO] Browser closed successfully for domain: crm.cartzlink.com
+[INFO] Browser instance cleared for domain: crm.cartzlink.com
+[SUMMARY] Timing for crm.cartzlink.com:
+{
+  "page_load": {
+    "current": 0.7,
+    "average": 0.7166666666666667,
+    "values": [
+      0.7,
+      0.7,
+      0.8,
+      0.6,
+      0.9,
+      0.6
+    ],
+    "is_high": false
+  },
+  "login": {
+    "current": 194.6,
+    "average": 135.08333333333334,
+    "values": [
+      194.6,
+      192.7,
+      194.3,
+      192.5,
+      18.1,
+      18.3
+    ],
+    "is_high": true
+  },
+  "features": {
+    "Dash board": {
+      "current": 0.0,
+      "average": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "is_high": 0.0
+    }
+  },
+  "scenario": {
+    "current": 0.0,
+    "average": 0.0,
+    "values": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "is_high": 0.0
+  }
+}
+
+[INFO] Server: CRM-CARTZLINK | Domain: crm.cartzlink.com
+==================================================
+[PASS] Dash board
+
+============================================================
+COMPLETED DOMAIN: crm.cartzlink.com
+============================================================
+
+============================================================
+STARTING DOMAIN: fa3.itserver.biz (Server: CRM-CARTZLINK)
+============================================================
+[FAIL] OTP fetch failed | Domain: fa3.itserver.biz | Server: CRM-CARTZLINK | OTP API failed: {'ok': 0, 'msg': 'Unauthorized'}
+
+============================================================
+STARTING DOMAIN: crm.tabrospharma.com (Server: CRM-TABROSPHARMA)
+============================================================
+[FAIL] OTP fetch failed | Domain: crm.tabrospharma.com | Server: CRM-TABROSPHARMA | OTP API failed: {'ok': 0, 'msg': 'Unauthorized'}
+
+============================================================
+STARTING DOMAIN: fa2.itserver.biz (Server: FA2)
+============================================================
+[FAIL] OTP fetch failed | Domain: fa2.itserver.biz | Server: FA2 | OTP API failed: {'ok': 0, 'msg': 'Unauthorized'}
+
+============================================================
+STARTING DOMAIN: fr.itserver.biz (Server: FST)
+============================================================
+[FAIL] OTP fetch failed | Domain: fr.itserver.biz | Server: FST | OTP API failed: {'ok': 0, 'msg': 'Unauthorized'}
+
+============================================================
+STARTING DOMAIN: franscent.itserver.biz (Server: FST)
+============================================================
+[FAIL] OTP fetch failed | Domain: franscent.itserver.biz | Server: FST | OTP API failed: {'ok': 0, 'msg': 'Unauthorized'}
+
+============================================================
+STARTING DOMAIN: mac.itserver.biz (Server: METRO)
+============================================================
+[FAIL] OTP fetch failed | Domain: mac.itserver.biz | Server: METRO | OTP API failed: {'ok': 0, 'msg': 'Unauthorized'}
+
+============================================================
+STARTING DOMAIN: mac1920.itserver.biz (Server: METRO)
+============================================================
+[FAIL] OTP fetch failed | Domain: mac1920.itserver.biz | Server: METRO | OTP API failed: {'ok': 0, 'msg': 'Unauthorized'}
+
+============================================================
+STARTING DOMAIN: cam.itserver.biz (Server: METRO-CAM)
+============================================================
+[FAIL] OTP fetch failed | Domain: cam.itserver.biz | Server: METRO-CAM | OTP API failed: {'ok': 0, 'msg': 'Unauthorized'}
+
+============================================================
+STARTING DOMAIN: mhp.itserver.biz (Server: MHP)
+============================================================
+[FAIL] OTP fetch failed | Domain: mhp.itserver.biz | Server: MHP | OTP API failed: {'ok': 0, 'msg': 'Unauthorized'}
+
+============================================================
+STARTING DOMAIN: mhptax.itserver.biz (Server: MHP)
+============================================================
+[FAIL] OTP fetch failed | Domain: mhptax.itserver.biz | Server: MHP | OTP API failed: {'ok': 0, 'msg': 'Unauthorized'}
+
+============================================================
+STARTING DOMAIN: nb.newagedistributions.com (Server: NEWAGE)
+============================================================
+[FAIL] OTP fetch failed | Domain: nb.newagedistributions.com | Server: NEWAGE | OTP API failed: {'ok': 0, 'msg': 'Unauthorized'}
+
+============================================================
+STARTING DOMAIN: novelaromas.itserver.biz (Server: NOVEAL-AROMAS)
+============================================================
+[FAIL] OTP fetch failed | Domain: novelaromas.itserver.biz | Server: NOVEAL-AROMAS | OTP API failed: {'ok': 0, 'msg': 'Unauthorized'}
+
+============================================================
+STARTING DOMAIN: demo.cartzlink.com (Server: S12)
+============================================================
+[FAIL] OTP fetch failed | Domain: demo.cartzlink.com | Server: S12 | OTP API failed: {'ok': 0, 'msg': 'Unauthorized'}
+
+============================================================
+STARTING DOMAIN: aonetrade.itserver.biz (Server: S12)
+============================================================
+[FAIL] OTP fetch failed | Domain: aonetrade.itserver.biz | Server: S12 | OTP API failed: {'ok': 0, 'msg': 'Unauthorized'}
+
+============================================================
+STARTING DOMAIN: Aht.alhabib.group (Server: S13)
+============================================================
+[FAIL] OTP fetch failed | Domain: Aht.alhabib.group | Server: S13 | OTP API failed: {'ok': 0, 'msg': 'Unauthorized'}
+
+============================================================
+STARTING DOMAIN: Ahta.alhabib.group (Server: S13)
+============================================================
+[FAIL] OTP fetch failed | Domain: Ahta.alhabib.group | Server: S13 | OTP API failed: {'ok': 0, 'msg': 'Unauthorized'}
+
+============================================================
+STARTING DOMAIN: scentnsecret.itserver.biz (Server: SCENTNSECRET)
+============================================================
+[FAIL] OTP fetch failed | Domain: scentnsecret.itserver.biz | Server: SCENTNSECRET | OTP API failed: {'ok': 0, 'msg': 'Unauthorized'}
+[PASS] Test summary email sent successfully.
+Finished at Wed 02/25/2026 11:00:23.11 
+========================================= 

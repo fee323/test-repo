@@ -1,1 +1,1 @@
-{"mt.itserver.biz": {"Server": "metro crm", "Page Load": 34.6, "Login": 14.2, "Features": {"Sales Order": {"Feature": 33.8, "Scenario Timings": [{"name": "Visit Sales order page and click on edit btn", "duration": 33.8, "status": "passed", "failed_steps": []}], "Failed Steps": []}}}}
+{"mt.itserver.biz": {"Server": "metro crm", "Page Load": 2.2, "Login": 24.5, "Features": {"Sales Order": {"Feature": 9.4, "Scenario Timings": [{"name": "Visit Sales order page and click on edit btn", "duration": 9.4, "status": "passed", "failed_steps": []}], "Failed Steps": []}}}}

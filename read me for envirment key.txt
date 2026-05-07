@@ -1,0 +1,33 @@
+after run as adminjs
+for the check api key 
+
+ echo $env:CL_OTP_API_KEY
+
+
+🟢 Scenario 2: API Key Windows Environment Variable me hai (Recommended Setup)
+
+Agar aapne set kiya tha:
+
+setx CL_OTP_API_KEY "abc123xyz" /M
+
+
+To remove karne ke liye:
+
+🔹 Temporary remove (current session only)
+
+Remove-Item Env:CL_OTP_API_KEY
+
+🔹 Permanently remove (machine level)
+
+[Environment]::SetEnvironmentVariable("CL_OTP_API_KEY", $null, "Machine")
+
+
+⚠️ IIS restart required:
+
+iisreset
+
+
+Create karna ke tariqa
+
+[Environment]::SetEnvironmentVariable("CL_OTP_API_KEY", "1bsnY6Re4bNt/Dm9ZQGgVrtg4QM9SNPDjDnUGHv773kLGuxcfvzfFW0yjoZV8sxp", "Machine")
+iisreset

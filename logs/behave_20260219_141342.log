@@ -1,0 +1,147 @@
+========================================= 
+Behave Run Started at Thu 02/19/2026 14:13:42.39 
+========================================= 
+
+============================================================
+STARTING DOMAIN: demo.cartzlink.com (Server: S12)
+============================================================
+[INFO] Running 2 feature files for domain 'demo.cartzlink.com':
+    E:\shayan\tests\features\global\domain.feature
+    E:\shayan\tests\features\global\domain2.feature
+[INFO] Domain = demo.cartzlink.com
+[INFO] Starting browser and logging in for domain: demo.cartzlink.com
+[INFO] Creating fresh browser instance for domain: demo.cartzlink.com
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://demo.cartzlink.com/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://demo.cartzlink.com/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[WARN] Page load taking longer than 30s, refreshing... (refresh 1/2)
+[WARN] Page load taking longer than 30s, refreshing... (refresh 2/2)
+[WARN] Refresh function failed, trying fallback method: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff6af064435
+	0x7ff6af064490
+	0x7ff6aedfd49d
+	0x7ff6aee582fe
+	0x7ff6aee5860c
+	0x7ff6aeea8b67
+	0x7ff6aeea5728
+	0x7ff6aee48e38
+	0x7ff6aee49d23
+	0x7ff6af333b30
+	0x7ff6af32e3b8
+	0x7ff6af34e72a
+	0x7ff6af0807e5
+	0x7ff6af08978c
+	0x7ff6af06d794
+	0x7ff6af06d946
+	0x7ff6af053457
+	0x7ffcf0467374
+	0x7ffcf247cc91
+
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 10.0s, Login: 209.7s
+[INFO] Login successful for domain: demo.cartzlink.com
+[INFO] Starting feature: Sales Order
+Feature: Sales Order # features/global/domain.feature:3
+
+  @critical
+  Scenario: Sales order page           # features/global/domain.feature:6
+    Given we visit "orders/salesOrder" # features/steps/form_actions.py:36
+[INFO] Completed feature: Sales Order
+DEBUG: context.domain = demo.cartzlink.com
+DEBUG: timing_summary = {'demo.cartzlink.com': {'Server': 'S12', 'Page Load': 10.0, 'Login': 209.7, 'Features': {'Sales Order': {'Feature': None, 'Scenario Timings': [{'name': 'Sales order page', 'duration': 0.9, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Order (0.9s)
+[DEBUG] Writing timing summary for demo.cartzlink.com to E:\shayan\tests\timing_results\demo.cartzlink.com_timing.json
+
+[INFO] Starting feature: Sales Invoice
+Feature: Sales Invoice # features/global/domain2.feature:2
+
+  @critical
+  Scenario: Sales Invoice page           # features/global/domain2.feature:5
+    Given we visit "orders/salesInvoice" # features/steps/form_actions.py:36
+[INFO] Completed feature: Sales Invoice
+DEBUG: context.domain = demo.cartzlink.com
+DEBUG: timing_summary = {'demo.cartzlink.com': {'Server': 'S12', 'Page Load': 10.0, 'Login': 209.7, 'Features': {'Sales Order': {'Feature': 0.9, 'Scenario Timings': [{'name': 'Sales order page', 'duration': 0.9, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}, 'Sales Invoice': {'Feature': None, 'Scenario Timings': [{'name': 'Sales Invoice page', 'duration': 1.0, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Invoice (1.0s)
+[DEBUG] Writing timing summary for demo.cartzlink.com to E:\shayan\tests\timing_results\demo.cartzlink.com_timing.json
+
+[INFO] Closing browser for domain: demo.cartzlink.com
+[INFO] Browser closed successfully for domain: demo.cartzlink.com
+[INFO] Browser instance cleared for domain: demo.cartzlink.com
+[SUMMARY] Timing for demo.cartzlink.com:
+{
+  "page_load": {
+    "current": 10.0,
+    "average": 10.0,
+    "values": [
+      10.0
+    ],
+    "is_high": false
+  },
+  "login": {
+    "current": 209.7,
+    "average": 209.7,
+    "values": [
+      209.7
+    ],
+    "is_high": false
+  },
+  "features": {
+    "Sales Order": {
+      "current": 0.9,
+      "average": 0.9,
+      "values": [
+        0.9
+      ],
+      "is_high": false
+    },
+    "Sales Invoice": {
+      "current": 1.0,
+      "average": 1.0,
+      "values": [
+        1.0
+      ],
+      "is_high": false
+    }
+  },
+  "scenario": {
+    "current": 0.95,
+    "average": 0.95,
+    "values": [
+      0.95
+    ],
+    "is_high": false
+  }
+}
+
+[INFO] Server: S12 | Domain: demo.cartzlink.com
+==================================================
+[PASS] Sales Order
+[PASS] Sales Invoice
+
+============================================================
+COMPLETED DOMAIN: demo.cartzlink.com
+============================================================
+
+============================================================
+STARTING DOMAIN: ntc.s4.itlinkonline.com (Server: CRM-CARTZLINK)
+============================================================
+[INFO] Running 2 feature files for domain 'ntc.s4.itlinkonline.com':
+    E:\shayan\tests\features\global\domain.feature
+    E:\shayan\tests\features\global\domain2.feature
+[INFO] Domain = ntc.s4.itlinkonline.com
+[INFO] Starting browser and logging in for domain: ntc.s4.itlinkonline.com
+[INFO] Creating fresh browser instance for domain: ntc.s4.itlinkonline.com
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://ntc.s4.itlinkonline.com/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://ntc.s4.itlinkonline.com/admin/?r=user/user/login&_lang=en
+[FAIL] Login Failed: Login page not found.
+[FAIL] Login failed for domain ntc.s4.itlinkonline.com. Aborting all features.
+Finished at Thu 02/19/2026 14:18:20.71 
+========================================= 

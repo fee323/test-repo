@@ -1,0 +1,158 @@
+========================================= 
+Behave Run Started at Fri 02/20/2026 11:33:39.65 
+========================================= 
+
+============================================================
+STARTING DOMAIN: bmkenya.itserver.biz (Server: BM-KENYA)
+============================================================
+[INFO] Running 2 feature files for domain 'bmkenya.itserver.biz':
+    E:\shayan\tests\features\bmkenya.itserver.biz\AccV.feature
+    E:\shayan\tests\features\bmkenya.itserver.biz\SO.feature
+[INFO] Domain = bmkenya.itserver.biz
+[INFO] Starting browser and logging in for domain: bmkenya.itserver.biz
+[INFO] Creating fresh browser instance for domain: bmkenya.itserver.biz
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://bmkenya.itserver.biz/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://bmkenya.itserver.biz/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[WARN] Page load taking longer than 30s, refreshing... (refresh 1/2)
+[WARN] Page load taking longer than 30s, refreshing... (refresh 2/2)
+[WARN] Refresh function failed, trying fallback method: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff6af064435
+	0x7ff6af064490
+	0x7ff6aedfd49d
+	0x7ff6aee582fe
+	0x7ff6aee5860c
+	0x7ff6aeea8b67
+	0x7ff6aeea5728
+	0x7ff6aee48e38
+	0x7ff6aee49d23
+	0x7ff6af333b30
+	0x7ff6af32e3b8
+	0x7ff6af34e72a
+	0x7ff6af0807e5
+	0x7ff6af08978c
+	0x7ff6af06d794
+	0x7ff6af06d946
+	0x7ff6af053457
+	0x7ffcf0467374
+	0x7ffcf247cc91
+
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 3.8s, Login: 191.5s
+[INFO] Login successful for domain: bmkenya.itserver.biz
+[INFO] Starting feature: Add Account Voucher
+Feature: Add Account Voucher # features/bmkenya.itserver.biz/AccV.feature:4
+
+  @critical
+  Scenario: Visit Account Voucher Page and click on Edit btn  # features/bmkenya.itserver.biz/AccV.feature:7
+    Given we visit "accounts2"                                # features/steps/form_actions.py:36
+    When we edit the top row                                  # features/steps/cartzlink_form.py:155
+      Assertion Failed:  Edit button could not be clicked or did not open the form
+      Captured stdout:
+       Successfully loaded accounts2
+      
+      [Screenshot Saved] E:\shayan\tests\screenshots\we edit the top row_20260220_113715.png
+
+[INFO] Completed feature: Add Account Voucher
+DEBUG: context.domain = bmkenya.itserver.biz
+DEBUG: timing_summary = {'bmkenya.itserver.biz': {'Server': 'BM-KENYA', 'Page Load': 3.8, 'Login': 191.5, 'Features': {'Add Account Voucher': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Account Voucher Page and click on Edit btn', 'duration': 16.4, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Add Account Voucher (16.4s)
+[DEBUG] Writing timing summary for bmkenya.itserver.biz to E:\shayan\tests\timing_results\bmkenya.itserver.biz_timing.json
+
+[INFO] Starting feature: Sales Order
+Feature: Sales Order # features/bmkenya.itserver.biz/SO.feature:4
+
+  @critical
+  Scenario: Visit Sales order page     # features/bmkenya.itserver.biz/SO.feature:7
+    Given we visit "orders/salesOrder" # features/steps/form_actions.py:36
+[INFO] Completed feature: Sales Order
+DEBUG: context.domain = bmkenya.itserver.biz
+DEBUG: timing_summary = {'bmkenya.itserver.biz': {'Server': 'BM-KENYA', 'Page Load': 3.8, 'Login': 191.5, 'Features': {'Add Account Voucher': {'Feature': 16.4, 'Scenario Timings': [{'name': 'Visit Account Voucher Page and click on Edit btn', 'duration': 16.4, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}, 'Sales Order': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Sales order page', 'duration': 0.7, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Order (0.7s)
+[DEBUG] Writing timing summary for bmkenya.itserver.biz to E:\shayan\tests\timing_results\bmkenya.itserver.biz_timing.json
+
+[INFO] Closing browser for domain: bmkenya.itserver.biz
+[INFO] Browser closed successfully for domain: bmkenya.itserver.biz
+[INFO] Browser instance cleared for domain: bmkenya.itserver.biz
+[SUMMARY] Timing for bmkenya.itserver.biz:
+{
+  "page_load": {
+    "current": 3.8,
+    "average": 3.9,
+    "values": [
+      3.8,
+      3.3,
+      3.8,
+      3.4,
+      5.2
+    ],
+    "is_high": false
+  },
+  "login": {
+    "current": 191.5,
+    "average": 54.04,
+    "values": [
+      191.5,
+      19.4,
+      20.3,
+      19.4,
+      19.6
+    ],
+    "is_high": true
+  },
+  "features": {
+    "Add Account Voucher": {
+      "current": 16.4,
+      "average": 11.04,
+      "values": [
+        16.4,
+        9.6,
+        10.1,
+        9.6,
+        9.5
+      ],
+      "is_high": true
+    },
+    "Sales Order": {
+      "current": 0.7,
+      "average": 0.96,
+      "values": [
+        0.7,
+        0.9,
+        1.0,
+        1.2,
+        1.0
+      ],
+      "is_high": false
+    }
+  },
+  "scenario": {
+    "current": 8.549999999999999,
+    "average": 6.0,
+    "values": [
+      8.549999999999999,
+      5.25,
+      5.55,
+      5.3999999999999995,
+      5.25
+    ],
+    "is_high": true
+  }
+}
+
+[INFO] Server: BM-KENYA | Domain: bmkenya.itserver.biz
+==================================================
+[FAIL] Add Account Voucher
+[PASS] Sales Order
+
+============================================================
+COMPLETED DOMAIN: bmkenya.itserver.biz
+============================================================
+[PASS] Test summary email sent successfully.
+Finished at Fri 02/20/2026 11:37:26.23 
+========================================= 

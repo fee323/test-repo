@@ -1,0 +1,37 @@
+========================================= 
+Behave Run Started at Sun 11/23/2025 20:00:01.27 
+========================================= 
+
+============================================================
+STARTING DOMAIN: mt.itserver.biz (Server: metro crm)
+============================================================
+[INFO] Running 1 feature files for domain 'mt.itserver.biz':
+    E:\shayan\tests\features\mt.itserver.biz\SO.feature
+[INFO] Domain = mt.itserver.biz
+[INFO] Starting browser and logging in for domain: mt.itserver.biz
+[INFO] Creating fresh browser instance for domain: mt.itserver.biz
+[INFO] Attempt 1/5: Creating Chrome driver...
+[INFO] Applying performance optimizations for problematic domain: mt.itserver.biz
+[WARN] Error creating Chrome driver on attempt 1: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+. Waiting 10 seconds before retry...
+[INFO] Attempt 2/5: Creating Chrome driver...
+[INFO] Applying performance optimizations for problematic domain: mt.itserver.biz
+[WARN] Error creating Chrome driver on attempt 2: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+. Waiting 10 seconds before retry...
+[INFO] Attempt 3/5: Creating Chrome driver...
+[INFO] Applying performance optimizations for problematic domain: mt.itserver.biz
+[WARN] Error creating Chrome driver on attempt 3: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+. Waiting 10 seconds before retry...
+[INFO] Attempt 4/5: Creating Chrome driver...
+[INFO] Applying performance optimizations for problematic domain: mt.itserver.biz
+[WARN] Error creating Chrome driver on attempt 4: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+. Waiting 10 seconds before retry...
+[INFO] Attempt 5/5: Creating Chrome driver...
+[INFO] Applying performance optimizations for problematic domain: mt.itserver.biz
+[WARN] Error creating Chrome driver on attempt 5: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+. Waiting 10 seconds before retry...
+[FAIL] All 5 attempts to create Chrome driver failed.
+[FAIL] Driver Creation Failed: Failed to create Chrome driver after all retries
+[FAIL] Login failed for domain mt.itserver.biz. Aborting all features.
+Finished at Sun 11/23/2025 20:00:55.00 
+========================================= 

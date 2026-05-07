@@ -1,0 +1,75 @@
+========================================= 
+Behave Run Started at Thu 09/25/2025 14:45:53.42 
+========================================= 
+
+============================================================
+STARTING DOMAIN: mt.itserver.biz (Server: metro crm)
+============================================================
+[INFO] Running 1 feature files for domain 'mt.itserver.biz':
+    C:\tests\features\mt.itserver.biz\SO.feature
+[INFO] Domain = mt.itserver.biz
+[INFO] Starting browser and logging in for domain: mt.itserver.biz
+[INFO] Creating fresh browser instance for domain: mt.itserver.biz
+[INFO] Attempt 1/5: Creating Chrome driver...
+[INFO] Applying performance optimizations for problematic domain: mt.itserver.biz
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/5: Opening https://mt.itserver.biz/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://mt.itserver.biz/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[PASS] Login successful - dashboard loaded with refresh function
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 30.9s, Login: 25.0s
+[INFO] Login successful for domain: mt.itserver.biz
+Feature: Sales Order # ../../tests/features/mt.itserver.biz/SO.feature:4
+
+  @critical
+  Scenario: Visit Sales order page and click on edit btn  # ../../tests/features/mt.itserver.biz/SO.feature:7
+    Given we visit "orders/SO2"                           # ../../tests/features/steps/form_actions.py:36
+    When we edit the top row                              # ../../tests/features/steps/cartzlink_form.py:155
+
+
+[INFO] Server: metro crm | Domain: mt.itserver.biz
+==================================================
+[PASS] Sales Order
+
+============================================================
+COMPLETED DOMAIN: mt.itserver.biz
+============================================================
+
+==================================================
+[SUMMARY] FINAL TEST SUMMARY
+==================================================
+[DEBUG] Getting 7-day data for domain: mt.itserver.biz
+[DEBUG] Page load data: {'current': 30.9, 'average': 30.9, 'values': [30.9], 'is_high': False}
+[DEBUG] Formatted summary: 
+Times (Today): 30.9
+Today: 30.9
+[DEBUG] Getting 7-day login data for domain: mt.itserver.biz
+[DEBUG] Login data: {'current': 25.0, 'average': 25.0, 'values': [25.0], 'is_high': False}
+[DEBUG] Formatted login summary: 
+Times (Today): 25.0
+Today: 25.0
+
+[INFO] Server: metro crm | Domain: mt.itserver.biz
+[INFO] Features executed:
+    Sales Order
+==================================================
+[PASS] Page Load (30.90s)
+
+Times (Today): 30.9
+Today: 30.9
+[PASS] Login (25.00s)
+
+Times (Today): 25.0
+Today: 25.0
+
+[INFO] Feature: Sales Order
+[PASS] Feature: Sales Order (24.00s)
+
+Times (Today): 24.0
+Today: 24.0
+[PASS] Scenario: Visit Sales order page and click on edit btn (24.00s)
+[PASS] Test summary email sent successfully.
+Finished at Thu 09/25/2025 14:47:23.74 
+========================================= 

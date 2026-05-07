@@ -1,0 +1,108 @@
+========================================= 
+Behave Run Started at Fri 02/20/2026 10:46:08.36 
+========================================= 
+
+============================================================
+STARTING DOMAIN: aone.cartzlink.com (Server: AONE-CARTZLINK)
+============================================================
+[FAIL] OTP fetch failed | Domain: aone.cartzlink.com | Server: AONE-CARTZLINK | Missing CL_OTP_API_KEY env var
+
+============================================================
+
+
+STARTING DOMAIN: bmkenya.itserver.biz (Server: BM-KENYA)
+============================================================
+[FAIL] OTP fetch failed | Domain: bmkenya.itserver.biz | Server: BM-KENYA | Missing CL_OTP_API_KEY env var
+
+============================================================
+STARTING DOMAIN: crm.cartzlink.com (Server: CRM-CARTZLINK)
+============================================================
+[FAIL] OTP fetch failed | Domain: crm.cartzlink.com | Server: CRM-CARTZLINK | Missing CL_OTP_API_KEY env var
+
+============================================================
+STARTING DOMAIN: fa3.itserver.biz (Server: CRM-CARTZLINK)
+============================================================
+[FAIL] OTP fetch failed | Domain: fa3.itserver.biz | Server: CRM-CARTZLINK | Missing CL_OTP_API_KEY env var
+
+============================================================
+STARTING DOMAIN: crm.tabrospharma.com (Server: CRM-TABROSPHARMA)
+============================================================
+[FAIL] OTP fetch failed | Domain: crm.tabrospharma.com | Server: CRM-TABROSPHARMA | Missing CL_OTP_API_KEY env var
+
+============================================================
+STARTING DOMAIN: fa2.itserver.biz (Server: FA2)
+============================================================
+[FAIL] OTP fetch failed | Domain: fa2.itserver.biz | Server: FA2 | Missing CL_OTP_API_KEY env var
+
+============================================================
+STARTING DOMAIN: fr.itserver.biz (Server: FST)
+============================================================
+[FAIL] OTP fetch failed | Domain: fr.itserver.biz | Server: FST | Missing CL_OTP_API_KEY env var
+
+============================================================
+STARTING DOMAIN: franscent.itserver.biz (Server: FST)
+============================================================
+[FAIL] OTP fetch failed | Domain: franscent.itserver.biz | Server: FST | Missing CL_OTP_API_KEY env var
+
+============================================================
+STARTING DOMAIN: mac.itserver.biz (Server: METRO)
+============================================================
+[FAIL] OTP fetch failed | Domain: mac.itserver.biz | Server: METRO | Missing CL_OTP_API_KEY env var
+
+============================================================
+STARTING DOMAIN: mac1920.itserver.biz (Server: METRO)
+============================================================
+[FAIL] OTP fetch failed | Domain: mac1920.itserver.biz | Server: METRO | Missing CL_OTP_API_KEY env var
+
+============================================================
+STARTING DOMAIN: cam.itserver.biz (Server: METRO-CAM)
+============================================================
+[FAIL] OTP fetch failed | Domain: cam.itserver.biz | Server: METRO-CAM | Missing CL_OTP_API_KEY env var
+
+============================================================
+STARTING DOMAIN: mhp.itserver.biz (Server: MHP)
+============================================================
+[FAIL] OTP fetch failed | Domain: mhp.itserver.biz | Server: MHP | Missing CL_OTP_API_KEY env var
+
+============================================================
+STARTING DOMAIN: mhptax.itserver.biz (Server: MHP)
+============================================================
+[FAIL] OTP fetch failed | Domain: mhptax.itserver.biz | Server: MHP | Missing CL_OTP_API_KEY env var
+
+============================================================
+STARTING DOMAIN: nb.newagedistributions.com (Server: NEWAGE)
+============================================================
+[FAIL] OTP fetch failed | Domain: nb.newagedistributions.com | Server: NEWAGE | Missing CL_OTP_API_KEY env var
+
+============================================================
+STARTING DOMAIN: novelaromas.itserver.biz (Server: NOVEAL-AROMAS)
+============================================================
+[FAIL] OTP fetch failed | Domain: novelaromas.itserver.biz | Server: NOVEAL-AROMAS | Missing CL_OTP_API_KEY env var
+
+============================================================
+STARTING DOMAIN: demo.cartzlink.com (Server: S12)
+============================================================
+[FAIL] OTP fetch failed | Domain: demo.cartzlink.com | Server: S12 | Missing CL_OTP_API_KEY env var
+
+============================================================
+STARTING DOMAIN: aonetrade.itserver.biz (Server: S12)
+============================================================
+[FAIL] OTP fetch failed | Domain: aonetrade.itserver.biz | Server: S12 | Missing CL_OTP_API_KEY env var
+
+============================================================
+STARTING DOMAIN: Aht.alhabib.group (Server: S13)
+============================================================
+[FAIL] OTP fetch failed | Domain: Aht.alhabib.group | Server: S13 | Missing CL_OTP_API_KEY env var
+
+============================================================
+STARTING DOMAIN: Ahta.alhabib.group (Server: S13)
+============================================================
+[FAIL] OTP fetch failed | Domain: Ahta.alhabib.group | Server: S13 | Missing CL_OTP_API_KEY env var
+
+============================================================
+STARTING DOMAIN: scentnsecret.itserver.biz (Server: SCENTNSECRET)
+============================================================
+[FAIL] OTP fetch failed | Domain: scentnsecret.itserver.biz | Server: SCENTNSECRET | Missing CL_OTP_API_KEY env var
+[FAIL] Failed to send email: Missing CL_SMTP_PASS env var for SMTP login
+Finished at Fri 02/20/2026 10:46:09.26 
+========================================= 

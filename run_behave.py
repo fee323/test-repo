@@ -1,34 +1,34 @@
 import sys
 import io
 import os
-from behave.configuration import Configuration
-from selenium.webdriver import Chrome, ChromeOptions
-from selenium.common.exceptions import WebDriverException
-from selenium.webdriver.common.by import By
-from behave.runner import Runner
-from behave.model_core import Status
-import smtplib
-from email.message import EmailMessage
-from features.environment import errors_summary, timing_summary
-import json
 import glob
-from email.mime.text import MIMEText
-from timing_tracker import TimingTracker
+import json
 import re
 import html
+import time
+import smtplib
+from datetime import datetime
 
-#def safe_str(obj):
-    # Remove non-ASCII characters
-    #return ''.join(c if ord(c) < 128 else '?' for c in str(obj))
+import requests
+from behave.configuration import Configuration
+from behave.runner import Runner
+from behave.model_core import Status
+from email.message import EmailMessage
 
-# UTF-8 fix for Windows console
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+from features.environment import errors_summary, timing_summary
+from timing_tracker import TimingTracker
+
+
+# =========================
+# Console UTF-8 fix (Windows)
+# =========================
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 
 test_summary = []
 
 # Sanitization helpers to avoid unintended formatting like strikethrough
 ANSI_ESCAPE_RE = re.compile(r"\x1B\[[0-?]*[ -/]*[@-~]")
-STRIKE_COMBINING_RE = re.compile(r"[\u0335\u0336\u0337\u0338]")  # Short/long stroke overlays and slashes
+STRIKE_COMBINING_RE = re.compile(r"[\u0335\u0336\u0337\u0338]")  # stroke overlays
 
 
 def strip_ansi(s: str) -> str:
@@ -40,11 +40,8 @@ def sanitize_text(s) -> str:
         return ""
     if not isinstance(s, str):
         s = str(s)
-    # Remove ANSI codes
     s = strip_ansi(s)
-    # Remove markdown strikethrough markers
     s = s.replace("~~", "")
-    # Remove unicode combining strikethrough overlays
     s = STRIKE_COMBINING_RE.sub("", s)
     return s
 
@@ -53,49 +50,76 @@ def sanitize_html_text(s) -> str:
     return html.escape(sanitize_text(s))
 
 
-def format_7_day_summary(metric_data, metric_name):
-    """Format 7-day average summary for display"""
-    if not metric_data or metric_data.get("average") is None:
-        return ""
-    
-    current = metric_data["current"]
-    average = metric_data["average"]
-    values = metric_data["values"]
-    is_high = metric_data.get("is_high", False)
-    
-    # Format values as comma-separated list
-    values_str = ", ".join([f"{v:.1f}" for v in values])
-    
-    # Create summary text with actual number of days
-    num_days = len(values)
-    if num_days == 1:
-        summary = f"\nTimes (Today): {values_str}\n"
-        summary += f"Today: {current:.1f}"
-    else:
-        summary = f"\nTimes (Last {num_days} Days): {values_str}\n"
-        summary += f"{num_days}-Day Avg: {average:.1f}\n"
-        summary += f"Today: {current:.1f}"
-    
-    # Add warning if today's time is high
-    if is_high:
-        summary += f"  Above {num_days}-Day Avg"
-    
-    return summary
+# =========================
+# ✅ OTP Fetch (API) Helper
+# =========================
+def fetch_otp(domain: str, user: str, api_base: str, api_key: str, endpoint: str, timeout: int = 30) -> str:
+    if not api_key:
+        raise RuntimeError("Missing CL_OTP_API_KEY env var")
 
-def run_behave_on_domain(domain_name, server_name, password, base_features_path, timing_dir):
+    url = f"{api_base.rstrip('/')}/{endpoint.lstrip('/')}"
+    payload = {"domain": domain, "user": user, "key": api_key}
+
+    # ✅ IMPORTANT: do NOT follow redirects
+    r = requests.post(url, data=payload, timeout=timeout, allow_redirects=False)
+
+    ct = (r.headers.get("Content-Type") or "").lower()
+
+    # ✅ If redirect => RequireLogin / auth is still blocking
+    if r.status_code in (301, 302, 303, 307, 308):
+        loc = r.headers.get("Location", "")
+        raise RuntimeError(
+            f"OTP API redirected (status={r.status_code}) to: {loc}  "
+            f"=> RequireLogin/auth still blocking this endpoint."
+        )
+
+    # ✅ Non-200
+    if r.status_code != 200:
+        raise RuntimeError(
+            f"OTP API HTTP {r.status_code}. content-type={ct}. First 300 chars: {r.text[:300]}"
+        )
+
+    # ✅ Must be JSON
+    try:
+        data = r.json()
+    except Exception:
+        raise RuntimeError(
+            f"OTP API returned non-JSON (status=200, content-type={ct}). First 500 chars: {r.text[:500]}"
+        )
+
+    if not isinstance(data, dict) or not data.get("ok"):
+        raise RuntimeError(f"OTP API failed: {data}")
+
+    otp = str(data.get("otp", "")).strip()
+    if not otp:
+        raise RuntimeError(f"OTP missing in response: {data}")
+
+    return otp
+
+
+# =========================
+# Behave Runner (per-domain)
+# =========================
+def run_behave_on_domain(domain_name, server_name, username, password, base_features_path, timing_dir):
     domain_feature_path = os.path.join(base_features_path, domain_name)
     fallback_path = os.path.join(base_features_path, "global")
     feature_path = domain_feature_path if os.path.isdir(domain_feature_path) else fallback_path
 
-    # List all .feature files in the feature_path
-    feature_files = glob.glob(os.path.join(feature_path, '**', '*.feature'), recursive=True)
+    feature_files = glob.glob(os.path.join(feature_path, "**", "*.feature"), recursive=True)
     print(f"[INFO] Running {len(feature_files)} feature files for domain '{domain_name}':")
     for f in feature_files:
         print(f"    {f}")
 
     config = Configuration()
-    config.userdata.update({"domain": domain_name, "password": password, "server": server_name})
-    config.format = ['pretty']
+    config.userdata.update(
+        {
+            "domain": domain_name,
+            "server": server_name,
+            "username": username,  # ✅ NEW
+            "password": password,  # ✅ OTP
+        }
+    )
+    config.format = ["pretty"]
     config.reporters = []
     config.paths = [feature_path]
 
@@ -105,516 +129,589 @@ def run_behave_on_domain(domain_name, server_name, password, base_features_path,
     try:
         runner.run()
     except Exception as e:
-        # msg = f"[WARN] Server error on {server_name} | Domain: {domain_name} -- {safe_str(e)}"
         msg = f"[WARN] Server error on {server_name} | Domain: {domain_name} -- {e}"
         print(msg)
         errors_summary.append({"domain": domain_name, "feature": "Server Error", "result": msg})
         return msg, {}
 
     output = [f"\n[INFO] Server: {server_name} | Domain: {domain_name}", "=" * 50]
-    #output = []
 
     for feature in runner.features:
         feature_status = "[PASS]" if all(s.status == Status.passed for s in feature.scenarios) else "[FAIL]"
         output.append(f"{feature_status} {feature.name}")
         for scenario in feature.scenarios:
             result = "[PASS] Pass" if scenario.status == Status.passed else "[FAIL] Fail"
-            test_summary.append({
-                "domain": domain_name, "server": server_name,
-                "feature": feature.name, "scenario": scenario.name,
-                "result": result
-            })
+            test_summary.append(
+                {
+                    "domain": domain_name,
+                    "server": server_name,
+                    "feature": feature.name,
+                    "scenario": scenario.name,
+                    "result": result,
+                }
+            )
 
     test_summary.extend(errors_summary)
     errors_summary.clear()
 
-    # Read timing summary from file
     timing_file = os.path.join(timing_dir, f"{domain_name}_timing.json")
     timing_data = {}
     if os.path.exists(timing_file):
         with open(timing_file, "r", encoding="utf-8") as f:
             timing_data = json.load(f)
+
     return "\n".join(output), timing_data
 
+
+# =========================
+# HTML Summary (your existing)
+# =========================
+
 def print_final_summary(timing_summary, timing_tracker=None):
-    print("\n" + "=" * 50)
-    print("[SUMMARY] FINAL TEST SUMMARY")
-    print("=" * 50)
-    
-    # Collect all failures and performance issues for summary at the top
+
+
+    def key_domain(d, s):
+        return f"{s} | {d}"
+
+    # ---------- collect failures + slow tests ----------
     all_failures = []
-    all_slow_tests = []
-    
+    all_slow = []
+
     for domain, domain_summary in timing_summary.items():
         server = domain_summary.get("Server", "Unknown")
         features = domain_summary.get("Features", {})
         page_load = domain_summary.get("Page Load")
         login = domain_summary.get("Login")
-        
-        # Check page load failures and performance
+
+        # Page Load
         if not isinstance(page_load, float) or page_load == "Failed":
             all_failures.append({
                 "type": "Page Load",
                 "domain": domain,
                 "server": server,
+                "feature": "",
+                "scenario": "",
                 "details": "Failed to load page"
             })
         elif timing_tracker:
-            page_load_data = timing_tracker.format_timing_summary(domain, domain_summary).get("page_load")
-            if page_load_data and page_load_data.get("is_high"):
-                all_slow_tests.append({
+            pd = timing_tracker.format_timing_summary(domain, domain_summary).get("page_load")
+            if pd and pd.get("is_high"):
+                all_slow.append({
                     "type": "Page Load",
                     "domain": domain,
                     "server": server,
+                    "feature": "",
                     "time": page_load,
-                    "avg_time": page_load_data.get("average", 0),
-                    "details": f"Above 7-day average ({page_load_data.get('average', 0):.1f}s)"
+                    "details": f"Above 7-day avg ({pd.get('average', 0):.1f}s)"
                 })
-        
-        # Check login failures and performance
+
+        # Login
         if not isinstance(login, float) or login == "Failed":
             all_failures.append({
                 "type": "Login",
                 "domain": domain,
                 "server": server,
+                "feature": "",
+                "scenario": "",
                 "details": "Failed to login"
             })
         elif timing_tracker:
-            login_data = timing_tracker.format_timing_summary(domain, domain_summary).get("login")
-            if login_data and login_data.get("is_high"):
-                all_slow_tests.append({
+            ld = timing_tracker.format_timing_summary(domain, domain_summary).get("login")
+            if ld and ld.get("is_high"):
+                all_slow.append({
                     "type": "Login",
                     "domain": domain,
                     "server": server,
+                    "feature": "",
                     "time": login,
-                    "avg_time": login_data.get("average", 0),
-                    "details": f"Above 7-day average ({login_data.get('average', 0):.1f}s)"
+                    "details": f"Above 7-day avg ({ld.get('average', 0):.1f}s)"
                 })
-        
-        # Check feature failures and performance
+
+        # Features + scenarios
         for fname, summary in features.items():
             feature_time = summary.get("Feature")
+
             if not isinstance(feature_time, float):
                 all_failures.append({
                     "type": "Feature",
                     "domain": domain,
                     "server": server,
                     "feature": fname,
+                    "scenario": "",
                     "details": "Feature execution failed"
                 })
             elif timing_tracker:
-                features_data = timing_tracker.format_timing_summary(domain, domain_summary).get("features", {})
-                feature_data = features_data.get(fname) if features_data else None
-                if feature_data and feature_data.get("is_high"):
-                    all_slow_tests.append({
+                fdata_map = timing_tracker.format_timing_summary(domain, domain_summary).get("features", {}) or {}
+                fdata = fdata_map.get(fname)
+                if fdata and fdata.get("is_high"):
+                    all_slow.append({
                         "type": "Feature",
                         "domain": domain,
                         "server": server,
                         "feature": fname,
                         "time": feature_time,
-                        "avg_time": feature_data.get("average", 0),
-                        "details": f"Above 7-day average ({feature_data.get('average', 0):.1f}s)"
+                        "details": f"Above 7-day avg ({fdata.get('average', 0):.1f}s)"
                     })
-            
-            # Check scenario failures and performance
-            scenario_timings = summary.get("Scenario Timings", [])
-            for scenario in scenario_timings:
-                if scenario["status"] == "failed":
+
+            # scenario failures
+            for sc in summary.get("Scenario Timings", []) or []:
+                if sc.get("status") == "failed":
                     all_failures.append({
                         "type": "Scenario",
                         "domain": domain,
                         "server": server,
                         "feature": fname,
-                        "scenario": scenario["name"],
-                        "details": f"Scenario failed in {scenario['duration']:.2f}s"
+                        "scenario": sc.get("name", ""),
+                        "details": f"Scenario failed in {float(sc.get('duration', 0)):.2f}s"
                     })
 
-    
-    # Print failures and performance issues summary at the top
-    if all_failures or all_slow_tests:
-        print("\n" + "=" * 80)
-        print("[CRITICAL] FAILURES AND PERFORMANCE ISSUES SUMMARY")
-        print("=" * 80)
-        
-        if all_failures:
-            print(f"\nFAILURES ({len(all_failures)} total):")
-            print("-" * 50)
-            for failure in all_failures:
-                if failure["type"] == "Page Load":
-                    print(f"[FAIL] {failure['type']} FAILED | {failure['server']} | {failure['domain']}")
-                    print(f"   Details: {failure['details']}")
-                elif failure["type"] == "Login":
-                    print(f"[FAIL] {failure['type']} FAILED | {failure['server']} | {failure['domain']}")
-                    print(f"   Details: {failure['details']}")
-                elif failure["type"] == "Feature":
-                    print(f"[FAIL] {failure['type']} FAILED | {failure['server']} | {failure['domain']}")
-                    print(f"   Feature: {failure['feature']}")
-                    print(f"   Details: {failure['details']}")
-                elif failure["type"] == "Scenario":
-                    print(f"[FAIL] {failure['type']} FAILED | {failure['server']} | {failure['domain']}")
-                    print(f"   Feature: {failure['feature']}")
-                    print(f"   Scenario: {failure['scenario']}")
-                    print(f"   Details: {failure['details']}")
-                print()
-        
-        if all_slow_tests:
-            print(f"\nSLOW TESTS ({len(all_slow_tests)} total):")
-            print("-" * 50)
-            for slow_test in all_slow_tests:
-                if slow_test["type"] == "Page Load":
-                    print(f"[SLOW] {slow_test['type']} SLOW | {slow_test['server']} | {slow_test['domain']}")
-                    print(f"   Time: {slow_test['time']:.2f}s | {slow_test['details']}")
-                elif slow_test["type"] == "Login":
-                    print(f"[SLOW] {slow_test['type']} SLOW | {slow_test['server']} | {slow_test['domain']}")
-                    print(f"   Time: {slow_test['time']:.2f}s | {slow_test['details']}")
-                elif slow_test["type"] == "Feature":
-                    print(f"[SLOW] {slow_test['type']} SLOW | {slow_test['server']} | {slow_test['domain']}")
-                    print(f"   Feature: {slow_test['feature']}")
-                    print(f"   Time: {slow_test['time']:.2f}s | {slow_test['details']}")
-                # Scenarios removed from slow tests
-        
-        print("=" * 80)
-        print()
-    
-    # Generate HTML content for email
-    html_lines = []
-    html_lines.append("<html><body>")
-    html_lines.append("<h2>FINAL TEST SUMMARY</h2>")
-    
-    # Add failures and performance issues to HTML
-    if all_failures or all_slow_tests:
-        html_lines.append("<h3 style='color: #d32f2f;'>FAILURES AND PERFORMANCE ISSUES SUMMARY</h3>")
-        
-        if all_failures:
-            html_lines.append(f"<h4 style='color: #d32f2f;'>FAILURES ({len(all_failures)} total):</h4>")
-            html_lines.append("<ul>")
-            for failure in all_failures:
-                if failure["type"] == "Page Load":
-                    html_lines.append(f"<li style='color: #d32f2f;'><strong>{failure['type']} FAILED</strong> | {failure['server']} | {failure['domain']}<br>Details: {failure['details']}</li>")
-                elif failure["type"] == "Login":
-                    html_lines.append(f"<li style='color: #d32f2f;'><strong>{failure['type']} FAILED</strong> | {failure['server']} | {failure['domain']}<br>Details: {failure['details']}</li>")
-                elif failure["type"] == "Feature":
-                    html_lines.append(f"<li style='color: #d32f2f;'><strong>{failure['type']} FAILED</strong> | {failure['server']} | {failure['domain']}<br>Feature: {failure['feature']}<br>Details: {failure['details']}</li>")
-                elif failure["type"] == "Scenario":
-                    html_lines.append(f"<li style='color: #d32f2f;'><strong>{failure['type']} FAILED</strong> | {failure['server']} | {failure['domain']}<br>Feature: {failure['feature']}<br>Scenario: {failure['scenario']}<br>Details: {failure['details']}</li>")
-            html_lines.append("</ul>")
-        
-        if all_slow_tests:
-            html_lines.append(f"<h4 style='color: #f57c00;'>SLOW TESTS ({len(all_slow_tests)} total):</h4>")
-            html_lines.append("<ul>")
-            for slow_test in all_slow_tests:
-                if slow_test["type"] == "Page Load":
-                    html_lines.append(f"<li style='color: #f57c00;'><strong>{slow_test['type']} SLOW</strong> | {slow_test['server']} | {slow_test['domain']}<br>Time: {slow_test['time']:.2f}s | {slow_test['details']}</li>")
-                elif slow_test["type"] == "Login":
-                    html_lines.append(f"<li style='color: #f57c00;'><strong>{slow_test['type']} SLOW</strong> | {slow_test['server']} | {slow_test['domain']}<br>Time: {slow_test['time']:.2f}s | {slow_test['details']}</li>")
-                elif slow_test["type"] == "Feature":
-                    html_lines.append(f"<li style='color: #f57c00;'><strong>{slow_test['type']} SLOW</strong> | {slow_test['server']} | {slow_test['domain']}<br>Feature: {slow_test['feature']}<br>Time: {slow_test['time']:.2f}s | {slow_test['details']}</li>")
-                # Scenarios removed from slow tests
-            html_lines.append("</ul>")
-        
-        html_lines.append("<hr>")
-    
-    for domain, domain_summary in timing_summary.items():
-        server = domain_summary.get("Server", "Unknown")
-        features = domain_summary.get("Features", {})
-        page_load = domain_summary.get("Page Load")
-        login = domain_summary.get("Login")
-        
-        safe_server = sanitize_html_text(server)
-        safe_domain = sanitize_html_text(domain)
-        html_lines.append(f"<h3>Server: {safe_server} | Domain: {safe_domain}</h3>")
-        html_lines.append("<h4>Features executed:</h4>")
-        html_lines.append("<ul>")
-        for fname in features:
-            html_lines.append(f"<li>{sanitize_html_text(fname)}</li>")
-        html_lines.append("</ul>")
-        html_lines.append("<hr>")
-        
-        # Page Load and Login status (domain level)
-        if isinstance(page_load, float):
-            # Get 7-day average data if tracker is available
-            page_load_summary = ""
-            if timing_tracker:
-                page_load_data = timing_tracker.format_timing_summary(domain, domain_summary).get("page_load")
-                if page_load_data:
-                    page_load_summary = format_7_day_summary(page_load_data, "page_load")
-                    if page_load_data.get("is_high"):
-                        html_lines.append(f"<span style='color:red; font-weight:bold;'>PASS Page Load ({page_load:.2f}s)  Above 7-Day Avg</span><br>")
-                    else:
-                        html_lines.append(f"<span style='color:green;'>PASS Page Load ({page_load:.2f}s)</span><br>")
-                else:
-                    html_lines.append(f"<span style='color:green;'>PASS Page Load ({page_load:.2f}s)</span><br>")
-            
-            # Add 7-day summary to HTML
-            if page_load_summary:
-                html_lines.append(f"<div style='margin-left: 20px; font-size: 0.9em; color: #666;'>{sanitize_html_text(page_load_summary).replace(chr(10), '<br>')}</div>")
-        else:
-            html_lines.append("<span style='color:red;'>FAIL Page Load: Failed</span><br>")
-        
-        if isinstance(login, float):
-            # Get 7-day average data if tracker is available
-            login_summary = ""
-            if timing_tracker:
-                login_data = timing_tracker.format_timing_summary(domain, domain_summary).get("login")
-                if login_data:
-                    login_summary = format_7_day_summary(login_data, "login")
-                    if login_data.get("is_high"):
-                        html_lines.append(f"<span style='color:red; font-weight:bold;'>PASS Login ({login:.2f}s)  Above 7-Day Avg</span><br>")
-                    else:
-                        html_lines.append(f"<span style='color:green;'>PASS Login ({login:.2f}s)</span><br>")
-                else:
-                    html_lines.append(f"<span style='color:green;'>PASS Login ({login:.2f}s)</span><br>")
-            
-            # Add 7-day summary to HTML
-            if login_summary:
-                html_lines.append(f"<div style='margin-left: 20px; font-size: 0.9em; color: #666;'>{sanitize_html_text(login_summary).replace(chr(10), '<br>')}</div>")
-        else:
-            html_lines.append("<span style='color:red;'>FAIL Login: Failed</span><br>")
-        
-        html_lines.append("<br>")
-        
-        for fname, summary in features.items():
-            safe_fname = sanitize_html_text(fname)
-            html_lines.append(f"<h4>Feature: {safe_fname}</h4>")
-            
-            feature_time = summary.get("Feature")
-            scenario_timings = summary.get("Scenario Timings", [])
-            
-            # Feature status
-            if isinstance(feature_time, float):
-                # Get 7-day average data if tracker is available
-                feature_summary = ""
-                if timing_tracker:
-                    features_data = timing_tracker.format_timing_summary(domain, domain_summary).get("features", {})
-                    feature_data = features_data.get(fname) if features_data else None
-                    if feature_data:
-                        feature_summary = format_7_day_summary(feature_data, "feature")
-                        if feature_data.get("is_high"):
-                            html_lines.append(f"<span style='color:red; font-weight:bold;'>PASS Feature: {safe_fname} ({feature_time:.2f}s)  Above 7-Day Avg</span><br>")
-                        else:
-                            html_lines.append(f"<span style='color:green;'>PASS Feature: {safe_fname} ({feature_time:.2f}s)</span><br>")
-                    else:
-                        html_lines.append(f"<span style='color:green;'>PASS Feature: {safe_fname} ({feature_time:.2f}s)</span><br>")
-                else:
-                    html_lines.append(f"<span style='color:green;'>PASS Feature: {safe_fname} ({feature_time:.2f}s)</span><br>")
-                
-                # Add 7-day summary to HTML
-                if feature_summary:
-                    html_lines.append(f"<div style='margin-left: 20px; font-size: 0.9em; color: #666;'>{sanitize_html_text(feature_summary).replace(chr(10), '<br>')}</div>")
-            else:
-                html_lines.append(f"<span style='color:red;'>FAIL Feature: {safe_fname} Failed</span><br>")
-            
-            # Separate failed and passed scenarios
-            failed_scenarios = []
-            passed_scenarios = []
-            
-            for scenario in scenario_timings:
-                if scenario["status"] == "failed":
-                    failed_scenarios.append(scenario)
-                else:
-                    passed_scenarios.append(scenario)
-            
-            # Show failed scenarios first
-            if failed_scenarios:
-                html_lines.append("<h5>FAILED Scenarios:</h5>")
-                for scenario in failed_scenarios:
-                    html_lines.append(f"<span style='color:red;'>FAILED: {sanitize_html_text(scenario['name'])} ({scenario['duration']:.2f}s)</span><br>")
-                    
-                    # Show failed steps for this scenario
-                    for step in scenario.get("failed_steps", []):
-                        html_lines.append(f"<span style='color:red;'>Step: {sanitize_html_text(step['Step'])}<br>")
-                        html_lines.append(f"Error: {sanitize_html_text(step['Error'])}<br>")
-                        html_lines.append(f"Time: {step['Duration']:.2f}s</span><br>")
-                    html_lines.append("<br>")
-            
-            # Show passed scenarios
-            if passed_scenarios:
-                html_lines.append("<h5>PASSED Scenarios:</h5>")
-                for scenario in passed_scenarios:
-                    html_lines.append(f"<span style='color:green;'>PASSED: {sanitize_html_text(scenario['name'])} ({scenario['duration']:.2f}s)</span><br>")
-            
-            html_lines.append("<br>")
-    
-    html_lines.append("</body></html>")
-    
-    # Also print plain text version to console
-    final_lines = []
-    for domain, domain_summary in timing_summary.items():
-        server = domain_summary.get("Server", "Unknown")
-        features = domain_summary.get("Features", {})
-        page_load = domain_summary.get("Page Load")
-        login = domain_summary.get("Login")
-        
-        final_lines.append(f"\n[INFO] Server: {server} | Domain: {domain}")
-        final_lines.append(f"[INFO] Features executed:")
-        for fname in features:
-            final_lines.append(f"    {fname}")
-        final_lines.append("=" * 50)
-        
-        # Page Load and Login status (domain level)
-        if isinstance(page_load, float):
-            # Get 7-day average data if tracker is available
-            if timing_tracker:
-                print(f"[DEBUG] Getting 7-day data for domain: {domain}")
-                page_load_data = timing_tracker.format_timing_summary(domain, domain_summary).get("page_load")
-                print(f"[DEBUG] Page load data: {page_load_data}")
-                
-                if page_load_data and page_load_data.get("is_high"):
-                    final_lines.append(f"[PASS] Page Load ({page_load:.2f}s)  Above 7-Day Avg")
-                else:
-                    final_lines.append(f"[PASS] Page Load ({page_load:.2f}s)")
-                
-                # Add 7-day summary to console
-                if page_load_data:
-                    summary = format_7_day_summary(page_load_data, "page_load")
-                    print(f"[DEBUG] Formatted summary: {summary}")
-                    if summary:
-                        final_lines.append(summary)
-            else:
-                final_lines.append(f"[PASS] Page Load ({page_load:.2f}s)")
-        else:
-            final_lines.append("[FAIL] Page Load: Failed")
-        
-        if isinstance(login, float):
-            # Get 7-day average data if tracker is available
-            if timing_tracker:
-                print(f"[DEBUG] Getting 7-day login data for domain: {domain}")
-                login_data = timing_tracker.format_timing_summary(domain, domain_summary).get("login")
-                print(f"[DEBUG] Login data: {login_data}")
-                
-                if login_data and login_data.get("is_high"):
-                    final_lines.append(f"[PASS] Login ({login:.2f}s)  Above 7-Day Avg")
-                else:
-                    final_lines.append(f"[PASS] Login ({login:.2f}s)")
-                
-                # Add 7-day summary to console
-                if login_data:
-                    summary = format_7_day_summary(login_data, "login")
-                    print(f"[DEBUG] Formatted login summary: {summary}")
-                    if summary:
-                        final_lines.append(summary)
-            else:
-                final_lines.append(f"[PASS] Login ({login:.2f}s)")
-        else:
-            final_lines.append("[FAIL] Login: Failed")
-        
-        final_lines.append("")
-        
-        for fname, summary in features.items():
-            final_lines.append(f"[INFO] Feature: {fname}")
-            feature_time = summary.get("Feature")
-            scenario_timings = summary.get("Scenario Timings", [])
-            
-            if isinstance(feature_time, float):
-                # Get 7-day average data if tracker is available
-                if timing_tracker:
-                    features_data = timing_tracker.format_timing_summary(domain, domain_summary).get("features", {})
-                    feature_data = features_data.get(fname) if features_data else None
-                    if feature_data and feature_data.get("is_high"):
-                        final_lines.append(f"[PASS] Feature: {fname} ({feature_time:.2f}s)  Above 7-Day Avg")
-                    else:
-                        final_lines.append(f"[PASS] Feature: {fname} ({feature_time:.2f}s)")
-                    
-                    # Add 7-day summary to console
-                    if feature_data:
-                        summary = format_7_day_summary(feature_data, "feature")
-                        if summary:
-                            final_lines.append(summary)
-                else:
-                    final_lines.append(f"[PASS] Feature: {fname} ({feature_time:.2f}s)")
-            else:
-                final_lines.append(f"[FAIL] Feature: {fname} Failed")
-            
-            for scenario in scenario_timings:
-                status_icon = "[PASS]" if scenario["status"] == "passed" else "[FAIL]"
-                final_lines.append(f"{status_icon} Scenario: {scenario['name']} ({scenario['duration']:.2f}s)")
-                for step in scenario.get("failed_steps", []):
-                    final_lines.append(f"    [FAIL] Step: {step['Step']} -- {step['Duration']:.2f}s")
-                    final_lines.append(f"        Error: {step['Error']}")
-    
-    final_output = "\n".join(final_lines)
-    print(final_output)
-    
-    # Return HTML content for email
-    html_content = "".join(html_lines)
-    return html_content
+    total_domains = len(timing_summary)
+    total_fail = len(all_failures)
+    total_slow = len(all_slow)
 
-def send_test_summary_email(summary_text):
+    # group slow by domain
+    slow_group = {}
+    for s in all_slow:
+        k = key_domain(s["domain"], s["server"])
+        slow_group.setdefault(k, []).append(s)
+
+    # group failures by domain
+    fail_group = {}
+    for f in all_failures:
+        k = key_domain(f["domain"], f["server"])
+        fail_group.setdefault(k, []).append(f)
+
+    # ---------- HTML helpers ----------
+    def badge(text, bg, fg):
+        return (
+            "<span style='display:inline-block;padding:3px 10px;border-radius:999px;"
+            f"background:{bg};color:{fg};font-size:12px;font-weight:800;line-height:18px;'>"
+            f"{sanitize_html_text(text)}</span>"
+        )
+
+    def h(txt):
+        return sanitize_html_text(txt)
+
+    def row_kv(k, v, vcolor="#111827"):
+        return (
+            "<tr>"
+            f"<td style='padding:8px 10px;color:#6b7280;font-size:13px;border-top:1px solid #eef2f7;width:42%;'>{h(k)}</td>"
+            f"<td style='padding:8px 10px;color:{vcolor};font-size:13px;font-weight:800;border-top:1px solid #eef2f7;'>{h(v)}</td>"
+            "</tr>"
+        )
+
+    now_str = datetime.now().strftime("%Y-%m-%d %H:%M")
+
+    # ---------- build HTML ----------
+    html_lines = []
+    html_lines.append("<html><body style='margin:0;padding:0;background:#f6f7fb;'>")
+    html_lines.append(f"""
+<div style="font-family:Segoe UI,Arial,sans-serif;max-width:980px;margin:0 auto;padding:18px;">
+
+  <div style="background:#111827;color:#fff;border-radius:12px;padding:16px 18px;">
+    <div style="font-size:18px;font-weight:900;letter-spacing:.2px;">Automated Test Summary Report</div>
+    <div style="font-size:12px;color:#cbd5e1;margin-top:6px;">Generated: {h(now_str)}</div>
+  </div>
+
+  <!-- executive cards -->
+  <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;">
+    <div style="flex:1;min-width:200px;background:#ffffff;border:1px solid #e5e7eb;border-radius:12px;padding:12px;">
+      <div style="font-size:12px;color:#6b7280;">Domains Tested</div>
+      <div style="font-size:26px;font-weight:900;color:#111827;margin-top:6px;">{total_domains}</div>
+    </div>
+    <div style="flex:1;min-width:200px;background:#ffffff;border:1px solid #fee2e2;border-radius:12px;padding:12px;">
+      <div style="font-size:12px;color:#b91c1c;">Failures</div>
+      <div style="font-size:26px;font-weight:900;color:#b91c1c;margin-top:6px;">{total_fail}</div>
+    </div>
+    <div style="flex:1;min-width:200px;background:#ffffff;border:1px solid #ffedd5;border-radius:12px;padding:12px;">
+      <div style="font-size:12px;color:#c2410c;">Performance Regressions</div>
+      <div style="font-size:26px;font-weight:900;color:#c2410c;margin-top:6px;">{total_slow}</div>
+    </div>
+  </div>
+
+  <!-- boss note -->
+  <div style="margin-top:10px;background:#ffffff;border:1px solid #e5e7eb;border-radius:12px;padding:12px;">
+    <div style="font-size:13px;color:#111827;font-weight:900;">What needs attention</div>
+    <div style="font-size:12px;color:#6b7280;margin-top:6px;line-height:18px;">
+      This report highlights only <b>Failures</b> and <b>Performance regressions</b> (above 7-day average).
+      Passed checks are intentionally minimized to keep this email actionable.
+    </div>
+  </div>
+""")
+
+    # ---------- FAILURES section ----------
+    if total_fail:
+        html_lines.append("""
+  <div style="margin-top:12px;background:#ffffff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+    <div style="padding:12px 14px;background:#7f1d1d;color:#ffffff;font-weight:900;font-size:14px;">
+      FAILURES (Action Required)
+    </div>
+    <table style="width:100%;border-collapse:collapse;">
+""")
+        # show domain-wise
+        for k, items in fail_group.items():
+            html_lines.append(f"""
+      <tr><td style="padding:10px 14px;background:#fff7f7;border-top:1px solid #fee2e2;">
+        {badge("FAIL", "#fee2e2", "#b91c1c")}
+        <span style="margin-left:8px;font-weight:900;color:#111827;">{h(k)}</span>
+      </td></tr>
+""")
+            # list items
+            for f in items:
+                t = h(f.get("type",""))
+                feat = h(f.get("feature",""))
+                scen = h(f.get("scenario",""))
+                details = h(f.get("details",""))
+
+                extra = ""
+                if feat:
+                    extra += f"<div style='color:#6b7280;font-size:12px;margin-top:4px;'>Feature: <b>{feat}</b></div>"
+                if scen:
+                    extra += f"<div style='color:#6b7280;font-size:12px;'>Scenario: <b>{scen}</b></div>"
+
+                html_lines.append(f"""
+      <tr>
+        <td style="padding:12px 14px;border-top:1px solid #eef2f7;">
+          <div style="font-weight:900;color:#111827;">{t}</div>
+          {extra}
+          <div style="color:#111827;font-size:13px;margin-top:8px;">{details}</div>
+        </td>
+      </tr>
+""")
+
+        html_lines.append("""
+    </table>
+  </div>
+""")
+    else:
+        html_lines.append("""
+  <div style="margin-top:12px;background:#ffffff;border:1px solid #dcfce7;border-radius:12px;padding:12px;">
+    <div style="font-weight:900;color:#166534;">No Failures detected ✅</div>
+  </div>
+""")
+
+    # ---------- PERFORMANCE section ----------
+    if total_slow:
+        html_lines.append("""
+  <div style="margin-top:12px;background:#ffffff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+    <div style="padding:12px 14px;background:#7c2d12;color:#ffffff;font-weight:900;font-size:14px;">
+      PERFORMANCE REGRESSIONS (Above 7-day average)
+    </div>
+    <table style="width:100%;border-collapse:collapse;">
+""")
+        for k, items in slow_group.items():
+            html_lines.append(f"""
+      <tr><td style="padding:10px 14px;background:#fff7ed;border-top:1px solid #fed7aa;">
+        {badge("SLOW", "#ffedd5", "#c2410c")}
+        <span style="margin-left:8px;font-weight:900;color:#111827;">{h(k)}</span>
+      </td></tr>
+""")
+            # sort slow items by time desc
+            items_sorted = sorted(items, key=lambda x: float(x.get("time", 0) or 0), reverse=True)
+            for s in items_sorted:
+                t = h(s.get("type",""))
+                feat = h(s.get("feature",""))
+                tm = s.get("time", None)
+                details = h(s.get("details",""))
+
+                line = f"{t}"
+                if isinstance(tm, (int,float)):
+                    line += f" • {tm:.2f}s"
+                if feat:
+                    line += f" • Feature: {feat}"
+
+                html_lines.append(f"""
+      <tr>
+        <td style="padding:12px 14px;border-top:1px solid #eef2f7;">
+          <div style="font-weight:900;color:#111827;">{h(line)}</div>
+          <div style="color:#6b7280;font-size:12px;margin-top:6px;">{details}</div>
+        </td>
+      </tr>
+""")
+
+        html_lines.append("""
+    </table>
+  </div>
+""")
+    else:
+        html_lines.append("""
+  <div style="margin-top:12px;background:#ffffff;border:1px solid #dcfce7;border-radius:12px;padding:12px;">
+    <div style="font-weight:900;color:#166534;">No Performance regressions ✅</div>
+  </div>
+""")
+
+    # ---------- NEXT ACTIONS (template) ----------
+    html_lines.append("""
+  <div style="margin-top:12px;background:#ffffff;border:1px solid #e5e7eb;border-radius:12px;padding:12px;">
+    <div style="font-size:14px;font-weight:900;color:#111827;">Next Actions</div>
+    <ul style="margin:8px 0 0 18px;color:#374151;font-size:13px;line-height:20px;">
+      <li>Investigate failures first (scenario-level). Confirm if regression is data-related or UI change.</li>
+      <li>For slow tests: review server load, DB locks, and recent deploy changes. Compare against 7-day baseline.</li>
+      <li>Re-run only affected domains after fixes for quick confirmation.</li>
+    </ul>
+  </div>
+""")
+
+    # ---------- DOMAIN SNAPSHOT (high-level, boss readable) ----------
+    html_lines.append("""
+  <div style="margin-top:12px;background:#ffffff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+    <div style="padding:12px 14px;background:#0f172a;color:#ffffff;font-weight:900;font-size:14px;">
+      Domain Snapshot
+    </div>
+""")
+
+    for domain, domain_summary in timing_summary.items():
+        server = domain_summary.get("Server", "Unknown")
+        features = domain_summary.get("Features", {})
+        page_load = domain_summary.get("Page Load")
+        login = domain_summary.get("Login")
+
+        safe_server = h(server)
+        safe_domain = h(domain)
+
+        # quick status
+        domain_fail_count = len(fail_group.get(key_domain(domain, server), []))
+        domain_slow_count = len(slow_group.get(key_domain(domain, server), []))
+
+        html_lines.append(f"""
+    <div style="padding:12px 14px;border-top:1px solid #eef2f7;">
+      <div style="font-weight:900;color:#111827;">{safe_domain}</div>
+      <div style="font-size:12px;color:#6b7280;margin-top:4px;">Server: <b>{safe_server}</b></div>
+
+      <div style="margin-top:8px;">
+        {badge(f"Failures: {domain_fail_count}", "#fee2e2" if domain_fail_count else "#dcfce7", "#b91c1c" if domain_fail_count else "#166534")}
+        <span style="display:inline-block;width:8px;"></span>
+        {badge(f"Slow: {domain_slow_count}", "#ffedd5" if domain_slow_count else "#dcfce7", "#c2410c" if domain_slow_count else "#166534")}
+      </div>
+
+      <table style="width:100%;border-collapse:collapse;margin-top:10px;border:1px solid #eef2f7;border-radius:10px;overflow:hidden;">
+""")
+
+        if isinstance(page_load, float):
+            html_lines.append(row_kv("Page Load", f"{page_load:.2f}s", "#16a34a"))
+        else:
+            html_lines.append(row_kv("Page Load", "FAILED", "#b91c1c"))
+
+        if isinstance(login, float):
+            html_lines.append(row_kv("Login", f"{login:.2f}s", "#16a34a"))
+        else:
+            html_lines.append(row_kv("Login", "FAILED", "#b91c1c"))
+
+        html_lines.append(row_kv("Features Executed", str(len(features)), "#111827"))
+        html_lines.append("</table></div>")
+
+    html_lines.append("</div>")  # close snapshot card
+    html_lines.append("</div></body></html>")
+
+    return "".join(html_lines)
+
+# =========================
+# Email Sender
+# =========================
+def send_test_summary_email(summary_html, summary_text_fallback=None):
     try:
         msg = EmailMessage()
         msg["Subject"] = "[SUMMARY] Automated Test Summary Report"
         msg["From"] = "CLAutomation_Alert@inayaat.com"
-        msg["To"] = "shafi@cartzlink.com"#, Devleads@cartzlink.com"
-        
-        # Set HTML content properly
-        msg.set_content(summary_text, subtype='html')
+        msg["To"] = "devleads@cartzlink.com"
+
+        if not summary_text_fallback:
+            summary_text_fallback = "Automated Test Summary Report (HTML). Please view in an HTML-capable email client."
+        msg.set_content(summary_text_fallback)
+
+        msg.add_alternative(summary_html, subtype="html")
+
+        # ✅ Move SMTP password to env (recommended)
+        SMTP_PASS = 'x6!493Crz'
+        if not SMTP_PASS:
+            raise RuntimeError("Missing CL_SMTP_PASS env var for SMTP login")
 
         with smtplib.SMTP_SSL("s7.itserver.biz", 465) as server:
-            server.login("CLAutomation_Alert@inayaat.com", "x6!493Crz")
+            server.login("CLAutomation_Alert@inayaat.com", SMTP_PASS)
             server.send_message(msg)
+
         print("[PASS] Test summary email sent successfully.")
     except Exception as e:
         print(f"[FAIL] Failed to send email: {e}")
+
+
+# =========================
+# Main
+# =========================
+# def main():
+#     base_dir = os.path.dirname(os.path.realpath(__file__))
+#     features_dir = os.path.join(base_dir, "features")
+#     timing_dir = os.path.join(base_dir, "timing_results")
+
+#     all_timing = {}
+#     timing_tracker = TimingTracker()
+#     timing_tracker.cleanup_old_data()  # Remove data older than 7 days
+
+#     # ✅ OTP configuration
+#     OTP_USER = "cl_tester"
+#     OTP_API_BASE = "https://crm.cartzlink.com"
+#     OTP_ENDPOINT = "admin/indexyii.php?r=api/GetOTPApi"  # ✅ Adjust if your route differs
+#     OTP_API_KEY = os.environ.get("CL_OTP_API_KEY", "")
+
+#     # Fetch domains
+#     try:
+#     url = "https://crm.cartzlink.com/admin/indexyii.php?r=api/FetchDomainList"
+
+#     # ✅ same key as OTP (recommended: reuse CL_OTP_API_KEY)
+#     payload = {"key": OTP_API_KEY}  # OTP_API_KEY = os.environ.get("CL_OTP_API_KEY","")
+
+#     response = requests.post(url, data=payload, timeout=30)
+#     response.raise_for_status()
+
+#     data = response.json()
+
+#     # ✅ new response format: { ok: 1, data: [...] }
+#     if not isinstance(data, dict) or not data.get("ok"):
+#         raise ValueError(f"FetchDomainList failed: {data}")
+
+#     domains = data.get("data", [])
+#     if not isinstance(domains, list):
+#         raise ValueError(f"Unexpected domains type: {type(domains)}")
+
+#     if not domains:
+#         raise ValueError("Domain list is empty")
+
+# except Exception as e:
+#     print(f"Error fetching domain list: {e}")
+#     return
+
+# # Run tests per domain
+# for entry in domains:
+#     domain = entry["domain"]
+#     server = entry["server"]
+
+#     print(f"\n{'='*60}")
+#     print(f"STARTING DOMAIN: {domain} (Server: {server})")
+#     print(f"{'='*60}")
+
+#     # ✅ Generate OTP per-domain immediately before login/tests
+#     try:
+#         otp = fetch_otp(domain, OTP_USER, OTP_API_BASE, OTP_API_KEY, OTP_ENDPOINT)
+#     except Exception as e:
+#         msg = f"[FAIL] OTP fetch failed | Domain: {domain} | Server: {server} | {e}"
+#         print(msg)
+#         errors_summary.append({"domain": domain, "feature": "OTP Error", "result": msg})
+#         continue
+
+
+#         result, timing_data = run_behave_on_domain(
+#             domain,
+#             server,
+#             OTP_USER,
+#             otp, 
+#             features_dir,
+#             timing_dir,
+#         )
+
+#         print(result)
+#         all_timing.update(timing_data)
+
+#         if timing_data:
+#             timing_tracker.add_timing_data(domain, timing_data)
+
+#         print(f"\n{'='*60}")
+#         print(f"COMPLETED DOMAIN: {domain}")
+#         print(f"{'='*60}")
+
+#         time.sleep(2)
+
+#     # Final summary + email
+#     summary_html = print_final_summary(all_timing, timing_tracker)
+#     send_test_summary_email(summary_html, "Automated Test Summary Report (HTML).")
+
 
 def main():
     base_dir = os.path.dirname(os.path.realpath(__file__))
     features_dir = os.path.join(base_dir, "features")
     timing_dir = os.path.join(base_dir, "timing_results")
+
     all_timing = {}
-    
-    # Initialize timing tracker for 7-day averages
     timing_tracker = TimingTracker()
     timing_tracker.cleanup_old_data()  # Remove data older than 7 days
 
-    domains = [
-#        {"domain": "anamta.primeerp.top", "server": "s12", "password": "fdgd"},
-#        {"domain": "anamta.primeerp.top", "server": "s12", "password": "czxVYO,30y8{2w"},
-#        {"domain": "mhp.itserver.biz", "server": "MHP", "password": "czxVYO,30y8{2w"},
-        {"domain": "mt2.itserver.biz", "server": "metro crm", "password": "c3q)1k10(Yv!"},
-#        {"domain": "mt.itserver.biz", "server": "metro crm", "password": "vI$97cK59+E2"},
-#        {"domain": "gta.cartzlink.com", "server": "s13", "password": "czxVYO,30y8{2w"},
-#        {"domain": "fst.itserver.biz", "server": "FST", "password": "8}rZ`bB8?68"},
-#        {"domain": "cam.itserver.biz", "server": "metro cam", "password": "dXT2316?.m_5"},
-#        {"domain": "nb.newagedistributions.com", "server": "newage", "password": "GkD4e7o[0?>T"},
-#        {"domain": "bmkenya.itserver.biz", "server": "bmkenya", "password": "7!WrCiO1£>3T"},
-#        {"domain": "scentnsecret.itserver.biz", "server": "scentnsecret", "password": "x%11<Zc8;J^!"},
-#        {"domain": "crm.cartzlink.com", "server": "s15", "password": "£8~pYxF~i40&"},
-#        {"domain": "crm.tabrospharma.com", "server": "TP", "password": "3M8Fg&Sn,18>"},
+    # ✅ OTP configuration
+    OTP_USER = "cl_tester"
+    OTP_API_BASE = "https://crm.cartzlink.com"
+    OTP_ENDPOINT = "admin/indexyii.php?r=api/GetOTPApi"
+    OTP_API_KEY = os.environ.get("CL_OTP_API_KEY", "")
 
-#        {"domain": "crm.cqsignal.com ", "server": "cqsignal", "password": "1"},        
-#        {"domain": "aone.cartzlink.com", "server": "s", "password": "d87-2w1Qh:9d"},
-#        {"domain": "gtalhr.cartzlink.com", "server": "s12", "password": ",#>7r5Q5Q%&S"},
+    # -------------------------
+    # Fetch domains (SECURED)
+    # -------------------------
+    try:
+        url = "https://crm.cartzlink.com/admin/indexyii.php?r=api/FetchDomainList"
+        payload = {"key": OTP_API_KEY}
 
-    ]
+        response = requests.post(url, data=payload, timeout=30)
+        response.raise_for_status()
 
+        data = response.json()
+
+        # Expected: { ok: 1, data: [...] }
+        if not isinstance(data, dict) or not data.get("ok"):
+            raise ValueError(f"FetchDomainList failed: {data}")
+
+        domains = data.get("data", [])
+        if not isinstance(domains, list):
+            raise ValueError(f"Unexpected domains type: {type(domains)}")
+
+        if not domains:
+            raise ValueError("Domain list is empty")
+
+    except Exception as e:
+        print(f"Error fetching domain list: {e}")
+        return
+
+    # -------------------------
+    # Run tests per domain
+    # -------------------------
     for entry in domains:
+        domain = entry["domain"]
+        server = entry["server"]
+
         print(f"\n{'='*60}")
-        print(f"STARTING DOMAIN: {entry['domain']} (Server: {entry['server']})")
+        print(f"STARTING DOMAIN: {domain} (Server: {server})")
         print(f"{'='*60}")
-        
-        result, timing_data = run_behave_on_domain(entry["domain"], entry["server"], entry["password"], features_dir, timing_dir)
+
+        # ✅ Generate OTP per-domain immediately before login/tests
+        try:
+            otp = fetch_otp(domain, OTP_USER, OTP_API_BASE, OTP_API_KEY, OTP_ENDPOINT)
+        except Exception as e:
+            msg = f"[FAIL] OTP fetch failed | Domain: {domain} | Server: {server} | {e}"
+            print(msg)
+            errors_summary.append({"domain": domain, "feature": "OTP Error", "result": msg})
+            continue
+
+        result, timing_data = run_behave_on_domain(
+            domain,
+            server,
+            OTP_USER,
+            otp,
+            features_dir,
+            timing_dir,
+        )
+
         print(result)
         all_timing.update(timing_data)
-        
-        # Store timing data for 7-day tracking
+
         if timing_data:
-            timing_tracker.add_timing_data(entry["domain"], timing_data)
-        
+            timing_tracker.add_timing_data(domain, timing_data)
+
         print(f"\n{'='*60}")
-        print(f"COMPLETED DOMAIN: {entry['domain']}")
+        print(f"COMPLETED DOMAIN: {domain}")
         print(f"{'='*60}")
-        
-        # Small delay between domains to ensure clean separation
-        import time
+
         time.sleep(2)
 
-    summary_text = print_final_summary(all_timing, timing_tracker)
-    send_test_summary_email(summary_text)
+    # Final summary + email
+    summary_html = print_final_summary(all_timing, timing_tracker)
+    send_test_summary_email(summary_html, "Automated Test Summary Report (HTML).")
+
 
 if __name__ == "__main__":
     main()
-
-
-
-
-

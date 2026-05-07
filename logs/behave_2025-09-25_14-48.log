@@ -1,0 +1,664 @@
+========================================= 
+Behave Run Started at Thu 09/25/2025 14:48:18.78 
+========================================= 
+
+============================================================
+STARTING DOMAIN: anamta.primeerp.top (Server: s12)
+============================================================
+[INFO] Running 2 feature files for domain 'anamta.primeerp.top':
+    C:\tests\features\anamta.primeerp.top\AccCV.feature
+    C:\tests\features\anamta.primeerp.top\AccV.feature
+[INFO] Domain = anamta.primeerp.top
+[INFO] Starting browser and logging in for domain: anamta.primeerp.top
+[INFO] Creating fresh browser instance for domain: anamta.primeerp.top
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://anamta.primeerp.top/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://anamta.primeerp.top/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[PASS] Login successful - dashboard loaded with refresh function
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 3.0s, Login: 29.4s
+[INFO] Login successful for domain: anamta.primeerp.top
+Feature: CASH RECEIPT CV # ../../tests/features/anamta.primeerp.top/AccCV.feature:3
+
+  @critical
+  Scenario: Visit CashReceiptCV Page and click on Edit btn  # ../../tests/features/anamta.primeerp.top/AccCV.feature:6
+    Given we visit "accounts2/CashReceiptCV"                # ../../tests/features/steps/form_actions.py:36
+    When we edit the top row                                # ../../tests/features/steps/cartzlink_form.py:155
+
+Feature: Account Voucher # ../../tests/features/anamta.primeerp.top/AccV.feature:4
+
+  @critical
+  Scenario: Visit Account Voucher Page and click on Edit btn  # ../../tests/features/anamta.primeerp.top/AccV.feature:7
+    Given we visit "accounts2"                                # ../../tests/features/steps/form_actions.py:36
+    When we edit the top row                                  # ../../tests/features/steps/cartzlink_form.py:155
+
+
+[INFO] Server: s12 | Domain: anamta.primeerp.top
+==================================================
+[PASS] CASH RECEIPT CV
+[PASS] Account Voucher
+
+============================================================
+COMPLETED DOMAIN: anamta.primeerp.top
+============================================================
+
+============================================================
+STARTING DOMAIN: mt.itserver.biz (Server: metro crm)
+============================================================
+[INFO] Running 1 feature files for domain 'mt.itserver.biz':
+    C:\tests\features\mt.itserver.biz\SO.feature
+[INFO] Domain = mt.itserver.biz
+[INFO] Starting browser and logging in for domain: mt.itserver.biz
+[INFO] Creating fresh browser instance for domain: mt.itserver.biz
+[INFO] Attempt 1/5: Creating Chrome driver...
+[INFO] Applying performance optimizations for problematic domain: mt.itserver.biz
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/5: Opening https://mt.itserver.biz/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://mt.itserver.biz/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[PASS] Login successful - dashboard loaded with refresh function
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 2.6s, Login: 25.8s
+[INFO] Login successful for domain: mt.itserver.biz
+Feature: Sales Order # ../../tests/features/mt.itserver.biz/SO.feature:4
+
+  @critical
+  Scenario: Visit Sales order page and click on edit btn  # ../../tests/features/mt.itserver.biz/SO.feature:7
+    Given we visit "orders/SO2"                           # ../../tests/features/steps/form_actions.py:36
+    When we edit the top row                              # ../../tests/features/steps/cartzlink_form.py:155
+
+
+[INFO] Server: metro crm | Domain: mt.itserver.biz
+==================================================
+[PASS] Sales Order
+
+============================================================
+COMPLETED DOMAIN: mt.itserver.biz
+============================================================
+
+============================================================
+STARTING DOMAIN: gta.cartzlink.com (Server: s13)
+============================================================
+[INFO] Running 2 feature files for domain 'gta.cartzlink.com':
+    C:\tests\features\gta.cartzlink.com\AccV.feature
+    C:\tests\features\gta.cartzlink.com\SI.feature
+[INFO] Domain = gta.cartzlink.com
+[INFO] Starting browser and logging in for domain: gta.cartzlink.com
+[INFO] Creating fresh browser instance for domain: gta.cartzlink.com
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://gta.cartzlink.com/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://gta.cartzlink.com/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[PASS] Login successful - dashboard loaded with refresh function
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 3.3s, Login: 28.8s
+[INFO] Login successful for domain: gta.cartzlink.com
+Feature: Add Account Voucher # ../../tests/features/gta.cartzlink.com/AccV.feature:4
+
+  @critical
+  Scenario: Visit Account Voucher Page and click on Edit btn  # ../../tests/features/gta.cartzlink.com/AccV.feature:7
+    Given we visit "accounts2"                                # ../../tests/features/steps/form_actions.py:36
+    When we edit the top row                                  # ../../tests/features/steps/cartzlink_form.py:155
+
+Feature: Sales Invoice # ../../tests/features/gta.cartzlink.com/SI.feature:1
+
+  @critical
+  Scenario: Sales Invoice page           # ../../tests/features/gta.cartzlink.com/SI.feature:4
+    Given we visit "orders/salesInvoice" # ../../tests/features/steps/form_actions.py:36
+    When we edit the top row             # ../../tests/features/steps/cartzlink_form.py:155
+
+
+[INFO] Server: s13 | Domain: gta.cartzlink.com
+==================================================
+[PASS] Add Account Voucher
+[PASS] Sales Invoice
+
+============================================================
+COMPLETED DOMAIN: gta.cartzlink.com
+============================================================
+
+============================================================
+STARTING DOMAIN: fst.itserver.biz (Server: FST)
+============================================================
+[INFO] Running 1 feature files for domain 'fst.itserver.biz':
+    C:\tests\features\fst.itserver.biz\SO.feature
+[INFO] Domain = fst.itserver.biz
+[INFO] Starting browser and logging in for domain: fst.itserver.biz
+[INFO] Creating fresh browser instance for domain: fst.itserver.biz
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://fst.itserver.biz/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://fst.itserver.biz/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[PASS] Login successful - dashboard loaded with refresh function
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 31.7s, Login: 20.2s
+[INFO] Login successful for domain: fst.itserver.biz
+Feature: Sales Order # ../../tests/features/fst.itserver.biz/SO.feature:4
+
+  @critical
+  Scenario: Visit Sales order page and click on Edit btn  # ../../tests/features/fst.itserver.biz/SO.feature:7
+    Given we visit "orders/salesOrder"                    # ../../tests/features/steps/form_actions.py:36
+    When we clear the from date and search                # ../../tests/features/steps/form_actions.py:82
+
+
+[INFO] Server: FST | Domain: fst.itserver.biz
+==================================================
+[PASS] Sales Order
+
+============================================================
+COMPLETED DOMAIN: fst.itserver.biz
+============================================================
+
+============================================================
+STARTING DOMAIN: cam.itserver.biz (Server: metro cam)
+============================================================
+[INFO] Running 4 feature files for domain 'cam.itserver.biz':
+    C:\tests\features\cam.itserver.biz\AccV.feature
+    C:\tests\features\cam.itserver.biz\GP.feature
+    C:\tests\features\cam.itserver.biz\PI.feature
+    C:\tests\features\cam.itserver.biz\SO.feature
+[INFO] Domain = cam.itserver.biz
+[INFO] Starting browser and logging in for domain: cam.itserver.biz
+[INFO] Creating fresh browser instance for domain: cam.itserver.biz
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://cam.itserver.biz/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://cam.itserver.biz/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[PASS] Login successful - dashboard loaded with refresh function
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 3.6s, Login: 20.3s
+[INFO] Login successful for domain: cam.itserver.biz
+Feature: Add Account Voucher # ../../tests/features/cam.itserver.biz/AccV.feature:4
+
+  @critical
+  Scenario: Visit Account Voucher Page and click on Edit btn  # ../../tests/features/cam.itserver.biz/AccV.feature:7
+    Given we visit "accounts2"                                # ../../tests/features/steps/form_actions.py:36
+    When we edit the top row                                  # ../../tests/features/steps/cartzlink_form.py:155
+
+Feature: Gatepass # ../../tests/features/cam.itserver.biz/GP.feature:1
+
+  @critical
+  Scenario: Visit Gate pass Page and click on Edit btn  # ../../tests/features/cam.itserver.biz/GP.feature:4
+    Given we visit "orders/deliveryChallanCAM"          # ../../tests/features/steps/form_actions.py:36
+    When we edit the top row                            # ../../tests/features/steps/cartzlink_form.py:155
+
+Feature: Purchase Invoice # ../../tests/features/cam.itserver.biz/PI.feature:3
+
+  @critical
+  Scenario: Visit Purchase invoice Page and click on Edit btn  # ../../tests/features/cam.itserver.biz/PI.feature:6
+    Given we visit "orders/purchaseInvoice"                    # ../../tests/features/steps/form_actions.py:36
+    When we edit the top row                                   # ../../tests/features/steps/cartzlink_form.py:155
+
+Feature: Production Order FSTUser # ../../tests/features/cam.itserver.biz/SO.feature:4
+
+  @critical
+  Scenario: Visit Production order page and click on Edit btn  # ../../tests/features/cam.itserver.biz/SO.feature:7
+    Given we visit "orders/SalesOrderFSTUser"                  # ../../tests/features/steps/form_actions.py:36
+    When we edit the top row                                   # ../../tests/features/steps/cartzlink_form.py:155
+
+
+[INFO] Server: metro cam | Domain: cam.itserver.biz
+==================================================
+[PASS] Add Account Voucher
+[PASS] Gatepass
+[PASS] Purchase Invoice
+[PASS] Production Order FSTUser
+
+============================================================
+COMPLETED DOMAIN: cam.itserver.biz
+============================================================
+
+============================================================
+STARTING DOMAIN: bmkenya.itserver.biz (Server: bmkenya)
+============================================================
+[INFO] Running 2 feature files for domain 'bmkenya.itserver.biz':
+    C:\tests\features\bmkenya.itserver.biz\AccV.feature
+    C:\tests\features\bmkenya.itserver.biz\SO.feature
+[INFO] Domain = bmkenya.itserver.biz
+[INFO] Starting browser and logging in for domain: bmkenya.itserver.biz
+[INFO] Creating fresh browser instance for domain: bmkenya.itserver.biz
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://bmkenya.itserver.biz/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://bmkenya.itserver.biz/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[PASS] Login successful - dashboard loaded with refresh function
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 2.6s, Login: 20.8s
+[INFO] Login successful for domain: bmkenya.itserver.biz
+Feature: Add Account Voucher # ../../tests/features/bmkenya.itserver.biz/AccV.feature:4
+
+  @critical
+  Scenario: Visit Account Voucher Page and click on Edit btn  # ../../tests/features/bmkenya.itserver.biz/AccV.feature:7
+    Given we visit "accounts2"                                # ../../tests/features/steps/form_actions.py:36
+      ASSERT FAILED: Page at 'accounts2' returned error: ERROR 404
+
+    When we edit the top row                                  # None
+----
+CAPTURED STDOUT: scenario
+Page at 'accounts2' returned error: ERROR 404
+
+[Screenshot Saved] C:\Windows\system32\screenshots\we visit "accounts2"_20250925_145652.png
+---- CAPTURED_SCENARIO_OUTPUT_END ----
+
+Feature: Sales Order # ../../tests/features/bmkenya.itserver.biz/SO.feature:4
+
+  @critical
+  Scenario: Visit Sales order page     # ../../tests/features/bmkenya.itserver.biz/SO.feature:7
+    Given we visit "orders/salesOrder" # ../../tests/features/steps/form_actions.py:36
+
+
+[INFO] Server: bmkenya | Domain: bmkenya.itserver.biz
+==================================================
+[FAIL] Add Account Voucher
+[PASS] Sales Order
+
+============================================================
+COMPLETED DOMAIN: bmkenya.itserver.biz
+============================================================
+
+============================================================
+STARTING DOMAIN: crm.cartzlink.com (Server: s15)
+============================================================
+[INFO] Running 1 feature files for domain 'crm.cartzlink.com':
+    C:\tests\features\crm.cartzlink.com\dashboard.feature
+[INFO] Domain = crm.cartzlink.com
+[INFO] Starting browser and logging in for domain: crm.cartzlink.com
+[INFO] Creating fresh browser instance for domain: crm.cartzlink.com
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://crm.cartzlink.com/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://crm.cartzlink.com/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[PASS] Login successful - dashboard loaded with refresh function
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 2.5s, Login: 19.2s
+[INFO] Login successful for domain: crm.cartzlink.com
+Feature: Dash board # ../../tests/features/crm.cartzlink.com/dashboard.feature:4
+
+  @critical
+  Scenario: Visit Dash board page  # ../../tests/features/crm.cartzlink.com/dashboard.feature:7
+
+
+[INFO] Server: s15 | Domain: crm.cartzlink.com
+==================================================
+[PASS] Dash board
+
+============================================================
+COMPLETED DOMAIN: crm.cartzlink.com
+============================================================
+
+============================================================
+STARTING DOMAIN: crm.tabrospharma.com (Server: TP)
+============================================================
+[INFO] Running 2 feature files for domain 'crm.tabrospharma.com':
+    C:\tests\features\crm.tabrospharma.com\AccV.feature
+    C:\tests\features\crm.tabrospharma.com\SO.feature
+[INFO] Domain = crm.tabrospharma.com
+[INFO] Starting browser and logging in for domain: crm.tabrospharma.com
+[INFO] Creating fresh browser instance for domain: crm.tabrospharma.com
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://crm.tabrospharma.com/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://crm.tabrospharma.com/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[PASS] Login successful - dashboard loaded with refresh function
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 2.2s, Login: 27.3s
+[INFO] Login successful for domain: crm.tabrospharma.com
+Feature: Add Account Voucher # ../../tests/features/crm.tabrospharma.com/AccV.feature:4
+
+  @critical
+  Scenario: Visit Account Voucher Page and click on Edit btn  # ../../tests/features/crm.tabrospharma.com/AccV.feature:7
+    Given we visit "accounts2"                                # ../../tests/features/steps/form_actions.py:36
+    When we edit the top row                                  # ../../tests/features/steps/cartzlink_form.py:155
+
+Feature: Sales Order # ../../tests/features/crm.tabrospharma.com/SO.feature:4
+
+  @critical
+  Scenario: Visit Sales Order Page and click on Edit btn  # ../../tests/features/crm.tabrospharma.com/SO.feature:7
+    Given we visit "orders/salesOrder"                    # ../../tests/features/steps/form_actions.py:36
+    When we edit the top row                              # ../../tests/features/steps/cartzlink_form.py:155
+
+
+[INFO] Server: TP | Domain: crm.tabrospharma.com
+==================================================
+[PASS] Add Account Voucher
+[PASS] Sales Order
+
+============================================================
+COMPLETED DOMAIN: crm.tabrospharma.com
+============================================================
+
+==================================================
+[SUMMARY] FINAL TEST SUMMARY
+==================================================
+
+================================================================================
+[CRITICAL] FAILURES AND PERFORMANCE ISSUES SUMMARY
+================================================================================
+
+FAILURES (1 total):
+--------------------------------------------------
+[FAIL] Scenario FAILED | bmkenya | bmkenya.itserver.biz
+   Feature: Add Account Voucher
+   Scenario: Visit Account Voucher Page and click on Edit btn
+   Details: Scenario failed in 3.00s
+
+
+SLOW TESTS (1 total):
+--------------------------------------------------
+[SLOW] Page Load SLOW | FST | fst.itserver.biz
+   Time: 31.70s | Above 7-day average (20.9s)
+================================================================================
+
+[DEBUG] Getting 7-day data for domain: anamta.primeerp.top
+[DEBUG] Page load data: {'current': 3.0, 'average': 3.0, 'values': [3.0], 'is_high': False}
+[DEBUG] Formatted summary: 
+Times (Today): 3.0
+Today: 3.0
+[DEBUG] Getting 7-day login data for domain: anamta.primeerp.top
+[DEBUG] Login data: {'current': 29.4, 'average': 29.4, 'values': [29.4], 'is_high': False}
+[DEBUG] Formatted login summary: 
+Times (Today): 29.4
+Today: 29.4
+[DEBUG] Getting 7-day data for domain: mt.itserver.biz
+[DEBUG] Page load data: {'current': 2.6, 'average': 2.6, 'values': [2.6], 'is_high': False}
+[DEBUG] Formatted summary: 
+Times (Today): 2.6
+Today: 2.6
+[DEBUG] Getting 7-day login data for domain: mt.itserver.biz
+[DEBUG] Login data: {'current': 25.8, 'average': 25.8, 'values': [25.8], 'is_high': False}
+[DEBUG] Formatted login summary: 
+Times (Today): 25.8
+Today: 25.8
+[DEBUG] Getting 7-day data for domain: gta.cartzlink.com
+[DEBUG] Page load data: {'current': 3.3, 'average': 3.3, 'values': [3.3], 'is_high': False}
+[DEBUG] Formatted summary: 
+Times (Today): 3.3
+Today: 3.3
+[DEBUG] Getting 7-day login data for domain: gta.cartzlink.com
+[DEBUG] Login data: {'current': 28.8, 'average': 28.8, 'values': [28.8], 'is_high': False}
+[DEBUG] Formatted login summary: 
+Times (Today): 28.8
+Today: 28.8
+[DEBUG] Getting 7-day data for domain: fst.itserver.biz
+[DEBUG] Page load data: {'current': 31.7, 'average': 20.9, 'values': [31.7, 10.1], 'is_high': True}
+[DEBUG] Formatted summary: 
+Times (Last 2 Days): 31.7, 10.1
+2-Day Avg: 20.9
+Today: 31.7  Above 2-Day Avg
+[DEBUG] Getting 7-day login data for domain: fst.itserver.biz
+[DEBUG] Login data: {'current': 20.2, 'average': 20.5, 'values': [20.2, 20.8], 'is_high': False}
+[DEBUG] Formatted login summary: 
+Times (Last 2 Days): 20.2, 20.8
+2-Day Avg: 20.5
+Today: 20.2
+[DEBUG] Getting 7-day data for domain: cam.itserver.biz
+[DEBUG] Page load data: {'current': 3.6, 'average': 3.6, 'values': [3.6], 'is_high': False}
+[DEBUG] Formatted summary: 
+Times (Today): 3.6
+Today: 3.6
+[DEBUG] Getting 7-day login data for domain: cam.itserver.biz
+[DEBUG] Login data: {'current': 20.3, 'average': 20.3, 'values': [20.3], 'is_high': False}
+[DEBUG] Formatted login summary: 
+Times (Today): 20.3
+Today: 20.3
+[DEBUG] Getting 7-day data for domain: bmkenya.itserver.biz
+[DEBUG] Page load data: {'current': 2.6, 'average': 2.6, 'values': [2.6], 'is_high': False}
+[DEBUG] Formatted summary: 
+Times (Today): 2.6
+Today: 2.6
+[DEBUG] Getting 7-day login data for domain: bmkenya.itserver.biz
+[DEBUG] Login data: {'current': 20.8, 'average': 20.8, 'values': [20.8], 'is_high': False}
+[DEBUG] Formatted login summary: 
+Times (Today): 20.8
+Today: 20.8
+[DEBUG] Getting 7-day data for domain: crm.cartzlink.com
+[DEBUG] Page load data: {'current': 2.5, 'average': 2.5, 'values': [2.5], 'is_high': False}
+[DEBUG] Formatted summary: 
+Times (Today): 2.5
+Today: 2.5
+[DEBUG] Getting 7-day login data for domain: crm.cartzlink.com
+[DEBUG] Login data: {'current': 19.2, 'average': 19.2, 'values': [19.2], 'is_high': False}
+[DEBUG] Formatted login summary: 
+Times (Today): 19.2
+Today: 19.2
+[DEBUG] Getting 7-day data for domain: crm.tabrospharma.com
+[DEBUG] Page load data: {'current': 2.2, 'average': 2.2, 'values': [2.2], 'is_high': False}
+[DEBUG] Formatted summary: 
+Times (Today): 2.2
+Today: 2.2
+[DEBUG] Getting 7-day login data for domain: crm.tabrospharma.com
+[DEBUG] Login data: {'current': 27.3, 'average': 27.3, 'values': [27.3], 'is_high': False}
+[DEBUG] Formatted login summary: 
+Times (Today): 27.3
+Today: 27.3
+
+[INFO] Server: s12 | Domain: anamta.primeerp.top
+[INFO] Features executed:
+    CASH RECEIPT CV
+    Account Voucher
+==================================================
+[PASS] Page Load (3.00s)
+
+Times (Today): 3.0
+Today: 3.0
+[PASS] Login (29.40s)
+
+Times (Today): 29.4
+Today: 29.4
+
+[INFO] Feature: CASH RECEIPT CV
+[PASS] Feature: CASH RECEIPT CV (9.20s)
+
+Times (Today): 9.2
+Today: 9.2
+[PASS] Scenario: Visit CashReceiptCV Page and click on Edit btn (9.20s)
+[INFO] Feature: Account Voucher
+[PASS] Feature: Account Voucher (10.20s)
+
+Times (Today): 10.2
+Today: 10.2
+[PASS] Scenario: Visit Account Voucher Page and click on Edit btn (10.20s)
+
+[INFO] Server: metro crm | Domain: mt.itserver.biz
+[INFO] Features executed:
+    Sales Order
+==================================================
+[PASS] Page Load (2.60s)
+
+Times (Today): 2.6
+Today: 2.6
+[PASS] Login (25.80s)
+
+Times (Today): 25.8
+Today: 25.8
+
+[INFO] Feature: Sales Order
+[PASS] Feature: Sales Order (23.00s)
+
+Times (Today): 23.0
+Today: 23.0
+[PASS] Scenario: Visit Sales order page and click on edit btn (23.00s)
+
+[INFO] Server: s13 | Domain: gta.cartzlink.com
+[INFO] Features executed:
+    Add Account Voucher
+    Sales Invoice
+==================================================
+[PASS] Page Load (3.30s)
+
+Times (Today): 3.3
+Today: 3.3
+[PASS] Login (28.80s)
+
+Times (Today): 28.8
+Today: 28.8
+
+[INFO] Feature: Add Account Voucher
+[PASS] Feature: Add Account Voucher (16.80s)
+
+Times (Today): 16.8
+Today: 16.8
+[PASS] Scenario: Visit Account Voucher Page and click on Edit btn (16.80s)
+[INFO] Feature: Sales Invoice
+[PASS] Feature: Sales Invoice (40.80s)
+
+Times (Today): 40.8
+Today: 40.8
+[PASS] Scenario: Sales Invoice page (40.80s)
+
+[INFO] Server: FST | Domain: fst.itserver.biz
+[INFO] Features executed:
+    Sales Order
+==================================================
+[PASS] Page Load (31.70s)  Above 7-Day Avg
+
+Times (Last 2 Days): 31.7, 10.1
+2-Day Avg: 20.9
+Today: 31.7  Above 2-Day Avg
+[PASS] Login (20.20s)
+
+Times (Last 2 Days): 20.2, 20.8
+2-Day Avg: 20.5
+Today: 20.2
+
+[INFO] Feature: Sales Order
+[PASS] Feature: Sales Order (49.50s)
+
+Times (Last 2 Days): 49.5, 74.7
+2-Day Avg: 62.1
+Today: 49.5
+[PASS] Scenario: Visit Sales order page and click on Edit btn (49.50s)
+
+[INFO] Server: metro cam | Domain: cam.itserver.biz
+[INFO] Features executed:
+    Add Account Voucher
+    Gatepass
+    Purchase Invoice
+    Production Order FSTUser
+==================================================
+[PASS] Page Load (3.60s)
+
+Times (Today): 3.6
+Today: 3.6
+[PASS] Login (20.30s)
+
+Times (Today): 20.3
+Today: 20.3
+
+[INFO] Feature: Add Account Voucher
+[PASS] Feature: Add Account Voucher (10.40s)
+
+Times (Today): 10.4
+Today: 10.4
+[PASS] Scenario: Visit Account Voucher Page and click on Edit btn (10.40s)
+[INFO] Feature: Gatepass
+[PASS] Feature: Gatepass (52.10s)
+
+Times (Today): 52.1
+Today: 52.1
+[PASS] Scenario: Visit Gate pass Page and click on Edit btn (52.10s)
+[INFO] Feature: Purchase Invoice
+[PASS] Feature: Purchase Invoice (54.60s)
+
+Times (Today): 54.6
+Today: 54.6
+[PASS] Scenario: Visit Purchase invoice Page and click on Edit btn (54.60s)
+[INFO] Feature: Production Order FSTUser
+[PASS] Feature: Production Order FSTUser (14.90s)
+
+Times (Today): 14.9
+Today: 14.9
+[PASS] Scenario: Visit Production order page and click on Edit btn (14.90s)
+
+[INFO] Server: bmkenya | Domain: bmkenya.itserver.biz
+[INFO] Features executed:
+    Add Account Voucher
+    Sales Order
+==================================================
+[PASS] Page Load (2.60s)
+
+Times (Today): 2.6
+Today: 2.6
+[PASS] Login (20.80s)
+
+Times (Today): 20.8
+Today: 20.8
+
+[INFO] Feature: Add Account Voucher
+[PASS] Feature: Add Account Voucher (3.00s)
+
+Times (Today): 3.0
+Today: 3.0
+[FAIL] Scenario: Visit Account Voucher Page and click on Edit btn (3.00s)
+[INFO] Feature: Sales Order
+[PASS] Feature: Sales Order (3.80s)
+
+Times (Today): 3.8
+Today: 3.8
+[PASS] Scenario: Visit Sales order page (3.80s)
+
+[INFO] Server: s15 | Domain: crm.cartzlink.com
+[INFO] Features executed:
+    Dash board
+==================================================
+[PASS] Page Load (2.50s)
+
+Times (Today): 2.5
+Today: 2.5
+[PASS] Login (19.20s)
+
+Times (Today): 19.2
+Today: 19.2
+
+[INFO] Feature: Dash board
+[PASS] Feature: Dash board (0.00s)
+
+Times (Today): 0.0
+Today: 0.0
+[PASS] Scenario: Visit Dash board page (0.00s)
+
+[INFO] Server: TP | Domain: crm.tabrospharma.com
+[INFO] Features executed:
+    Add Account Voucher
+    Sales Order
+==================================================
+[PASS] Page Load (2.20s)
+
+Times (Today): 2.2
+Today: 2.2
+[PASS] Login (27.30s)
+
+Times (Today): 27.3
+Today: 27.3
+
+[INFO] Feature: Add Account Voucher
+[PASS] Feature: Add Account Voucher (8.60s)
+
+Times (Today): 8.6
+Today: 8.6
+[PASS] Scenario: Visit Account Voucher Page and click on Edit btn (8.60s)
+[INFO] Feature: Sales Order
+[PASS] Feature: Sales Order (9.50s)
+
+Times (Today): 9.5
+Today: 9.5
+[PASS] Scenario: Visit Sales Order Page and click on Edit btn (9.50s)
+[PASS] Test summary email sent successfully.
+Finished at Thu 09/25/2025 14:58:24.49 
+========================================= 

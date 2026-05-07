@@ -1,0 +1,1137 @@
+========================================= 
+Behave Run Started at Mon 09/29/2025 17:31:45.58 
+========================================= 
+
+============================================================
+STARTING DOMAIN: mt.itserver.biz (Server: metro crm)
+============================================================
+[INFO] Running 1 feature files for domain 'mt.itserver.biz':
+    E:\shayan\tests\features\mt.itserver.biz\SO.feature
+[INFO] Domain = mt.itserver.biz
+[INFO] Starting browser and logging in for domain: mt.itserver.biz
+[INFO] Creating fresh browser instance for domain: mt.itserver.biz
+[INFO] Attempt 1/5: Creating Chrome driver...
+[INFO] Applying performance optimizations for problematic domain: mt.itserver.biz
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/5: Opening https://mt.itserver.biz/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://mt.itserver.biz/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[PASS] Login successful - dashboard loaded with refresh function
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 12.8s, Login: 28.9s
+[INFO] Login successful for domain: mt.itserver.biz
+[INFO] Starting feature: Sales Order
+Feature: Sales Order # features/mt.itserver.biz/SO.feature:4
+
+  @critical
+  Scenario: Visit Sales order page and click on edit btn  # features/mt.itserver.biz/SO.feature:7
+    Given we visit "orders/SO2"                           # features/steps/form_actions.py:36
+    When we edit the top row                              # features/steps/cartzlink_form.py:155
+[INFO] Completed feature: Sales Order
+DEBUG: context.domain = mt.itserver.biz
+DEBUG: timing_summary = {'mt.itserver.biz': {'Server': 'metro crm', 'Page Load': 12.8, 'Login': 28.9, 'Features': {'Sales Order': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Sales order page and click on edit btn', 'duration': 11.5, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Order (11.5s)
+[DEBUG] Writing timing summary for mt.itserver.biz to E:\shayan\tests\timing_results\mt.itserver.biz_timing.json
+
+[INFO] Closing browser for domain: mt.itserver.biz
+[INFO] Browser closed successfully for domain: mt.itserver.biz
+[INFO] Browser instance cleared for domain: mt.itserver.biz
+[SUMMARY] Timing for mt.itserver.biz:
+{
+  "page_load": {
+    "current": 12.8,
+    "average": 8.35,
+    "values": [
+      12.8,
+      1.8,
+      1.9,
+      16.9
+    ],
+    "is_high": true
+  },
+  "login": {
+    "current": 28.9,
+    "average": 26.275,
+    "values": [
+      28.9,
+      25.4,
+      25.1,
+      25.7
+    ],
+    "is_high": true
+  },
+  "features": {
+    "Sales Order": {
+      "current": 11.5,
+      "average": 20.75,
+      "values": [
+        11.5,
+        23.5,
+        23.8,
+        24.2
+      ],
+      "is_high": false
+    }
+  },
+  "scenario": {
+    "current": 11.5,
+    "average": 20.75,
+    "values": [
+      11.5,
+      23.5,
+      23.8,
+      24.2
+    ],
+    "is_high": false
+  }
+}
+
+[INFO] Server: metro crm | Domain: mt.itserver.biz
+==================================================
+[PASS] Sales Order
+
+============================================================
+COMPLETED DOMAIN: mt.itserver.biz
+============================================================
+
+============================================================
+STARTING DOMAIN: gta.cartzlink.com (Server: s13)
+============================================================
+[INFO] Running 2 feature files for domain 'gta.cartzlink.com':
+    E:\shayan\tests\features\gta.cartzlink.com\AccV.feature
+    E:\shayan\tests\features\gta.cartzlink.com\SI.feature
+[INFO] Domain = gta.cartzlink.com
+[INFO] Starting browser and logging in for domain: gta.cartzlink.com
+[INFO] Creating fresh browser instance for domain: gta.cartzlink.com
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://gta.cartzlink.com/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://gta.cartzlink.com/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[PASS] Login successful - dashboard loaded with refresh function
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 6.2s, Login: 49.9s
+[INFO] Login successful for domain: gta.cartzlink.com
+[INFO] Starting feature: Add Account Voucher
+Feature: Add Account Voucher # features/gta.cartzlink.com/AccV.feature:4
+
+  @critical
+  Scenario: Visit Account Voucher Page and click on Edit btn  # features/gta.cartzlink.com/AccV.feature:7
+    Given we visit "accounts2"                                # features/steps/form_actions.py:36
+    When we edit the top row                                  # features/steps/cartzlink_form.py:155
+[INFO] Completed feature: Add Account Voucher
+DEBUG: context.domain = gta.cartzlink.com
+DEBUG: timing_summary = {'gta.cartzlink.com': {'Server': 's13', 'Page Load': 6.2, 'Login': 49.9, 'Features': {'Add Account Voucher': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Account Voucher Page and click on Edit btn', 'duration': 14.1, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Add Account Voucher (14.1s)
+[DEBUG] Writing timing summary for gta.cartzlink.com to E:\shayan\tests\timing_results\gta.cartzlink.com_timing.json
+
+[INFO] Starting feature: Sales Invoice
+Feature: Sales Invoice # features/gta.cartzlink.com/SI.feature:1
+
+  @critical
+  Scenario: Sales Invoice page           # features/gta.cartzlink.com/SI.feature:4
+    Given we visit "orders/salesInvoice" # features/steps/form_actions.py:36
+    When we edit the top row             # features/steps/cartzlink_form.py:155
+[INFO] Completed feature: Sales Invoice
+DEBUG: context.domain = gta.cartzlink.com
+DEBUG: timing_summary = {'gta.cartzlink.com': {'Server': 's13', 'Page Load': 6.2, 'Login': 49.9, 'Features': {'Add Account Voucher': {'Feature': 14.1, 'Scenario Timings': [{'name': 'Visit Account Voucher Page and click on Edit btn', 'duration': 14.1, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}, 'Sales Invoice': {'Feature': None, 'Scenario Timings': [{'name': 'Sales Invoice page', 'duration': 15.3, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Invoice (15.3s)
+[DEBUG] Writing timing summary for gta.cartzlink.com to E:\shayan\tests\timing_results\gta.cartzlink.com_timing.json
+
+[INFO] Closing browser for domain: gta.cartzlink.com
+[INFO] Browser closed successfully for domain: gta.cartzlink.com
+[INFO] Browser instance cleared for domain: gta.cartzlink.com
+[SUMMARY] Timing for gta.cartzlink.com:
+{
+  "page_load": {
+    "current": 6.2,
+    "average": 3.5,
+    "values": [
+      6.2,
+      2.3,
+      2.6,
+      2.9
+    ],
+    "is_high": true
+  },
+  "login": {
+    "current": 49.9,
+    "average": 34.45,
+    "values": [
+      49.9,
+      29.0,
+      29.7,
+      29.2
+    ],
+    "is_high": true
+  },
+  "features": {
+    "Add Account Voucher": {
+      "current": 14.1,
+      "average": 16.7,
+      "values": [
+        14.1,
+        17.0,
+        16.9,
+        18.8
+      ],
+      "is_high": false
+    },
+    "Sales Invoice": {
+      "current": 15.3,
+      "average": 32.45,
+      "values": [
+        15.3,
+        37.0,
+        37.3,
+        40.2
+      ],
+      "is_high": false
+    }
+  },
+  "scenario": {
+    "current": 14.7,
+    "average": 24.575,
+    "values": [
+      14.7,
+      27.0,
+      27.099999999999998,
+      29.5
+    ],
+    "is_high": false
+  }
+}
+
+[INFO] Server: s13 | Domain: gta.cartzlink.com
+==================================================
+[PASS] Add Account Voucher
+[PASS] Sales Invoice
+
+============================================================
+COMPLETED DOMAIN: gta.cartzlink.com
+============================================================
+
+============================================================
+STARTING DOMAIN: fst.itserver.biz (Server: FST)
+============================================================
+[INFO] Running 1 feature files for domain 'fst.itserver.biz':
+    E:\shayan\tests\features\fst.itserver.biz\SO.feature
+[INFO] Domain = fst.itserver.biz
+[INFO] Starting browser and logging in for domain: fst.itserver.biz
+[INFO] Creating fresh browser instance for domain: fst.itserver.biz
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://fst.itserver.biz/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://fst.itserver.biz/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[PASS] Login successful - dashboard loaded with refresh function
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 9.1s, Login: 24.3s
+[INFO] Login successful for domain: fst.itserver.biz
+[INFO] Starting feature: Sales Order
+Feature: Sales Order # features/fst.itserver.biz/SO.feature:4
+
+  @critical
+  Scenario: Visit Sales order page and click on Edit btn  # features/fst.itserver.biz/SO.feature:7
+    Given we visit "orders/salesOrder"                    # features/steps/form_actions.py:36
+    When we clear the from date and search                # features/steps/form_actions.py:82
+[INFO] Completed feature: Sales Order
+DEBUG: context.domain = fst.itserver.biz
+DEBUG: timing_summary = {'fst.itserver.biz': {'Server': 'FST', 'Page Load': 9.1, 'Login': 24.3, 'Features': {'Sales Order': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Sales order page and click on Edit btn', 'duration': 17.0, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Order (17.0s)
+[DEBUG] Writing timing summary for fst.itserver.biz to E:\shayan\tests\timing_results\fst.itserver.biz_timing.json
+
+[INFO] Closing browser for domain: fst.itserver.biz
+[INFO] Browser closed successfully for domain: fst.itserver.biz
+[INFO] Browser instance cleared for domain: fst.itserver.biz
+[SUMMARY] Timing for fst.itserver.biz:
+{
+  "page_load": {
+    "current": 9.1,
+    "average": 5.779999999999999,
+    "values": [
+      9.1,
+      2.3,
+      2.8,
+      4.6,
+      10.1
+    ],
+    "is_high": true
+  },
+  "login": {
+    "current": 24.3,
+    "average": 21.82,
+    "values": [
+      24.3,
+      19.4,
+      22.5,
+      22.1,
+      20.8
+    ],
+    "is_high": true
+  },
+  "features": {
+    "Sales Order": {
+      "current": 17.0,
+      "average": 49.36,
+      "values": [
+        17.0,
+        50.9,
+        53.1,
+        51.1,
+        74.7
+      ],
+      "is_high": false
+    }
+  },
+  "scenario": {
+    "current": 17.0,
+    "average": 49.36,
+    "values": [
+      17.0,
+      50.9,
+      53.1,
+      51.1,
+      74.7
+    ],
+    "is_high": false
+  }
+}
+
+[INFO] Server: FST | Domain: fst.itserver.biz
+==================================================
+[PASS] Sales Order
+
+============================================================
+COMPLETED DOMAIN: fst.itserver.biz
+============================================================
+
+============================================================
+STARTING DOMAIN: cam.itserver.biz (Server: metro cam)
+============================================================
+[INFO] Running 4 feature files for domain 'cam.itserver.biz':
+    E:\shayan\tests\features\cam.itserver.biz\AccV.feature
+    E:\shayan\tests\features\cam.itserver.biz\GP.feature
+    E:\shayan\tests\features\cam.itserver.biz\PI.feature
+    E:\shayan\tests\features\cam.itserver.biz\SO.feature
+[INFO] Domain = cam.itserver.biz
+[INFO] Starting browser and logging in for domain: cam.itserver.biz
+[INFO] Creating fresh browser instance for domain: cam.itserver.biz
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://cam.itserver.biz/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://cam.itserver.biz/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[PASS] Login successful - dashboard loaded with refresh function
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 17.0s, Login: 22.4s
+[INFO] Login successful for domain: cam.itserver.biz
+[INFO] Starting feature: Add Account Voucher
+Feature: Add Account Voucher # features/cam.itserver.biz/AccV.feature:4
+
+  @critical
+  Scenario: Visit Account Voucher Page and click on Edit btn  # features/cam.itserver.biz/AccV.feature:7
+    Given we visit "accounts2"                                # features/steps/form_actions.py:36
+    When we edit the top row                                  # features/steps/cartzlink_form.py:155
+[INFO] Completed feature: Add Account Voucher
+DEBUG: context.domain = cam.itserver.biz
+DEBUG: timing_summary = {'cam.itserver.biz': {'Server': 'metro cam', 'Page Load': 17.0, 'Login': 22.4, 'Features': {'Add Account Voucher': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Account Voucher Page and click on Edit btn', 'duration': 8.4, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Add Account Voucher (8.4s)
+[DEBUG] Writing timing summary for cam.itserver.biz to E:\shayan\tests\timing_results\cam.itserver.biz_timing.json
+
+[INFO] Starting feature: Gatepass
+Feature: Gatepass # features/cam.itserver.biz/GP.feature:1
+
+  @critical
+  Scenario: Visit Gate pass Page and click on Edit btn  # features/cam.itserver.biz/GP.feature:4
+    Given we visit "orders/deliveryChallanCAM"          # features/steps/form_actions.py:36
+    When we edit the top row                            # features/steps/cartzlink_form.py:155
+[INFO] Completed feature: Gatepass
+DEBUG: context.domain = cam.itserver.biz
+DEBUG: timing_summary = {'cam.itserver.biz': {'Server': 'metro cam', 'Page Load': 17.0, 'Login': 22.4, 'Features': {'Add Account Voucher': {'Feature': 8.4, 'Scenario Timings': [{'name': 'Visit Account Voucher Page and click on Edit btn', 'duration': 8.4, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}, 'Gatepass': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Gate pass Page and click on Edit btn', 'duration': 22.3, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Gatepass (22.3s)
+[DEBUG] Writing timing summary for cam.itserver.biz to E:\shayan\tests\timing_results\cam.itserver.biz_timing.json
+
+[INFO] Starting feature: Purchase Invoice
+Feature: Purchase Invoice # features/cam.itserver.biz/PI.feature:3
+
+  @critical
+  Scenario: Visit Purchase invoice Page and click on Edit btn  # features/cam.itserver.biz/PI.feature:6
+    Given we visit "orders/purchaseInvoice"                    # features/steps/form_actions.py:36
+    When we edit the top row                                   # features/steps/cartzlink_form.py:155
+[INFO] Completed feature: Purchase Invoice
+DEBUG: context.domain = cam.itserver.biz
+DEBUG: timing_summary = {'cam.itserver.biz': {'Server': 'metro cam', 'Page Load': 17.0, 'Login': 22.4, 'Features': {'Add Account Voucher': {'Feature': 8.4, 'Scenario Timings': [{'name': 'Visit Account Voucher Page and click on Edit btn', 'duration': 8.4, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}, 'Gatepass': {'Feature': 22.3, 'Scenario Timings': [{'name': 'Visit Gate pass Page and click on Edit btn', 'duration': 22.3, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}, 'Purchase Invoice': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Purchase invoice Page and click on Edit btn', 'duration': 16.7, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Purchase Invoice (16.7s)
+[DEBUG] Writing timing summary for cam.itserver.biz to E:\shayan\tests\timing_results\cam.itserver.biz_timing.json
+
+[INFO] Starting feature: Production Order FSTUser
+Feature: Production Order FSTUser # features/cam.itserver.biz/SO.feature:4
+
+  @critical
+  Scenario: Visit Production order page and click on Edit btn  # features/cam.itserver.biz/SO.feature:7
+    Given we visit "orders/SalesOrderFSTUser"                  # features/steps/form_actions.py:36
+    When we edit the top row                                   # features/steps/cartzlink_form.py:155
+[INFO] Completed feature: Production Order FSTUser
+DEBUG: context.domain = cam.itserver.biz
+DEBUG: timing_summary = {'cam.itserver.biz': {'Server': 'metro cam', 'Page Load': 17.0, 'Login': 22.4, 'Features': {'Add Account Voucher': {'Feature': 8.4, 'Scenario Timings': [{'name': 'Visit Account Voucher Page and click on Edit btn', 'duration': 8.4, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}, 'Gatepass': {'Feature': 22.3, 'Scenario Timings': [{'name': 'Visit Gate pass Page and click on Edit btn', 'duration': 22.3, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}, 'Purchase Invoice': {'Feature': 16.7, 'Scenario Timings': [{'name': 'Visit Purchase invoice Page and click on Edit btn', 'duration': 16.7, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}, 'Production Order FSTUser': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Production order page and click on Edit btn', 'duration': 9.3, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Production Order FSTUser (9.3s)
+[DEBUG] Writing timing summary for cam.itserver.biz to E:\shayan\tests\timing_results\cam.itserver.biz_timing.json
+
+[INFO] Closing browser for domain: cam.itserver.biz
+[INFO] Browser closed successfully for domain: cam.itserver.biz
+[INFO] Browser instance cleared for domain: cam.itserver.biz
+[SUMMARY] Timing for cam.itserver.biz:
+{
+  "page_load": {
+    "current": 17.0,
+    "average": 6.975,
+    "values": [
+      17.0,
+      4.1,
+      3.3,
+      3.5
+    ],
+    "is_high": true
+  },
+  "login": {
+    "current": 22.4,
+    "average": 22.675,
+    "values": [
+      22.4,
+      21.2,
+      21.0,
+      26.1
+    ],
+    "is_high": false
+  },
+  "features": {
+    "Add Account Voucher": {
+      "current": 8.4,
+      "average": 9.525,
+      "values": [
+        8.4,
+        9.4,
+        9.4,
+        10.9
+      ],
+      "is_high": false
+    },
+    "Gatepass": {
+      "current": 22.3,
+      "average": 43.300000000000004,
+      "values": [
+        22.3,
+        49.6,
+        48.6,
+        52.7
+      ],
+      "is_high": false
+    },
+    "Purchase Invoice": {
+      "current": 16.7,
+      "average": 46.825,
+      "values": [
+        16.7,
+        54.7,
+        57.0,
+        58.9
+      ],
+      "is_high": false
+    },
+    "Production Order FSTUser": {
+      "current": 9.3,
+      "average": 14.275,
+      "values": [
+        9.3,
+        15.1,
+        15.8,
+        16.9
+      ],
+      "is_high": false
+    }
+  },
+  "scenario": {
+    "current": 14.175,
+    "average": 28.475,
+    "values": [
+      14.175,
+      32.2,
+      32.675,
+      34.85
+    ],
+    "is_high": false
+  }
+}
+
+[INFO] Server: metro cam | Domain: cam.itserver.biz
+==================================================
+[PASS] Add Account Voucher
+[PASS] Gatepass
+[PASS] Purchase Invoice
+[PASS] Production Order FSTUser
+
+============================================================
+COMPLETED DOMAIN: cam.itserver.biz
+============================================================
+
+============================================================
+STARTING DOMAIN: bmkenya.itserver.biz (Server: bmkenya)
+============================================================
+[INFO] Running 2 feature files for domain 'bmkenya.itserver.biz':
+    E:\shayan\tests\features\bmkenya.itserver.biz\AccV.feature
+    E:\shayan\tests\features\bmkenya.itserver.biz\SO.feature
+[INFO] Domain = bmkenya.itserver.biz
+[INFO] Starting browser and logging in for domain: bmkenya.itserver.biz
+[INFO] Creating fresh browser instance for domain: bmkenya.itserver.biz
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://bmkenya.itserver.biz/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://bmkenya.itserver.biz/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[PASS] Login successful - dashboard loaded with refresh function
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 6.0s, Login: 106.0s
+[INFO] Login successful for domain: bmkenya.itserver.biz
+[INFO] Starting feature: Add Account Voucher
+Feature: Add Account Voucher # features/bmkenya.itserver.biz/AccV.feature:4
+
+  @critical
+  Scenario: Visit Account Voucher Page and click on Edit btn  # features/bmkenya.itserver.biz/AccV.feature:7
+    Given we visit "accounts2"                                # features/steps/form_actions.py:36
+    When we edit the top row                                  # features/steps/cartzlink_form.py:155
+[INFO] Completed feature: Add Account Voucher
+DEBUG: context.domain = bmkenya.itserver.biz
+DEBUG: timing_summary = {'bmkenya.itserver.biz': {'Server': 'bmkenya', 'Page Load': 6.0, 'Login': 106.0, 'Features': {'Add Account Voucher': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Account Voucher Page and click on Edit btn', 'duration': 58.6, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Add Account Voucher (58.6s)
+[DEBUG] Writing timing summary for bmkenya.itserver.biz to E:\shayan\tests\timing_results\bmkenya.itserver.biz_timing.json
+
+[INFO] Starting feature: Sales Order
+Feature: Sales Order # features/bmkenya.itserver.biz/SO.feature:4
+
+  @critical
+  Scenario: Visit Sales order page     # features/bmkenya.itserver.biz/SO.feature:7
+    Given we visit "orders/salesOrder" # features/steps/form_actions.py:36
+[INFO] Completed feature: Sales Order
+DEBUG: context.domain = bmkenya.itserver.biz
+DEBUG: timing_summary = {'bmkenya.itserver.biz': {'Server': 'bmkenya', 'Page Load': 6.0, 'Login': 106.0, 'Features': {'Add Account Voucher': {'Feature': 58.6, 'Scenario Timings': [{'name': 'Visit Account Voucher Page and click on Edit btn', 'duration': 58.6, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}, 'Sales Order': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Sales order page', 'duration': 1.6, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Order (1.6s)
+[DEBUG] Writing timing summary for bmkenya.itserver.biz to E:\shayan\tests\timing_results\bmkenya.itserver.biz_timing.json
+
+[INFO] Closing browser for domain: bmkenya.itserver.biz
+[INFO] Browser closed successfully for domain: bmkenya.itserver.biz
+[INFO] Browser instance cleared for domain: bmkenya.itserver.biz
+[SUMMARY] Timing for bmkenya.itserver.biz:
+{
+  "page_load": {
+    "current": 6.0,
+    "average": 9.2,
+    "values": [
+      6.0,
+      3.0,
+      11.4,
+      16.4
+    ],
+    "is_high": false
+  },
+  "login": {
+    "current": 106.0,
+    "average": 42.25,
+    "values": [
+      106.0,
+      21.6,
+      20.9,
+      20.5
+    ],
+    "is_high": true
+  },
+  "features": {
+    "Add Account Voucher": {
+      "current": 58.6,
+      "average": 21.875,
+      "values": [
+        58.6,
+        13.2,
+        12.7,
+        3.0
+      ],
+      "is_high": true
+    },
+    "Sales Order": {
+      "current": 1.6,
+      "average": 3.625,
+      "values": [
+        1.6,
+        3.5,
+        4.6,
+        4.8
+      ],
+      "is_high": false
+    }
+  },
+  "scenario": {
+    "current": 30.1,
+    "average": 12.7375,
+    "values": [
+      30.1,
+      8.3,
+      8.649999999999999,
+      3.9
+    ],
+    "is_high": true
+  }
+}
+
+[INFO] Server: bmkenya | Domain: bmkenya.itserver.biz
+==================================================
+[PASS] Add Account Voucher
+[PASS] Sales Order
+
+============================================================
+COMPLETED DOMAIN: bmkenya.itserver.biz
+============================================================
+
+============================================================
+STARTING DOMAIN: crm.cartzlink.com (Server: s15)
+============================================================
+[INFO] Running 1 feature files for domain 'crm.cartzlink.com':
+    E:\shayan\tests\features\crm.cartzlink.com\dashboard.feature
+[INFO] Domain = crm.cartzlink.com
+[INFO] Starting browser and logging in for domain: crm.cartzlink.com
+[INFO] Creating fresh browser instance for domain: crm.cartzlink.com
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://crm.cartzlink.com/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://crm.cartzlink.com/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[PASS] Login successful - dashboard loaded with refresh function
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 3.3s, Login: 18.7s
+[INFO] Login successful for domain: crm.cartzlink.com
+[INFO] Starting feature: Dash board
+Feature: Dash board # features/crm.cartzlink.com/dashboard.feature:4
+[INFO] Completed feature: Dash board
+DEBUG: context.domain = crm.cartzlink.com
+DEBUG: timing_summary = {'crm.cartzlink.com': {'Server': 's15', 'Page Load': 3.3, 'Login': 18.7, 'Features': {'Dash board': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Dash board page', 'duration': 0.0, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Dash board (0.0s)
+[DEBUG] Writing timing summary for crm.cartzlink.com to E:\shayan\tests\timing_results\crm.cartzlink.com_timing.json
+
+  @critical
+  Scenario: Visit Dash board page  # features/crm.cartzlink.com/dashboard.feature:7
+
+[INFO] Closing browser for domain: crm.cartzlink.com
+[INFO] Browser closed successfully for domain: crm.cartzlink.com
+[INFO] Browser instance cleared for domain: crm.cartzlink.com
+[SUMMARY] Timing for crm.cartzlink.com:
+{
+  "page_load": {
+    "current": 3.3,
+    "average": 2.075,
+    "values": [
+      3.3,
+      2.1,
+      1.3,
+      1.6
+    ],
+    "is_high": true
+  },
+  "login": {
+    "current": 18.7,
+    "average": 19.75,
+    "values": [
+      18.7,
+      20.8,
+      19.4,
+      20.1
+    ],
+    "is_high": false
+  },
+  "features": {
+    "Dash board": {
+      "current": 0.0,
+      "average": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "is_high": 0.0
+    }
+  },
+  "scenario": {
+    "current": 0.0,
+    "average": 0.0,
+    "values": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "is_high": 0.0
+  }
+}
+
+[INFO] Server: s15 | Domain: crm.cartzlink.com
+==================================================
+[PASS] Dash board
+
+============================================================
+COMPLETED DOMAIN: crm.cartzlink.com
+============================================================
+
+============================================================
+STARTING DOMAIN: crm.tabrospharma.com (Server: TP)
+============================================================
+[INFO] Running 2 feature files for domain 'crm.tabrospharma.com':
+    E:\shayan\tests\features\crm.tabrospharma.com\AccV.feature
+    E:\shayan\tests\features\crm.tabrospharma.com\SO.feature
+[INFO] Domain = crm.tabrospharma.com
+[INFO] Starting browser and logging in for domain: crm.tabrospharma.com
+[INFO] Creating fresh browser instance for domain: crm.tabrospharma.com
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://crm.tabrospharma.com/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://crm.tabrospharma.com/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[PASS] Login successful - dashboard loaded with refresh function
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 3.7s, Login: 26.0s
+[INFO] Login successful for domain: crm.tabrospharma.com
+[INFO] Starting feature: Add Account Voucher
+Feature: Add Account Voucher # features/crm.tabrospharma.com/AccV.feature:4
+
+  @critical
+  Scenario: Visit Account Voucher Page and click on Edit btn  # features/crm.tabrospharma.com/AccV.feature:7
+    Given we visit "accounts2"                                # features/steps/form_actions.py:36
+    When we edit the top row                                  # features/steps/cartzlink_form.py:155
+[INFO] Completed feature: Add Account Voucher
+DEBUG: context.domain = crm.tabrospharma.com
+DEBUG: timing_summary = {'crm.tabrospharma.com': {'Server': 'TP', 'Page Load': 3.7, 'Login': 26.0, 'Features': {'Add Account Voucher': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Account Voucher Page and click on Edit btn', 'duration': 7.0, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Add Account Voucher (7.0s)
+[DEBUG] Writing timing summary for crm.tabrospharma.com to E:\shayan\tests\timing_results\crm.tabrospharma.com_timing.json
+
+[INFO] Starting feature: Sales Order
+Feature: Sales Order # features/crm.tabrospharma.com/SO.feature:4
+
+  @critical
+  Scenario: Visit Sales Order Page and click on Edit btn  # features/crm.tabrospharma.com/SO.feature:7
+    Given we visit "orders/salesOrder"                    # features/steps/form_actions.py:36
+    When we edit the top row                              # features/steps/cartzlink_form.py:155
+[INFO] Completed feature: Sales Order
+DEBUG: context.domain = crm.tabrospharma.com
+DEBUG: timing_summary = {'crm.tabrospharma.com': {'Server': 'TP', 'Page Load': 3.7, 'Login': 26.0, 'Features': {'Add Account Voucher': {'Feature': 7.0, 'Scenario Timings': [{'name': 'Visit Account Voucher Page and click on Edit btn', 'duration': 7.0, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}, 'Sales Order': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Sales Order Page and click on Edit btn', 'duration': 6.9, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Order (6.9s)
+[DEBUG] Writing timing summary for crm.tabrospharma.com to E:\shayan\tests\timing_results\crm.tabrospharma.com_timing.json
+
+[INFO] Closing browser for domain: crm.tabrospharma.com
+[INFO] Browser closed successfully for domain: crm.tabrospharma.com
+[INFO] Browser instance cleared for domain: crm.tabrospharma.com
+[SUMMARY] Timing for crm.tabrospharma.com:
+{
+  "page_load": {
+    "current": 3.7,
+    "average": 2.625,
+    "values": [
+      3.7,
+      1.9,
+      1.6,
+      3.3
+    ],
+    "is_high": true
+  },
+  "login": {
+    "current": 26.0,
+    "average": 27.425,
+    "values": [
+      26.0,
+      27.5,
+      27.4,
+      28.8
+    ],
+    "is_high": false
+  },
+  "features": {
+    "Add Account Voucher": {
+      "current": 7.0,
+      "average": 9.05,
+      "values": [
+        7.0,
+        9.3,
+        9.0,
+        10.9
+      ],
+      "is_high": false
+    },
+    "Sales Order": {
+      "current": 6.9,
+      "average": 9.55,
+      "values": [
+        6.9,
+        9.8,
+        10.0,
+        11.5
+      ],
+      "is_high": false
+    }
+  },
+  "scenario": {
+    "current": 6.95,
+    "average": 9.3,
+    "values": [
+      6.95,
+      9.55,
+      9.5,
+      11.2
+    ],
+    "is_high": false
+  }
+}
+
+[INFO] Server: TP | Domain: crm.tabrospharma.com
+==================================================
+[PASS] Add Account Voucher
+[PASS] Sales Order
+
+============================================================
+COMPLETED DOMAIN: crm.tabrospharma.com
+============================================================
+
+==================================================
+[SUMMARY] FINAL TEST SUMMARY
+==================================================
+
+================================================================================
+[CRITICAL] FAILURES AND PERFORMANCE ISSUES SUMMARY
+================================================================================
+
+SLOW TESTS (11 total):
+--------------------------------------------------
+[SLOW] Page Load SLOW | metro crm | mt.itserver.biz
+   Time: 12.80s | Above 7-day average (8.3s)
+[SLOW] Login SLOW | metro crm | mt.itserver.biz
+   Time: 28.90s | Above 7-day average (26.3s)
+[SLOW] Page Load SLOW | s13 | gta.cartzlink.com
+   Time: 6.20s | Above 7-day average (3.5s)
+[SLOW] Login SLOW | s13 | gta.cartzlink.com
+   Time: 49.90s | Above 7-day average (34.5s)
+[SLOW] Page Load SLOW | FST | fst.itserver.biz
+   Time: 9.10s | Above 7-day average (5.8s)
+[SLOW] Login SLOW | FST | fst.itserver.biz
+   Time: 24.30s | Above 7-day average (21.8s)
+[SLOW] Page Load SLOW | metro cam | cam.itserver.biz
+   Time: 17.00s | Above 7-day average (7.0s)
+[SLOW] Login SLOW | bmkenya | bmkenya.itserver.biz
+   Time: 106.00s | Above 7-day average (42.2s)
+[SLOW] Feature SLOW | bmkenya | bmkenya.itserver.biz
+   Feature: Add Account Voucher
+   Time: 58.60s | Above 7-day average (21.9s)
+[SLOW] Page Load SLOW | s15 | crm.cartzlink.com
+   Time: 3.30s | Above 7-day average (2.1s)
+[SLOW] Page Load SLOW | TP | crm.tabrospharma.com
+   Time: 3.70s | Above 7-day average (2.6s)
+================================================================================
+
+[DEBUG] Getting 7-day data for domain: mt.itserver.biz
+[DEBUG] Page load data: {'current': 12.8, 'average': 8.35, 'values': [12.8, 1.8, 1.9, 16.9], 'is_high': True}
+[DEBUG] Formatted summary: 
+Times (Last 4 Days): 12.8, 1.8, 1.9, 16.9
+4-Day Avg: 8.3
+Today: 12.8  Above 4-Day Avg
+[DEBUG] Getting 7-day login data for domain: mt.itserver.biz
+[DEBUG] Login data: {'current': 28.9, 'average': 26.275, 'values': [28.9, 25.4, 25.1, 25.7], 'is_high': True}
+[DEBUG] Formatted login summary: 
+Times (Last 4 Days): 28.9, 25.4, 25.1, 25.7
+4-Day Avg: 26.3
+Today: 28.9  Above 4-Day Avg
+[DEBUG] Getting 7-day data for domain: gta.cartzlink.com
+[DEBUG] Page load data: {'current': 6.2, 'average': 3.5, 'values': [6.2, 2.3, 2.6, 2.9], 'is_high': True}
+[DEBUG] Formatted summary: 
+Times (Last 4 Days): 6.2, 2.3, 2.6, 2.9
+4-Day Avg: 3.5
+Today: 6.2  Above 4-Day Avg
+[DEBUG] Getting 7-day login data for domain: gta.cartzlink.com
+[DEBUG] Login data: {'current': 49.9, 'average': 34.45, 'values': [49.9, 29.0, 29.7, 29.2], 'is_high': True}
+[DEBUG] Formatted login summary: 
+Times (Last 4 Days): 49.9, 29.0, 29.7, 29.2
+4-Day Avg: 34.5
+Today: 49.9  Above 4-Day Avg
+[DEBUG] Getting 7-day data for domain: fst.itserver.biz
+[DEBUG] Page load data: {'current': 9.1, 'average': 5.779999999999999, 'values': [9.1, 2.3, 2.8, 4.6, 10.1], 'is_high': True}
+[DEBUG] Formatted summary: 
+Times (Last 5 Days): 9.1, 2.3, 2.8, 4.6, 10.1
+5-Day Avg: 5.8
+Today: 9.1  Above 5-Day Avg
+[DEBUG] Getting 7-day login data for domain: fst.itserver.biz
+[DEBUG] Login data: {'current': 24.3, 'average': 21.82, 'values': [24.3, 19.4, 22.5, 22.1, 20.8], 'is_high': True}
+[DEBUG] Formatted login summary: 
+Times (Last 5 Days): 24.3, 19.4, 22.5, 22.1, 20.8
+5-Day Avg: 21.8
+Today: 24.3  Above 5-Day Avg
+[DEBUG] Getting 7-day data for domain: cam.itserver.biz
+[DEBUG] Page load data: {'current': 17.0, 'average': 6.975, 'values': [17.0, 4.1, 3.3, 3.5], 'is_high': True}
+[DEBUG] Formatted summary: 
+Times (Last 4 Days): 17.0, 4.1, 3.3, 3.5
+4-Day Avg: 7.0
+Today: 17.0  Above 4-Day Avg
+[DEBUG] Getting 7-day login data for domain: cam.itserver.biz
+[DEBUG] Login data: {'current': 22.4, 'average': 22.675, 'values': [22.4, 21.2, 21.0, 26.1], 'is_high': False}
+[DEBUG] Formatted login summary: 
+Times (Last 4 Days): 22.4, 21.2, 21.0, 26.1
+4-Day Avg: 22.7
+Today: 22.4
+[DEBUG] Getting 7-day data for domain: bmkenya.itserver.biz
+[DEBUG] Page load data: {'current': 6.0, 'average': 9.2, 'values': [6.0, 3.0, 11.4, 16.4], 'is_high': False}
+[DEBUG] Formatted summary: 
+Times (Last 4 Days): 6.0, 3.0, 11.4, 16.4
+4-Day Avg: 9.2
+Today: 6.0
+[DEBUG] Getting 7-day login data for domain: bmkenya.itserver.biz
+[DEBUG] Login data: {'current': 106.0, 'average': 42.25, 'values': [106.0, 21.6, 20.9, 20.5], 'is_high': True}
+[DEBUG] Formatted login summary: 
+Times (Last 4 Days): 106.0, 21.6, 20.9, 20.5
+4-Day Avg: 42.2
+Today: 106.0  Above 4-Day Avg
+[DEBUG] Getting 7-day data for domain: crm.cartzlink.com
+[DEBUG] Page load data: {'current': 3.3, 'average': 2.075, 'values': [3.3, 2.1, 1.3, 1.6], 'is_high': True}
+[DEBUG] Formatted summary: 
+Times (Last 4 Days): 3.3, 2.1, 1.3, 1.6
+4-Day Avg: 2.1
+Today: 3.3  Above 4-Day Avg
+[DEBUG] Getting 7-day login data for domain: crm.cartzlink.com
+[DEBUG] Login data: {'current': 18.7, 'average': 19.75, 'values': [18.7, 20.8, 19.4, 20.1], 'is_high': False}
+[DEBUG] Formatted login summary: 
+Times (Last 4 Days): 18.7, 20.8, 19.4, 20.1
+4-Day Avg: 19.8
+Today: 18.7
+[DEBUG] Getting 7-day data for domain: crm.tabrospharma.com
+[DEBUG] Page load data: {'current': 3.7, 'average': 2.625, 'values': [3.7, 1.9, 1.6, 3.3], 'is_high': True}
+[DEBUG] Formatted summary: 
+Times (Last 4 Days): 3.7, 1.9, 1.6, 3.3
+4-Day Avg: 2.6
+Today: 3.7  Above 4-Day Avg
+[DEBUG] Getting 7-day login data for domain: crm.tabrospharma.com
+[DEBUG] Login data: {'current': 26.0, 'average': 27.425, 'values': [26.0, 27.5, 27.4, 28.8], 'is_high': False}
+[DEBUG] Formatted login summary: 
+Times (Last 4 Days): 26.0, 27.5, 27.4, 28.8
+4-Day Avg: 27.4
+Today: 26.0
+
+[INFO] Server: metro crm | Domain: mt.itserver.biz
+[INFO] Features executed:
+    Sales Order
+==================================================
+[PASS] Page Load (12.80s)  Above 7-Day Avg
+
+Times (Last 4 Days): 12.8, 1.8, 1.9, 16.9
+4-Day Avg: 8.3
+Today: 12.8  Above 4-Day Avg
+[PASS] Login (28.90s)  Above 7-Day Avg
+
+Times (Last 4 Days): 28.9, 25.4, 25.1, 25.7
+4-Day Avg: 26.3
+Today: 28.9  Above 4-Day Avg
+
+[INFO] Feature: Sales Order
+[PASS] Feature: Sales Order (11.50s)
+
+Times (Last 4 Days): 11.5, 23.5, 23.8, 24.2
+4-Day Avg: 20.8
+Today: 11.5
+[PASS] Scenario: Visit Sales order page and click on edit btn (11.50s)
+
+[INFO] Server: s13 | Domain: gta.cartzlink.com
+[INFO] Features executed:
+    Add Account Voucher
+    Sales Invoice
+==================================================
+[PASS] Page Load (6.20s)  Above 7-Day Avg
+
+Times (Last 4 Days): 6.2, 2.3, 2.6, 2.9
+4-Day Avg: 3.5
+Today: 6.2  Above 4-Day Avg
+[PASS] Login (49.90s)  Above 7-Day Avg
+
+Times (Last 4 Days): 49.9, 29.0, 29.7, 29.2
+4-Day Avg: 34.5
+Today: 49.9  Above 4-Day Avg
+
+[INFO] Feature: Add Account Voucher
+[PASS] Feature: Add Account Voucher (14.10s)
+
+Times (Last 4 Days): 14.1, 17.0, 16.9, 18.8
+4-Day Avg: 16.7
+Today: 14.1
+[PASS] Scenario: Visit Account Voucher Page and click on Edit btn (14.10s)
+[INFO] Feature: Sales Invoice
+[PASS] Feature: Sales Invoice (15.30s)
+
+Times (Last 4 Days): 15.3, 37.0, 37.3, 40.2
+4-Day Avg: 32.5
+Today: 15.3
+[PASS] Scenario: Sales Invoice page (15.30s)
+
+[INFO] Server: FST | Domain: fst.itserver.biz
+[INFO] Features executed:
+    Sales Order
+==================================================
+[PASS] Page Load (9.10s)  Above 7-Day Avg
+
+Times (Last 5 Days): 9.1, 2.3, 2.8, 4.6, 10.1
+5-Day Avg: 5.8
+Today: 9.1  Above 5-Day Avg
+[PASS] Login (24.30s)  Above 7-Day Avg
+
+Times (Last 5 Days): 24.3, 19.4, 22.5, 22.1, 20.8
+5-Day Avg: 21.8
+Today: 24.3  Above 5-Day Avg
+
+[INFO] Feature: Sales Order
+[PASS] Feature: Sales Order (17.00s)
+
+Times (Last 5 Days): 17.0, 50.9, 53.1, 51.1, 74.7
+5-Day Avg: 49.4
+Today: 17.0
+[PASS] Scenario: Visit Sales order page and click on Edit btn (17.00s)
+
+[INFO] Server: metro cam | Domain: cam.itserver.biz
+[INFO] Features executed:
+    Add Account Voucher
+    Gatepass
+    Purchase Invoice
+    Production Order FSTUser
+==================================================
+[PASS] Page Load (17.00s)  Above 7-Day Avg
+
+Times (Last 4 Days): 17.0, 4.1, 3.3, 3.5
+4-Day Avg: 7.0
+Today: 17.0  Above 4-Day Avg
+[PASS] Login (22.40s)
+
+Times (Last 4 Days): 22.4, 21.2, 21.0, 26.1
+4-Day Avg: 22.7
+Today: 22.4
+
+[INFO] Feature: Add Account Voucher
+[PASS] Feature: Add Account Voucher (8.40s)
+
+Times (Last 4 Days): 8.4, 9.4, 9.4, 10.9
+4-Day Avg: 9.5
+Today: 8.4
+[PASS] Scenario: Visit Account Voucher Page and click on Edit btn (8.40s)
+[INFO] Feature: Gatepass
+[PASS] Feature: Gatepass (22.30s)
+
+Times (Last 4 Days): 22.3, 49.6, 48.6, 52.7
+4-Day Avg: 43.3
+Today: 22.3
+[PASS] Scenario: Visit Gate pass Page and click on Edit btn (22.30s)
+[INFO] Feature: Purchase Invoice
+[PASS] Feature: Purchase Invoice (16.70s)
+
+Times (Last 4 Days): 16.7, 54.7, 57.0, 58.9
+4-Day Avg: 46.8
+Today: 16.7
+[PASS] Scenario: Visit Purchase invoice Page and click on Edit btn (16.70s)
+[INFO] Feature: Production Order FSTUser
+[PASS] Feature: Production Order FSTUser (9.30s)
+
+Times (Last 4 Days): 9.3, 15.1, 15.8, 16.9
+4-Day Avg: 14.3
+Today: 9.3
+[PASS] Scenario: Visit Production order page and click on Edit btn (9.30s)
+
+[INFO] Server: bmkenya | Domain: bmkenya.itserver.biz
+[INFO] Features executed:
+    Add Account Voucher
+    Sales Order
+==================================================
+[PASS] Page Load (6.00s)
+
+Times (Last 4 Days): 6.0, 3.0, 11.4, 16.4
+4-Day Avg: 9.2
+Today: 6.0
+[PASS] Login (106.00s)  Above 7-Day Avg
+
+Times (Last 4 Days): 106.0, 21.6, 20.9, 20.5
+4-Day Avg: 42.2
+Today: 106.0  Above 4-Day Avg
+
+[INFO] Feature: Add Account Voucher
+[PASS] Feature: Add Account Voucher (58.60s)  Above 7-Day Avg
+
+Times (Last 4 Days): 58.6, 13.2, 12.7, 3.0
+4-Day Avg: 21.9
+Today: 58.6  Above 4-Day Avg
+[PASS] Scenario: Visit Account Voucher Page and click on Edit btn (58.60s)
+[INFO] Feature: Sales Order
+[PASS] Feature: Sales Order (1.60s)
+
+Times (Last 4 Days): 1.6, 3.5, 4.6, 4.8
+4-Day Avg: 3.6
+Today: 1.6
+[PASS] Scenario: Visit Sales order page (1.60s)
+
+[INFO] Server: s15 | Domain: crm.cartzlink.com
+[INFO] Features executed:
+    Dash board
+==================================================
+[PASS] Page Load (3.30s)  Above 7-Day Avg
+
+Times (Last 4 Days): 3.3, 2.1, 1.3, 1.6
+4-Day Avg: 2.1
+Today: 3.3  Above 4-Day Avg
+[PASS] Login (18.70s)
+
+Times (Last 4 Days): 18.7, 20.8, 19.4, 20.1
+4-Day Avg: 19.8
+Today: 18.7
+
+[INFO] Feature: Dash board
+[PASS] Feature: Dash board (0.00s)
+
+Times (Last 4 Days): 0.0, 0.0, 0.0, 0.0
+4-Day Avg: 0.0
+Today: 0.0
+[PASS] Scenario: Visit Dash board page (0.00s)
+
+[INFO] Server: TP | Domain: crm.tabrospharma.com
+[INFO] Features executed:
+    Add Account Voucher
+    Sales Order
+==================================================
+[PASS] Page Load (3.70s)  Above 7-Day Avg
+
+Times (Last 4 Days): 3.7, 1.9, 1.6, 3.3
+4-Day Avg: 2.6
+Today: 3.7  Above 4-Day Avg
+[PASS] Login (26.00s)
+
+Times (Last 4 Days): 26.0, 27.5, 27.4, 28.8
+4-Day Avg: 27.4
+Today: 26.0
+
+[INFO] Feature: Add Account Voucher
+[PASS] Feature: Add Account Voucher (7.00s)
+
+Times (Last 4 Days): 7.0, 9.3, 9.0, 10.9
+4-Day Avg: 9.1
+Today: 7.0
+[PASS] Scenario: Visit Account Voucher Page and click on Edit btn (7.00s)
+[INFO] Feature: Sales Order
+[PASS] Feature: Sales Order (6.90s)
+
+Times (Last 4 Days): 6.9, 9.8, 10.0, 11.5
+4-Day Avg: 9.6
+Today: 6.9
+[PASS] Scenario: Visit Sales Order Page and click on Edit btn (6.90s)
+[PASS] Test summary email sent successfully.
+Finished at Mon 09/29/2025 17:41:39.14 
+========================================= 

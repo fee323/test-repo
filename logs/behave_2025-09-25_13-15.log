@@ -1,0 +1,594 @@
+========================================= 
+Behave Run Started at Thu 09/25/2025 13:15:23.74 
+========================================= 
+ABORTED: HOOK-ERROR in before_all: SystemExit
+
+============================================================
+STARTING DOMAIN: anamta.primeerp.top (Server: s12)
+============================================================
+[INFO] Running 2 feature files for domain 'anamta.primeerp.top':
+    C:\tests\features\anamta.primeerp.top\AccCV.feature
+    C:\tests\features\anamta.primeerp.top\AccV.feature
+[INFO] Domain = anamta.primeerp.top
+[INFO] Starting browser and logging in for domain: anamta.primeerp.top
+[INFO] Creating fresh browser instance for domain: anamta.primeerp.top
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://anamta.primeerp.top/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://anamta.primeerp.top/admin/?r=user/user/login&_lang=en
+[FAIL] Login Failed - Connection Timeout: HTTPConnectionPool(host='localhost', port=64786): Read timed out. (read timeout=120)
+[FAIL] Login failed for domain anamta.primeerp.top. Aborting all features.
+
+ABORTED: By user.
+
+[INFO] Server: s12 | Domain: anamta.primeerp.top
+==================================================
+[FAIL] CASH RECEIPT CV
+[FAIL] Account Voucher
+
+============================================================
+COMPLETED DOMAIN: anamta.primeerp.top
+============================================================
+
+============================================================
+STARTING DOMAIN: mt.itserver.biz (Server: metro crm)
+============================================================
+[INFO] Running 1 feature files for domain 'mt.itserver.biz':
+    C:\tests\features\mt.itserver.biz\SO.feature
+[INFO] Domain = mt.itserver.biz
+[INFO] Starting browser and logging in for domain: mt.itserver.biz
+[INFO] Creating fresh browser instance for domain: mt.itserver.biz
+[INFO] Attempt 1/5: Creating Chrome driver...
+[INFO] Applying performance optimizations for problematic domain: mt.itserver.biz
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/5: Opening https://mt.itserver.biz/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://mt.itserver.biz/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[PASS] Login successful - dashboard loaded with refresh function
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 11.8s, Login: 116.6s
+[INFO] Login successful for domain: mt.itserver.biz
+Feature: Sales Order # ../../tests/features/mt.itserver.biz/SO.feature:4
+
+  @critical
+  Scenario: Visit Sales order page and click on edit btn  # ../../tests/features/mt.itserver.biz/SO.feature:7
+    Given we visit "orders/SO2"                           # ../../tests/features/steps/form_actions.py:36
+    When we edit the top row                              # ../../tests/features/steps/cartzlink_form.py:155
+
+ABORTED: HOOK-ERROR in before_all: SystemExit
+
+[INFO] Server: metro crm | Domain: mt.itserver.biz
+==================================================
+[PASS] Sales Order
+
+============================================================
+COMPLETED DOMAIN: mt.itserver.biz
+============================================================
+
+============================================================
+STARTING DOMAIN: gta.cartzlink.com (Server: s13)
+============================================================
+[INFO] Running 2 feature files for domain 'gta.cartzlink.com':
+    C:\tests\features\gta.cartzlink.com\AccV.feature
+    C:\tests\features\gta.cartzlink.com\SI.feature
+[INFO] Domain = gta.cartzlink.com
+[INFO] Starting browser and logging in for domain: gta.cartzlink.com
+[INFO] Creating fresh browser instance for domain: gta.cartzlink.com
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://gta.cartzlink.com/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://gta.cartzlink.com/admin/?r=user/user/login&_lang=en
+[FAIL] Login Failed - Connection Timeout: HTTPConnectionPool(host='localhost', port=49260): Read timed out. (read timeout=120)
+[FAIL] Login failed for domain gta.cartzlink.com. Aborting all features.
+
+ABORTED: By user.
+
+[INFO] Server: s13 | Domain: gta.cartzlink.com
+==================================================
+[FAIL] Add Account Voucher
+[FAIL] Sales Invoice
+
+============================================================
+COMPLETED DOMAIN: gta.cartzlink.com
+============================================================
+
+============================================================
+STARTING DOMAIN: fst.itserver.biz (Server: FST)
+============================================================
+[INFO] Running 1 feature files for domain 'fst.itserver.biz':
+    C:\tests\features\fst.itserver.biz\SO.feature
+[INFO] Domain = fst.itserver.biz
+[INFO] Starting browser and logging in for domain: fst.itserver.biz
+[INFO] Creating fresh browser instance for domain: fst.itserver.biz
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://fst.itserver.biz/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://fst.itserver.biz/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[PASS] Login successful - dashboard loaded with refresh function
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 95.2s, Login: 119.7s
+[INFO] Login successful for domain: fst.itserver.biz
+Feature: Sales Order # ../../tests/features/fst.itserver.biz/SO.feature:4
+
+  @critical
+  Scenario: Visit Sales order page and click on Edit btn  # ../../tests/features/fst.itserver.biz/SO.feature:7
+    Given we visit "orders/salesOrder"                    # ../../tests/features/steps/form_actions.py:36
+    When we clear the from date and search                # ../../tests/features/steps/form_actions.py:82
+
+ABORTED: HOOK-ERROR in before_all: SystemExit
+ABORTED: HOOK-ERROR in before_all: SystemExit
+ABORTED: HOOK-ERROR in before_all: SystemExit
+ABORTED: HOOK-ERROR in before_all: SystemExit
+
+[INFO] Server: FST | Domain: fst.itserver.biz
+==================================================
+[PASS] Sales Order
+
+============================================================
+COMPLETED DOMAIN: fst.itserver.biz
+============================================================
+
+============================================================
+STARTING DOMAIN: cam.itserver.biz (Server: metro cam)
+============================================================
+[INFO] Running 4 feature files for domain 'cam.itserver.biz':
+    C:\tests\features\cam.itserver.biz\AccV.feature
+    C:\tests\features\cam.itserver.biz\GP.feature
+    C:\tests\features\cam.itserver.biz\PI.feature
+    C:\tests\features\cam.itserver.biz\SO.feature
+[INFO] Domain = cam.itserver.biz
+[INFO] Starting browser and logging in for domain: cam.itserver.biz
+[INFO] Creating fresh browser instance for domain: cam.itserver.biz
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://cam.itserver.biz/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://cam.itserver.biz/admin/?r=user/user/login&_lang=en
+[FAIL] Login Failed - Connection Timeout: HTTPConnectionPool(host='localhost', port=50116): Read timed out. (read timeout=120)
+[FAIL] Login failed for domain cam.itserver.biz. Aborting all features.
+
+ABORTED: By user.
+
+[INFO] Server: metro cam | Domain: cam.itserver.biz
+==================================================
+[FAIL] Add Account Voucher
+[FAIL] Gatepass
+[FAIL] Purchase Invoice
+[FAIL] Production Order FSTUser
+
+============================================================
+COMPLETED DOMAIN: cam.itserver.biz
+============================================================
+
+============================================================
+STARTING DOMAIN: bmkenya.itserver.biz (Server: bmkenya)
+============================================================
+[INFO] Running 2 feature files for domain 'bmkenya.itserver.biz':
+    C:\tests\features\bmkenya.itserver.biz\AccV.feature
+    C:\tests\features\bmkenya.itserver.biz\SO.feature
+[INFO] Domain = bmkenya.itserver.biz
+[INFO] Starting browser and logging in for domain: bmkenya.itserver.biz
+[INFO] Creating fresh browser instance for domain: bmkenya.itserver.biz
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://bmkenya.itserver.biz/admin/?r=user/user/login&_lang=en
+[WARN] Error on attempt 1: HTTPConnectionPool(host='localhost', port=50597): Read timed out. (read timeout=120)
+[INFO] Waiting 5 seconds before retry...
+[INFO] Attempt 2/3: Opening https://bmkenya.itserver.biz/admin/?r=user/user/login&_lang=en
+[WARN] Error on attempt 2: HTTPConnectionPool(host='localhost', port=50597): Read timed out. (read timeout=120)
+[INFO] Waiting 10 seconds before retry...
+[INFO] Attempt 3/3: Opening https://bmkenya.itserver.biz/admin/?r=user/user/login&_lang=en
+[WARN] Error on attempt 3: HTTPConnectionPool(host='localhost', port=50597): Read timed out. (read timeout=120)
+[FAIL] All 3 attempts failed due to errors
+[FAIL] Page Load Failed: Failed to load login page after all retries
+[FAIL] Login failed for domain bmkenya.itserver.biz. Aborting all features.
+
+ABORTED: By user.
+
+[INFO] Server: bmkenya | Domain: bmkenya.itserver.biz
+==================================================
+[FAIL] Add Account Voucher
+[FAIL] Sales Order
+
+============================================================
+COMPLETED DOMAIN: bmkenya.itserver.biz
+============================================================
+
+============================================================
+STARTING DOMAIN: crm.cartzlink.com (Server: s15)
+============================================================
+[INFO] Running 1 feature files for domain 'crm.cartzlink.com':
+    C:\tests\features\crm.cartzlink.com\dashboard.feature
+[INFO] Domain = crm.cartzlink.com
+[INFO] Starting browser and logging in for domain: crm.cartzlink.com
+[INFO] Creating fresh browser instance for domain: crm.cartzlink.com
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://crm.cartzlink.com/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://crm.cartzlink.com/admin/?r=user/user/login&_lang=en
+[FAIL] Login Failed - Connection Timeout: HTTPConnectionPool(host='localhost', port=51212): Read timed out. (read timeout=120)
+[FAIL] Login failed for domain crm.cartzlink.com. Aborting all features.
+
+ABORTED: By user.
+
+[INFO] Server: s15 | Domain: crm.cartzlink.com
+==================================================
+[PASS] Dash board
+
+============================================================
+COMPLETED DOMAIN: crm.cartzlink.com
+============================================================
+
+============================================================
+STARTING DOMAIN: crm.tabrospharma.com (Server: TP)
+============================================================
+[INFO] Running 2 feature files for domain 'crm.tabrospharma.com':
+    C:\tests\features\crm.tabrospharma.com\AccV.feature
+    C:\tests\features\crm.tabrospharma.com\SO.feature
+[INFO] Domain = crm.tabrospharma.com
+[INFO] Starting browser and logging in for domain: crm.tabrospharma.com
+[INFO] Creating fresh browser instance for domain: crm.tabrospharma.com
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://crm.tabrospharma.com/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://crm.tabrospharma.com/admin/?r=user/user/login&_lang=en
+[FAIL] Login Failed - Connection Timeout: HTTPConnectionPool(host='localhost', port=51532): Read timed out. (read timeout=120)
+[FAIL] Login failed for domain crm.tabrospharma.com. Aborting all features.
+
+ABORTED: By user.
+
+[INFO] Server: TP | Domain: crm.tabrospharma.com
+==================================================
+[FAIL] Add Account Voucher
+[FAIL] Sales Order
+
+============================================================
+COMPLETED DOMAIN: crm.tabrospharma.com
+============================================================
+
+==================================================
+[SUMMARY] FINAL TEST SUMMARY
+==================================================
+
+================================================================================
+[CRITICAL] FAILURES AND PERFORMANCE ISSUES SUMMARY
+================================================================================
+
+FAILURES (4 total):
+--------------------------------------------------
+[FAIL] Scenario FAILED | s12 | anamta.primeerp.top
+   Feature: CASH RECEIPT CV
+   Scenario: Visit CashReceiptCV Page and click on Edit btn
+   Details: Scenario failed in 9.40s
+
+[FAIL] Scenario FAILED | metro cam | cam.itserver.biz
+   Feature: Add Account Voucher
+   Scenario: Visit Account Voucher Page and click on Edit btn
+   Details: Scenario failed in 2.50s
+
+[FAIL] Scenario FAILED | metro cam | cam.itserver.biz
+   Feature: Production Order FSTUser
+   Scenario: Visit Production order page and click on Edit btn
+   Details: Scenario failed in 8.60s
+
+[FAIL] Scenario FAILED | bmkenya | bmkenya.itserver.biz
+   Feature: Add Account Voucher
+   Scenario: Visit Account Voucher Page and click on Edit btn
+   Details: Scenario failed in 2.60s
+
+
+SLOW TESTS (3 total):
+--------------------------------------------------
+[SLOW] Page Load SLOW | FST | fst.itserver.biz
+   Time: 95.20s | Above 7-day average (52.6s)
+[SLOW] Login SLOW | FST | fst.itserver.biz
+   Time: 119.70s | Above 7-day average (70.2s)
+[SLOW] Feature SLOW | FST | fst.itserver.biz
+   Feature: Sales Order
+   Time: 132.50s | Above 7-day average (103.6s)
+================================================================================
+
+[DEBUG] Getting 7-day data for domain: anamta.primeerp.top
+[DEBUG] Page load data: {'current': 3.0, 'average': 3.0, 'values': [3.0], 'is_high': False}
+[DEBUG] Formatted summary: 
+Times (Today): 3.0
+Today: 3.0
+[DEBUG] Getting 7-day login data for domain: anamta.primeerp.top
+[DEBUG] Login data: {'current': 32.6, 'average': 32.6, 'values': [32.6], 'is_high': False}
+[DEBUG] Formatted login summary: 
+Times (Today): 32.6
+Today: 32.6
+[DEBUG] Getting 7-day data for domain: mt.itserver.biz
+[DEBUG] Page load data: {'current': 11.8, 'average': 11.8, 'values': [11.8], 'is_high': False}
+[DEBUG] Formatted summary: 
+Times (Today): 11.8
+Today: 11.8
+[DEBUG] Getting 7-day login data for domain: mt.itserver.biz
+[DEBUG] Login data: {'current': 116.6, 'average': 116.6, 'values': [116.6], 'is_high': False}
+[DEBUG] Formatted login summary: 
+Times (Today): 116.6
+Today: 116.6
+[DEBUG] Getting 7-day data for domain: gta.cartzlink.com
+[DEBUG] Page load data: {'current': 3.0, 'average': 3.0, 'values': [3.0], 'is_high': False}
+[DEBUG] Formatted summary: 
+Times (Today): 3.0
+Today: 3.0
+[DEBUG] Getting 7-day login data for domain: gta.cartzlink.com
+[DEBUG] Login data: {'current': 29.2, 'average': 29.2, 'values': [29.2], 'is_high': False}
+[DEBUG] Formatted login summary: 
+Times (Today): 29.2
+Today: 29.2
+[DEBUG] Getting 7-day data for domain: fst.itserver.biz
+[DEBUG] Page load data: {'current': 95.2, 'average': 52.65, 'values': [95.2, 10.1], 'is_high': True}
+[DEBUG] Formatted summary: 
+Times (Last 2 Days): 95.2, 10.1
+2-Day Avg: 52.6
+Today: 95.2  Above 2-Day Avg
+[DEBUG] Getting 7-day login data for domain: fst.itserver.biz
+[DEBUG] Login data: {'current': 119.7, 'average': 70.25, 'values': [119.7, 20.8], 'is_high': True}
+[DEBUG] Formatted login summary: 
+Times (Last 2 Days): 119.7, 20.8
+2-Day Avg: 70.2
+Today: 119.7  Above 2-Day Avg
+[DEBUG] Getting 7-day data for domain: cam.itserver.biz
+[DEBUG] Page load data: {'current': 3.5, 'average': 3.5, 'values': [3.5], 'is_high': False}
+[DEBUG] Formatted summary: 
+Times (Today): 3.5
+Today: 3.5
+[DEBUG] Getting 7-day login data for domain: cam.itserver.biz
+[DEBUG] Login data: {'current': 22.5, 'average': 22.5, 'values': [22.5], 'is_high': False}
+[DEBUG] Formatted login summary: 
+Times (Today): 22.5
+Today: 22.5
+[DEBUG] Getting 7-day data for domain: bmkenya.itserver.biz
+[DEBUG] Page load data: {'current': 32.1, 'average': 32.1, 'values': [32.1], 'is_high': False}
+[DEBUG] Formatted summary: 
+Times (Today): 32.1
+Today: 32.1
+[DEBUG] Getting 7-day login data for domain: bmkenya.itserver.biz
+[DEBUG] Login data: {'current': 22.0, 'average': 22.0, 'values': [22.0], 'is_high': False}
+[DEBUG] Formatted login summary: 
+Times (Today): 22.0
+Today: 22.0
+[DEBUG] Getting 7-day data for domain: crm.cartzlink.com
+[DEBUG] Page load data: {'current': 1.3, 'average': 1.3, 'values': [1.3], 'is_high': False}
+[DEBUG] Formatted summary: 
+Times (Today): 1.3
+Today: 1.3
+[DEBUG] Getting 7-day login data for domain: crm.cartzlink.com
+[DEBUG] Login data: {'current': 23.4, 'average': 23.4, 'values': [23.4], 'is_high': False}
+[DEBUG] Formatted login summary: 
+Times (Today): 23.4
+Today: 23.4
+[DEBUG] Getting 7-day data for domain: crm.tabrospharma.com
+[DEBUG] Page load data: {'current': 2.9, 'average': 2.9, 'values': [2.9], 'is_high': False}
+[DEBUG] Formatted summary: 
+Times (Today): 2.9
+Today: 2.9
+[DEBUG] Getting 7-day login data for domain: crm.tabrospharma.com
+[DEBUG] Login data: {'current': 27.3, 'average': 27.3, 'values': [27.3], 'is_high': False}
+[DEBUG] Formatted login summary: 
+Times (Today): 27.3
+Today: 27.3
+
+[INFO] Server: s12 | Domain: anamta.primeerp.top
+[INFO] Features executed:
+    CASH RECEIPT CV
+    Account Voucher
+==================================================
+[PASS] Page Load (3.00s)
+
+Times (Today): 3.0
+Today: 3.0
+[PASS] Login (32.60s)
+
+Times (Today): 32.6
+Today: 32.6
+
+[INFO] Feature: CASH RECEIPT CV
+[PASS] Feature: CASH RECEIPT CV (9.40s)
+
+Times (Today): 9.4
+Today: 9.4
+[FAIL] Scenario: Visit CashReceiptCV Page and click on Edit btn (9.40s)
+[INFO] Feature: Account Voucher
+[PASS] Feature: Account Voucher (9.40s)
+
+Times (Today): 9.4
+Today: 9.4
+[PASS] Scenario: Visit Account Voucher Page and click on Edit btn (9.40s)
+
+[INFO] Server: metro crm | Domain: mt.itserver.biz
+[INFO] Features executed:
+    Sales Order
+==================================================
+[PASS] Page Load (11.80s)
+
+Times (Today): 11.8
+Today: 11.8
+[PASS] Login (116.60s)
+
+Times (Today): 116.6
+Today: 116.6
+
+[INFO] Feature: Sales Order
+[PASS] Feature: Sales Order (97.10s)
+
+Times (Today): 97.1
+Today: 97.1
+[PASS] Scenario: Visit Sales order page and click on edit btn (97.10s)
+
+[INFO] Server: s13 | Domain: gta.cartzlink.com
+[INFO] Features executed:
+    Add Account Voucher
+    Sales Invoice
+==================================================
+[PASS] Page Load (3.00s)
+
+Times (Today): 3.0
+Today: 3.0
+[PASS] Login (29.20s)
+
+Times (Today): 29.2
+Today: 29.2
+
+[INFO] Feature: Add Account Voucher
+[PASS] Feature: Add Account Voucher (17.00s)
+
+Times (Today): 17.0
+Today: 17.0
+[PASS] Scenario: Visit Account Voucher Page and click on Edit btn (17.00s)
+[INFO] Feature: Sales Invoice
+[PASS] Feature: Sales Invoice (38.30s)
+
+Times (Today): 38.3
+Today: 38.3
+[PASS] Scenario: Sales Invoice page (38.30s)
+
+[INFO] Server: FST | Domain: fst.itserver.biz
+[INFO] Features executed:
+    Sales Order
+==================================================
+[PASS] Page Load (95.20s)  Above 7-Day Avg
+
+Times (Last 2 Days): 95.2, 10.1
+2-Day Avg: 52.6
+Today: 95.2  Above 2-Day Avg
+[PASS] Login (119.70s)  Above 7-Day Avg
+
+Times (Last 2 Days): 119.7, 20.8
+2-Day Avg: 70.2
+Today: 119.7  Above 2-Day Avg
+
+[INFO] Feature: Sales Order
+[PASS] Feature: Sales Order (132.50s)  Above 7-Day Avg
+
+Times (Last 2 Days): 132.5, 74.7
+2-Day Avg: 103.6
+Today: 132.5  Above 2-Day Avg
+[PASS] Scenario: Visit Sales order page and click on Edit btn (132.50s)
+
+[INFO] Server: metro cam | Domain: cam.itserver.biz
+[INFO] Features executed:
+    Add Account Voucher
+    Gatepass
+    Purchase Invoice
+    Production Order FSTUser
+==================================================
+[PASS] Page Load (3.50s)
+
+Times (Today): 3.5
+Today: 3.5
+[PASS] Login (22.50s)
+
+Times (Today): 22.5
+Today: 22.5
+
+[INFO] Feature: Add Account Voucher
+[PASS] Feature: Add Account Voucher (2.50s)
+
+Times (Today): 2.5
+Today: 2.5
+[FAIL] Scenario: Visit Account Voucher Page and click on Edit btn (2.50s)
+[INFO] Feature: Gatepass
+[PASS] Feature: Gatepass (46.40s)
+
+Times (Today): 46.4
+Today: 46.4
+[PASS] Scenario: Visit Gate pass Page and click on Edit btn (46.40s)
+[INFO] Feature: Purchase Invoice
+[PASS] Feature: Purchase Invoice (51.40s)
+
+Times (Today): 51.4
+Today: 51.4
+[PASS] Scenario: Visit Purchase invoice Page and click on Edit btn (51.40s)
+[INFO] Feature: Production Order FSTUser
+[PASS] Feature: Production Order FSTUser (8.60s)
+
+Times (Today): 8.6
+Today: 8.6
+[FAIL] Scenario: Visit Production order page and click on Edit btn (8.60s)
+
+[INFO] Server: bmkenya | Domain: bmkenya.itserver.biz
+[INFO] Features executed:
+    Add Account Voucher
+    Sales Order
+==================================================
+[PASS] Page Load (32.10s)
+
+Times (Today): 32.1
+Today: 32.1
+[PASS] Login (22.00s)
+
+Times (Today): 22.0
+Today: 22.0
+
+[INFO] Feature: Add Account Voucher
+[PASS] Feature: Add Account Voucher (2.60s)
+
+Times (Today): 2.6
+Today: 2.6
+[FAIL] Scenario: Visit Account Voucher Page and click on Edit btn (2.60s)
+[INFO] Feature: Sales Order
+[PASS] Feature: Sales Order (4.40s)
+
+Times (Today): 4.4
+Today: 4.4
+[PASS] Scenario: Visit Sales order page (4.40s)
+
+[INFO] Server: s15 | Domain: crm.cartzlink.com
+[INFO] Features executed:
+    Dash board
+==================================================
+[PASS] Page Load (1.30s)
+
+Times (Today): 1.3
+Today: 1.3
+[PASS] Login (23.40s)
+
+Times (Today): 23.4
+Today: 23.4
+
+[INFO] Feature: Dash board
+[PASS] Feature: Dash board (0.00s)
+
+Times (Today): 0.0
+Today: 0.0
+[PASS] Scenario: Visit Dash board page (0.00s)
+
+[INFO] Server: TP | Domain: crm.tabrospharma.com
+[INFO] Features executed:
+    Add Account Voucher
+    Sales Order
+==================================================
+[PASS] Page Load (2.90s)
+
+Times (Today): 2.9
+Today: 2.9
+[PASS] Login (27.30s)
+
+Times (Today): 27.3
+Today: 27.3
+
+[INFO] Feature: Add Account Voucher
+[PASS] Feature: Add Account Voucher (9.70s)
+
+Times (Today): 9.7
+Today: 9.7
+[PASS] Scenario: Visit Account Voucher Page and click on Edit btn (9.70s)
+[INFO] Feature: Sales Order
+[PASS] Feature: Sales Order (9.80s)
+
+Times (Today): 9.8
+Today: 9.8
+[PASS] Scenario: Visit Sales Order Page and click on Edit btn (9.80s)
+[PASS] Test summary email sent successfully.
+Finished at Thu 09/25/2025 13:57:46.74 
+========================================= 

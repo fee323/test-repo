@@ -1,0 +1,22 @@
+========================================= 
+Behave Run Started at Thu 02/19/2026 14:10:36.43 
+========================================= 
+
+============================================================
+STARTING DOMAIN: itlinkonline (Server: S2)
+============================================================
+[INFO] Running 2 feature files for domain 'itlinkonline':
+    E:\shayan\tests\features\global\domain.feature
+    E:\shayan\tests\features\global\domain2.feature
+[INFO] Domain = itlinkonline
+[INFO] Starting browser and logging in for domain: itlinkonline
+[INFO] Creating fresh browser instance for domain: itlinkonline
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://itlinkonline/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://itlinkonline/admin/?r=user/user/login&_lang=en
+[FAIL] Login Failed: Login page not found.
+[FAIL] Login failed for domain itlinkonline. Aborting all features.
+Finished at Thu 02/19/2026 14:11:22.77 
+========================================= 

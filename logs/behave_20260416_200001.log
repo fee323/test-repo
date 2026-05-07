@@ -1,0 +1,2381 @@
+========================================= 
+Behave Run Started at Thu 04/16/2026 20:00:01.81 
+========================================= 
+
+============================================================
+STARTING DOMAIN: aone.cartzlink.com (Server: AONE-CARTZLINK)
+============================================================
+[INFO] Running 3 feature files for domain 'aone.cartzlink.com':
+    E:\shayan\tests\features\aone.cartzlink.com\AccV.feature
+    E:\shayan\tests\features\aone.cartzlink.com\SI.feature
+    E:\shayan\tests\features\aone.cartzlink.com\SO.feature
+[INFO] Domain = aone.cartzlink.com
+[INFO] Starting browser and logging in for domain: aone.cartzlink.com
+[INFO] Creating fresh browser instance for domain: aone.cartzlink.com
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://aone.cartzlink.com/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://aone.cartzlink.com/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[WARN] Page load taking longer than 30s, refreshing... (refresh 1/2)
+[WARN] Page load taking longer than 30s, refreshing... (refresh 2/2)
+[WARN] Refresh function failed, trying fallback method: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff78bf70245+146d5]
+	chromedriver!GetHandleVerifier [0x7ff78bf702b0+14740]
+	chromedriver!(No symbol) [0x7ff78bcdd7cd]
+	chromedriver!(No symbol) [0x7ff78bd36c4e]
+	chromedriver!(No symbol) [0x7ff78bd36f5c]
+	chromedriver!(No symbol) [0x7ff78bd87cc7]
+	chromedriver!(No symbol) [0x7ff78bd84818]
+	chromedriver!(No symbol) [0x7ff78bd29018]
+	chromedriver!(No symbol) [0x7ff78bd29f03]
+	chromedriver!GetHandleVerifier [0x7ff78c2858f9+329d89]
+	chromedriver!GetHandleVerifier [0x7ff78c27fe46+3242d6]
+	chromedriver!GetHandleVerifier [0x7ff78c2a30b2+347542]
+	chromedriver!GetHandleVerifier [0x7ff78bf8d3d5+31865]
+	chromedriver!GetHandleVerifier [0x7ff78bf9600c+3a49c]
+	chromedriver!GetHandleVerifier [0x7ff78bf79634+1dac4]
+	chromedriver!GetHandleVerifier [0x7ff78bf797e6+1dc76]
+	chromedriver!GetHandleVerifier [0x7ff78bf5e2f7+2787]
+	KERNEL32!BaseThreadInitThunk [0x7ffa7d8b7374+14]
+	ntdll!RtlUserThreadStart [0x7ffa7d9fcc91+21]
+
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 5.9s, Login: 195.9s
+[INFO] Login successful for domain: aone.cartzlink.com
+[INFO] Starting feature: Add Account Voucher
+Feature: Add Account Voucher # features/aone.cartzlink.com/AccV.feature:4
+
+  @critical
+  Scenario: Visit Account Voucher Page and click on Edit btn  # features/aone.cartzlink.com/AccV.feature:7
+    Given we visit "accounts2"                                # features/steps/form_actions.py:36
+    When we edit the top row                                  # features/steps/cartzlink_form.py:155
+      Assertion Failed:  Edit button could not be clicked or did not open the form
+      Captured stdout:
+       Successfully loaded accounts2
+      
+      [Screenshot Saved] E:\shayan\tests\screenshots\we edit the top row_20260416_200348.png
+
+[INFO] Completed feature: Add Account Voucher
+DEBUG: context.domain = aone.cartzlink.com
+DEBUG: timing_summary = {'aone.cartzlink.com': {'Server': 'AONE-CARTZLINK', 'Page Load': 5.9, 'Login': 195.9, 'Features': {'Add Account Voucher': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Account Voucher Page and click on Edit btn', 'duration': 16.0, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Add Account Voucher (16.0s)
+[DEBUG] Writing timing summary for aone.cartzlink.com to E:\shayan\tests\timing_results\aone.cartzlink.com_timing.json
+
+[INFO] Starting feature: Sales Invoice
+Feature: Sales Invoice # features/aone.cartzlink.com/SI.feature:3
+
+  @critical
+  Scenario: Visit Sales Order Page and click on Edit btn  # features/aone.cartzlink.com/SI.feature:6
+    Given we visit "orders/salesInvoice"                  # features/steps/form_actions.py:36
+    When we edit the top row                              # features/steps/cartzlink_form.py:155
+      Assertion Failed:  Edit button could not be clicked or did not open the form
+      Captured stdout:
+       Successfully loaded orders/salesInvoice
+      
+      [Screenshot Saved] E:\shayan\tests\screenshots\we edit the top row_20260416_200403.png
+
+[INFO] Completed feature: Sales Invoice
+DEBUG: context.domain = aone.cartzlink.com
+DEBUG: timing_summary = {'aone.cartzlink.com': {'Server': 'AONE-CARTZLINK', 'Page Load': 5.9, 'Login': 195.9, 'Features': {'Add Account Voucher': {'Feature': 16.0, 'Scenario Timings': [{'name': 'Visit Account Voucher Page and click on Edit btn', 'duration': 16.0, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}, 'Sales Invoice': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Sales Order Page and click on Edit btn', 'duration': 15.8, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Invoice (15.8s)
+[DEBUG] Writing timing summary for aone.cartzlink.com to E:\shayan\tests\timing_results\aone.cartzlink.com_timing.json
+
+[INFO] Starting feature: Sales Order
+Feature: Sales Order # features/aone.cartzlink.com/SO.feature:4
+
+  @critical
+  Scenario: Visit Sales Order Page and click on Edit btn  # features/aone.cartzlink.com/SO.feature:7
+    Given we visit "orders/salesOrder"                    # features/steps/form_actions.py:36
+    When we edit the top row                              # features/steps/cartzlink_form.py:155
+      Assertion Failed:  Edit button could not be clicked or did not open the form
+      Captured stdout:
+       Successfully loaded orders/salesOrder
+      
+      [Screenshot Saved] E:\shayan\tests\screenshots\we edit the top row_20260416_200419.png
+
+[INFO] Completed feature: Sales Order
+DEBUG: context.domain = aone.cartzlink.com
+DEBUG: timing_summary = {'aone.cartzlink.com': {'Server': 'AONE-CARTZLINK', 'Page Load': 5.9, 'Login': 195.9, 'Features': {'Add Account Voucher': {'Feature': 16.0, 'Scenario Timings': [{'name': 'Visit Account Voucher Page and click on Edit btn', 'duration': 16.0, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}, 'Sales Invoice': {'Feature': 15.8, 'Scenario Timings': [{'name': 'Visit Sales Order Page and click on Edit btn', 'duration': 15.8, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}, 'Sales Order': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Sales Order Page and click on Edit btn', 'duration': 16.0, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Order (16.0s)
+[DEBUG] Writing timing summary for aone.cartzlink.com to E:\shayan\tests\timing_results\aone.cartzlink.com_timing.json
+
+[INFO] Closing browser for domain: aone.cartzlink.com
+[INFO] Browser closed successfully for domain: aone.cartzlink.com
+[INFO] Browser instance cleared for domain: aone.cartzlink.com
+[SUMMARY] Timing for aone.cartzlink.com:
+{
+  "page_load": {
+    "current": 5.9,
+    "average": 5.9,
+    "values": [
+      5.9
+    ],
+    "is_high": false
+  },
+  "login": {
+    "current": 195.9,
+    "average": 195.9,
+    "values": [
+      195.9
+    ],
+    "is_high": false
+  },
+  "features": {
+    "Add Account Voucher": {
+      "current": 16.0,
+      "average": 16.0,
+      "values": [
+        16.0
+      ],
+      "is_high": false
+    },
+    "Sales Invoice": {
+      "current": 15.8,
+      "average": 15.8,
+      "values": [
+        15.8
+      ],
+      "is_high": false
+    },
+    "Sales Order": {
+      "current": 16.0,
+      "average": 16.0,
+      "values": [
+        16.0
+      ],
+      "is_high": false
+    }
+  },
+  "scenario": {
+    "current": 15.933333333333332,
+    "average": 15.933333333333332,
+    "values": [
+      15.933333333333332
+    ],
+    "is_high": false
+  }
+}
+
+[INFO] Server: AONE-CARTZLINK | Domain: aone.cartzlink.com
+==================================================
+[FAIL] Add Account Voucher
+[FAIL] Sales Invoice
+[FAIL] Sales Order
+
+============================================================
+COMPLETED DOMAIN: aone.cartzlink.com
+============================================================
+
+============================================================
+STARTING DOMAIN: aone1920.cartzlink.com (Server: AONE-CARTZLINK)
+============================================================
+[INFO] Running 2 feature files for domain 'aone1920.cartzlink.com':
+    E:\shayan\tests\features\global\domain.feature
+    E:\shayan\tests\features\global\domain2.feature
+[INFO] Domain = aone1920.cartzlink.com
+[INFO] Starting browser and logging in for domain: aone1920.cartzlink.com
+[INFO] Creating fresh browser instance for domain: aone1920.cartzlink.com
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://aone1920.cartzlink.com/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://aone1920.cartzlink.com/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[WARN] Page load taking longer than 30s, refreshing... (refresh 1/2)
+[WARN] Page load taking longer than 30s, refreshing... (refresh 2/2)
+[WARN] Refresh function failed, trying fallback method: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff78bf70245+146d5]
+	chromedriver!GetHandleVerifier [0x7ff78bf702b0+14740]
+	chromedriver!(No symbol) [0x7ff78bcdd7cd]
+	chromedriver!(No symbol) [0x7ff78bd36c4e]
+	chromedriver!(No symbol) [0x7ff78bd36f5c]
+	chromedriver!(No symbol) [0x7ff78bd87cc7]
+	chromedriver!(No symbol) [0x7ff78bd84818]
+	chromedriver!(No symbol) [0x7ff78bd29018]
+	chromedriver!(No symbol) [0x7ff78bd29f03]
+	chromedriver!GetHandleVerifier [0x7ff78c2858f9+329d89]
+	chromedriver!GetHandleVerifier [0x7ff78c27fe46+3242d6]
+	chromedriver!GetHandleVerifier [0x7ff78c2a30b2+347542]
+	chromedriver!GetHandleVerifier [0x7ff78bf8d3d5+31865]
+	chromedriver!GetHandleVerifier [0x7ff78bf9600c+3a49c]
+	chromedriver!GetHandleVerifier [0x7ff78bf79634+1dac4]
+	chromedriver!GetHandleVerifier [0x7ff78bf797e6+1dc76]
+	chromedriver!GetHandleVerifier [0x7ff78bf5e2f7+2787]
+	KERNEL32!BaseThreadInitThunk [0x7ffa7d8b7374+14]
+	ntdll!RtlUserThreadStart [0x7ffa7d9fcc91+21]
+
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 3.4s, Login: 193.2s
+[INFO] Login successful for domain: aone1920.cartzlink.com
+[INFO] Starting feature: Sales Order
+Feature: Sales Order # features/global/domain.feature:3
+
+  @critical
+  Scenario: Sales order page           # features/global/domain.feature:6
+    Given we visit "orders/salesOrder" # features/steps/form_actions.py:36
+[INFO] Completed feature: Sales Order
+DEBUG: context.domain = aone1920.cartzlink.com
+DEBUG: timing_summary = {'aone1920.cartzlink.com': {'Server': 'AONE-CARTZLINK', 'Page Load': 3.4, 'Login': 193.2, 'Features': {'Sales Order': {'Feature': None, 'Scenario Timings': [{'name': 'Sales order page', 'duration': 0.3, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Order (0.3s)
+[DEBUG] Writing timing summary for aone1920.cartzlink.com to E:\shayan\tests\timing_results\aone1920.cartzlink.com_timing.json
+
+[INFO] Starting feature: Sales Invoice
+Feature: Sales Invoice # features/global/domain2.feature:2
+
+  @critical
+  Scenario: Sales Invoice page           # features/global/domain2.feature:5
+    Given we visit "orders/salesInvoice" # features/steps/form_actions.py:36
+[INFO] Completed feature: Sales Invoice
+DEBUG: context.domain = aone1920.cartzlink.com
+DEBUG: timing_summary = {'aone1920.cartzlink.com': {'Server': 'AONE-CARTZLINK', 'Page Load': 3.4, 'Login': 193.2, 'Features': {'Sales Order': {'Feature': 0.3, 'Scenario Timings': [{'name': 'Sales order page', 'duration': 0.3, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}, 'Sales Invoice': {'Feature': None, 'Scenario Timings': [{'name': 'Sales Invoice page', 'duration': 0.1, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Invoice (0.1s)
+[DEBUG] Writing timing summary for aone1920.cartzlink.com to E:\shayan\tests\timing_results\aone1920.cartzlink.com_timing.json
+
+[INFO] Closing browser for domain: aone1920.cartzlink.com
+[INFO] Browser closed successfully for domain: aone1920.cartzlink.com
+[INFO] Browser instance cleared for domain: aone1920.cartzlink.com
+[SUMMARY] Timing for aone1920.cartzlink.com:
+{
+  "page_load": {
+    "current": 3.4,
+    "average": 3.4,
+    "values": [
+      3.4
+    ],
+    "is_high": false
+  },
+  "login": {
+    "current": 193.2,
+    "average": 193.2,
+    "values": [
+      193.2
+    ],
+    "is_high": false
+  },
+  "features": {
+    "Sales Order": {
+      "current": 0.3,
+      "average": 0.3,
+      "values": [
+        0.3
+      ],
+      "is_high": false
+    },
+    "Sales Invoice": {
+      "current": 0.1,
+      "average": 0.1,
+      "values": [
+        0.1
+      ],
+      "is_high": false
+    }
+  },
+  "scenario": {
+    "current": 0.2,
+    "average": 0.2,
+    "values": [
+      0.2
+    ],
+    "is_high": false
+  }
+}
+
+[INFO] Server: AONE-CARTZLINK | Domain: aone1920.cartzlink.com
+==================================================
+[PASS] Sales Order
+[PASS] Sales Invoice
+
+============================================================
+COMPLETED DOMAIN: aone1920.cartzlink.com
+============================================================
+
+============================================================
+STARTING DOMAIN: bmkenya.itserver.biz (Server: BM-KENYA)
+============================================================
+[INFO] Running 2 feature files for domain 'bmkenya.itserver.biz':
+    E:\shayan\tests\features\bmkenya.itserver.biz\AccV.feature
+    E:\shayan\tests\features\bmkenya.itserver.biz\SO.feature
+[INFO] Domain = bmkenya.itserver.biz
+[INFO] Starting browser and logging in for domain: bmkenya.itserver.biz
+[INFO] Creating fresh browser instance for domain: bmkenya.itserver.biz
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://bmkenya.itserver.biz/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://bmkenya.itserver.biz/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[WARN] Page load taking longer than 30s, refreshing... (refresh 1/2)
+[WARN] Page load taking longer than 30s, refreshing... (refresh 2/2)
+[WARN] Refresh function failed, trying fallback method: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff78bf70245+146d5]
+	chromedriver!GetHandleVerifier [0x7ff78bf702b0+14740]
+	chromedriver!(No symbol) [0x7ff78bcdd7cd]
+	chromedriver!(No symbol) [0x7ff78bd36c4e]
+	chromedriver!(No symbol) [0x7ff78bd36f5c]
+	chromedriver!(No symbol) [0x7ff78bd87cc7]
+	chromedriver!(No symbol) [0x7ff78bd84818]
+	chromedriver!(No symbol) [0x7ff78bd29018]
+	chromedriver!(No symbol) [0x7ff78bd29f03]
+	chromedriver!GetHandleVerifier [0x7ff78c2858f9+329d89]
+	chromedriver!GetHandleVerifier [0x7ff78c27fe46+3242d6]
+	chromedriver!GetHandleVerifier [0x7ff78c2a30b2+347542]
+	chromedriver!GetHandleVerifier [0x7ff78bf8d3d5+31865]
+	chromedriver!GetHandleVerifier [0x7ff78bf9600c+3a49c]
+	chromedriver!GetHandleVerifier [0x7ff78bf79634+1dac4]
+	chromedriver!GetHandleVerifier [0x7ff78bf797e6+1dc76]
+	chromedriver!GetHandleVerifier [0x7ff78bf5e2f7+2787]
+	KERNEL32!BaseThreadInitThunk [0x7ffa7d8b7374+14]
+	ntdll!RtlUserThreadStart [0x7ffa7d9fcc91+21]
+
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 9.1s, Login: 192.8s
+[INFO] Login successful for domain: bmkenya.itserver.biz
+[INFO] Starting feature: Add Account Voucher
+Feature: Add Account Voucher # features/bmkenya.itserver.biz/AccV.feature:4
+
+  @critical
+  Scenario: Visit Account Voucher Page and click on Edit btn  # features/bmkenya.itserver.biz/AccV.feature:7
+    Given we visit "accounts2"                                # features/steps/form_actions.py:36
+    When we edit the top row                                  # features/steps/cartzlink_form.py:155
+      Assertion Failed:  Edit button could not be clicked or did not open the form
+      Captured stdout:
+       Successfully loaded accounts2
+      
+      [Screenshot Saved] E:\shayan\tests\screenshots\we edit the top row_20260416_201134.png
+
+[INFO] Completed feature: Add Account Voucher
+DEBUG: context.domain = bmkenya.itserver.biz
+DEBUG: timing_summary = {'bmkenya.itserver.biz': {'Server': 'BM-KENYA', 'Page Load': 9.1, 'Login': 192.8, 'Features': {'Add Account Voucher': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Account Voucher Page and click on Edit btn', 'duration': 16.6, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Add Account Voucher (16.6s)
+[DEBUG] Writing timing summary for bmkenya.itserver.biz to E:\shayan\tests\timing_results\bmkenya.itserver.biz_timing.json
+
+[INFO] Starting feature: Sales Order
+Feature: Sales Order # features/bmkenya.itserver.biz/SO.feature:4
+
+  @critical
+  Scenario: Visit Sales order page     # features/bmkenya.itserver.biz/SO.feature:7
+    Given we visit "orders/salesOrder" # features/steps/form_actions.py:36
+[INFO] Completed feature: Sales Order
+DEBUG: context.domain = bmkenya.itserver.biz
+DEBUG: timing_summary = {'bmkenya.itserver.biz': {'Server': 'BM-KENYA', 'Page Load': 9.1, 'Login': 192.8, 'Features': {'Add Account Voucher': {'Feature': 16.6, 'Scenario Timings': [{'name': 'Visit Account Voucher Page and click on Edit btn', 'duration': 16.6, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}, 'Sales Order': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Sales order page', 'duration': 1.0, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Order (1.0s)
+[DEBUG] Writing timing summary for bmkenya.itserver.biz to E:\shayan\tests\timing_results\bmkenya.itserver.biz_timing.json
+
+[INFO] Closing browser for domain: bmkenya.itserver.biz
+[INFO] Browser closed successfully for domain: bmkenya.itserver.biz
+[INFO] Browser instance cleared for domain: bmkenya.itserver.biz
+[SUMMARY] Timing for bmkenya.itserver.biz:
+{
+  "page_load": {
+    "current": 9.1,
+    "average": 9.1,
+    "values": [
+      9.1
+    ],
+    "is_high": false
+  },
+  "login": {
+    "current": 192.8,
+    "average": 192.8,
+    "values": [
+      192.8
+    ],
+    "is_high": false
+  },
+  "features": {
+    "Add Account Voucher": {
+      "current": 16.6,
+      "average": 16.6,
+      "values": [
+        16.6
+      ],
+      "is_high": false
+    },
+    "Sales Order": {
+      "current": 1.0,
+      "average": 1.0,
+      "values": [
+        1.0
+      ],
+      "is_high": false
+    }
+  },
+  "scenario": {
+    "current": 8.8,
+    "average": 8.8,
+    "values": [
+      8.8
+    ],
+    "is_high": false
+  }
+}
+
+[INFO] Server: BM-KENYA | Domain: bmkenya.itserver.biz
+==================================================
+[FAIL] Add Account Voucher
+[PASS] Sales Order
+
+============================================================
+COMPLETED DOMAIN: bmkenya.itserver.biz
+============================================================
+
+============================================================
+STARTING DOMAIN: crm.cartzlink.com (Server: CRM-CARTZLINK)
+============================================================
+[INFO] Running 1 feature files for domain 'crm.cartzlink.com':
+    E:\shayan\tests\features\crm.cartzlink.com\dashboard.feature
+[INFO] Domain = crm.cartzlink.com
+[INFO] Starting browser and logging in for domain: crm.cartzlink.com
+[INFO] Creating fresh browser instance for domain: crm.cartzlink.com
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://crm.cartzlink.com/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://crm.cartzlink.com/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[WARN] Page load taking longer than 30s, refreshing... (refresh 1/2)
+[WARN] Page load taking longer than 30s, refreshing... (refresh 2/2)
+[WARN] Refresh function failed, trying fallback method: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff78bf70245+146d5]
+	chromedriver!GetHandleVerifier [0x7ff78bf702b0+14740]
+	chromedriver!(No symbol) [0x7ff78bcdd7cd]
+	chromedriver!(No symbol) [0x7ff78bd36c4e]
+	chromedriver!(No symbol) [0x7ff78bd36f5c]
+	chromedriver!(No symbol) [0x7ff78bd87cc7]
+	chromedriver!(No symbol) [0x7ff78bd84818]
+	chromedriver!(No symbol) [0x7ff78bd29018]
+	chromedriver!(No symbol) [0x7ff78bd29f03]
+	chromedriver!GetHandleVerifier [0x7ff78c2858f9+329d89]
+	chromedriver!GetHandleVerifier [0x7ff78c27fe46+3242d6]
+	chromedriver!GetHandleVerifier [0x7ff78c2a30b2+347542]
+	chromedriver!GetHandleVerifier [0x7ff78bf8d3d5+31865]
+	chromedriver!GetHandleVerifier [0x7ff78bf9600c+3a49c]
+	chromedriver!GetHandleVerifier [0x7ff78bf79634+1dac4]
+	chromedriver!GetHandleVerifier [0x7ff78bf797e6+1dc76]
+	chromedriver!GetHandleVerifier [0x7ff78bf5e2f7+2787]
+	KERNEL32!BaseThreadInitThunk [0x7ffa7d8b7374+14]
+	ntdll!RtlUserThreadStart [0x7ffa7d9fcc91+21]
+
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 5.5s, Login: 193.1s
+[INFO] Login successful for domain: crm.cartzlink.com
+[INFO] Starting feature: Dash board
+Feature: Dash board # features/crm.cartzlink.com/dashboard.feature:4
+[INFO] Completed feature: Dash board
+DEBUG: context.domain = crm.cartzlink.com
+DEBUG: timing_summary = {'crm.cartzlink.com': {'Server': 'CRM-CARTZLINK', 'Page Load': 5.5, 'Login': 193.1, 'Features': {'Dash board': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Dash board page', 'duration': 0.0, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Dash board (0.0s)
+[DEBUG] Writing timing summary for crm.cartzlink.com to E:\shayan\tests\timing_results\crm.cartzlink.com_timing.json
+
+  @critical
+  Scenario: Visit Dash board page  # features/crm.cartzlink.com/dashboard.feature:7
+
+[INFO] Closing browser for domain: crm.cartzlink.com
+[INFO] Browser closed successfully for domain: crm.cartzlink.com
+[INFO] Browser instance cleared for domain: crm.cartzlink.com
+[SUMMARY] Timing for crm.cartzlink.com:
+{
+  "page_load": {
+    "current": 5.5,
+    "average": 5.5,
+    "values": [
+      5.5
+    ],
+    "is_high": false
+  },
+  "login": {
+    "current": 193.1,
+    "average": 193.1,
+    "values": [
+      193.1
+    ],
+    "is_high": false
+  },
+  "features": {
+    "Dash board": {
+      "current": 0.0,
+      "average": 0.0,
+      "values": [
+        0.0
+      ],
+      "is_high": 0.0
+    }
+  },
+  "scenario": {
+    "current": 0.0,
+    "average": 0.0,
+    "values": [
+      0.0
+    ],
+    "is_high": 0.0
+  }
+}
+
+[INFO] Server: CRM-CARTZLINK | Domain: crm.cartzlink.com
+==================================================
+[PASS] Dash board
+
+============================================================
+COMPLETED DOMAIN: crm.cartzlink.com
+============================================================
+
+============================================================
+STARTING DOMAIN: fa3.itserver.biz (Server: CRM-CARTZLINK)
+============================================================
+[INFO] Running 2 feature files for domain 'fa3.itserver.biz':
+    E:\shayan\tests\features\global\domain.feature
+    E:\shayan\tests\features\global\domain2.feature
+[INFO] Domain = fa3.itserver.biz
+[INFO] Starting browser and logging in for domain: fa3.itserver.biz
+[INFO] Creating fresh browser instance for domain: fa3.itserver.biz
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://fa3.itserver.biz/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://fa3.itserver.biz/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[WARN] Page load taking longer than 30s, refreshing... (refresh 1/2)
+[WARN] Page load taking longer than 30s, refreshing... (refresh 2/2)
+[WARN] Refresh function failed, trying fallback method: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff78bf70245+146d5]
+	chromedriver!GetHandleVerifier [0x7ff78bf702b0+14740]
+	chromedriver!(No symbol) [0x7ff78bcdd7cd]
+	chromedriver!(No symbol) [0x7ff78bd36c4e]
+	chromedriver!(No symbol) [0x7ff78bd36f5c]
+	chromedriver!(No symbol) [0x7ff78bd87cc7]
+	chromedriver!(No symbol) [0x7ff78bd84818]
+	chromedriver!(No symbol) [0x7ff78bd29018]
+	chromedriver!(No symbol) [0x7ff78bd29f03]
+	chromedriver!GetHandleVerifier [0x7ff78c2858f9+329d89]
+	chromedriver!GetHandleVerifier [0x7ff78c27fe46+3242d6]
+	chromedriver!GetHandleVerifier [0x7ff78c2a30b2+347542]
+	chromedriver!GetHandleVerifier [0x7ff78bf8d3d5+31865]
+	chromedriver!GetHandleVerifier [0x7ff78bf9600c+3a49c]
+	chromedriver!GetHandleVerifier [0x7ff78bf79634+1dac4]
+	chromedriver!GetHandleVerifier [0x7ff78bf797e6+1dc76]
+	chromedriver!GetHandleVerifier [0x7ff78bf5e2f7+2787]
+	KERNEL32!BaseThreadInitThunk [0x7ffa7d8b7374+14]
+	ntdll!RtlUserThreadStart [0x7ffa7d9fcc91+21]
+
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 3.5s, Login: 193.4s
+[INFO] Login successful for domain: fa3.itserver.biz
+[INFO] Starting feature: Sales Order
+Feature: Sales Order # features/global/domain.feature:3
+
+  @critical
+  Scenario: Sales order page           # features/global/domain.feature:6
+    Given we visit "orders/salesOrder" # features/steps/form_actions.py:36
+[INFO] Completed feature: Sales Order
+DEBUG: context.domain = fa3.itserver.biz
+DEBUG: timing_summary = {'fa3.itserver.biz': {'Server': 'CRM-CARTZLINK', 'Page Load': 3.5, 'Login': 193.4, 'Features': {'Sales Order': {'Feature': None, 'Scenario Timings': [{'name': 'Sales order page', 'duration': 0.2, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Order (0.2s)
+[DEBUG] Writing timing summary for fa3.itserver.biz to E:\shayan\tests\timing_results\fa3.itserver.biz_timing.json
+
+[INFO] Starting feature: Sales Invoice
+Feature: Sales Invoice # features/global/domain2.feature:2
+
+  @critical
+  Scenario: Sales Invoice page           # features/global/domain2.feature:5
+    Given we visit "orders/salesInvoice" # features/steps/form_actions.py:36
+[INFO] Completed feature: Sales Invoice
+DEBUG: context.domain = fa3.itserver.biz
+DEBUG: timing_summary = {'fa3.itserver.biz': {'Server': 'CRM-CARTZLINK', 'Page Load': 3.5, 'Login': 193.4, 'Features': {'Sales Order': {'Feature': 0.2, 'Scenario Timings': [{'name': 'Sales order page', 'duration': 0.2, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}, 'Sales Invoice': {'Feature': None, 'Scenario Timings': [{'name': 'Sales Invoice page', 'duration': 0.1, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Invoice (0.1s)
+[DEBUG] Writing timing summary for fa3.itserver.biz to E:\shayan\tests\timing_results\fa3.itserver.biz_timing.json
+
+[INFO] Closing browser for domain: fa3.itserver.biz
+[INFO] Browser closed successfully for domain: fa3.itserver.biz
+[INFO] Browser instance cleared for domain: fa3.itserver.biz
+[SUMMARY] Timing for fa3.itserver.biz:
+{
+  "page_load": {
+    "current": 3.5,
+    "average": 3.5,
+    "values": [
+      3.5
+    ],
+    "is_high": false
+  },
+  "login": {
+    "current": 193.4,
+    "average": 193.4,
+    "values": [
+      193.4
+    ],
+    "is_high": false
+  },
+  "features": {
+    "Sales Order": {
+      "current": 0.2,
+      "average": 0.2,
+      "values": [
+        0.2
+      ],
+      "is_high": false
+    },
+    "Sales Invoice": {
+      "current": 0.1,
+      "average": 0.1,
+      "values": [
+        0.1
+      ],
+      "is_high": false
+    }
+  },
+  "scenario": {
+    "current": 0.15000000000000002,
+    "average": 0.15000000000000002,
+    "values": [
+      0.15000000000000002
+    ],
+    "is_high": false
+  }
+}
+
+[INFO] Server: CRM-CARTZLINK | Domain: fa3.itserver.biz
+==================================================
+[PASS] Sales Order
+[PASS] Sales Invoice
+
+============================================================
+COMPLETED DOMAIN: fa3.itserver.biz
+============================================================
+
+============================================================
+STARTING DOMAIN: anamta.primeerp.top (Server: CRM-S16)
+============================================================
+[INFO] Running 2 feature files for domain 'anamta.primeerp.top':
+    E:\shayan\tests\features\anamta.primeerp.top\AccCV.feature
+    E:\shayan\tests\features\anamta.primeerp.top\AccV.feature
+[INFO] Domain = anamta.primeerp.top
+[INFO] Starting browser and logging in for domain: anamta.primeerp.top
+[INFO] Creating fresh browser instance for domain: anamta.primeerp.top
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://anamta.primeerp.top/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://anamta.primeerp.top/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[WARN] Page load taking longer than 30s, refreshing... (refresh 1/2)
+[WARN] Page load taking longer than 30s, refreshing... (refresh 2/2)
+[WARN] Refresh function failed, trying fallback method: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff78bf70245+146d5]
+	chromedriver!GetHandleVerifier [0x7ff78bf702b0+14740]
+	chromedriver!(No symbol) [0x7ff78bcdd7cd]
+	chromedriver!(No symbol) [0x7ff78bd36c4e]
+	chromedriver!(No symbol) [0x7ff78bd36f5c]
+	chromedriver!(No symbol) [0x7ff78bd87cc7]
+	chromedriver!(No symbol) [0x7ff78bd84818]
+	chromedriver!(No symbol) [0x7ff78bd29018]
+	chromedriver!(No symbol) [0x7ff78bd29f03]
+	chromedriver!GetHandleVerifier [0x7ff78c2858f9+329d89]
+	chromedriver!GetHandleVerifier [0x7ff78c27fe46+3242d6]
+	chromedriver!GetHandleVerifier [0x7ff78c2a30b2+347542]
+	chromedriver!GetHandleVerifier [0x7ff78bf8d3d5+31865]
+	chromedriver!GetHandleVerifier [0x7ff78bf9600c+3a49c]
+	chromedriver!GetHandleVerifier [0x7ff78bf79634+1dac4]
+	chromedriver!GetHandleVerifier [0x7ff78bf797e6+1dc76]
+	chromedriver!GetHandleVerifier [0x7ff78bf5e2f7+2787]
+	KERNEL32!BaseThreadInitThunk [0x7ffa7d8b7374+14]
+	ntdll!RtlUserThreadStart [0x7ffa7d9fcc91+21]
+
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 5.8s, Login: 195.2s
+[INFO] Login successful for domain: anamta.primeerp.top
+[INFO] Starting feature: CASH RECEIPT CV
+Feature: CASH RECEIPT CV # features/anamta.primeerp.top/AccCV.feature:3
+
+  @critical
+  Scenario: Visit CashReceiptCV Page and click on Edit btn  # features/anamta.primeerp.top/AccCV.feature:6
+    Given we visit "accounts2/CashReceiptCV"                # features/steps/form_actions.py:36
+    When we edit the top row                                # features/steps/cartzlink_form.py:155
+      Assertion Failed:  Edit button could not be clicked or did not open the form
+      Captured stdout:
+       Successfully loaded accounts2/CashReceiptCV
+      
+      [Screenshot Saved] E:\shayan\tests\screenshots\we edit the top row_20260416_202218.png
+
+[INFO] Completed feature: CASH RECEIPT CV
+DEBUG: context.domain = anamta.primeerp.top
+DEBUG: timing_summary = {'anamta.primeerp.top': {'Server': 'CRM-S16', 'Page Load': 5.8, 'Login': 195.2, 'Features': {'CASH RECEIPT CV': {'Feature': None, 'Scenario Timings': [{'name': 'Visit CashReceiptCV Page and click on Edit btn', 'duration': 15.9, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: CASH RECEIPT CV (15.9s)
+[DEBUG] Writing timing summary for anamta.primeerp.top to E:\shayan\tests\timing_results\anamta.primeerp.top_timing.json
+
+[INFO] Starting feature: Account Voucher
+Feature: Account Voucher # features/anamta.primeerp.top/AccV.feature:4
+
+  @critical
+  Scenario: Visit Account Voucher Page and click on Edit btn  # features/anamta.primeerp.top/AccV.feature:7
+    Given we visit "accounts2"                                # features/steps/form_actions.py:36
+    When we edit the top row                                  # features/steps/cartzlink_form.py:155
+      Assertion Failed:  Edit button could not be clicked or did not open the form
+      Captured stdout:
+       Successfully loaded accounts2
+      
+      [Screenshot Saved] E:\shayan\tests\screenshots\we edit the top row_20260416_202234.png
+
+[INFO] Completed feature: Account Voucher
+DEBUG: context.domain = anamta.primeerp.top
+DEBUG: timing_summary = {'anamta.primeerp.top': {'Server': 'CRM-S16', 'Page Load': 5.8, 'Login': 195.2, 'Features': {'CASH RECEIPT CV': {'Feature': 15.9, 'Scenario Timings': [{'name': 'Visit CashReceiptCV Page and click on Edit btn', 'duration': 15.9, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}, 'Account Voucher': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Account Voucher Page and click on Edit btn', 'duration': 15.9, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Account Voucher (15.9s)
+[DEBUG] Writing timing summary for anamta.primeerp.top to E:\shayan\tests\timing_results\anamta.primeerp.top_timing.json
+
+[INFO] Closing browser for domain: anamta.primeerp.top
+[INFO] Browser closed successfully for domain: anamta.primeerp.top
+[INFO] Browser instance cleared for domain: anamta.primeerp.top
+[SUMMARY] Timing for anamta.primeerp.top:
+{
+  "page_load": {
+    "current": 5.8,
+    "average": 5.8,
+    "values": [
+      5.8
+    ],
+    "is_high": false
+  },
+  "login": {
+    "current": 195.2,
+    "average": 195.2,
+    "values": [
+      195.2
+    ],
+    "is_high": false
+  },
+  "features": {
+    "CASH RECEIPT CV": {
+      "current": 15.9,
+      "average": 15.9,
+      "values": [
+        15.9
+      ],
+      "is_high": false
+    },
+    "Account Voucher": {
+      "current": 15.9,
+      "average": 15.9,
+      "values": [
+        15.9
+      ],
+      "is_high": false
+    }
+  },
+  "scenario": {
+    "current": 15.9,
+    "average": 15.9,
+    "values": [
+      15.9
+    ],
+    "is_high": false
+  }
+}
+
+[INFO] Server: CRM-S16 | Domain: anamta.primeerp.top
+==================================================
+[FAIL] CASH RECEIPT CV
+[FAIL] Account Voucher
+
+============================================================
+COMPLETED DOMAIN: anamta.primeerp.top
+============================================================
+
+============================================================
+STARTING DOMAIN: crm.tabrospharma.com (Server: CRM-TABROSPHARMA)
+============================================================
+[INFO] Running 2 feature files for domain 'crm.tabrospharma.com':
+    E:\shayan\tests\features\crm.tabrospharma.com\AccV.feature
+    E:\shayan\tests\features\crm.tabrospharma.com\SO.feature
+[INFO] Domain = crm.tabrospharma.com
+[INFO] Starting browser and logging in for domain: crm.tabrospharma.com
+[INFO] Creating fresh browser instance for domain: crm.tabrospharma.com
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://crm.tabrospharma.com/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://crm.tabrospharma.com/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[WARN] Page load taking longer than 30s, refreshing... (refresh 1/2)
+[WARN] Page load taking longer than 30s, refreshing... (refresh 2/2)
+[WARN] Refresh function failed, trying fallback method: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff78bf70245+146d5]
+	chromedriver!GetHandleVerifier [0x7ff78bf702b0+14740]
+	chromedriver!(No symbol) [0x7ff78bcdd7cd]
+	chromedriver!(No symbol) [0x7ff78bd36c4e]
+	chromedriver!(No symbol) [0x7ff78bd36f5c]
+	chromedriver!(No symbol) [0x7ff78bd87cc7]
+	chromedriver!(No symbol) [0x7ff78bd84818]
+	chromedriver!(No symbol) [0x7ff78bd29018]
+	chromedriver!(No symbol) [0x7ff78bd29f03]
+	chromedriver!GetHandleVerifier [0x7ff78c2858f9+329d89]
+	chromedriver!GetHandleVerifier [0x7ff78c27fe46+3242d6]
+	chromedriver!GetHandleVerifier [0x7ff78c2a30b2+347542]
+	chromedriver!GetHandleVerifier [0x7ff78bf8d3d5+31865]
+	chromedriver!GetHandleVerifier [0x7ff78bf9600c+3a49c]
+	chromedriver!GetHandleVerifier [0x7ff78bf79634+1dac4]
+	chromedriver!GetHandleVerifier [0x7ff78bf797e6+1dc76]
+	chromedriver!GetHandleVerifier [0x7ff78bf5e2f7+2787]
+	KERNEL32!BaseThreadInitThunk [0x7ffa7d8b7374+14]
+	ntdll!RtlUserThreadStart [0x7ffa7d9fcc91+21]
+
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 4.0s, Login: 209.4s
+[INFO] Login successful for domain: crm.tabrospharma.com
+[INFO] Starting feature: Add Account Voucher
+Feature: Add Account Voucher # features/crm.tabrospharma.com/AccV.feature:4
+
+  @critical
+  Scenario: Visit Account Voucher Page and click on Edit btn  # features/crm.tabrospharma.com/AccV.feature:7
+    Given we visit "accounts2"                                # features/steps/form_actions.py:36
+    When we edit the top row                                  # features/steps/cartzlink_form.py:155
+      Assertion Failed:  Edit button could not be clicked or did not open the form
+      Captured stdout:
+       Successfully loaded accounts2
+      
+      [Screenshot Saved] E:\shayan\tests\screenshots\we edit the top row_20260416_202631.png
+
+[INFO] Completed feature: Add Account Voucher
+DEBUG: context.domain = crm.tabrospharma.com
+DEBUG: timing_summary = {'crm.tabrospharma.com': {'Server': 'CRM-TABROSPHARMA', 'Page Load': 4.0, 'Login': 209.4, 'Features': {'Add Account Voucher': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Account Voucher Page and click on Edit btn', 'duration': 16.2, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Add Account Voucher (16.2s)
+[DEBUG] Writing timing summary for crm.tabrospharma.com to E:\shayan\tests\timing_results\crm.tabrospharma.com_timing.json
+
+[INFO] Starting feature: Sales Order
+Feature: Sales Order # features/crm.tabrospharma.com/SO.feature:4
+
+  @critical
+  Scenario: Visit Sales Order Page and click on Edit btn  # features/crm.tabrospharma.com/SO.feature:7
+    Given we visit "orders/salesOrder"                    # features/steps/form_actions.py:36
+    When we edit the top row                              # features/steps/cartzlink_form.py:155
+      Assertion Failed:  Edit button could not be clicked or did not open the form
+      Captured stdout:
+       Successfully loaded orders/salesOrder
+      
+      [Screenshot Saved] E:\shayan\tests\screenshots\we edit the top row_20260416_202647.png
+
+[INFO] Completed feature: Sales Order
+DEBUG: context.domain = crm.tabrospharma.com
+DEBUG: timing_summary = {'crm.tabrospharma.com': {'Server': 'CRM-TABROSPHARMA', 'Page Load': 4.0, 'Login': 209.4, 'Features': {'Add Account Voucher': {'Feature': 16.2, 'Scenario Timings': [{'name': 'Visit Account Voucher Page and click on Edit btn', 'duration': 16.2, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}, 'Sales Order': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Sales Order Page and click on Edit btn', 'duration': 16.2, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Order (16.2s)
+[DEBUG] Writing timing summary for crm.tabrospharma.com to E:\shayan\tests\timing_results\crm.tabrospharma.com_timing.json
+
+[INFO] Closing browser for domain: crm.tabrospharma.com
+[INFO] Browser closed successfully for domain: crm.tabrospharma.com
+[INFO] Browser instance cleared for domain: crm.tabrospharma.com
+[SUMMARY] Timing for crm.tabrospharma.com:
+{
+  "page_load": {
+    "current": 4.0,
+    "average": 4.0,
+    "values": [
+      4.0
+    ],
+    "is_high": false
+  },
+  "login": {
+    "current": 209.4,
+    "average": 209.4,
+    "values": [
+      209.4
+    ],
+    "is_high": false
+  },
+  "features": {
+    "Add Account Voucher": {
+      "current": 16.2,
+      "average": 16.2,
+      "values": [
+        16.2
+      ],
+      "is_high": false
+    },
+    "Sales Order": {
+      "current": 16.2,
+      "average": 16.2,
+      "values": [
+        16.2
+      ],
+      "is_high": false
+    }
+  },
+  "scenario": {
+    "current": 16.2,
+    "average": 16.2,
+    "values": [
+      16.2
+    ],
+    "is_high": false
+  }
+}
+
+[INFO] Server: CRM-TABROSPHARMA | Domain: crm.tabrospharma.com
+==================================================
+[FAIL] Add Account Voucher
+[FAIL] Sales Order
+
+============================================================
+COMPLETED DOMAIN: crm.tabrospharma.com
+============================================================
+
+============================================================
+STARTING DOMAIN: fa2.itserver.biz (Server: FA2)
+============================================================
+[INFO] Running 2 feature files for domain 'fa2.itserver.biz':
+    E:\shayan\tests\features\global\domain.feature
+    E:\shayan\tests\features\global\domain2.feature
+[INFO] Domain = fa2.itserver.biz
+[INFO] Starting browser and logging in for domain: fa2.itserver.biz
+[INFO] Creating fresh browser instance for domain: fa2.itserver.biz
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://fa2.itserver.biz/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://fa2.itserver.biz/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[WARN] Page load taking longer than 30s, refreshing... (refresh 1/2)
+[WARN] Page load taking longer than 30s, refreshing... (refresh 2/2)
+[WARN] Refresh function failed, trying fallback method: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff78bf70245+146d5]
+	chromedriver!GetHandleVerifier [0x7ff78bf702b0+14740]
+	chromedriver!(No symbol) [0x7ff78bcdd7cd]
+	chromedriver!(No symbol) [0x7ff78bd36c4e]
+	chromedriver!(No symbol) [0x7ff78bd36f5c]
+	chromedriver!(No symbol) [0x7ff78bd87cc7]
+	chromedriver!(No symbol) [0x7ff78bd84818]
+	chromedriver!(No symbol) [0x7ff78bd29018]
+	chromedriver!(No symbol) [0x7ff78bd29f03]
+	chromedriver!GetHandleVerifier [0x7ff78c2858f9+329d89]
+	chromedriver!GetHandleVerifier [0x7ff78c27fe46+3242d6]
+	chromedriver!GetHandleVerifier [0x7ff78c2a30b2+347542]
+	chromedriver!GetHandleVerifier [0x7ff78bf8d3d5+31865]
+	chromedriver!GetHandleVerifier [0x7ff78bf9600c+3a49c]
+	chromedriver!GetHandleVerifier [0x7ff78bf79634+1dac4]
+	chromedriver!GetHandleVerifier [0x7ff78bf797e6+1dc76]
+	chromedriver!GetHandleVerifier [0x7ff78bf5e2f7+2787]
+	KERNEL32!BaseThreadInitThunk [0x7ffa7d8b7374+14]
+	ntdll!RtlUserThreadStart [0x7ffa7d9fcc91+21]
+
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 9.0s, Login: 191.1s
+[INFO] Login successful for domain: fa2.itserver.biz
+[INFO] Starting feature: Sales Order
+Feature: Sales Order # features/global/domain.feature:3
+
+  @critical
+  Scenario: Sales order page           # features/global/domain.feature:6
+    Given we visit "orders/salesOrder" # features/steps/form_actions.py:36
+[INFO] Completed feature: Sales Order
+DEBUG: context.domain = fa2.itserver.biz
+DEBUG: timing_summary = {'fa2.itserver.biz': {'Server': 'FA2', 'Page Load': 9.0, 'Login': 191.1, 'Features': {'Sales Order': {'Feature': None, 'Scenario Timings': [{'name': 'Sales order page', 'duration': 1.0, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Order (1.0s)
+[DEBUG] Writing timing summary for fa2.itserver.biz to E:\shayan\tests\timing_results\fa2.itserver.biz_timing.json
+
+[INFO] Starting feature: Sales Invoice
+Feature: Sales Invoice # features/global/domain2.feature:2
+
+  @critical
+  Scenario: Sales Invoice page           # features/global/domain2.feature:5
+    Given we visit "orders/salesInvoice" # features/steps/form_actions.py:36
+[INFO] Completed feature: Sales Invoice
+DEBUG: context.domain = fa2.itserver.biz
+DEBUG: timing_summary = {'fa2.itserver.biz': {'Server': 'FA2', 'Page Load': 9.0, 'Login': 191.1, 'Features': {'Sales Order': {'Feature': 1.0, 'Scenario Timings': [{'name': 'Sales order page', 'duration': 1.0, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}, 'Sales Invoice': {'Feature': None, 'Scenario Timings': [{'name': 'Sales Invoice page', 'duration': 0.8, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Invoice (0.8s)
+[DEBUG] Writing timing summary for fa2.itserver.biz to E:\shayan\tests\timing_results\fa2.itserver.biz_timing.json
+
+[INFO] Closing browser for domain: fa2.itserver.biz
+[INFO] Browser closed successfully for domain: fa2.itserver.biz
+[INFO] Browser instance cleared for domain: fa2.itserver.biz
+[SUMMARY] Timing for fa2.itserver.biz:
+{
+  "page_load": {
+    "current": 9.0,
+    "average": 9.0,
+    "values": [
+      9.0
+    ],
+    "is_high": false
+  },
+  "login": {
+    "current": 191.1,
+    "average": 191.1,
+    "values": [
+      191.1
+    ],
+    "is_high": false
+  },
+  "features": {
+    "Sales Order": {
+      "current": 1.0,
+      "average": 1.0,
+      "values": [
+        1.0
+      ],
+      "is_high": false
+    },
+    "Sales Invoice": {
+      "current": 0.8,
+      "average": 0.8,
+      "values": [
+        0.8
+      ],
+      "is_high": false
+    }
+  },
+  "scenario": {
+    "current": 0.9,
+    "average": 0.9,
+    "values": [
+      0.9
+    ],
+    "is_high": false
+  }
+}
+
+[INFO] Server: FA2 | Domain: fa2.itserver.biz
+==================================================
+[PASS] Sales Order
+[PASS] Sales Invoice
+
+============================================================
+COMPLETED DOMAIN: fa2.itserver.biz
+============================================================
+
+============================================================
+STARTING DOMAIN: fr.itserver.biz (Server: FST)
+============================================================
+[INFO] Running 2 feature files for domain 'fr.itserver.biz':
+    E:\shayan\tests\features\global\domain.feature
+    E:\shayan\tests\features\global\domain2.feature
+[INFO] Domain = fr.itserver.biz
+[INFO] Starting browser and logging in for domain: fr.itserver.biz
+[INFO] Creating fresh browser instance for domain: fr.itserver.biz
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://fr.itserver.biz/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://fr.itserver.biz/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[WARN] Page load taking longer than 30s, refreshing... (refresh 1/2)
+[WARN] Page load taking longer than 30s, refreshing... (refresh 2/2)
+[WARN] Refresh function failed, trying fallback method: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff78bf70245+146d5]
+	chromedriver!GetHandleVerifier [0x7ff78bf702b0+14740]
+	chromedriver!(No symbol) [0x7ff78bcdd7cd]
+	chromedriver!(No symbol) [0x7ff78bd36c4e]
+	chromedriver!(No symbol) [0x7ff78bd36f5c]
+	chromedriver!(No symbol) [0x7ff78bd87cc7]
+	chromedriver!(No symbol) [0x7ff78bd84818]
+	chromedriver!(No symbol) [0x7ff78bd29018]
+	chromedriver!(No symbol) [0x7ff78bd29f03]
+	chromedriver!GetHandleVerifier [0x7ff78c2858f9+329d89]
+	chromedriver!GetHandleVerifier [0x7ff78c27fe46+3242d6]
+	chromedriver!GetHandleVerifier [0x7ff78c2a30b2+347542]
+	chromedriver!GetHandleVerifier [0x7ff78bf8d3d5+31865]
+	chromedriver!GetHandleVerifier [0x7ff78bf9600c+3a49c]
+	chromedriver!GetHandleVerifier [0x7ff78bf79634+1dac4]
+	chromedriver!GetHandleVerifier [0x7ff78bf797e6+1dc76]
+	chromedriver!GetHandleVerifier [0x7ff78bf5e2f7+2787]
+	KERNEL32!BaseThreadInitThunk [0x7ffa7d8b7374+14]
+	ntdll!RtlUserThreadStart [0x7ffa7d9fcc91+21]
+
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 7.5s, Login: 191.3s
+[INFO] Login successful for domain: fr.itserver.biz
+[INFO] Starting feature: Sales Order
+Feature: Sales Order # features/global/domain.feature:3
+
+  @critical
+  Scenario: Sales order page           # features/global/domain.feature:6
+    Given we visit "orders/salesOrder" # features/steps/form_actions.py:36
+[INFO] Completed feature: Sales Order
+DEBUG: context.domain = fr.itserver.biz
+DEBUG: timing_summary = {'fr.itserver.biz': {'Server': 'FST', 'Page Load': 7.5, 'Login': 191.3, 'Features': {'Sales Order': {'Feature': None, 'Scenario Timings': [{'name': 'Sales order page', 'duration': 0.7, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Order (0.7s)
+[DEBUG] Writing timing summary for fr.itserver.biz to E:\shayan\tests\timing_results\fr.itserver.biz_timing.json
+
+[INFO] Starting feature: Sales Invoice
+Feature: Sales Invoice # features/global/domain2.feature:2
+
+  @critical
+  Scenario: Sales Invoice page           # features/global/domain2.feature:5
+    Given we visit "orders/salesInvoice" # features/steps/form_actions.py:36
+[INFO] Completed feature: Sales Invoice
+DEBUG: context.domain = fr.itserver.biz
+DEBUG: timing_summary = {'fr.itserver.biz': {'Server': 'FST', 'Page Load': 7.5, 'Login': 191.3, 'Features': {'Sales Order': {'Feature': 0.7, 'Scenario Timings': [{'name': 'Sales order page', 'duration': 0.7, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}, 'Sales Invoice': {'Feature': None, 'Scenario Timings': [{'name': 'Sales Invoice page', 'duration': 0.7, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Invoice (0.7s)
+[DEBUG] Writing timing summary for fr.itserver.biz to E:\shayan\tests\timing_results\fr.itserver.biz_timing.json
+
+[INFO] Closing browser for domain: fr.itserver.biz
+[INFO] Browser closed successfully for domain: fr.itserver.biz
+[INFO] Browser instance cleared for domain: fr.itserver.biz
+[SUMMARY] Timing for fr.itserver.biz:
+{
+  "page_load": {
+    "current": 7.5,
+    "average": 7.5,
+    "values": [
+      7.5
+    ],
+    "is_high": false
+  },
+  "login": {
+    "current": 191.3,
+    "average": 191.3,
+    "values": [
+      191.3
+    ],
+    "is_high": false
+  },
+  "features": {
+    "Sales Order": {
+      "current": 0.7,
+      "average": 0.7,
+      "values": [
+        0.7
+      ],
+      "is_high": false
+    },
+    "Sales Invoice": {
+      "current": 0.7,
+      "average": 0.7,
+      "values": [
+        0.7
+      ],
+      "is_high": false
+    }
+  },
+  "scenario": {
+    "current": 0.7,
+    "average": 0.7,
+    "values": [
+      0.7
+    ],
+    "is_high": false
+  }
+}
+
+[INFO] Server: FST | Domain: fr.itserver.biz
+==================================================
+[PASS] Sales Order
+[PASS] Sales Invoice
+
+============================================================
+COMPLETED DOMAIN: fr.itserver.biz
+============================================================
+
+============================================================
+STARTING DOMAIN: franscent.itserver.biz (Server: FST)
+============================================================
+[INFO] Running 2 feature files for domain 'franscent.itserver.biz':
+    E:\shayan\tests\features\global\domain.feature
+    E:\shayan\tests\features\global\domain2.feature
+[INFO] Domain = franscent.itserver.biz
+[INFO] Starting browser and logging in for domain: franscent.itserver.biz
+[INFO] Creating fresh browser instance for domain: franscent.itserver.biz
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://franscent.itserver.biz/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://franscent.itserver.biz/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[WARN] Page load taking longer than 30s, refreshing... (refresh 1/2)
+[WARN] Page load taking longer than 30s, refreshing... (refresh 2/2)
+[WARN] Refresh function failed, trying fallback method: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff78bf70245+146d5]
+	chromedriver!GetHandleVerifier [0x7ff78bf702b0+14740]
+	chromedriver!(No symbol) [0x7ff78bcdd7cd]
+	chromedriver!(No symbol) [0x7ff78bd36c4e]
+	chromedriver!(No symbol) [0x7ff78bd36f5c]
+	chromedriver!(No symbol) [0x7ff78bd87cc7]
+	chromedriver!(No symbol) [0x7ff78bd84818]
+	chromedriver!(No symbol) [0x7ff78bd29018]
+	chromedriver!(No symbol) [0x7ff78bd29f03]
+	chromedriver!GetHandleVerifier [0x7ff78c2858f9+329d89]
+	chromedriver!GetHandleVerifier [0x7ff78c27fe46+3242d6]
+	chromedriver!GetHandleVerifier [0x7ff78c2a30b2+347542]
+	chromedriver!GetHandleVerifier [0x7ff78bf8d3d5+31865]
+	chromedriver!GetHandleVerifier [0x7ff78bf9600c+3a49c]
+	chromedriver!GetHandleVerifier [0x7ff78bf79634+1dac4]
+	chromedriver!GetHandleVerifier [0x7ff78bf797e6+1dc76]
+	chromedriver!GetHandleVerifier [0x7ff78bf5e2f7+2787]
+	KERNEL32!BaseThreadInitThunk [0x7ffa7d8b7374+14]
+	ntdll!RtlUserThreadStart [0x7ffa7d9fcc91+21]
+
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 62.1s, Login: 193.3s
+[INFO] Login successful for domain: franscent.itserver.biz
+[INFO] Starting feature: Sales Order
+Feature: Sales Order # features/global/domain.feature:3
+
+  @critical
+  Scenario: Sales order page           # features/global/domain.feature:6
+    Given we visit "orders/salesOrder" # features/steps/form_actions.py:36
+[INFO] Completed feature: Sales Order
+DEBUG: context.domain = franscent.itserver.biz
+DEBUG: timing_summary = {'franscent.itserver.biz': {'Server': 'FST', 'Page Load': 62.1, 'Login': 193.3, 'Features': {'Sales Order': {'Feature': None, 'Scenario Timings': [{'name': 'Sales order page', 'duration': 3.1, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Order (3.1s)
+[DEBUG] Writing timing summary for franscent.itserver.biz to E:\shayan\tests\timing_results\franscent.itserver.biz_timing.json
+
+[INFO] Starting feature: Sales Invoice
+Feature: Sales Invoice # features/global/domain2.feature:2
+
+  @critical
+  Scenario: Sales Invoice page           # features/global/domain2.feature:5
+    Given we visit "orders/salesInvoice" # features/steps/form_actions.py:36
+[INFO] Completed feature: Sales Invoice
+DEBUG: context.domain = franscent.itserver.biz
+DEBUG: timing_summary = {'franscent.itserver.biz': {'Server': 'FST', 'Page Load': 62.1, 'Login': 193.3, 'Features': {'Sales Order': {'Feature': 3.1, 'Scenario Timings': [{'name': 'Sales order page', 'duration': 3.1, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}, 'Sales Invoice': {'Feature': None, 'Scenario Timings': [{'name': 'Sales Invoice page', 'duration': 1.4, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Invoice (1.4s)
+[DEBUG] Writing timing summary for franscent.itserver.biz to E:\shayan\tests\timing_results\franscent.itserver.biz_timing.json
+
+[INFO] Closing browser for domain: franscent.itserver.biz
+[INFO] Browser closed successfully for domain: franscent.itserver.biz
+[INFO] Browser instance cleared for domain: franscent.itserver.biz
+[SUMMARY] Timing for franscent.itserver.biz:
+{
+  "page_load": {
+    "current": 62.1,
+    "average": 62.1,
+    "values": [
+      62.1
+    ],
+    "is_high": false
+  },
+  "login": {
+    "current": 193.3,
+    "average": 193.3,
+    "values": [
+      193.3
+    ],
+    "is_high": false
+  },
+  "features": {
+    "Sales Order": {
+      "current": 3.1,
+      "average": 3.1,
+      "values": [
+        3.1
+      ],
+      "is_high": false
+    },
+    "Sales Invoice": {
+      "current": 1.4,
+      "average": 1.4,
+      "values": [
+        1.4
+      ],
+      "is_high": false
+    }
+  },
+  "scenario": {
+    "current": 2.25,
+    "average": 2.25,
+    "values": [
+      2.25
+    ],
+    "is_high": false
+  }
+}
+
+[INFO] Server: FST | Domain: franscent.itserver.biz
+==================================================
+[PASS] Sales Order
+[PASS] Sales Invoice
+
+============================================================
+COMPLETED DOMAIN: franscent.itserver.biz
+============================================================
+
+============================================================
+STARTING DOMAIN: mac.itserver.biz (Server: METRO)
+============================================================
+[INFO] Running 2 feature files for domain 'mac.itserver.biz':
+    E:\shayan\tests\features\global\domain.feature
+    E:\shayan\tests\features\global\domain2.feature
+[INFO] Domain = mac.itserver.biz
+[INFO] Starting browser and logging in for domain: mac.itserver.biz
+[INFO] Creating fresh browser instance for domain: mac.itserver.biz
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://mac.itserver.biz/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://mac.itserver.biz/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[WARN] Page load taking longer than 30s, refreshing... (refresh 1/2)
+[WARN] Page load taking longer than 30s, refreshing... (refresh 2/2)
+[WARN] Refresh function failed, trying fallback method: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff78bf70245+146d5]
+	chromedriver!GetHandleVerifier [0x7ff78bf702b0+14740]
+	chromedriver!(No symbol) [0x7ff78bcdd7cd]
+	chromedriver!(No symbol) [0x7ff78bd36c4e]
+	chromedriver!(No symbol) [0x7ff78bd36f5c]
+	chromedriver!(No symbol) [0x7ff78bd87cc7]
+	chromedriver!(No symbol) [0x7ff78bd84818]
+	chromedriver!(No symbol) [0x7ff78bd29018]
+	chromedriver!(No symbol) [0x7ff78bd29f03]
+	chromedriver!GetHandleVerifier [0x7ff78c2858f9+329d89]
+	chromedriver!GetHandleVerifier [0x7ff78c27fe46+3242d6]
+	chromedriver!GetHandleVerifier [0x7ff78c2a30b2+347542]
+	chromedriver!GetHandleVerifier [0x7ff78bf8d3d5+31865]
+	chromedriver!GetHandleVerifier [0x7ff78bf9600c+3a49c]
+	chromedriver!GetHandleVerifier [0x7ff78bf79634+1dac4]
+	chromedriver!GetHandleVerifier [0x7ff78bf797e6+1dc76]
+	chromedriver!GetHandleVerifier [0x7ff78bf5e2f7+2787]
+	KERNEL32!BaseThreadInitThunk [0x7ffa7d8b7374+14]
+	ntdll!RtlUserThreadStart [0x7ffa7d9fcc91+21]
+
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 81.8s, Login: 194.8s
+[INFO] Login successful for domain: mac.itserver.biz
+[INFO] Starting feature: Sales Order
+Feature: Sales Order # features/global/domain.feature:3
+
+  @critical
+  Scenario: Sales order page           # features/global/domain.feature:6
+    Given we visit "orders/salesOrder" # features/steps/form_actions.py:36
+[INFO] Completed feature: Sales Order
+DEBUG: context.domain = mac.itserver.biz
+DEBUG: timing_summary = {'mac.itserver.biz': {'Server': 'METRO', 'Page Load': 81.8, 'Login': 194.8, 'Features': {'Sales Order': {'Feature': None, 'Scenario Timings': [{'name': 'Sales order page', 'duration': 2.3, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Order (2.3s)
+[DEBUG] Writing timing summary for mac.itserver.biz to E:\shayan\tests\timing_results\mac.itserver.biz_timing.json
+
+[INFO] Starting feature: Sales Invoice
+Feature: Sales Invoice # features/global/domain2.feature:2
+
+  @critical
+  Scenario: Sales Invoice page           # features/global/domain2.feature:5
+    Given we visit "orders/salesInvoice" # features/steps/form_actions.py:36
+[INFO] Completed feature: Sales Invoice
+DEBUG: context.domain = mac.itserver.biz
+DEBUG: timing_summary = {'mac.itserver.biz': {'Server': 'METRO', 'Page Load': 81.8, 'Login': 194.8, 'Features': {'Sales Order': {'Feature': 2.3, 'Scenario Timings': [{'name': 'Sales order page', 'duration': 2.3, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}, 'Sales Invoice': {'Feature': None, 'Scenario Timings': [{'name': 'Sales Invoice page', 'duration': 5.8, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Invoice (5.8s)
+[DEBUG] Writing timing summary for mac.itserver.biz to E:\shayan\tests\timing_results\mac.itserver.biz_timing.json
+
+[INFO] Closing browser for domain: mac.itserver.biz
+[INFO] Browser closed successfully for domain: mac.itserver.biz
+[INFO] Browser instance cleared for domain: mac.itserver.biz
+[SUMMARY] Timing for mac.itserver.biz:
+{
+  "page_load": {
+    "current": 81.8,
+    "average": 81.8,
+    "values": [
+      81.8
+    ],
+    "is_high": false
+  },
+  "login": {
+    "current": 194.8,
+    "average": 194.8,
+    "values": [
+      194.8
+    ],
+    "is_high": false
+  },
+  "features": {
+    "Sales Order": {
+      "current": 2.3,
+      "average": 2.3,
+      "values": [
+        2.3
+      ],
+      "is_high": false
+    },
+    "Sales Invoice": {
+      "current": 5.8,
+      "average": 5.8,
+      "values": [
+        5.8
+      ],
+      "is_high": false
+    }
+  },
+  "scenario": {
+    "current": 4.05,
+    "average": 4.05,
+    "values": [
+      4.05
+    ],
+    "is_high": false
+  }
+}
+
+[INFO] Server: METRO | Domain: mac.itserver.biz
+==================================================
+[PASS] Sales Order
+[PASS] Sales Invoice
+
+============================================================
+COMPLETED DOMAIN: mac.itserver.biz
+============================================================
+
+============================================================
+STARTING DOMAIN: mac1920.itserver.biz (Server: METRO)
+============================================================
+[INFO] Running 2 feature files for domain 'mac1920.itserver.biz':
+    E:\shayan\tests\features\global\domain.feature
+    E:\shayan\tests\features\global\domain2.feature
+[INFO] Domain = mac1920.itserver.biz
+[INFO] Starting browser and logging in for domain: mac1920.itserver.biz
+[INFO] Creating fresh browser instance for domain: mac1920.itserver.biz
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://mac1920.itserver.biz/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://mac1920.itserver.biz/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[WARN] Page load taking longer than 30s, refreshing... (refresh 1/2)
+[WARN] Page load taking longer than 30s, refreshing... (refresh 2/2)
+[WARN] Refresh function failed, trying fallback method: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff78bf70245+146d5]
+	chromedriver!GetHandleVerifier [0x7ff78bf702b0+14740]
+	chromedriver!(No symbol) [0x7ff78bcdd7cd]
+	chromedriver!(No symbol) [0x7ff78bd36c4e]
+	chromedriver!(No symbol) [0x7ff78bd36f5c]
+	chromedriver!(No symbol) [0x7ff78bd87cc7]
+	chromedriver!(No symbol) [0x7ff78bd84818]
+	chromedriver!(No symbol) [0x7ff78bd29018]
+	chromedriver!(No symbol) [0x7ff78bd29f03]
+	chromedriver!GetHandleVerifier [0x7ff78c2858f9+329d89]
+	chromedriver!GetHandleVerifier [0x7ff78c27fe46+3242d6]
+	chromedriver!GetHandleVerifier [0x7ff78c2a30b2+347542]
+	chromedriver!GetHandleVerifier [0x7ff78bf8d3d5+31865]
+	chromedriver!GetHandleVerifier [0x7ff78bf9600c+3a49c]
+	chromedriver!GetHandleVerifier [0x7ff78bf79634+1dac4]
+	chromedriver!GetHandleVerifier [0x7ff78bf797e6+1dc76]
+	chromedriver!GetHandleVerifier [0x7ff78bf5e2f7+2787]
+	KERNEL32!BaseThreadInitThunk [0x7ffa7d8b7374+14]
+	ntdll!RtlUserThreadStart [0x7ffa7d9fcc91+21]
+
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 76.3s, Login: 206.2s
+[INFO] Login successful for domain: mac1920.itserver.biz
+[INFO] Starting feature: Sales Order
+Feature: Sales Order # features/global/domain.feature:3
+
+  @critical
+  Scenario: Sales order page           # features/global/domain.feature:6
+    Given we visit "orders/salesOrder" # features/steps/form_actions.py:36
+[INFO] Completed feature: Sales Order
+DEBUG: context.domain = mac1920.itserver.biz
+DEBUG: timing_summary = {'mac1920.itserver.biz': {'Server': 'METRO', 'Page Load': 76.3, 'Login': 206.2, 'Features': {'Sales Order': {'Feature': None, 'Scenario Timings': [{'name': 'Sales order page', 'duration': 1.4, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Order (1.4s)
+[DEBUG] Writing timing summary for mac1920.itserver.biz to E:\shayan\tests\timing_results\mac1920.itserver.biz_timing.json
+
+[INFO] Starting feature: Sales Invoice
+Feature: Sales Invoice # features/global/domain2.feature:2
+
+  @critical
+  Scenario: Sales Invoice page           # features/global/domain2.feature:5
+    Given we visit "orders/salesInvoice" # features/steps/form_actions.py:36
+[INFO] Completed feature: Sales Invoice
+DEBUG: context.domain = mac1920.itserver.biz
+DEBUG: timing_summary = {'mac1920.itserver.biz': {'Server': 'METRO', 'Page Load': 76.3, 'Login': 206.2, 'Features': {'Sales Order': {'Feature': 1.4, 'Scenario Timings': [{'name': 'Sales order page', 'duration': 1.4, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}, 'Sales Invoice': {'Feature': None, 'Scenario Timings': [{'name': 'Sales Invoice page', 'duration': 1.4, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Invoice (1.4s)
+[DEBUG] Writing timing summary for mac1920.itserver.biz to E:\shayan\tests\timing_results\mac1920.itserver.biz_timing.json
+
+[INFO] Closing browser for domain: mac1920.itserver.biz
+[INFO] Browser closed successfully for domain: mac1920.itserver.biz
+[INFO] Browser instance cleared for domain: mac1920.itserver.biz
+[SUMMARY] Timing for mac1920.itserver.biz:
+{
+  "page_load": {
+    "current": 76.3,
+    "average": 76.3,
+    "values": [
+      76.3
+    ],
+    "is_high": false
+  },
+  "login": {
+    "current": 206.2,
+    "average": 206.2,
+    "values": [
+      206.2
+    ],
+    "is_high": false
+  },
+  "features": {
+    "Sales Order": {
+      "current": 1.4,
+      "average": 1.4,
+      "values": [
+        1.4
+      ],
+      "is_high": false
+    },
+    "Sales Invoice": {
+      "current": 1.4,
+      "average": 1.4,
+      "values": [
+        1.4
+      ],
+      "is_high": false
+    }
+  },
+  "scenario": {
+    "current": 1.4,
+    "average": 1.4,
+    "values": [
+      1.4
+    ],
+    "is_high": false
+  }
+}
+
+[INFO] Server: METRO | Domain: mac1920.itserver.biz
+==================================================
+[PASS] Sales Order
+[PASS] Sales Invoice
+
+============================================================
+COMPLETED DOMAIN: mac1920.itserver.biz
+============================================================
+
+============================================================
+STARTING DOMAIN: cam.itserver.biz (Server: METRO-CAM)
+============================================================
+[INFO] Running 4 feature files for domain 'cam.itserver.biz':
+    E:\shayan\tests\features\cam.itserver.biz\AccV.feature
+    E:\shayan\tests\features\cam.itserver.biz\GP.feature
+    E:\shayan\tests\features\cam.itserver.biz\PI.feature
+    E:\shayan\tests\features\cam.itserver.biz\SO.feature
+[INFO] Domain = cam.itserver.biz
+[INFO] Starting browser and logging in for domain: cam.itserver.biz
+[INFO] Creating fresh browser instance for domain: cam.itserver.biz
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://cam.itserver.biz/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://cam.itserver.biz/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[WARN] Page load taking longer than 30s, refreshing... (refresh 1/2)
+[WARN] Page load taking longer than 30s, refreshing... (refresh 2/2)
+[WARN] Refresh function failed, trying fallback method: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff78bf70245+146d5]
+	chromedriver!GetHandleVerifier [0x7ff78bf702b0+14740]
+	chromedriver!(No symbol) [0x7ff78bcdd7cd]
+	chromedriver!(No symbol) [0x7ff78bd36c4e]
+	chromedriver!(No symbol) [0x7ff78bd36f5c]
+	chromedriver!(No symbol) [0x7ff78bd87cc7]
+	chromedriver!(No symbol) [0x7ff78bd84818]
+	chromedriver!(No symbol) [0x7ff78bd29018]
+	chromedriver!(No symbol) [0x7ff78bd29f03]
+	chromedriver!GetHandleVerifier [0x7ff78c2858f9+329d89]
+	chromedriver!GetHandleVerifier [0x7ff78c27fe46+3242d6]
+	chromedriver!GetHandleVerifier [0x7ff78c2a30b2+347542]
+	chromedriver!GetHandleVerifier [0x7ff78bf8d3d5+31865]
+	chromedriver!GetHandleVerifier [0x7ff78bf9600c+3a49c]
+	chromedriver!GetHandleVerifier [0x7ff78bf79634+1dac4]
+	chromedriver!GetHandleVerifier [0x7ff78bf797e6+1dc76]
+	chromedriver!GetHandleVerifier [0x7ff78bf5e2f7+2787]
+	KERNEL32!BaseThreadInitThunk [0x7ffa7d8b7374+14]
+	ntdll!RtlUserThreadStart [0x7ffa7d9fcc91+21]
+
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 8.9s, Login: 191.3s
+[INFO] Login successful for domain: cam.itserver.biz
+[INFO] Starting feature: Add Account Voucher
+Feature: Add Account Voucher # features/cam.itserver.biz/AccV.feature:4
+
+  @critical
+  Scenario: Visit Account Voucher Page and click on Edit btn  # features/cam.itserver.biz/AccV.feature:7
+    Given we visit "accounts2"                                # features/steps/form_actions.py:36
+    When we edit the top row                                  # features/steps/cartzlink_form.py:155
+      Assertion Failed:  Edit button could not be clicked or did not open the form
+      Captured stdout:
+       Successfully loaded accounts2
+      
+      [Screenshot Saved] E:\shayan\tests\screenshots\we edit the top row_20260416_205213.png
+
+[INFO] Completed feature: Add Account Voucher
+DEBUG: context.domain = cam.itserver.biz
+DEBUG: timing_summary = {'cam.itserver.biz': {'Server': 'METRO-CAM', 'Page Load': 8.9, 'Login': 191.3, 'Features': {'Add Account Voucher': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Account Voucher Page and click on Edit btn', 'duration': 16.7, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Add Account Voucher (16.7s)
+[DEBUG] Writing timing summary for cam.itserver.biz to E:\shayan\tests\timing_results\cam.itserver.biz_timing.json
+
+[INFO] Starting feature: Gatepass
+Feature: Gatepass # features/cam.itserver.biz/GP.feature:1
+
+  @critical
+  Scenario: Visit Gate pass Page and click on Edit btn  # features/cam.itserver.biz/GP.feature:4
+    Given we visit "orders/deliveryChallanCAM"          # features/steps/form_actions.py:36
+    When we edit the top row                            # features/steps/cartzlink_form.py:155
+      Assertion Failed:  Edit button could not be clicked or did not open the form
+      Captured stdout:
+       Successfully loaded orders/deliveryChallanCAM
+      
+      [Screenshot Saved] E:\shayan\tests\screenshots\we edit the top row_20260416_205230.png
+
+[INFO] Completed feature: Gatepass
+DEBUG: context.domain = cam.itserver.biz
+DEBUG: timing_summary = {'cam.itserver.biz': {'Server': 'METRO-CAM', 'Page Load': 8.9, 'Login': 191.3, 'Features': {'Add Account Voucher': {'Feature': 16.7, 'Scenario Timings': [{'name': 'Visit Account Voucher Page and click on Edit btn', 'duration': 16.7, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}, 'Gatepass': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Gate pass Page and click on Edit btn', 'duration': 16.6, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Gatepass (16.6s)
+[DEBUG] Writing timing summary for cam.itserver.biz to E:\shayan\tests\timing_results\cam.itserver.biz_timing.json
+
+[INFO] Starting feature: Purchase Invoice
+Feature: Purchase Invoice # features/cam.itserver.biz/PI.feature:3
+
+  @critical
+  Scenario: Visit Purchase invoice Page and click on Edit btn  # features/cam.itserver.biz/PI.feature:6
+    Given we visit "orders/purchaseInvoice"                    # features/steps/form_actions.py:36
+    When we edit the top row                                   # features/steps/cartzlink_form.py:155
+      Assertion Failed:  Edit button could not be clicked or did not open the form
+      Captured stdout:
+       Successfully loaded orders/purchaseInvoice
+      
+      [Screenshot Saved] E:\shayan\tests\screenshots\we edit the top row_20260416_205246.png
+
+[INFO] Completed feature: Purchase Invoice
+DEBUG: context.domain = cam.itserver.biz
+DEBUG: timing_summary = {'cam.itserver.biz': {'Server': 'METRO-CAM', 'Page Load': 8.9, 'Login': 191.3, 'Features': {'Add Account Voucher': {'Feature': 16.7, 'Scenario Timings': [{'name': 'Visit Account Voucher Page and click on Edit btn', 'duration': 16.7, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}, 'Gatepass': {'Feature': 16.6, 'Scenario Timings': [{'name': 'Visit Gate pass Page and click on Edit btn', 'duration': 16.6, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}, 'Purchase Invoice': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Purchase invoice Page and click on Edit btn', 'duration': 16.6, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Purchase Invoice (16.6s)
+[DEBUG] Writing timing summary for cam.itserver.biz to E:\shayan\tests\timing_results\cam.itserver.biz_timing.json
+
+[INFO] Starting feature: Production Order FSTUser
+Feature: Production Order FSTUser # features/cam.itserver.biz/SO.feature:4
+
+  @critical
+  Scenario: Visit Production order page and click on Edit btn  # features/cam.itserver.biz/SO.feature:7
+    Given we visit "orders/SalesOrderFSTUser"                  # features/steps/form_actions.py:36
+    When we edit the top row                                   # features/steps/cartzlink_form.py:155
+      Assertion Failed:  Edit button could not be clicked or did not open the form
+      Captured stdout:
+       Successfully loaded orders/SalesOrderFSTUser
+      
+      [Screenshot Saved] E:\shayan\tests\screenshots\we edit the top row_20260416_205303.png
+
+[INFO] Completed feature: Production Order FSTUser
+DEBUG: context.domain = cam.itserver.biz
+DEBUG: timing_summary = {'cam.itserver.biz': {'Server': 'METRO-CAM', 'Page Load': 8.9, 'Login': 191.3, 'Features': {'Add Account Voucher': {'Feature': 16.7, 'Scenario Timings': [{'name': 'Visit Account Voucher Page and click on Edit btn', 'duration': 16.7, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}, 'Gatepass': {'Feature': 16.6, 'Scenario Timings': [{'name': 'Visit Gate pass Page and click on Edit btn', 'duration': 16.6, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}, 'Purchase Invoice': {'Feature': 16.6, 'Scenario Timings': [{'name': 'Visit Purchase invoice Page and click on Edit btn', 'duration': 16.6, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}, 'Production Order FSTUser': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Production order page and click on Edit btn', 'duration': 16.5, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Production Order FSTUser (16.5s)
+[DEBUG] Writing timing summary for cam.itserver.biz to E:\shayan\tests\timing_results\cam.itserver.biz_timing.json
+
+[INFO] Closing browser for domain: cam.itserver.biz
+[INFO] Browser closed successfully for domain: cam.itserver.biz
+[INFO] Browser instance cleared for domain: cam.itserver.biz
+[SUMMARY] Timing for cam.itserver.biz:
+{
+  "page_load": {
+    "current": 8.9,
+    "average": 8.9,
+    "values": [
+      8.9
+    ],
+    "is_high": false
+  },
+  "login": {
+    "current": 191.3,
+    "average": 191.3,
+    "values": [
+      191.3
+    ],
+    "is_high": false
+  },
+  "features": {
+    "Add Account Voucher": {
+      "current": 16.7,
+      "average": 16.7,
+      "values": [
+        16.7
+      ],
+      "is_high": false
+    },
+    "Gatepass": {
+      "current": 16.6,
+      "average": 16.6,
+      "values": [
+        16.6
+      ],
+      "is_high": false
+    },
+    "Purchase Invoice": {
+      "current": 16.6,
+      "average": 16.6,
+      "values": [
+        16.6
+      ],
+      "is_high": false
+    },
+    "Production Order FSTUser": {
+      "current": 16.5,
+      "average": 16.5,
+      "values": [
+        16.5
+      ],
+      "is_high": false
+    }
+  },
+  "scenario": {
+    "current": 16.6,
+    "average": 16.6,
+    "values": [
+      16.6
+    ],
+    "is_high": false
+  }
+}
+
+[INFO] Server: METRO-CAM | Domain: cam.itserver.biz
+==================================================
+[FAIL] Add Account Voucher
+[FAIL] Gatepass
+[FAIL] Purchase Invoice
+[FAIL] Production Order FSTUser
+
+============================================================
+COMPLETED DOMAIN: cam.itserver.biz
+============================================================
+
+============================================================
+STARTING DOMAIN: mhp.itserver.biz (Server: MHP)
+============================================================
+[INFO] Running 2 feature files for domain 'mhp.itserver.biz':
+    E:\shayan\tests\features\mhp.itserver.biz\AccV.feature
+    E:\shayan\tests\features\mhp.itserver.biz\SO.feature
+[INFO] Domain = mhp.itserver.biz
+[INFO] Starting browser and logging in for domain: mhp.itserver.biz
+[INFO] Creating fresh browser instance for domain: mhp.itserver.biz
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://mhp.itserver.biz/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://mhp.itserver.biz/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[WARN] Page load taking longer than 30s, refreshing... (refresh 1/2)
+[WARN] Page load taking longer than 30s, refreshing... (refresh 2/2)
+[WARN] Refresh function failed, trying fallback method: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff78bf70245+146d5]
+	chromedriver!GetHandleVerifier [0x7ff78bf702b0+14740]
+	chromedriver!(No symbol) [0x7ff78bcdd7cd]
+	chromedriver!(No symbol) [0x7ff78bd36c4e]
+	chromedriver!(No symbol) [0x7ff78bd36f5c]
+	chromedriver!(No symbol) [0x7ff78bd87cc7]
+	chromedriver!(No symbol) [0x7ff78bd84818]
+	chromedriver!(No symbol) [0x7ff78bd29018]
+	chromedriver!(No symbol) [0x7ff78bd29f03]
+	chromedriver!GetHandleVerifier [0x7ff78c2858f9+329d89]
+	chromedriver!GetHandleVerifier [0x7ff78c27fe46+3242d6]
+	chromedriver!GetHandleVerifier [0x7ff78c2a30b2+347542]
+	chromedriver!GetHandleVerifier [0x7ff78bf8d3d5+31865]
+	chromedriver!GetHandleVerifier [0x7ff78bf9600c+3a49c]
+	chromedriver!GetHandleVerifier [0x7ff78bf79634+1dac4]
+	chromedriver!GetHandleVerifier [0x7ff78bf797e6+1dc76]
+	chromedriver!GetHandleVerifier [0x7ff78bf5e2f7+2787]
+	KERNEL32!BaseThreadInitThunk [0x7ffa7d8b7374+14]
+	ntdll!RtlUserThreadStart [0x7ffa7d9fcc91+21]
+
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 5.9s, Login: 196.1s
+[INFO] Login successful for domain: mhp.itserver.biz
+[INFO] Starting feature: Add Account Voucher
+Feature: Add Account Voucher # features/mhp.itserver.biz/AccV.feature:4
+
+  @critical
+  Scenario: Visit Account Voucher Page and click on Edit btn  # features/mhp.itserver.biz/AccV.feature:7
+    Given we visit "accounts2"                                # features/steps/form_actions.py:36
+    When we edit the top row                                  # features/steps/cartzlink_form.py:155
+      Assertion Failed:  Edit button could not be clicked or did not open the form
+      Captured stdout:
+       Successfully loaded accounts2
+      
+      [Screenshot Saved] E:\shayan\tests\screenshots\we edit the top row_20260416_205649.png
+
+[INFO] Completed feature: Add Account Voucher
+DEBUG: context.domain = mhp.itserver.biz
+DEBUG: timing_summary = {'mhp.itserver.biz': {'Server': 'MHP', 'Page Load': 5.9, 'Login': 196.1, 'Features': {'Add Account Voucher': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Account Voucher Page and click on Edit btn', 'duration': 16.0, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Add Account Voucher (16.0s)
+[DEBUG] Writing timing summary for mhp.itserver.biz to E:\shayan\tests\timing_results\mhp.itserver.biz_timing.json
+
+[INFO] Starting feature: Sales Order
+Feature: Sales Order # features/mhp.itserver.biz/SO.feature:4
+
+  @critical
+  Scenario: Visit Sales order page     # features/mhp.itserver.biz/SO.feature:7
+    Given we visit "orders/salesOrder" # features/steps/form_actions.py:36
+    When we edit the top row           # features/steps/cartzlink_form.py:155
+      Assertion Failed:  Edit button could not be clicked or did not open the form
+      Captured stdout:
+       Successfully loaded orders/salesOrder
+      
+      [Screenshot Saved] E:\shayan\tests\screenshots\we edit the top row_20260416_205705.png
+
+[INFO] Completed feature: Sales Order
+DEBUG: context.domain = mhp.itserver.biz
+DEBUG: timing_summary = {'mhp.itserver.biz': {'Server': 'MHP', 'Page Load': 5.9, 'Login': 196.1, 'Features': {'Add Account Voucher': {'Feature': 16.0, 'Scenario Timings': [{'name': 'Visit Account Voucher Page and click on Edit btn', 'duration': 16.0, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}, 'Sales Order': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Sales order page', 'duration': 16.0, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Order (16.0s)
+[DEBUG] Writing timing summary for mhp.itserver.biz to E:\shayan\tests\timing_results\mhp.itserver.biz_timing.json
+
+[INFO] Closing browser for domain: mhp.itserver.biz
+[INFO] Browser closed successfully for domain: mhp.itserver.biz
+[INFO] Browser instance cleared for domain: mhp.itserver.biz
+[SUMMARY] Timing for mhp.itserver.biz:
+{
+  "page_load": {
+    "current": 5.9,
+    "average": 5.9,
+    "values": [
+      5.9
+    ],
+    "is_high": false
+  },
+  "login": {
+    "current": 196.1,
+    "average": 196.1,
+    "values": [
+      196.1
+    ],
+    "is_high": false
+  },
+  "features": {
+    "Add Account Voucher": {
+      "current": 16.0,
+      "average": 16.0,
+      "values": [
+        16.0
+      ],
+      "is_high": false
+    },
+    "Sales Order": {
+      "current": 16.0,
+      "average": 16.0,
+      "values": [
+        16.0
+      ],
+      "is_high": false
+    }
+  },
+  "scenario": {
+    "current": 16.0,
+    "average": 16.0,
+    "values": [
+      16.0
+    ],
+    "is_high": false
+  }
+}
+
+[INFO] Server: MHP | Domain: mhp.itserver.biz
+==================================================
+[FAIL] Add Account Voucher
+[FAIL] Sales Order
+
+============================================================
+COMPLETED DOMAIN: mhp.itserver.biz
+============================================================
+
+============================================================
+STARTING DOMAIN: mhptax.itserver.biz (Server: MHP)
+============================================================
+[INFO] Running 2 feature files for domain 'mhptax.itserver.biz':
+    E:\shayan\tests\features\global\domain.feature
+    E:\shayan\tests\features\global\domain2.feature
+[INFO] Domain = mhptax.itserver.biz
+[INFO] Starting browser and logging in for domain: mhptax.itserver.biz
+[INFO] Creating fresh browser instance for domain: mhptax.itserver.biz
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://mhptax.itserver.biz/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://mhptax.itserver.biz/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[WARN] Page load taking longer than 30s, refreshing... (refresh 1/2)
+[WARN] Page load taking longer than 30s, refreshing... (refresh 2/2)
+[WARN] Refresh function failed, trying fallback method: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff78bf70245+146d5]
+	chromedriver!GetHandleVerifier [0x7ff78bf702b0+14740]
+	chromedriver!(No symbol) [0x7ff78bcdd7cd]
+	chromedriver!(No symbol) [0x7ff78bd36c4e]
+	chromedriver!(No symbol) [0x7ff78bd36f5c]
+	chromedriver!(No symbol) [0x7ff78bd87cc7]
+	chromedriver!(No symbol) [0x7ff78bd84818]
+	chromedriver!(No symbol) [0x7ff78bd29018]
+	chromedriver!(No symbol) [0x7ff78bd29f03]
+	chromedriver!GetHandleVerifier [0x7ff78c2858f9+329d89]
+	chromedriver!GetHandleVerifier [0x7ff78c27fe46+3242d6]
+	chromedriver!GetHandleVerifier [0x7ff78c2a30b2+347542]
+	chromedriver!GetHandleVerifier [0x7ff78bf8d3d5+31865]
+	chromedriver!GetHandleVerifier [0x7ff78bf9600c+3a49c]
+	chromedriver!GetHandleVerifier [0x7ff78bf79634+1dac4]
+	chromedriver!GetHandleVerifier [0x7ff78bf797e6+1dc76]
+	chromedriver!GetHandleVerifier [0x7ff78bf5e2f7+2787]
+	KERNEL32!BaseThreadInitThunk [0x7ffa7d8b7374+14]
+	ntdll!RtlUserThreadStart [0x7ffa7d9fcc91+21]
+
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 3.6s, Login: 193.4s
+[INFO] Login successful for domain: mhptax.itserver.biz
+[INFO] Starting feature: Sales Order
+Feature: Sales Order # features/global/domain.feature:3
+
+  @critical
+  Scenario: Sales order page           # features/global/domain.feature:6
+    Given we visit "orders/salesOrder" # features/steps/form_actions.py:36
+[INFO] Completed feature: Sales Order
+DEBUG: context.domain = mhptax.itserver.biz
+DEBUG: timing_summary = {'mhptax.itserver.biz': {'Server': 'MHP', 'Page Load': 3.6, 'Login': 193.4, 'Features': {'Sales Order': {'Feature': None, 'Scenario Timings': [{'name': 'Sales order page', 'duration': 0.1, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Order (0.1s)
+[DEBUG] Writing timing summary for mhptax.itserver.biz to E:\shayan\tests\timing_results\mhptax.itserver.biz_timing.json
+
+[INFO] Starting feature: Sales Invoice
+Feature: Sales Invoice # features/global/domain2.feature:2
+
+  @critical
+  Scenario: Sales Invoice page           # features/global/domain2.feature:5
+    Given we visit "orders/salesInvoice" # features/steps/form_actions.py:36
+[INFO] Completed feature: Sales Invoice
+DEBUG: context.domain = mhptax.itserver.biz
+DEBUG: timing_summary = {'mhptax.itserver.biz': {'Server': 'MHP', 'Page Load': 3.6, 'Login': 193.4, 'Features': {'Sales Order': {'Feature': 0.1, 'Scenario Timings': [{'name': 'Sales order page', 'duration': 0.1, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}, 'Sales Invoice': {'Feature': None, 'Scenario Timings': [{'name': 'Sales Invoice page', 'duration': 0.2, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Invoice (0.2s)
+[DEBUG] Writing timing summary for mhptax.itserver.biz to E:\shayan\tests\timing_results\mhptax.itserver.biz_timing.json
+
+[INFO] Closing browser for domain: mhptax.itserver.biz
+[INFO] Browser closed successfully for domain: mhptax.itserver.biz
+[INFO] Browser instance cleared for domain: mhptax.itserver.biz
+[SUMMARY] Timing for mhptax.itserver.biz:
+{
+  "page_load": {
+    "current": 3.6,
+    "average": 3.6,
+    "values": [
+      3.6
+    ],
+    "is_high": false
+  },
+  "login": {
+    "current": 193.4,
+    "average": 193.4,
+    "values": [
+      193.4
+    ],
+    "is_high": false
+  },
+  "features": {
+    "Sales Order": {
+      "current": 0.1,
+      "average": 0.1,
+      "values": [
+        0.1
+      ],
+      "is_high": false
+    },
+    "Sales Invoice": {
+      "current": 0.2,
+      "average": 0.2,
+      "values": [
+        0.2
+      ],
+      "is_high": false
+    }
+  },
+  "scenario": {
+    "current": 0.15000000000000002,
+    "average": 0.15000000000000002,
+    "values": [
+      0.15000000000000002
+    ],
+    "is_high": false
+  }
+}
+
+[INFO] Server: MHP | Domain: mhptax.itserver.biz
+==================================================
+[PASS] Sales Order
+[PASS] Sales Invoice
+
+============================================================
+COMPLETED DOMAIN: mhptax.itserver.biz
+============================================================
+
+============================================================
+STARTING DOMAIN: nb.newagedistributions.com (Server: NEWAGE)
+============================================================
+[INFO] Running 1 feature files for domain 'nb.newagedistributions.com':
+    E:\shayan\tests\features\nb.newagedistributions.com\SO.feature
+[INFO] Domain = nb.newagedistributions.com
+[INFO] Starting browser and logging in for domain: nb.newagedistributions.com
+[INFO] Creating fresh browser instance for domain: nb.newagedistributions.com
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://nb.newagedistributions.com/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://nb.newagedistributions.com/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[WARN] Page load taking longer than 30s, refreshing... (refresh 1/2)
+[WARN] Page load taking longer than 30s, refreshing... (refresh 2/2)
+[WARN] Refresh function failed, trying fallback method: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff78bf70245+146d5]
+	chromedriver!GetHandleVerifier [0x7ff78bf702b0+14740]
+	chromedriver!(No symbol) [0x7ff78bcdd7cd]
+	chromedriver!(No symbol) [0x7ff78bd36c4e]
+	chromedriver!(No symbol) [0x7ff78bd36f5c]
+	chromedriver!(No symbol) [0x7ff78bd87cc7]
+	chromedriver!(No symbol) [0x7ff78bd84818]
+	chromedriver!(No symbol) [0x7ff78bd29018]
+	chromedriver!(No symbol) [0x7ff78bd29f03]
+	chromedriver!GetHandleVerifier [0x7ff78c2858f9+329d89]
+	chromedriver!GetHandleVerifier [0x7ff78c27fe46+3242d6]
+	chromedriver!GetHandleVerifier [0x7ff78c2a30b2+347542]
+	chromedriver!GetHandleVerifier [0x7ff78bf8d3d5+31865]
+	chromedriver!GetHandleVerifier [0x7ff78bf9600c+3a49c]
+	chromedriver!GetHandleVerifier [0x7ff78bf79634+1dac4]
+	chromedriver!GetHandleVerifier [0x7ff78bf797e6+1dc76]
+	chromedriver!GetHandleVerifier [0x7ff78bf5e2f7+2787]
+	KERNEL32!BaseThreadInitThunk [0x7ffa7d8b7374+14]
+	ntdll!RtlUserThreadStart [0x7ffa7d9fcc91+21]
+
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 8.5s, Login: 192.9s
+[INFO] Login successful for domain: nb.newagedistributions.com
+[INFO] Starting feature: Sales Order
+Feature: Sales Order # features/nb.newagedistributions.com/SO.feature:4
+
+  @critical
+  Scenario: Visit Sales order page     # features/nb.newagedistributions.com/SO.feature:7
+    Given we visit "orders/salesOrder" # features/steps/form_actions.py:36
+    When we edit the top row           # features/steps/cartzlink_form.py:155
+      Assertion Failed:  Edit button could not be clicked or did not open the form
+      Captured stdout:
+       Successfully loaded orders/salesOrder
+      
+      [Screenshot Saved] E:\shayan\tests\screenshots\we edit the top row_20260416_210422.png
+
+[INFO] Completed feature: Sales Order
+DEBUG: context.domain = nb.newagedistributions.com
+DEBUG: timing_summary = {'nb.newagedistributions.com': {'Server': 'NEWAGE', 'Page Load': 8.5, 'Login': 192.9, 'Features': {'Sales Order': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Sales order page', 'duration': 16.4, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Order (16.4s)
+[DEBUG] Writing timing summary for nb.newagedistributions.com to E:\shayan\tests\timing_results\nb.newagedistributions.com_timing.json
+
+[INFO] Closing browser for domain: nb.newagedistributions.com
+[INFO] Browser closed successfully for domain: nb.newagedistributions.com
+[INFO] Browser instance cleared for domain: nb.newagedistributions.com
+[SUMMARY] Timing for nb.newagedistributions.com:
+{
+  "page_load": {
+    "current": 8.5,
+    "average": 8.5,
+    "values": [
+      8.5
+    ],
+    "is_high": false
+  },
+  "login": {
+    "current": 192.9,
+    "average": 192.9,
+    "values": [
+      192.9
+    ],
+    "is_high": false
+  },
+  "features": {
+    "Sales Order": {
+      "current": 16.4,
+      "average": 16.4,
+      "values": [
+        16.4
+      ],
+      "is_high": false
+    }
+  },
+  "scenario": {
+    "current": 16.4,
+    "average": 16.4,
+    "values": [
+      16.4
+    ],
+    "is_high": false
+  }
+}
+
+[INFO] Server: NEWAGE | Domain: nb.newagedistributions.com
+==================================================
+[FAIL] Sales Order
+
+============================================================
+COMPLETED DOMAIN: nb.newagedistributions.com
+============================================================
+
+============================================================
+STARTING DOMAIN: novelaromas.itserver.biz (Server: NOVEAL-AROMAS)
+============================================================
+[INFO] Running 2 feature files for domain 'novelaromas.itserver.biz':
+    E:\shayan\tests\features\global\domain.feature
+    E:\shayan\tests\features\global\domain2.feature
+[INFO] Domain = novelaromas.itserver.biz
+[INFO] Starting browser and logging in for domain: novelaromas.itserver.biz
+[INFO] Creating fresh browser instance for domain: novelaromas.itserver.biz
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://novelaromas.itserver.biz/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://novelaromas.itserver.biz/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[WARN] Page load taking longer than 30s, refreshing... (refresh 1/2)
+[WARN] Page load taking longer than 30s, refreshing... (refresh 2/2)
+[WARN] Refresh function failed, trying fallback method: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff78bf70245+146d5]
+	chromedriver!GetHandleVerifier [0x7ff78bf702b0+14740]
+	chromedriver!(No symbol) [0x7ff78bcdd7cd]
+	chromedriver!(No symbol) [0x7ff78bd36c4e]
+	chromedriver!(No symbol) [0x7ff78bd36f5c]
+	chromedriver!(No symbol) [0x7ff78bd87cc7]
+	chromedriver!(No symbol) [0x7ff78bd84818]
+	chromedriver!(No symbol) [0x7ff78bd29018]
+	chromedriver!(No symbol) [0x7ff78bd29f03]
+	chromedriver!GetHandleVerifier [0x7ff78c2858f9+329d89]
+	chromedriver!GetHandleVerifier [0x7ff78c27fe46+3242d6]
+	chromedriver!GetHandleVerifier [0x7ff78c2a30b2+347542]
+	chromedriver!GetHandleVerifier [0x7ff78bf8d3d5+31865]
+	chromedriver!GetHandleVerifier [0x7ff78bf9600c+3a49c]
+	chromedriver!GetHandleVerifier [0x7ff78bf79634+1dac4]
+	chromedriver!GetHandleVerifier [0x7ff78bf797e6+1dc76]
+	chromedriver!GetHandleVerifier [0x7ff78bf5e2f7+2787]
+	KERNEL32!BaseThreadInitThunk [0x7ffa7d8b7374+14]
+	ntdll!RtlUserThreadStart [0x7ffa7d9fcc91+21]
+
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 3.6s, Login: 193.2s
+[INFO] Login successful for domain: novelaromas.itserver.biz
+[INFO] Starting feature: Sales Order
+Feature: Sales Order # features/global/domain.feature:3
+
+  @critical
+  Scenario: Sales order page           # features/global/domain.feature:6
+    Given we visit "orders/salesOrder" # features/steps/form_actions.py:36
+[INFO] Completed feature: Sales Order
+DEBUG: context.domain = novelaromas.itserver.biz
+DEBUG: timing_summary = {'novelaromas.itserver.biz': {'Server': 'NOVEAL-AROMAS', 'Page Load': 3.6, 'Login': 193.2, 'Features': {'Sales Order': {'Feature': None, 'Scenario Timings': [{'name': 'Sales order page', 'duration': 0.3, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Order (0.3s)
+[DEBUG] Writing timing summary for novelaromas.itserver.biz to E:\shayan\tests\timing_results\novelaromas.itserver.biz_timing.json
+
+[INFO] Starting feature: Sales Invoice
+Feature: Sales Invoice # features/global/domain2.feature:2
+
+  @critical
+  Scenario: Sales Invoice page           # features/global/domain2.feature:5
+    Given we visit "orders/salesInvoice" # features/steps/form_actions.py:36
+[INFO] Completed feature: Sales Invoice
+DEBUG: context.domain = novelaromas.itserver.biz
+DEBUG: timing_summary = {'novelaromas.itserver.biz': {'Server': 'NOVEAL-AROMAS', 'Page Load': 3.6, 'Login': 193.2, 'Features': {'Sales Order': {'Feature': 0.3, 'Scenario Timings': [{'name': 'Sales order page', 'duration': 0.3, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}, 'Sales Invoice': {'Feature': None, 'Scenario Timings': [{'name': 'Sales Invoice page', 'duration': 0.2, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Invoice (0.2s)
+[DEBUG] Writing timing summary for novelaromas.itserver.biz to E:\shayan\tests\timing_results\novelaromas.itserver.biz_timing.json
+
+[INFO] Closing browser for domain: novelaromas.itserver.biz
+[INFO] Browser closed successfully for domain: novelaromas.itserver.biz
+[INFO] Browser instance cleared for domain: novelaromas.itserver.biz
+[SUMMARY] Timing for novelaromas.itserver.biz:
+{
+  "page_load": {
+    "current": 3.6,
+    "average": 3.6,
+    "values": [
+      3.6
+    ],
+    "is_high": false
+  },
+  "login": {
+    "current": 193.2,
+    "average": 193.2,
+    "values": [
+      193.2
+    ],
+    "is_high": false
+  },
+  "features": {
+    "Sales Order": {
+      "current": 0.3,
+      "average": 0.3,
+      "values": [
+        0.3
+      ],
+      "is_high": false
+    },
+    "Sales Invoice": {
+      "current": 0.2,
+      "average": 0.2,
+      "values": [
+        0.2
+      ],
+      "is_high": false
+    }
+  },
+  "scenario": {
+    "current": 0.25,
+    "average": 0.25,
+    "values": [
+      0.25
+    ],
+    "is_high": false
+  }
+}
+
+[INFO] Server: NOVEAL-AROMAS | Domain: novelaromas.itserver.biz
+==================================================
+[PASS] Sales Order
+[PASS] Sales Invoice
+
+============================================================
+COMPLETED DOMAIN: novelaromas.itserver.biz
+============================================================
+
+============================================================
+STARTING DOMAIN: demo.cartzlink.com (Server: S12)
+============================================================
+[INFO] Running 2 feature files for domain 'demo.cartzlink.com':
+    E:\shayan\tests\features\global\domain.feature
+    E:\shayan\tests\features\global\domain2.feature
+[INFO] Domain = demo.cartzlink.com
+[INFO] Starting browser and logging in for domain: demo.cartzlink.com
+[INFO] Creating fresh browser instance for domain: demo.cartzlink.com
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://demo.cartzlink.com/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://demo.cartzlink.com/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[WARN] Page load taking longer than 30s, refreshing... (refresh 1/2)
+[WARN] Page load taking longer than 30s, refreshing... (refresh 2/2)
+[WARN] Refresh function failed, trying fallback method: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff78bf70245+146d5]
+	chromedriver!GetHandleVerifier [0x7ff78bf702b0+14740]
+	chromedriver!(No symbol) [0x7ff78bcdd7cd]
+	chromedriver!(No symbol) [0x7ff78bd36c4e]
+	chromedriver!(No symbol) [0x7ff78bd36f5c]
+	chromedriver!(No symbol) [0x7ff78bd87cc7]
+	chromedriver!(No symbol) [0x7ff78bd84818]
+	chromedriver!(No symbol) [0x7ff78bd29018]
+	chromedriver!(No symbol) [0x7ff78bd29f03]
+	chromedriver!GetHandleVerifier [0x7ff78c2858f9+329d89]
+	chromedriver!GetHandleVerifier [0x7ff78c27fe46+3242d6]
+	chromedriver!GetHandleVerifier [0x7ff78c2a30b2+347542]
+	chromedriver!GetHandleVerifier [0x7ff78bf8d3d5+31865]
+	chromedriver!GetHandleVerifier [0x7ff78bf9600c+3a49c]
+	chromedriver!GetHandleVerifier [0x7ff78bf79634+1dac4]
+	chromedriver!GetHandleVerifier [0x7ff78bf797e6+1dc76]
+	chromedriver!GetHandleVerifier [0x7ff78bf5e2f7+2787]
+	KERNEL32!BaseThreadInitThunk [0x7ffa7d8b7374+14]
+	ntdll!RtlUserThreadStart [0x7ffa7d9fcc91+21]
+
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 26.5s, Login: 212.4s
+[INFO] Login successful for domain: demo.cartzlink.com
+[INFO] Starting feature: Sales Order
+Feature: Sales Order # features/global/domain.feature:3
+
+  @critical
+  Scenario: Sales order page           # features/global/domain.feature:6
+    Given we visit "orders/salesOrder" # features/steps/form_actions.py:36
+[INFO] Completed feature: Sales Order
+DEBUG: context.domain = demo.cartzlink.com
+DEBUG: timing_summary = {'demo.cartzlink.com': {'Server': 'S12', 'Page Load': 26.5, 'Login': 212.4, 'Features': {'Sales Order': {'Feature': None, 'Scenario Timings': [{'name': 'Sales order page', 'duration': 1.3, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Order (1.3s)
+[DEBUG] Writing timing summary for demo.cartzlink.com to E:\shayan\tests\timing_results\demo.cartzlink.com_timing.json
+
+[INFO] Starting feature: Sales Invoice
+Feature: Sales Invoice # features/global/domain2.feature:2
+
+  @critical
+  Scenario: Sales Invoice page           # features/global/domain2.feature:5
+    Given we visit "orders/salesInvoice" # features/steps/form_actions.py:36
+[INFO] Completed feature: Sales Invoice
+DEBUG: context.domain = demo.cartzlink.com
+DEBUG: timing_summary = {'demo.cartzlink.com': {'Server': 'S12', 'Page Load': 26.5, 'Login': 212.4, 'Features': {'Sales Order': {'Feature': 1.3, 'Scenario Timings': [{'name': 'Sales order page', 'duration': 1.3, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}, 'Sales Invoice': {'Feature': None, 'Scenario Timings': [{'name': 'Sales Invoice page', 'duration': 1.6, 'status': 'passed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Invoice (1.6s)
+[DEBUG] Writing timing summary for demo.cartzlink.com to E:\shayan\tests\timing_results\demo.cartzlink.com_timing.json
+
+[INFO] Closing browser for domain: demo.cartzlink.com
+[INFO] Browser closed successfully for domain: demo.cartzlink.com
+[INFO] Browser instance cleared for domain: demo.cartzlink.com
+[SUMMARY] Timing for demo.cartzlink.com:
+{
+  "page_load": {
+    "current": 26.5,
+    "average": 26.5,
+    "values": [
+      26.5
+    ],
+    "is_high": false
+  },
+  "login": {
+    "current": 212.4,
+    "average": 212.4,
+    "values": [
+      212.4
+    ],
+    "is_high": false
+  },
+  "features": {
+    "Sales Order": {
+      "current": 1.3,
+      "average": 1.3,
+      "values": [
+        1.3
+      ],
+      "is_high": false
+    },
+    "Sales Invoice": {
+      "current": 1.6,
+      "average": 1.6,
+      "values": [
+        1.6
+      ],
+      "is_high": false
+    }
+  },
+  "scenario": {
+    "current": 1.4500000000000002,
+    "average": 1.4500000000000002,
+    "values": [
+      1.4500000000000002
+    ],
+    "is_high": false
+  }
+}
+
+[INFO] Server: S12 | Domain: demo.cartzlink.com
+==================================================
+[PASS] Sales Order
+[PASS] Sales Invoice
+
+============================================================
+COMPLETED DOMAIN: demo.cartzlink.com
+============================================================
+
+============================================================
+STARTING DOMAIN: aonetrade.itserver.biz (Server: S12)
+============================================================
+[INFO] Running 2 feature files for domain 'aonetrade.itserver.biz':
+    E:\shayan\tests\features\global\domain.feature
+    E:\shayan\tests\features\global\domain2.feature
+[INFO] Domain = aonetrade.itserver.biz
+[INFO] Starting browser and logging in for domain: aonetrade.itserver.biz
+[INFO] Creating fresh browser instance for domain: aonetrade.itserver.biz
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://aonetrade.itserver.biz/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://aonetrade.itserver.biz/admin/?r=user/user/login&_lang=en
+[FAIL] Login Failed: Login page not found.
+[FAIL] Login failed for domain aonetrade.itserver.biz. Aborting all features.
+Error found 
+Finished at Thu 04/16/2026 21:13:11.76 
+========================================= 

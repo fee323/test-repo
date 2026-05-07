@@ -1,0 +1,62 @@
+========================================= 
+Behave Run Started at Fri 09/19/2025 18:19:08.10 
+========================================= 
+ABORTED: HOOK-ERROR in before_all: KeyboardInterrupt
+
+============================================================
+STARTING DOMAIN: mt2.itserver.biz (Server: metro crm)
+============================================================
+[INFO] Running 2 feature files for domain 'mt2.itserver.biz':
+    C:\tests\features\mt2.itserver.biz\AccV.feature
+    C:\tests\features\mt2.itserver.biz\SO.feature
+[INFO] Domain = mt2.itserver.biz
+[INFO] Starting browser and logging in for domain: mt2.itserver.biz
+[INFO] Creating fresh browser instance for domain: mt2.itserver.biz
+[INFO] Attempt 1/5: Creating Chrome driver...
+[INFO] Applying performance optimizations for problematic domain: mt2.itserver.biz
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/5: Opening https://mt2.itserver.biz/admin/?r=user/user/login&_lang=en
+[WARN] Error on attempt 1: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=140.0.7339.128)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff745ee30f5+79493]
+	GetHandleVerifier [0x0x7ff745ee3150+79584]
+	(No symbol) [0x0x7ff745c601ba]
+	(No symbol) [0x0x7ff745c38271]
+	(No symbol) [0x0x7ff745ce7d2e]
+	(No symbol) [0x0x7ff745d084c2]
+	(No symbol) [0x0x7ff745ce04e3]
+	(No symbol) [0x0x7ff745ca8e92]
+	(No symbol) [0x0x7ff745ca9c63]
+	GetHandleVerifier [0x0x7ff7461a0dbd+2954061]
+	GetHandleVerifier [0x0x7ff74619b02a+2930106]
+	GetHandleVerifier [0x0x7ff7461bb357+3061991]
+	GetHandleVerifier [0x0x7ff745efd60e+187294]
+	GetHandleVerifier [0x0x7ff745f0557f+219919]
+	GetHandleVerifier [0x0x7ff745eec294+116772]
+	GetHandleVerifier [0x0x7ff745eec449+117209]
+	GetHandleVerifier [0x0x7ff745ed2618+11176]
+	BaseThreadInitThunk [0x0x7ffefbbe7374+20]
+	RtlUserThreadStart [0x0x7ffefdadcc91+33]
+
+[INFO] Waiting 10 seconds before retry...
+
+ABORTED: By user.
+
+[INFO] Server: metro crm | Domain: mt2.itserver.biz
+==================================================
+[FAIL] Add Account Voucher
+[FAIL] Sales invoice MT
+
+============================================================
+COMPLETED DOMAIN: mt2.itserver.biz
+============================================================
+Traceback (most recent call last):
+  File "C:\tests\run_behave.py", line 615, in <module>
+    main()
+  File "C:\tests\run_behave.py", line 609, in main
+    time.sleep(2)
+KeyboardInterrupt
+^CFinished at Fri 09/19/2025 18:19:37.02 
+========================================= 

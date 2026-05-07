@@ -1,1 +1,1 @@
-{"fst.itserver.biz": {"Server": "FST", "Page Load": 15.3, "Login": 27.2, "Features": {"Sales Order": {"Feature": 112.3, "Scenario Timings": [{"name": "Visit Sales order page and click on Edit btn", "duration": 112.3, "status": "passed", "failed_steps": []}], "Failed Steps": []}}}}
+{"fst.itserver.biz": {"Server": "FST", "Page Load": 3.7, "Login": 21.4, "Features": {"Sales Order": {"Feature": 23.8, "Scenario Timings": [{"name": "Visit Sales order page and click on Edit btn", "duration": 23.8, "status": "passed", "failed_steps": []}], "Failed Steps": []}}}}

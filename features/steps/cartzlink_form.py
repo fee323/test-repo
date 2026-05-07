@@ -173,7 +173,7 @@ def step_impl(context):
 
     except (IndexError, NoSuchElementException):
         assert False, " Edit button not found in the grid"
-    except (TimeoutException, ElementClickInterceptedException):
+    except (TimeoutException, ElementClickInterceptedException, StaleElementReferenceException):
         assert False, " Edit button could not be clicked or did not open the form"
 
 #@when('we edit the top row')

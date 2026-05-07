@@ -1,0 +1,180 @@
+========================================= 
+Behave Run Started at Fri 02/20/2026 11:20:36.57 
+========================================= 
+
+============================================================
+STARTING DOMAIN: aone.cartzlink.com (Server: AONE-CARTZLINK)
+============================================================
+[INFO] Running 3 feature files for domain 'aone.cartzlink.com':
+    E:\shayan\tests\features\aone.cartzlink.com\AccV.feature
+    E:\shayan\tests\features\aone.cartzlink.com\SI.feature
+    E:\shayan\tests\features\aone.cartzlink.com\SO.feature
+[INFO] Domain = aone.cartzlink.com
+[INFO] Starting browser and logging in for domain: aone.cartzlink.com
+[INFO] Creating fresh browser instance for domain: aone.cartzlink.com
+[INFO] Attempt 1/3: Creating Chrome driver...
+[PASS] Chrome driver created successfully on attempt 1
+[INFO] Attempt 1/3: Opening https://aone.cartzlink.com/admin/?r=user/user/login&_lang=en
+[PASS] Page loaded successfully on attempt 1
+[PASS] Opened URL: https://aone.cartzlink.com/admin/?r=user/user/login&_lang=en
+[INFO] Testing refresh function for dashboard elements...
+[WARN] Page load taking longer than 30s, refreshing... (refresh 1/2)
+[WARN] Page load taking longer than 30s, refreshing... (refresh 2/2)
+[WARN] Refresh function failed, trying fallback method: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff6af064435
+	0x7ff6af064490
+	0x7ff6aedfd49d
+	0x7ff6aee582fe
+	0x7ff6aee5860c
+	0x7ff6aeea8b67
+	0x7ff6aeea5728
+	0x7ff6aee48e38
+	0x7ff6aee49d23
+	0x7ff6af333b30
+	0x7ff6af32e3b8
+	0x7ff6af34e72a
+	0x7ff6af0807e5
+	0x7ff6af08978c
+	0x7ff6af06d794
+	0x7ff6af06d946
+	0x7ff6af053457
+	0x7ffcf0467374
+	0x7ffcf247cc91
+
+[PASS] Login successful - dashboard loaded with fallback method
+[INFO] Login completed. Page Load: 1.0s, Login: 192.5s
+[INFO] Login successful for domain: aone.cartzlink.com
+[INFO] Starting feature: Add Account Voucher
+Feature: Add Account Voucher # features/aone.cartzlink.com/AccV.feature:4
+
+  @critical
+  Scenario: Visit Account Voucher Page and click on Edit btn  # features/aone.cartzlink.com/AccV.feature:7
+    Given we visit "accounts2"                                # features/steps/form_actions.py:36
+    When we edit the top row                                  # features/steps/cartzlink_form.py:155
+      Assertion Failed:  Edit button could not be clicked or did not open the form
+      Captured stdout:
+       Successfully loaded accounts2
+      
+      [Screenshot Saved] E:\shayan\tests\screenshots\we edit the top row_20260220_112409.png
+
+[INFO] Completed feature: Add Account Voucher
+DEBUG: context.domain = aone.cartzlink.com
+DEBUG: timing_summary = {'aone.cartzlink.com': {'Server': 'AONE-CARTZLINK', 'Page Load': 1.0, 'Login': 192.5, 'Features': {'Add Account Voucher': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Account Voucher Page and click on Edit btn', 'duration': 15.8, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Add Account Voucher (15.8s)
+[DEBUG] Writing timing summary for aone.cartzlink.com to E:\shayan\tests\timing_results\aone.cartzlink.com_timing.json
+
+[INFO] Starting feature: Sales Invoice
+Feature: Sales Invoice # features/aone.cartzlink.com/SI.feature:3
+
+  @critical
+  Scenario: Visit Sales Order Page and click on Edit btn  # features/aone.cartzlink.com/SI.feature:6
+    Given we visit "orders/salesInvoice"                  # features/steps/form_actions.py:36
+    When we edit the top row                              # features/steps/cartzlink_form.py:155
+      Assertion Failed:  Edit button could not be clicked or did not open the form
+      Captured stdout:
+       Successfully loaded orders/salesInvoice
+      
+      [Screenshot Saved] E:\shayan\tests\screenshots\we edit the top row_20260220_112425.png
+
+[INFO] Completed feature: Sales Invoice
+DEBUG: context.domain = aone.cartzlink.com
+DEBUG: timing_summary = {'aone.cartzlink.com': {'Server': 'AONE-CARTZLINK', 'Page Load': 1.0, 'Login': 192.5, 'Features': {'Add Account Voucher': {'Feature': 15.8, 'Scenario Timings': [{'name': 'Visit Account Voucher Page and click on Edit btn', 'duration': 15.8, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}, 'Sales Invoice': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Sales Order Page and click on Edit btn', 'duration': 15.8, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Invoice (15.8s)
+[DEBUG] Writing timing summary for aone.cartzlink.com to E:\shayan\tests\timing_results\aone.cartzlink.com_timing.json
+
+[INFO] Starting feature: Sales Order
+Feature: Sales Order # features/aone.cartzlink.com/SO.feature:4
+
+  @critical
+  Scenario: Visit Sales Order Page and click on Edit btn  # features/aone.cartzlink.com/SO.feature:7
+    Given we visit "orders/salesOrder"                    # features/steps/form_actions.py:36
+    When we edit the top row                              # features/steps/cartzlink_form.py:155
+      Assertion Failed:  Edit button could not be clicked or did not open the form
+      Captured stdout:
+       Successfully loaded orders/salesOrder
+      
+      [Screenshot Saved] E:\shayan\tests\screenshots\we edit the top row_20260220_112441.png
+
+[INFO] Completed feature: Sales Order
+DEBUG: context.domain = aone.cartzlink.com
+DEBUG: timing_summary = {'aone.cartzlink.com': {'Server': 'AONE-CARTZLINK', 'Page Load': 1.0, 'Login': 192.5, 'Features': {'Add Account Voucher': {'Feature': 15.8, 'Scenario Timings': [{'name': 'Visit Account Voucher Page and click on Edit btn', 'duration': 15.8, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}, 'Sales Invoice': {'Feature': 15.8, 'Scenario Timings': [{'name': 'Visit Sales Order Page and click on Edit btn', 'duration': 15.8, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}, 'Sales Order': {'Feature': None, 'Scenario Timings': [{'name': 'Visit Sales Order Page and click on Edit btn', 'duration': 15.8, 'status': 'failed', 'failed_steps': []}], 'Failed Steps': []}}}}
+PASS Feature: Sales Order (15.8s)
+[DEBUG] Writing timing summary for aone.cartzlink.com to E:\shayan\tests\timing_results\aone.cartzlink.com_timing.json
+
+[INFO] Closing browser for domain: aone.cartzlink.com
+[INFO] Browser closed successfully for domain: aone.cartzlink.com
+[INFO] Browser instance cleared for domain: aone.cartzlink.com
+[SUMMARY] Timing for aone.cartzlink.com:
+{
+  "page_load": {
+    "current": 1.0,
+    "average": 1.0,
+    "values": [
+      1.0,
+      1.0
+    ],
+    "is_high": false
+  },
+  "login": {
+    "current": 192.5,
+    "average": 105.3,
+    "values": [
+      192.5,
+      18.1
+    ],
+    "is_high": true
+  },
+  "features": {
+    "Add Account Voucher": {
+      "current": 15.8,
+      "average": 11.95,
+      "values": [
+        15.8,
+        8.1
+      ],
+      "is_high": true
+    },
+    "Sales Invoice": {
+      "current": 15.8,
+      "average": 16.700000000000003,
+      "values": [
+        15.8,
+        17.6
+      ],
+      "is_high": false
+    },
+    "Sales Order": {
+      "current": 15.8,
+      "average": 16.0,
+      "values": [
+        15.8,
+        16.2
+      ],
+      "is_high": false
+    }
+  },
+  "scenario": {
+    "current": 15.800000000000002,
+    "average": 14.883333333333335,
+    "values": [
+      15.800000000000002,
+      13.966666666666667
+    ],
+    "is_high": true
+  }
+}
+
+[INFO] Server: AONE-CARTZLINK | Domain: aone.cartzlink.com
+==================================================
+[FAIL] Add Account Voucher
+[FAIL] Sales Invoice
+[FAIL] Sales Order
+
+============================================================
+COMPLETED DOMAIN: aone.cartzlink.com
+============================================================
+[PASS] Test summary email sent successfully.
+Finished at Fri 02/20/2026 11:24:51.97 
+========================================= 

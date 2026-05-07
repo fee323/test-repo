@@ -1,0 +1,11 @@
+========================================= 
+Behave Run Started at Fri 02/20/2026 11:00:10.58 
+========================================= 
+
+============================================================
+STARTING DOMAIN: aone.cartzlink.com (Server: AONE-CARTZLINK)
+============================================================
+[FAIL] OTP fetch failed | Domain: aone.cartzlink.com | Server: AONE-CARTZLINK | OTP API failed: {'ok': 0, 'msg': 'Unauthorized'}
+[FAIL] Failed to send email: Missing CL_SMTP_PASS env var for SMTP login
+Finished at Fri 02/20/2026 11:00:11.26 
+========================================= 

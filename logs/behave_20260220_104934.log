@@ -1,0 +1,19 @@
+========================================= 
+Behave Run Started at Fri 02/20/2026 10:49:34.41 
+========================================= 
+
+============================================================
+STARTING DOMAIN: aone.cartzlink.com (Server: AONE-CARTZLINK)
+============================================================
+[FAIL] OTP fetch failed | Domain: aone.cartzlink.com | Server: AONE-CARTZLINK | OTP API returned non-JSON: <html>
+<head>
+	<!-- new added adil -->
+	<link rel="stylesheet" type="text/css" href="cube/components/bootstrap/dist/css/bootstrap.min.css" />
+
+	<!-- RTL support - for demo only -->
+	<script src="cube/js/demo-rtl.js"></script>
+	<!--
+    If you need RTL support just include here RTL CSS file <
+[FAIL] Failed to send email: Missing CL_SMTP_PASS env var for SMTP login
+Finished at Fri 02/20/2026 10:49:35.26 
+========================================= 
